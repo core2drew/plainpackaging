@@ -4402,11 +4402,31 @@ function nav_content($menu, $var = null)
             ?>
             <section id="about-state" class="container content-st-section">
                 <div class="row abt-st-r">
-                    <div class="col-lg-10 col-lg-offset-1"><?php echo breadcrumbs(' / ', 'Home'); ?></div>
-                    <div class="col-lg-10 col-lg-offset-1">
+                    <div class="col-lg-8 col-lg-offset-1"><?php echo breadcrumbs(' / ', 'Home'); ?></div>
+                    <div class="col-lg-8 col-lg-offset-1">
                         <div class="section-margin-top-25 section-title fc-ref-mat-3">Research Evidence</div>
                     </div>
-                    <div class="content-desc-cont col-lg-10 col-lg-offset-1 ref -g1">
+                    <div class="col-lg-3">
+                        <div class="sidebar-wrapper header-sidebar col-xs-12 sidebar-1">
+                            <ul class="sidebar-nav">
+                                <div class="sidebar-nav-header">LINKED<br>TOOLS AND RESOURCES</div>
+                                <li>
+                                    <a class="flex"
+                                       href="http://localhost/projects/plainpackaging/resources/legal-issues&#10;                                    "><img
+                                                src="http://localhost/projects/plainpackaging/img/icons/linked-tools-and-resources/legal-issues.PNG"
+                                                style="padding:0 10px;">Branding on tobacco packaging </a>
+                                </li>
+                                <li>
+                                    <a class="flex"
+                                       href="http://localhost/projects/plainpackaging/resources/policy-briefs&#10;"><img
+                                                src="http://localhost/projects/plainpackaging/img/icons/linked-tools-and-resources/policy-brief-is-it-lawful.PNG"
+                                                style="padding:0 5px;">Opposing arguments (and how to counter them)</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="content-desc-cont col-lg-8 col-lg-offset-1 ref -g1">
                         <div>
                             <div class="section-secondary-title fc-ref-mat-3">Introduction</div>
                             <p>These pages summarise the empirical research evidence that supports the implementation of
@@ -4473,7 +4493,7 @@ function nav_content($menu, $var = null)
                                     plain
                                     packaging</b>.</p>
 
-                            <div class="section-secondary-title fc-ref-mat-3">Outcomes of the research</div>
+                            <div id="item1" class="section-secondary-title fc-ref-mat-3">Outcomes of the research</div>
                             <h3 class="fc-ref-mat-4 sub-title">Attractiveness of tobacco products and packaging as
                                 advertising</h3>
                             <p><b>A substantial number of studies that examine plain packaging support the conclusions
@@ -4533,7 +4553,8 @@ function nav_content($menu, $var = null)
                                 variants to mislead consumers about the relative harms of different products.
                                 <sup>17</sup></p>
 
-                            <div class="section-secondary-title fc-ref-mat-3">Expert reviews of the research evidence
+                            <div id="item2"  class="section-secondary-title fc-ref-mat-3">Expert reviews of the 
+                                research evidence
                             </div>
                             <p>Australia, the UK, and Ireland, when considering plain packaging, commissioned
                                 independent reviews of the research
@@ -4584,7 +4605,8 @@ function nav_content($menu, $var = null)
                                 that
                                 have taken place since the latest evidence review (see below). </p>
 
-                            <div class="section-secondary-title fc-ref-mat-3">1. Cancer Council Victoria</div>
+                            <div id="item3"  class="section-secondary-title fc-ref-mat-3">1. Cancer Council
+                                Victoria</div>
                             <p>In 2011, Cancer Council Victoria in Australia produced a paper to present the findings of
                                 research over two decades
                                 and across five countries on the topic of plain packaging. It includes the results of
@@ -4601,7 +4623,7 @@ function nav_content($menu, $var = null)
                                 ones. To avoid repetition, these
                                 pages focuses on the outcomes of more recent reviews. </p>
 
-                            <div class="section-secondary-title fc-ref-mat-3">2. The Stirling Review</div>
+                            <div id="item4"  class="section-secondary-title fc-ref-mat-3">2. The Stirling Review</div>
 
                             <h3 class="fc-ref-mat-4 sub-title">Background</h3>
                             <p>In 2012,the UK Department of Health commissioned a systematic review of the evidence on
@@ -4746,7 +4768,7 @@ function nav_content($menu, $var = null)
                                 provides further support for
                                 the proposed benefits of plain packaging.”</p>
 
-                            <div class="section-secondary-title fc-ref-mat-3">3. The Chantler Review</div>
+                            <div id="item5"  class="section-secondary-title fc-ref-mat-3">3. The Chantler Review</div>
 
                             <h3 class="fc-ref-mat-4 sub-title">Background</h3>
                             <p>In November 2013, the UK Department of Health commissioned Sir Cyril Chantler to
@@ -4901,7 +4923,7 @@ function nav_content($menu, $var = null)
                                 illicit sales, arguing that illicit suppliers benefit from not having to follow the same
                                 restrictions.” </p>
 
-                            <div class="section-secondary-title fc-ref-mat-3">4. The Hammond Review</div>
+                            <div id="item6" class="section-secondary-title fc-ref-mat-3">4. The Hammond Review</div>
                             <h3 class="fc-ref-mat-4 sub-title">Background</h3>
                             <p>In March 2014, Professor David Hammond, an associate Professor of health behaviour and
                                 health policy at the
@@ -5054,7 +5076,7 @@ function nav_content($menu, $var = null)
                                 <li>Plain packaging will help to denormalize tobacco use”</li>
                             </ol>
 
-                            <div class="section-secondary-title fc-ref-mat-3">5. The Cochrane Review</div>
+                            <div id="item7" class="section-secondary-title fc-ref-mat-3">5. The Cochrane Review</div>
                             <p><a href="http://www.cochrane.org/uk/about-us">Cochrane</a> is a non-profit,
                                 non-governmental organization formed to
                                 organize medical research findings to facilitate
@@ -5132,7 +5154,7 @@ function nav_content($menu, $var = null)
                             <p>The review did not find any evidence suggesting standardized packaging may increase
                                 tobacco use. <sup>19</sup></p>
 
-                            <div class="section-secondary-title fc-ref-mat-3">Further research evidence</div>
+                            <div id="item8" class="section-secondary-title fc-ref-mat-3">Further research evidence</div>
 
                             <p>Further research into likely impacts of tobacco plain packaging has continued to be
                                 undertaken around the world since
@@ -5189,7 +5211,9 @@ function nav_content($menu, $var = null)
                                 which is set out on the <b>AUSTRALIA’S POST-IMPLEMENTATION EVIDENCE</b> PAGE OF THE
                                 TOOLS AND RESOURCES. </p>
 
-                            <div class="section-secondary-title fc-ref-mat-3">4.1 Post-implementation research planned
+                            <div id="item9" class="section-secondary-title fc-ref-mat-3">4.1 Post-implementation
+                                research
+                                planned
                                 in the UK and France
                             </div>
 
@@ -5365,6 +5389,41 @@ function nav_content($menu, $var = null)
                                 Nicotine and Tobacco Research (2016) 18 (5): 1348-1356. DOI: <a
                                         href="https://doi.org/10.1093/ntr/ntv114">https://doi.org/10.1093/ntr/ntv114</a>
                             </p>
+                        </div>
+                    </div>
+                    <div class="content-desc-cont col-lg-3">
+                        <!-- 2 -->
+                        <div class="sidebar-wrapper col-xs-12 sidebar-2">
+                            <div class="sidebar-nav-header">ON THIS PAGE</div>
+                            <ul class="sidebar-nav">
+                                <li>
+                                    <a href="#item1">Overview of the outcomes from the</a>
+                                </li>
+                                <li>
+                                    <a href="#item2">Overview of expert systematic reviews</a>
+                                </li>
+                                <li>
+                                    <a href="#item3">1. Cancer Counsel Victoria Review</a>
+                                </li>
+                                <li>
+                                    <a href="#item4">2. The Stirling Reviews</a>
+                                </li>
+                                <li>
+                                    <a href="#item5">3. The Chantler Review</a>
+                                </li>
+                                <li>
+                                    <a href="#item6">4. The Hammond Review</a>
+                                </li>
+                                <li>
+                                    <a href="#item7">5. The Cochrane Review</a>
+                                </li>
+                                <li>
+                                    <a href="#item8">Further research and evidence</a>
+                                </li>
+                                <li>
+                                    <a href="#item9">Post implementation research planned in the UK and France </a>
+                                </li>
+                            </ul>
                         </div>
                     </div>
             </section>
@@ -6055,6 +6114,26 @@ function nav_content($menu, $var = null)
                             its impacts on smoking behaviour
                         </div>
                     </div>
+                    <div class="col-lg-3">
+                        <!-- 1 -->
+                        <div class="sidebar-wrapper header-sidebar col-xs-12 sidebar-1">
+                            <ul class="sidebar-nav">
+                                <div class="sidebar-nav-header">LINKED<br>TOOLS AND RESOURCES</div>
+                                <li>
+                                    <a class="flex" href="http://localhost/projects/plainpackaging/resources/legal-issues
+                                    "><img
+                                                src="http://localhost/projects/plainpackaging/img/icons/linked-tools-and-resources/legal-issues.PNG"
+                                                style="padding:0 10px;">Branding on tobacco packaging </a>
+                                </li>
+                                <li>
+                                    <a class="flex" href="http://localhost/projects/plainpackaging/resources/policy-briefs
+"><img
+                                                src="http://localhost/projects/plainpackaging/img/icons/linked-tools-and-resources/policy-brief-is-it-lawful.PNG"
+                                                style="padding:0 5px;">Opposing arguments (and how to counter them)</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
 
                     <div class="content-desc-cont col-lg-8 col-lg-offset-1 ref -g1">
                         <div>
@@ -6092,7 +6171,8 @@ function nav_content($menu, $var = null)
                                 industry
                                 position.</p>
 
-                            <div class="section-secondary-title fc-ref-mat-3">Marketing theory and the role of
+                            <div id="item1" class="section-secondary-title fc-ref-mat-3">Marketing theory and the
+                                role of
                                 packaging
                             </div>
                             <h3 class="fc-ref-mat-4 sub-title">Tobacco packaging has a number of functions:</h3>
@@ -6202,7 +6282,8 @@ function nav_content($menu, $var = null)
                                 Put another way — when you
                                 don’t have anything else — our packaging is our marketing.” </p>
 
-                            <div class="section-secondary-title fc-ref-mat-3">Why tobacco packaging is different to
+                            <div id="item2" class="section-secondary-title fc-ref-mat-3">Why tobacco packaging is
+                                different to
                                 packaging for other consumer
                                 goods
                             </div>
@@ -6262,7 +6343,8 @@ function nav_content($menu, $var = null)
                                 exposure to tobacco packaging . .
                                 . .” <sup>17</sup> [emphasis added]</p>
 
-                            <div class="section-secondary-title fc-ref-mat-3">Tobacco packaging serves as an integral
+                            <div id="item3" class="section-secondary-title fc-ref-mat-3">Tobacco packaging serves as an
+                                integral
                                 component of tobacco
                                 marketing:
                             </div>
@@ -6462,7 +6544,8 @@ function nav_content($menu, $var = null)
                                 less desirable product
                                 associations.”</p>
 
-                            <div class="section-secondary-title fc-ref-mat-3">Plain packaging “denormalizes” smoking
+                            <div id="item4" class="section-secondary-title fc-ref-mat-3">Plain packaging “denormalizes”
+                                smoking
                             </div>
 
                             <p>If smoking is seen by young people as a normal part of everyday life, they are much more
@@ -6528,7 +6611,7 @@ function nav_content($menu, $var = null)
                                 packaging as a promotion as traditional mass media becomes more restricted.”
                                 <sup>30</sup></p>
 
-                            <div class="section-secondary-title fc-ref-mat-3">Packaging and smokers’ identity
+                            <div id="item5" class="section-secondary-title fc-ref-mat-3">Packaging and smokers’ identity
                             </div>
 
                             <p><b>Branding enables tobacco manufacturers to sell status, social acceptance, and glamour,
@@ -6609,7 +6692,9 @@ function nav_content($menu, $var = null)
                                 help maintain smoking
                                 behavior. <sup>36</sup></p>
 
-                            <div class="section-secondary-title fc-ref-mat-3">Branding on tobacco packaging is intended
+                            <div id="item6" class="section-secondary-title fc-ref-mat-3">Branding on tobacco packaging
+                                is
+                                intended
                                 to mislead consumers
                             </div>
 
@@ -6664,7 +6749,8 @@ function nav_content($menu, $var = null)
                                  src="<?php echo $base_url; ?>img/tobacco branding/image-7.png">
 
 
-                            <div class="section-secondary-title fc-ref-mat-3">Pack color is used to mislead consumers
+                            <div id="item7" class="section-secondary-title fc-ref-mat-3">Pack color is used to mislead
+                                consumers
                                 about the harms of tobacco.
                             </div>
 
@@ -6769,7 +6855,9 @@ function nav_content($menu, $var = null)
                                 deliberately positioned adjacent to confectionary and toys in retail outlets and airport
                                 duty free stores. </p>
 
-                            <div class="section-secondary-title fc-ref-mat-3">Tobacco industry documents: the importance
+                            <div id="item8" class="section-secondary-title fc-ref-mat-3">Tobacco industry documents:
+                                the
+                                importance
                                 of packaging in promoting
                                 tobacco
                             </div>
@@ -7147,13 +7235,29 @@ function nav_content($menu, $var = null)
                             <div class="sidebar-nav-header">ON THIS PAGE</div>
                             <ul class="sidebar-nav">
                                 <li class="text-center">
-                                    <a href="#item1">Research into attitudes and behaviours</a>
+                                    <a href="#item1">Marketing theory and the role of packaging</a>
                                 </li>
                                 <li class="text-center">
-                                    <a href="#item2">Statistical data smoking prevalence and tobacco consumption</a>
+                                    <a href="#item2">Why tobacco packaging is different</a>
                                 </li>
                                 <li class="text-center">
                                     <a href="#item3">Branded packaging and youth smoking</a>
+                                </li>
+                                <li class="text-center">
+                                    <a href="#item4">Plain packaging de-normalises tobacco</a>
+                                </li>
+                                <li class="text-center">
+                                    <a href="#item5">Packaging and smokers’ identity</a>
+                                </li>
+                                <li class="text-center">
+                                    <a href="#item6">Tobacco packaging is intended to mislead consumers</a>
+                                </li>
+                                <li class="text-center">
+                                    <a href="#item7">The tobacco industry’s public position</a>
+                                </li>
+                                <li class="text-center">
+                                    <a href="#item8">Internal industry documents on the use of branding on tobacco
+                                        packaging</a>
                                 </li>
                             </ul>
                         </div>
