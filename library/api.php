@@ -5380,10 +5380,30 @@ function nav_content($menu, $var = null)
             ?>
             <section id="about-state" class="container content-st-section">
                 <div class="row abt-st-r">
-                    <div class="col-lg-10 col-lg-offset-1"><?php echo breadcrumbs(' / ', 'Home'); ?></div>
-                    <div class="col-lg-10 col-lg-offset-1">
+                    <div class="col-lg-8 col-lg-offset-1"><?php echo breadcrumbs(' / ', 'Home'); ?></div>
+                    <div class="col-lg-8 col-lg-offset-1">
                         <div class="section-margin-top-25 section-title fc-ref-mat-3">Post-implementation evidence from
                             Australia
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <!-- 1 -->
+                        <div class="sidebar-wrapper header-sidebar col-xs-12 sidebar-1">
+                            <ul class="sidebar-nav">
+                                <div class="sidebar-nav-header">LINKED<br>TOOLS AND RESOURCES</div>
+                                <li>
+                                    <a class="flex" href="http://localhost/projects/plainpackaging/resources/legal-issues
+                                    "><img
+                                                src="http://localhost/projects/plainpackaging/img/icons/linked-tools-and-resources/legal-issues.PNG"
+                                                style="padding:0 10px;">Branding on tobacco packaging </a>
+                                </li>
+                                <li>
+                                    <a class="flex" href="http://localhost/projects/plainpackaging/resources/policy-briefs
+"><img
+                                                src="http://localhost/projects/plainpackaging/img/icons/linked-tools-and-resources/policy-brief-is-it-lawful.PNG"
+                                                style="padding:0 5px;">Opposing arguments (and how to counter them)</a>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                     <div class="content-desc-cont col-lg-8 col-lg-offset-1 ref -g1">
@@ -5555,7 +5575,9 @@ function nav_content($menu, $var = null)
                                 now stored
                                 alphabetically. </p>
 
-                            <div class="section-secondary-title fc-ref-mat-3">Statistical data: smoking prevalence and
+                            <div id="item2" class="section-secondary-title fc-ref-mat-3">Statistical data: smoking
+                                prevalence
+                                and
                                 tobacco consumption rates
                             </div>
 
@@ -5996,6 +6018,23 @@ function nav_content($menu, $var = null)
                                 marital status), which enable analysis of the smoking population in Australia.</p>
                         </div>
                     </div>
+                    <div class="content-desc-cont col-lg-3">
+                        <!-- 2 -->
+                        <div class="sidebar-wrapper col-xs-12 sidebar-2">
+                            <div class="sidebar-nav-header">ON THIS PAGE</div>
+                            <ul class="sidebar-nav">
+                                <li class="text-center">
+                                    <a href="#item1">Research into attitudes and behaviours</a>
+                                </li>
+                                <li class="text-center">
+                                    <a href="#item2">Statistical data smoking prevalence and tobacco consumption</a>
+                                </li>
+                                <li class="text-center">
+                                    <a href="#item3">Branded packaging and youth smoking</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </section>
             <?php
@@ -6014,25 +6053,6 @@ function nav_content($menu, $var = null)
                     <div class="col-lg-8 col-lg-offset-1">
                         <div class="section-margin-top-25 section-title fc-ref-mat-3">Branding on tobacco packaging and
                             its impacts on smoking behaviour
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3">
-                        <!-- 1 -->
-                        <div class="sidebar-wrapper header-sidebar col-xs-12 sidebar-1">
-                            <ul class="sidebar-nav">
-                                <div class="sidebar-nav-header">LINKED<br>TOOLS AND RESOURCES</div>
-                                <li>
-                                    <a href="http://localhost/projects/plainpackaging/resources/legal-issues"><img
-                                                src="http://localhost/projects/plainpackaging/img/icons/linked-tools-and-resources/legal-issues.PNG"
-                                                style="padding:0 10px;"> Legal Issues</a>
-                                </li>
-                                <li>
-                                    <a href="http://localhost/projects/plainpackaging/resources/policy-briefs"><img
-                                                src="http://localhost/projects/plainpackaging/img/icons/linked-tools-and-resources/policy-brief-is-it-lawful.PNG"
-                                                style="padding:0 5px;">Policy Brief: Is it Lawful?</a>
-                                </li>
-                            </ul>
                         </div>
                     </div>
 
@@ -7130,7 +7150,7 @@ function nav_content($menu, $var = null)
                                     <a href="#item1">Research into attitudes and behaviours</a>
                                 </li>
                                 <li class="text-center">
-                                    <a href="#item2">Statistical data: smoking prevalence and tobacco consumption</a>
+                                    <a href="#item2">Statistical data smoking prevalence and tobacco consumption</a>
                                 </li>
                                 <li class="text-center">
                                     <a href="#item3">Branded packaging and youth smoking</a>
