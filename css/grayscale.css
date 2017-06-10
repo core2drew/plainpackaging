@@ -1576,6 +1576,10 @@ h3 {
   content:'';
 }
 
+.flex {
+  display:flex !important;
+}
+
 /*End*/
 
 /* navbar desktop end */
