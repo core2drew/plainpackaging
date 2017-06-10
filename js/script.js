@@ -8,6 +8,16 @@ $(window).resize(function() {
 	}
 });
 $(document).ready(function(){
+	$('.sidebar-nav a').click(function(e){
+        var target = $( $(this).attr('href') );
+		var offset = 100;
+		var scrollTop = target.offset().top - offset
+        if(target.length) {
+            e.preventDefault();
+            $('html,body').animate({scrollTop: scrollTop}, 500)
+		}
+	});
+
 	$('.dc-step-by-step').mouseenter(function() {
 		$('.dc-step-by-step-cont').css('display','block');
 		$('.dc-step-by-step-li').css('background-color','rgb(204,204,204)');
