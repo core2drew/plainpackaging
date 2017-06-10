@@ -1,0 +1,88 @@
+RewriteEngine On
+# Redirect non-www to www
+Options +FollowSymLinks
+
+RewriteCond %{REQUEST_URI} !(\.css|\.js|\.png|\.jpg|\.gif|robots\.txt)$ [NC]
+
+# If http send to http://www.
+RewriteCond %{HTTP_HOST} ^tobaccofreekids.org$ [NC]
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ http://www.tobaccofreekids.org/microsites/statereport2017/$1 [R=301,L]
+
+RewriteRule   ^/?$ index.php [NC]
+
+RewriteCond $1 ^getting-prepared
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ parseUrl.php?q=$1&x=$2 [L,QSA]
+
+RewriteCond $1 ^collecting-the-evidence
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ parseUrl.php?q=$1&x=$2 [L,QSA]
+
+RewriteCond $1 ^crafting-the-legislation
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ parseUrl.php?q=$1&x=$2 [L,QSA]
+
+RewriteCond $1 ^procedural-steps-for-a-secure-policy
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ parseUrl.php?q=$1&x=$2 [L,QSA]
+
+RewriteCond $1 ^policy-tools
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ parseUrl.php?q=$1&x=$2 [L,QSA]
+
+RewriteCond $1 ^more
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ parseUrl.php?q=$1&x=$2 [L,QSA]
+
+RewriteCond $1 ^resources
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ parseUrl.php?q=$1&x=$2 [L,QSA]
+
+RewriteCond $1 ^templates
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ parseUrl.php?q=$1&x=$2 [L,QSA]
+
+RewriteCond $1 ^evidence
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ parseUrl.php?q=$1&x=$2 [L,QSA]
+
+RewriteCond $1 ^home
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ parseUrl.php?q=$1&x=$2 [L,QSA]
+
+RewriteCond $1 ^legislation-drafting-tools
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ parseUrl.php?q=$1&x=$2 [L,QSA]
+
+RewriteCond $1 ^evidence
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ parseUrl.php?q=$1&x=$2 [L,QSA]
+
+RewriteCond $1 ^legal-issues-and-international-developments
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ parseUrl.php?q=$1&x=$2 [L,QSA]
+
+RewriteCond $1 ^nav
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ parseUrl.php?q=$1&x=$2 [L,QSA]
+
+ErrorDocument 404 http://www.tobaccofreekids.org/home/404
+
+<IfModule php5_module>
+  php_value date.timezone "Asia/Manila"
+</IfModule>
