@@ -6,14 +6,15 @@ error_reporting(0);
 function camel_case($string)
 {
     $string = strtolower($string);
-	$string = str_replace("-", " ", $string);
-	$string = ucwords($string);
-	$string = ucwords(strtolower($string));
-	return $string;
+    $string = str_replace("-", " ", $string);
+    $string = ucwords($string);
+    $string = ucwords(strtolower($string));
+    return $string;
 }
 
 // This function will take $_SERVER['REQUEST_URI'] and build a breadcrumb based on the user's current path
-function breadcrumbs($separator = ' &raquo; ', $home = 'Home') {
+function breadcrumbs($separator = ' &raquo; ', $home = 'Home')
+{
     global $base_url;
     // This gets the REQUEST_URI (/path/to/file.php), splits the string (using '/') into an array, and then filters out any empty values
     $path = array_filter(explode('/', parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH)));
@@ -50,7 +51,7 @@ function breadcrumbs($separator = ' &raquo; ', $home = 'Home') {
     return implode($separator, $breadcrumbs);
 }
 
-function seo_url($string) 
+function seo_url($string)
 {
     //Lower case everything
     $string = strtolower($string);
@@ -65,9 +66,8 @@ function seo_url($string)
 
 function chk_nav($nav)
 {
-    $menu = array('navigate-the-toolkit','set-policy-objectives','establish-document-development-retention','prepare-tobacco-industry-interference','evidence-review','regulatory-impact-analysis','stakeholder-input-public-consultation','make-key-policy-decisions','draft-the-law','coordinate-across-government','obtain-legal-advice','wto-notification','policy-briefs','what-is-plain-packaging-and-why-is-it-needed','countering-industry-arguments','is-plain-packaging-legal','regulatory-impact-analysis-ref','consultation-document-template','drafting-the-legislation-in-detail','comparison-table-of-existing-plain-packaging-laws','template-draft-model-law','research-evidence','austalia-post-implementation-evidence','tobacco-product-branding','opposing-arguments-and-how-to-counter-them','legal-issues', 'legal-issues', 'case-summaries','international-developments','download-toolkit','faqs','about-and-contact','what-is-it-and-why-is-it-needed','where-in-the-world','is-it-lawful','tobacco-industry-arguments','explore-the-guides','tools-and-resources','compare-images','plain-packaging-and-the-who-fctc','more-help-from-ctfk','legal-issues','case-summaries');
-    if (in_array($nav,$menu))
-    {
+    $menu = array('navigate-the-toolkit', 'set-policy-objectives', 'establish-document-development-retention', 'prepare-tobacco-industry-interference', 'evidence-review', 'regulatory-impact-analysis', 'stakeholder-input-public-consultation', 'make-key-policy-decisions', 'draft-the-law', 'coordinate-across-government', 'obtain-legal-advice', 'wto-notification', 'policy-briefs', 'what-is-plain-packaging-and-why-is-it-needed', 'countering-industry-arguments', 'is-plain-packaging-legal', 'regulatory-impact-analysis-ref', 'consultation-document-template', 'drafting-the-legislation-in-detail', 'comparison-table-of-existing-plain-packaging-laws', 'template-draft-model-law', 'research-evidence', 'austalia-post-implementation-evidence', 'tobacco-product-branding', 'opposing-arguments-and-how-to-counter-them', 'legal-issues', 'legal-issues', 'case-summaries', 'international-developments', 'download-toolkit', 'faqs', 'about-and-contact', 'what-is-it-and-why-is-it-needed', 'where-in-the-world', 'is-it-lawful', 'tobacco-industry-arguments', 'explore-the-guides', 'tools-and-resources', 'compare-images', 'plain-packaging-and-the-who-fctc', 'more-help-from-ctfk', 'legal-issues', 'case-summaries');
+    if (in_array($nav, $menu)) {
         return 'ver';
     }
 }
@@ -77,8 +77,7 @@ function nav_main_content($menu)
     global $base_url;
     switch ($menu) {
         case 'getting-prepared':
-            if ($var == 'og_desc')
-            {
+            if ($var == 'og_desc') {
                 $og_desc = '';
 
                 return $og_desc;
@@ -93,26 +92,26 @@ function nav_main_content($menu)
                     <div class="content-desc-cont col-lg-10 col-lg-offset-1">
                         <table class="nav-main">
                             <tbody>
-                                <tr>
-                                    <td class="col-lg-3 bg-nav-gd-1-1">
-                                        <a href="<?php echo $base_url ?>getting-prepared/set-policy-objectives">
-                                            <div class="dropdown-note">Guide 1.1</div>
-                                            Set Policy Guidelines
-                                        </a>
-                                    </td>
-                                    <td class="col-lg-3 bg-nav-gd-1-2">
-                                        <a href="<?php echo $base_url ?>getting-prepared/establish-document-development-retention">
-                                            <div class="dropdown-note">Guide 1.2</div>
-                                            Establish Document Development and Retention Policy
-                                        </a>
-                                    </td>
-                                    <td class="col-lg-3 bg-nav-gd-1-3">
-                                        <a href="<?php echo $base_url ?>getting-prepared/prepare-tobacco-industry-interference">
-                                            <div class="dropdown-note">Guide 1.3</div>
-                                            Prepare for Tobacco Industry Interference
-                                        </a>
-                                    </td>
-                                </tr>
+                            <tr>
+                                <td class="col-lg-3 bg-nav-gd-1-1">
+                                    <a href="<?php echo $base_url ?>getting-prepared/set-policy-objectives">
+                                        <div class="dropdown-note">Guide 1.1</div>
+                                        Set Policy Guidelines
+                                    </a>
+                                </td>
+                                <td class="col-lg-3 bg-nav-gd-1-2">
+                                    <a href="<?php echo $base_url ?>getting-prepared/establish-document-development-retention">
+                                        <div class="dropdown-note">Guide 1.2</div>
+                                        Establish Document Development and Retention Policy
+                                    </a>
+                                </td>
+                                <td class="col-lg-3 bg-nav-gd-1-3">
+                                    <a href="<?php echo $base_url ?>getting-prepared/prepare-tobacco-industry-interference">
+                                        <div class="dropdown-note">Guide 1.3</div>
+                                        Prepare for Tobacco Industry Interference
+                                    </a>
+                                </td>
+                            </tr>
                             </tbody>
                         </table>
                     </div>
@@ -121,8 +120,7 @@ function nav_main_content($menu)
             <?php
             break;
         case 'collecting-the-evidence':
-            if ($var == 'og_desc')
-            {
+            if ($var == 'og_desc') {
                 $og_desc = '';
 
                 return $og_desc;
@@ -137,26 +135,26 @@ function nav_main_content($menu)
                     <div class="content-desc-cont col-lg-10 col-lg-offset-1">
                         <table class="nav-main">
                             <tbody>
-                                <tr>
-                                    <td class="col-lg-3 bg-nav-gd-2-1">
-                                        <a href="<?php echo $base_url ?>collecting-the-evidence/evidence-review">
-                                            <div class="dropdown-note">Guide 2.1</div>
-                                            Evidence Review
-                                        </a>
-                                    </td>
-                                    <td class="col-lg-3 bg-nav-gd-2-2">
-                                        <a href="<?php echo $base_url ?>collecting-the-evidence/regulatory-impact-analysis">
-                                            <div class="dropdown-note">Guide 2.2</div>
-                                            Regulatory Impact Analysis
-                                        </a>
-                                    </td>
-                                    <td class="col-lg-3 bg-nav-gd-2-3">
-                                        <a href="<?php echo $base_url ?>collecting-the-evidence/stakeholder-input-public-consultation">
-                                            <div class="dropdown-note">Guide 2.3</div>
-                                            Stakeholder Input / Public Consultation
-                                        </a>
-                                    </td>
-                                </tr>
+                            <tr>
+                                <td class="col-lg-3 bg-nav-gd-2-1">
+                                    <a href="<?php echo $base_url ?>collecting-the-evidence/evidence-review">
+                                        <div class="dropdown-note">Guide 2.1</div>
+                                        Evidence Review
+                                    </a>
+                                </td>
+                                <td class="col-lg-3 bg-nav-gd-2-2">
+                                    <a href="<?php echo $base_url ?>collecting-the-evidence/regulatory-impact-analysis">
+                                        <div class="dropdown-note">Guide 2.2</div>
+                                        Regulatory Impact Analysis
+                                    </a>
+                                </td>
+                                <td class="col-lg-3 bg-nav-gd-2-3">
+                                    <a href="<?php echo $base_url ?>collecting-the-evidence/stakeholder-input-public-consultation">
+                                        <div class="dropdown-note">Guide 2.3</div>
+                                        Stakeholder Input / Public Consultation
+                                    </a>
+                                </td>
+                            </tr>
                             </tbody>
                         </table>
                     </div>
@@ -166,8 +164,7 @@ function nav_main_content($menu)
             break;
             break;
         case 'crafting-the-legislation':
-            if ($var == 'og_desc')
-            {
+            if ($var == 'og_desc') {
                 $og_desc = '';
 
                 return $og_desc;
@@ -182,20 +179,20 @@ function nav_main_content($menu)
                     <div class="content-desc-cont col-lg-10 col-lg-offset-1">
                         <table class="nav-main">
                             <tbody>
-                                <tr>
-                                    <td class="col-lg-5 bg-nav-gd-3-1">
-                                        <a href="<?php echo $base_url ?>crafting-the-legislation/make-key-policy-decisions">
-                                            <div class="dropdown-note">Guide 3.1</div>
-                                            Make Key Policy Decisions
-                                        </a>
-                                    </td>
-                                    <td class="col-lg-5 bg-nav-gd-3-2">
-                                        <a href="<?php echo $base_url ?>crafting-the-legislation/draft-the-law">
-                                            <div class="dropdown-note">Guide 3.2</div>
-                                            Draft the Law
-                                        </a>
-                                    </td>
-                                </tr>
+                            <tr>
+                                <td class="col-lg-5 bg-nav-gd-3-1">
+                                    <a href="<?php echo $base_url ?>crafting-the-legislation/make-key-policy-decisions">
+                                        <div class="dropdown-note">Guide 3.1</div>
+                                        Make Key Policy Decisions
+                                    </a>
+                                </td>
+                                <td class="col-lg-5 bg-nav-gd-3-2">
+                                    <a href="<?php echo $base_url ?>crafting-the-legislation/draft-the-law">
+                                        <div class="dropdown-note">Guide 3.2</div>
+                                        Draft the Law
+                                    </a>
+                                </td>
+                            </tr>
                             </tbody>
                         </table>
                     </div>
@@ -205,8 +202,7 @@ function nav_main_content($menu)
             break;
             break;
         case 'procedural-steps-for-a-secure-policy':
-            if ($var == 'og_desc')
-            {
+            if ($var == 'og_desc') {
                 $og_desc = '';
 
                 return $og_desc;
@@ -221,26 +217,26 @@ function nav_main_content($menu)
                     <div class="content-desc-cont col-lg-10 col-lg-offset-1">
                         <table class="nav-main">
                             <tbody>
-                                <tr>
-                                    <td class="col-lg-3 bg-nav-gd-4-1">
-                                        <a href="<?php echo $base_url ?>procedural-steps-for-a-secure-policy/coordinate-across-government">
-                                            <div class="dropdown-note">Guide 4.1</div>
-                                            Coordinate Across Government
-                                        </a>
-                                    </td>
-                                    <td class="col-lg-3 bg-nav-gd-4-2">
-                                        <a href="<?php echo $base_url ?>procedural-steps-for-a-secure-policy/obtain-legal-advice">
-                                            <div class="dropdown-note">Guide 4.2</div>
-                                            Obtain Legal Advice
-                                        </a>
-                                    </td>
-                                    <td class="col-lg-3 bg-nav-gd-4-3">
-                                        <a href="<?php echo $base_url ?>procedural-steps-for-a-secure-policy/wto-notification">
-                                            <div class="dropdown-note">Guide 4.3</div>
-                                            WTO Notification
-                                        </a>
-                                    </td>
-                                </tr>
+                            <tr>
+                                <td class="col-lg-3 bg-nav-gd-4-1">
+                                    <a href="<?php echo $base_url ?>procedural-steps-for-a-secure-policy/coordinate-across-government">
+                                        <div class="dropdown-note">Guide 4.1</div>
+                                        Coordinate Across Government
+                                    </a>
+                                </td>
+                                <td class="col-lg-3 bg-nav-gd-4-2">
+                                    <a href="<?php echo $base_url ?>procedural-steps-for-a-secure-policy/obtain-legal-advice">
+                                        <div class="dropdown-note">Guide 4.2</div>
+                                        Obtain Legal Advice
+                                    </a>
+                                </td>
+                                <td class="col-lg-3 bg-nav-gd-4-3">
+                                    <a href="<?php echo $base_url ?>procedural-steps-for-a-secure-policy/wto-notification">
+                                        <div class="dropdown-note">Guide 4.3</div>
+                                        WTO Notification
+                                    </a>
+                                </td>
+                            </tr>
                             </tbody>
                         </table>
                     </div>
@@ -250,8 +246,7 @@ function nav_main_content($menu)
             break;
             break;
         case 'policy-tools':
-            if ($var == 'og_desc')
-            {
+            if ($var == 'og_desc') {
                 $og_desc = '';
 
                 return $og_desc;
@@ -266,26 +261,26 @@ function nav_main_content($menu)
                     <div class="content-desc-cont col-lg-10 col-lg-offset-1">
                         <table class="nav-main">
                             <tbody>
-                                <tr>
-                                    <td class="col-lg-3 bg-nav-r-1">
-                                        <a href="<?php echo $base_url; ?>policy-tools/policy-briefs">
-                                            <div class="dropdown-note">A.</div>
-                                            Policy Briefs
-                                        </a>
-                                    </td>
-                                    <td class="col-lg-3 bg-nav-r-1">
-                                        <a href="<?php echo $base_url; ?>policy-tools/regulatory-impact-analysis-ref">
-                                            <div class="dropdown-note">B.</div>
-                                            Regulatory Impact Analysis Template
-                                        </a>
-                                    </td>
-                                    <td class="col-lg-3 bg-nav-r-1">
-                                        <a href="<?php echo $base_url; ?>policy-tools/consultation-document-template">
-                                            <div class="dropdown-note">C.</div>
-                                            Consultation Document Template
-                                        </a>
-                                    </td>
-                                </tr>
+                            <tr>
+                                <td class="col-lg-3 bg-nav-r-1">
+                                    <a href="<?php echo $base_url; ?>policy-tools/policy-briefs">
+                                        <div class="dropdown-note">A.</div>
+                                        Policy Briefs
+                                    </a>
+                                </td>
+                                <td class="col-lg-3 bg-nav-r-1">
+                                    <a href="<?php echo $base_url; ?>policy-tools/regulatory-impact-analysis-ref">
+                                        <div class="dropdown-note">B.</div>
+                                        Regulatory Impact Analysis Template
+                                    </a>
+                                </td>
+                                <td class="col-lg-3 bg-nav-r-1">
+                                    <a href="<?php echo $base_url; ?>policy-tools/consultation-document-template">
+                                        <div class="dropdown-note">C.</div>
+                                        Consultation Document Template
+                                    </a>
+                                </td>
+                            </tr>
                             </tbody>
                         </table>
                     </div>
@@ -295,8 +290,7 @@ function nav_main_content($menu)
             break;
             break;
         case 'legislation-drafting-tools':
-            if ($var == 'og_desc')
-            {
+            if ($var == 'og_desc') {
                 $og_desc = '';
 
                 return $og_desc;
@@ -311,26 +305,26 @@ function nav_main_content($menu)
                     <div class="content-desc-cont col-lg-10 col-lg-offset-1">
                         <table class="nav-main">
                             <tbody>
-                                <tr>
-                                    <td class="col-lg-2 bg-nav-r-2">
-                                        <a href="<?php echo $base_url; ?>legislation-drafting-tools/drafting-the-legislation-in-detail">
-                                            <div class="dropdown-note">D.</div>
-                                            Drafting the Legislation in Detail
-                                        </a>
-                                    </td>
-                                    <td class="col-lg-3 bg-nav-r-2">
-                                        <a href="<?php echo $base_url; ?>legislation-drafting-tools/comparison-table-of-existing-plain-packaging-laws">
-                                            <div class="dropdown-note">E.</div>
-                                            Comparison Table of Existing Plain Packaging Laws
-                                        </a>
-                                    </td>
-                                    <td class="col-lg-3 bg-nav-r-2">
-                                        <a href="<?php echo $base_url; ?>legislation-drafting-tools/template-draft-model-law">
-                                            <div class="dropdown-note">F.</div>
-                                            Template Draft Model Law
-                                        </a>
-                                    </td>
-                                </tr>
+                            <tr>
+                                <td class="col-lg-2 bg-nav-r-2">
+                                    <a href="<?php echo $base_url; ?>legislation-drafting-tools/drafting-the-legislation-in-detail">
+                                        <div class="dropdown-note">D.</div>
+                                        Drafting the Legislation in Detail
+                                    </a>
+                                </td>
+                                <td class="col-lg-3 bg-nav-r-2">
+                                    <a href="<?php echo $base_url; ?>legislation-drafting-tools/comparison-table-of-existing-plain-packaging-laws">
+                                        <div class="dropdown-note">E.</div>
+                                        Comparison Table of Existing Plain Packaging Laws
+                                    </a>
+                                </td>
+                                <td class="col-lg-3 bg-nav-r-2">
+                                    <a href="<?php echo $base_url; ?>legislation-drafting-tools/template-draft-model-law">
+                                        <div class="dropdown-note">F.</div>
+                                        Template Draft Model Law
+                                    </a>
+                                </td>
+                            </tr>
                             </tbody>
                         </table>
                     </div>
@@ -340,8 +334,7 @@ function nav_main_content($menu)
             break;
             break;
         case 'evidence':
-            if ($var == 'og_desc')
-            {
+            if ($var == 'og_desc') {
                 $og_desc = '';
 
                 return $og_desc;
@@ -356,32 +349,32 @@ function nav_main_content($menu)
                     <div class="content-desc-cont col-lg-10 col-lg-offset-1">
                         <table class="nav-main">
                             <tbody>
-                                <tr>
-                                    <td class="col-lg-2 bg-nav-r-3">
-                                        <a href="<?php echo $base_url; ?>evidence/research-evidence">
-                                            <div class="dropdown-note">G.</div>
-                                            Research Evidence
-                                        </a>
-                                    </td>
-                                    <td class="col-lg-3 bg-nav-r-3">
-                                        <a href="<?php echo $base_url; ?>evidence/austalia-post-implementation-evidence">
-                                            <div class="dropdown-note">H.</div>
-                                            Australia's Post-Implementation Evidence
-                                        </a>
-                                    </td>
-                                    <td class="col-lg-3 bg-nav-r-3">
-                                        <a href="<?php echo $base_url; ?>evidence/tobacco-product-branding">
-                                            <div class="dropdown-note">I.</div>
-                                            Tobacco Product Branding
-                                        </a>
-                                    </td>
-                                    <td class="col-lg-2 bg-nav-r-3">
-                                        <a href="<?php echo $base_url; ?>evidence/opposing-arguments-and-how-to-counter-them">
-                                            <div class="dropdown-note">J.</div>
-                                            Opposing Arugments (and How to Counter Them)
-                                        </a>
-                                    </td>
-                                </tr>
+                            <tr>
+                                <td class="col-lg-2 bg-nav-r-3">
+                                    <a href="<?php echo $base_url; ?>evidence/research-evidence">
+                                        <div class="dropdown-note">G.</div>
+                                        Research Evidence
+                                    </a>
+                                </td>
+                                <td class="col-lg-3 bg-nav-r-3">
+                                    <a href="<?php echo $base_url; ?>evidence/austalia-post-implementation-evidence">
+                                        <div class="dropdown-note">H.</div>
+                                        Australia's Post-Implementation Evidence
+                                    </a>
+                                </td>
+                                <td class="col-lg-3 bg-nav-r-3">
+                                    <a href="<?php echo $base_url; ?>evidence/tobacco-product-branding">
+                                        <div class="dropdown-note">I.</div>
+                                        Tobacco Product Branding
+                                    </a>
+                                </td>
+                                <td class="col-lg-2 bg-nav-r-3">
+                                    <a href="<?php echo $base_url; ?>evidence/opposing-arguments-and-how-to-counter-them">
+                                        <div class="dropdown-note">J.</div>
+                                        Opposing Arugments (and How to Counter Them)
+                                    </a>
+                                </td>
+                            </tr>
                             </tbody>
                         </table>
                     </div>
@@ -391,8 +384,7 @@ function nav_main_content($menu)
             break;
             break;
         case 'legal-issues-and-international-developments':
-            if ($var == 'og_desc')
-            {
+            if ($var == 'og_desc') {
                 $og_desc = '';
 
                 return $og_desc;
@@ -407,20 +399,20 @@ function nav_main_content($menu)
                     <div class="content-desc-cont col-lg-10 col-lg-offset-1">
                         <table class="nav-main">
                             <tbody>
-                                <tr>
-                                    <td class="col-lg-5 bg-nav-r-4">
-                                        <a href="<?php echo $base_url; ?>legal-issues-and-international-developments/legal-issues">
-                                            <div class="dropdown-note">K.</div>
-                                            Legal Issues and Case Summaries
-                                        </a>
-                                    </td>
-                                    <td class="col-lg-5 bg-nav-r-4">
-                                        <a href="<?php echo $base_url; ?>legal-issues-and-international-developments/international-developments">
-                                            <div class="dropdown-note">L.</div>
-                                            International Developments
-                                        </a>
-                                    </td>
-                                </tr>
+                            <tr>
+                                <td class="col-lg-5 bg-nav-r-4">
+                                    <a href="<?php echo $base_url; ?>legal-issues-and-international-developments/legal-issues">
+                                        <div class="dropdown-note">K.</div>
+                                        Legal Issues and Case Summaries
+                                    </a>
+                                </td>
+                                <td class="col-lg-5 bg-nav-r-4">
+                                    <a href="<?php echo $base_url; ?>legal-issues-and-international-developments/international-developments">
+                                        <div class="dropdown-note">L.</div>
+                                        International Developments
+                                    </a>
+                                </td>
+                            </tr>
                             </tbody>
                         </table>
                     </div>
@@ -435,13 +427,12 @@ function nav_main_content($menu)
     }
 }
 
-function nav_content($menu,$var = null)
+function nav_content($menu, $var = null)
 {
     global $base_url;
     switch ($menu) {
         case 'navigate-the-toolkit':
-            if ($var == 'og_desc')
-            {
+            if ($var == 'og_desc') {
                 $og_desc = 'Plain Packaging of Tobacco Products is therefore an important element of any comprehensive tobacco control strategy, in combination with other policies such as prohibitions on tobacco advertising and promotion and large graphic health warnings. There is clear evidence that plain packaging works as an effective demand reduction measure.';
 
                 return $og_desc;
@@ -454,20 +445,47 @@ function nav_content($menu,$var = null)
                         <div class="section-title fc-dark-brown">Navigate the Toolkit</div>
                     </div>
                     <div class="content-desc-cont col-lg-10 col-lg-offset-1">
-                        <div class="section-secondary-title fc-dark-brown">Branding, logos and other appealing features on tobacco packaging act as a form of advertising and promotion.</div>
-                        <p>It can mislead consumers about the health effects of tobacco products; and distract from health warnings on the packs.</p>
-                        <p><b>Plain Packaging of Tobacco Products</b> is therefore an important element of any comprehensive tobacco control strategy, in combination with other policies such as prohibitions on tobacco advertising and promotion and large graphic health warnings. There is clear evidence that plain packaging works as an effective demand reduction measure.</p>
-                        <p>This Toolkit is intended to provide governments and civil society organizations with the tools needed to ensure robust plain packaging policies and legislation that can stand up to Big Tobacco’s efforts to dilute, delay and defeat the measure.</p>
-                        <p>The Toolkit sets also out important technical details needed in the development of the policy and in the drafting of the legislation.</p>
+                        <div class="section-secondary-title fc-dark-brown">Branding, logos and other appealing features
+                            on tobacco packaging act as a form of advertising and promotion.
+                        </div>
+                        <p>It can mislead consumers about the health effects of tobacco products; and distract from
+                            health warnings on the packs.</p>
+                        <p><b>Plain Packaging of Tobacco Products</b> is therefore an important element of any
+                            comprehensive tobacco control strategy, in combination with other policies such as
+                            prohibitions on tobacco advertising and promotion and large graphic health warnings. There
+                            is clear evidence that plain packaging works as an effective demand reduction measure.</p>
+                        <p>This Toolkit is intended to provide governments and civil society organizations with the
+                            tools needed to ensure robust plain packaging policies and legislation that can stand up to
+                            Big Tobacco’s efforts to dilute, delay and defeat the measure.</p>
+                        <p>The Toolkit sets also out important technical details needed in the development of the policy
+                            and in the drafting of the legislation.</p>
                         <hr class="navigate-toolkit">
-                        <p><span class="section-tertiary-title">PART 1 </span>contains a series of <b>BRIEF GUIDES</b> that provide an outline of the steps a government should consider including in its development and drafting of legislation. These guides provide a step by step approach highlighting key issues and decisions that need to be considered; and signpost the detailed evidence and resources contained in the Reference Materials or elsewhere.</p>
+                        <p><span class="section-tertiary-title">PART 1 </span>contains a series of <b>BRIEF GUIDES</b>
+                            that provide an outline of the steps a government should consider including in its
+                            development and drafting of legislation. These guides provide a step by step approach
+                            highlighting key issues and decisions that need to be considered; and signpost the detailed
+                            evidence and resources contained in the Reference Materials or elsewhere.</p>
                         <hr class="navigate-toolkit">
-                        <p><span class="section-tertiary-title">PART 2 </span>contains more detailed <b>REFERENCE MATERIALS</b>. These set out all the available evidence supporting the policy as well as the opposing arguments and their flaws; there is a detailed guide on how to approach drafting the law, with examples from existing legislation and a <b>DRAFT MODEL BILL</b> that sets out the recommended elements for plain packaging legislation.</p>
-                        <p>PART 2 also includes templates for a regulatory impact assessment and a template consultation document for plain packaging, if government officials decide to undertake these recommended procedures. There are also policy briefing papers to assist with media messaging and coordination with other government departments.</p>
+                        <p><span class="section-tertiary-title">PART 2 </span>contains more detailed <b>REFERENCE
+                                MATERIALS</b>. These set out all the available evidence supporting the policy as well as
+                            the opposing arguments and their flaws; there is a detailed guide on how to approach
+                            drafting the law, with examples from existing legislation and a <b>DRAFT MODEL BILL</b> that
+                            sets out the recommended elements for plain packaging legislation.</p>
+                        <p>PART 2 also includes templates for a regulatory impact assessment and a template consultation
+                            document for plain packaging, if government officials decide to undertake these recommended
+                            procedures. There are also policy briefing papers to assist with media messaging and
+                            coordination with other government departments.</p>
                         <hr class="navigate-toolkit">
-                        <p>The World Health Organization (WHO) has produced guidance on the evidence, design and implementation of Plain Packaging of tobacco products. Government Ministries of Health should refer to the WHO guidance when considering plain packaging.</p>
-                        <p><a href="www.who.int/tobacco/publications/industry/plain-packaging-tobacco-products/en" target="_blank">www.who.int/tobacco/publications/industry/plain-packaging-tobacco-products/en</a></p>
-                        <p>This Toolkit was developed by the <b>Campaign for Tobacco Free Kids</b> to complement the WHO guidance, to provide practical assistance on policy development processes, to provide greater detail on the evidence and opposing arguments, and to assist with drafting legislation.</p>
+                        <p>The World Health Organization (WHO) has produced guidance on the evidence, design and
+                            implementation of Plain Packaging of tobacco products. Government Ministries of Health
+                            should refer to the WHO guidance when considering plain packaging.</p>
+                        <p><a href="www.who.int/tobacco/publications/industry/plain-packaging-tobacco-products/en"
+                              target="_blank">www.who.int/tobacco/publications/industry/plain-packaging-tobacco-products/en</a>
+                        </p>
+                        <p>This Toolkit was developed by the <b>Campaign for Tobacco Free Kids</b> to complement the WHO
+                            guidance, to provide practical assistance on policy development processes, to provide
+                            greater detail on the evidence and opposing arguments, and to assist with drafting
+                            legislation.</p>
                     </div>
                 </div>
             </section>
@@ -475,8 +493,7 @@ function nav_content($menu,$var = null)
             break;
 
         case 'download-toolkit':
-            if ($var == 'og_desc')
-            {
+            if ($var == 'og_desc') {
                 $og_desc = 'Plain Packaging of Tobacco Products is therefore an important element of any comprehensive tobacco control strategy, in combination with other policies such as prohibitions on tobacco advertising and promotion and large graphic health warnings. There is clear evidence that plain packaging works as an effective demand reduction measure.';
 
                 return $og_desc;
@@ -490,34 +507,67 @@ function nav_content($menu,$var = null)
                     </div>
                     <div class="content-desc-cont col-lg-10 col-lg-offset-1">
                         <div class="col-lg-8">
-                            <div><a href="<?php echo $base_url; ?>files/complete-guide.rar" target="_blank" class="fc-dark-brown"><b><u>Plain Packaging of Tobacco Products</u></b></a> (Complete Toolkit)</div>
+                            <div><a href="<?php echo $base_url; ?>files/complete-guide.rar" target="_blank"
+                                    class="fc-dark-brown"><b><u>Plain Packaging of Tobacco Products</u></b></a>
+                                (Complete Toolkit)
+                            </div>
                             <br>&nbsp;<br>
                             <div class="section-secondary-title fc-dark-brown"><i>Download Individual guides</i></div>
                             <div>
                                 <div class="section-tertiary-title fc-dark-brown">Getting Prepared</div>
-                                <div class="fc-dark-brown">Guide 1.1: <u><a href="<?php echo $base_url; ?>files/guide-1.1.pdf" download target="_blank" class="fc-dark-brown">Set Policy Objectives</a></u></div>
-                                <div class="fc-dark-brown">Guide 1.2: <u><a href="<?php echo $base_url; ?>files/guide-1.2.pdf" download target="_blank" class="fc-dark-brown">Establish Document Development and Retention Policy</a></u></div>
-                                <div class="fc-dark-brown">Guide 1.3: <u><a href="<?php echo $base_url; ?>files/guide-1.3.pdf" download target="_blank" class="fc-dark-brown">Prepare for Tobacco Industry Interference</a></u></div>
+                                <div class="fc-dark-brown">Guide 1.1: <u><a
+                                                href="<?php echo $base_url; ?>files/guide-1.1.pdf" download
+                                                target="_blank" class="fc-dark-brown">Set Policy Objectives</a></u>
+                                </div>
+                                <div class="fc-dark-brown">Guide 1.2: <u><a
+                                                href="<?php echo $base_url; ?>files/guide-1.2.pdf" download
+                                                target="_blank" class="fc-dark-brown">Establish Document Development and
+                                            Retention Policy</a></u></div>
+                                <div class="fc-dark-brown">Guide 1.3: <u><a
+                                                href="<?php echo $base_url; ?>files/guide-1.3.pdf" download
+                                                target="_blank" class="fc-dark-brown">Prepare for Tobacco Industry
+                                            Interference</a></u></div>
                             </div>
                             <br>&nbsp;<br>
                             <div>
                                 <div class="section-tertiary-title fc-dark-brown">Collecting the Evidence</div>
-                                <div class="fc-dark-brown">Guide 2.1: <u><a href="<?php echo $base_url; ?>files/guide-2.1.pdf" download target="_blank" class="fc-dark-brown">Evidence Review</a></u></div>
-                                <div class="fc-dark-brown">Guide 2.2: <u><a href="<?php echo $base_url; ?>files/guide-2.2.pdf" download target="_blank" class="fc-dark-brown">Regulatory Impact Analysis</a></u></div>
-                                <div class="fc-dark-brown">Guide 2.3: <u><a href="<?php echo $base_url; ?>files/guide-2.3.pdf" download target="_blank" class="fc-dark-brown">Stakeholder Input / Public Consultation</a></u></div>
+                                <div class="fc-dark-brown">Guide 2.1: <u><a
+                                                href="<?php echo $base_url; ?>files/guide-2.1.pdf" download
+                                                target="_blank" class="fc-dark-brown">Evidence Review</a></u></div>
+                                <div class="fc-dark-brown">Guide 2.2: <u><a
+                                                href="<?php echo $base_url; ?>files/guide-2.2.pdf" download
+                                                target="_blank" class="fc-dark-brown">Regulatory Impact Analysis</a></u>
+                                </div>
+                                <div class="fc-dark-brown">Guide 2.3: <u><a
+                                                href="<?php echo $base_url; ?>files/guide-2.3.pdf" download
+                                                target="_blank" class="fc-dark-brown">Stakeholder Input / Public
+                                            Consultation</a></u></div>
                             </div>
                             <br>&nbsp;<br>
                             <div>
                                 <div class="section-tertiary-title fc-dark-brown">Crafting the Legislation</div>
-                                <div class="fc-dark-brown">Guide 3.1: <u><a href="<?php echo $base_url; ?>files/guide-3.1.pdf" download target="_blank" class="fc-dark-brown">Make Key Policy Decisions</a></u></div>
-                                <div class="fc-dark-brown">Guide 3.2: <u><a href="<?php echo $base_url; ?>files/guide-3.2.pdf" download target="_blank" class="fc-dark-brown">Draft the Law</a></u></div>
+                                <div class="fc-dark-brown">Guide 3.1: <u><a
+                                                href="<?php echo $base_url; ?>files/guide-3.1.pdf" download
+                                                target="_blank" class="fc-dark-brown">Make Key Policy Decisions</a></u>
+                                </div>
+                                <div class="fc-dark-brown">Guide 3.2: <u><a
+                                                href="<?php echo $base_url; ?>files/guide-3.2.pdf" download
+                                                target="_blank" class="fc-dark-brown">Draft the Law</a></u></div>
                             </div>
                             <br>&nbsp;<br>
                             <div>
-                                <div class="section-tertiary-title fc-dark-brown">Procedural Steps for a Secure Policy</div>
-                                <div class="fc-dark-brown">Guide 4.1: <u><a href="<?php echo $base_url; ?>files/guide-4.1.pdf" download target="_blank" class="fc-dark-brown">Coordinate Across Government</a></u></div>
-                                <div class="fc-dark-brown">Guide 4.2: <u><a href="<?php echo $base_url; ?>files/guide-4.2.pdf" download target="_blank" class="fc-dark-brown">Obtain Legal Advice</a></u></div>
-                                <div class="fc-dark-brown">Guide 4.3: <u><a href="<?php echo $base_url; ?>files/guide-4.3.pdf" download target="_blank" class="fc-dark-brown">WTO Notification</a></u></div>
+                                <div class="section-tertiary-title fc-dark-brown">Procedural Steps for a Secure Policy
+                                </div>
+                                <div class="fc-dark-brown">Guide 4.1: <u><a
+                                                href="<?php echo $base_url; ?>files/guide-4.1.pdf" download
+                                                target="_blank" class="fc-dark-brown">Coordinate Across
+                                            Government</a></u></div>
+                                <div class="fc-dark-brown">Guide 4.2: <u><a
+                                                href="<?php echo $base_url; ?>files/guide-4.2.pdf" download
+                                                target="_blank" class="fc-dark-brown">Obtain Legal Advice</a></u></div>
+                                <div class="fc-dark-brown">Guide 4.3: <u><a
+                                                href="<?php echo $base_url; ?>files/guide-4.3.pdf" download
+                                                target="_blank" class="fc-dark-brown">WTO Notification</a></u></div>
                             </div>
                         </div>
                         <div class="col-lg-4"><img src="<?php echo $base_url ?>img/toolkit_cover.jpg"></div>
@@ -528,8 +578,7 @@ function nav_content($menu,$var = null)
             break;
 
         case 'set-policy-objectives':
-            if ($var == 'og_desc')
-            {
+            if ($var == 'og_desc') {
                 $og_desc = 'It is critical to establish clear aims and objectives for an effective policy development process of a tobacco control policy. Many domestic and international courts and tribunals apply legal tests to establish whether a measure is proportionate or justified in relation to its intended objectives. Where a government fails to formally establish those objectives, a legal challenge may be more difficult to defend.';
 
                 return $og_desc;
@@ -545,77 +594,166 @@ function nav_content($menu,$var = null)
                     <div class="content-desc-cont">
                         <div class="col-lg-10 col-lg-offset-1">
                             <div class="section-secondary-title fc-violet">1. Establish the aims and objectives</div>
-                            <p>It is critical to establish clear aims and objectives for an effective policy development process of a tobacco control policy. Many domestic and international courts and tribunals apply legal tests to establish whether a measure is  roportionate or justified in relation to its intended objectives. Where a government fails to formally establish those objectives, a legal challenge may be more difficult to defend.</p>
+                            <p>It is critical to establish clear aims and objectives for an effective policy development
+                                process of a tobacco control policy. Many domestic and international courts and
+                                tribunals apply legal tests to establish whether a measure is roportionate or justified
+                                in relation to its intended objectives. Where a government fails to formally establish
+                                those objectives, a legal challenge may be more difficult to defend.</p>
                             <p>
-                                Plain packaging serves multiple objectives within the broader context of tobacco demand reduction strategies. The broad objectives for plain packaging are to improve public health by:
-                                <ul class="custom">
-                                    <li>discouraging people from taking up smoking, or using tobacco products; and</li>
-                                    <li>encouraging people to give up smoking, and to stop using tobacco products; and</li>
-                                    <li>discouraging people who have given up smoking, or who have stopped using tobacco products, from relapsing.</li>
-                                </ul>
+                                Plain packaging serves multiple objectives within the broader context of tobacco demand
+                                reduction strategies. The broad objectives for plain packaging are to improve public
+                                health by:
+                            <ul class="custom">
+                                <li>discouraging people from taking up smoking, or using tobacco products; and</li>
+                                <li>encouraging people to give up smoking, and to stop using tobacco products; and</li>
+                                <li>discouraging people who have given up smoking, or who have stopped using tobacco
+                                    products, from relapsing.
+                                </li>
+                            </ul>
                             </p>
                         </div>
                         <div class="col-lg-10 col-lg-offset-1">
                             <div class="inner-box-style">
-                                    <div class="section-tertiary-title fc-violet">The objectives of plain packaging are achieved by</div>
-                                    <ul class="custom fc-violet">
-                                        <li><b><i>reducing</i></b> the appeal and attractiveness of tobacco products to consumers,</li>
-                                        <li><b><i>increasing</i></b> the noticeability and effectiveness of health warnings on the packaging of tobacco products,</li>
-                                        <li><b><i>reducing</i></b> the ability of the packaging of tobacco products to mislead consumers about the harmful effects of smoking or using tobacco products,</li>
-                                        <li><b><i>eliminating</i></b> the ability of tobacco packaging to advertise and promote tobacco consumption,</li>
-                                        <li><b><i>having a positive</i></b> effect on smoking-related attitudes, beliefs, intentions and behaviours or assisting with the denormalisation of tobacco products.</li>
-                                    </ul>
+                                <div class="section-tertiary-title fc-violet">The objectives of plain packaging are
+                                    achieved by
+                                </div>
+                                <ul class="custom fc-violet">
+                                    <li><b><i>reducing</i></b> the appeal and attractiveness of tobacco products to
+                                        consumers,
+                                    </li>
+                                    <li><b><i>increasing</i></b> the noticeability and effectiveness of health warnings
+                                        on the packaging of tobacco products,
+                                    </li>
+                                    <li><b><i>reducing</i></b> the ability of the packaging of tobacco products to
+                                        mislead consumers about the harmful effects of smoking or using tobacco
+                                        products,
+                                    </li>
+                                    <li><b><i>eliminating</i></b> the ability of tobacco packaging to advertise and
+                                        promote tobacco consumption,
+                                    </li>
+                                    <li><b><i>having a positive</i></b> effect on smoking-related attitudes, beliefs,
+                                        intentions and behaviours or assisting with the denormalisation of tobacco
+                                        products.
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                         <div class="col-lg-10 col-lg-offset-1">
-                            <p>This list is drawn from the objectives as expressed in the who fctc guidelines for Articles 11 and 13, Australia’s Tobacco Plain Packaging Act 2011, Ireland’s Public Health (Standardised Packaging of Tobacco) Act 2014 and the public consultation documents from the UK. Governments proposing plain packaging should consider which objectives are relevant for them but it is recommended that governments take a broad inclusive approach to the aims they wish to achieve and the means by which they should be achieved through the implementation of plain packaging.</p>
-                            <p>An important point is that these objectives are evidence-based and capable of being monitored and evaluated.</p>
+                            <p>This list is drawn from the objectives as expressed in the who fctc guidelines for
+                                Articles 11 and 13, Australia’s Tobacco Plain Packaging Act 2011, Ireland’s Public
+                                Health (Standardised Packaging of Tobacco) Act 2014 and the public consultation
+                                documents from the UK. Governments proposing plain packaging should consider which
+                                objectives are relevant for them but it is recommended that governments take a broad
+                                inclusive approach to the aims they wish to achieve and the means by which they should
+                                be achieved through the implementation of plain packaging.</p>
+                            <p>An important point is that these objectives are evidence-based and capable of being
+                                monitored and evaluated.</p>
                         </div>
                         <div class="col-lg-10 col-lg-offset-1">
-                            <div class="section-secondary-title fc-violet">2. Set out the objectives in official documents</div>
-                            <p>It is important that a government sets out the aims for the policy clearly in official, publicly available documents or publications. For example, this can be in the preamble or explanatory notes of the legislation itself (as Australia and Ireland did); in public consultation documents (as the UK and Canada have done); or in a Regulatory Impact Assessment (such as the one published by New Zealand). Links to these documents are given below.</p>
+                            <div class="section-secondary-title fc-violet">2. Set out the objectives in official
+                                documents
+                            </div>
+                            <p>It is important that a government sets out the aims for the policy clearly in official,
+                                publicly available documents or publications. For example, this can be in the preamble
+                                or explanatory notes of the legislation itself (as Australia and Ireland did); in public
+                                consultation documents (as the UK and Canada have done); or in a Regulatory Impact
+                                Assessment (such as the one published by New Zealand). Links to these documents are
+                                given below.</p>
                         </div>
                         <div class="col-lg-10 col-lg-offset-1">
-                            <div class="section-secondary-title fc-violet">3. Establish that Plain Packaging is in furtherance of the WHO FCTC</div>
-                            <p>It is also important that a government formally recognises that plain packaging is a policy recommended in the implementing guidelines for Articles 11 and 13 of the who fctc. The fact that a country is adopting a policy in furtherance of its international legal obligations can be a significant factor for courts or tribunals asked to consider that policy. Giving effect to obligations in the who fctc is stated as an objective of both Australia and New Zealand’s legislation, and is detailed in the UK consultation document.</p>
+                            <div class="section-secondary-title fc-violet">3. Establish that Plain Packaging is in
+                                furtherance of the WHO FCTC
+                            </div>
+                            <p>It is also important that a government formally recognises that plain packaging is a
+                                policy recommended in the implementing guidelines for Articles 11 and 13 of the who
+                                fctc. The fact that a country is adopting a policy in furtherance of its international
+                                legal obligations can be a significant factor for courts or tribunals asked to consider
+                                that policy. Giving effect to obligations in the who fctc is stated as an objective of
+                                both Australia and New Zealand’s legislation, and is detailed in the UK consultation
+                                document.</p>
                         </div>
                         <div class="col-lg-10 col-lg-offset-1">
-                            <div class="section-secondary-title fc-violet">4. Plain Packaging objectives work as part of a wider tobacco control policy</div>
-                            <p>It is critical for policy and legal reasons that plain packaging is part of a wider tobacco control strategy that includes a comprehensive tobacco advertising, promotion and sponsorship ( TA P S) ban, including a ban on point of sale advertising, and effective graphic health warnings in line with WHO F C T C recommendations.</p>
+                            <div class="section-secondary-title fc-violet">4. Plain Packaging objectives work as part of
+                                a wider tobacco control policy
+                            </div>
+                            <p>It is critical for policy and legal reasons that plain packaging is part of a wider
+                                tobacco control strategy that includes a comprehensive tobacco advertising, promotion
+                                and sponsorship ( TA P S) ban, including a ban on point of sale advertising, and
+                                effective graphic health warnings in line with WHO F C T C recommendations.</p>
                             <p>
-                                It is critical for policy and legal reasons that plain packaging is part of a wider tobacco control strategy that includes:
-                                <ul class="custom">
-                                    <li>a comprehensive tobacco advertising, promotion and sponsorship (TAPS) ban, including a ban on point of sale advertising, and</li>
-                                    <li>effective graphic health warnings in line with WHO FC TC recommendations.</li>
-                                </ul>
+                                It is critical for policy and legal reasons that plain packaging is part of a wider
+                                tobacco control strategy that includes:
+                            <ul class="custom">
+                                <li>a comprehensive tobacco advertising, promotion and sponsorship (TAPS) ban, including
+                                    a ban on point of sale advertising, and
+                                </li>
+                                <li>effective graphic health warnings in line with WHO FC TC recommendations.</li>
+                            </ul>
                             </p>
                             <p>The reasons for this are:</p>
                             <p>
-                                <div class="section-tertiary-title">Policy issues</div>
-                                <ul class="custom">
-                                    <li>It makes little sense to remove the advertising and promotional elements on tobacco packets but still allow advertising or promotion of tobacco products in other ways.</li>
-                                    <li>One of the key aims of plain packaging is that it increases the noticeability and effectiveness of the Graphic Health Warnings, therefore a country should either have in place, or be introducing concurrently with plain packaging, health warnings that are in line with the recommendations of WHO F C T C Article 11 guidelines – at least 50% front and back with graphic pictures.</li>
-                                    <li>In both Australia and in the EU countries that have introduced plain packaging, health warnings increased in size at the same time plain packaging was introduced.</li>
-                                </ul>
+                            <div class="section-tertiary-title">Policy issues</div>
+                            <ul class="custom">
+                                <li>It makes little sense to remove the advertising and promotional elements on tobacco
+                                    packets but still allow advertising or promotion of tobacco products in other ways.
+                                </li>
+                                <li>One of the key aims of plain packaging is that it increases the noticeability and
+                                    effectiveness of the Graphic Health Warnings, therefore a country should either have
+                                    in place, or be introducing concurrently with plain packaging, health warnings that
+                                    are in line with the recommendations of WHO F C T C Article 11 guidelines – at least
+                                    50% front and back with graphic pictures.
+                                </li>
+                                <li>In both Australia and in the EU countries that have introduced plain packaging,
+                                    health warnings increased in size at the same time plain packaging was introduced.
+                                </li>
+                            </ul>
                             </p>
                             <p>
-                                <div class="section-tertiary-title">Legal issues</div>
-                                <ul class="custom">
-                                    <li>International legal challenges, as well as many national legal jurisdictions, often include a test of whether it is necessary or justified to introduce a measure that has the potential to restrict trade in goods or commercial activity. This type of legal argument includes consideration of whether there are less restrictive alternative measures that could also meet the policy objectives. If a comprehensive TAPS ban is not in place or being introduced, a court could consider that a TAPS ban may be a less restrictive option for achieving the policy objectives than introducing plain packaging.</li>
-                                    <li>Tobacco companies could argue that that the efficacy of the policy would be undermined by other forms of advertising.</li>
-                                    <li>There is significant research evidence that shows plain packaging is effective at increasing the noticeability of health warnings. But without regulations requiring effective health warnings that are in accordance with F C T C recommendations, it would be difficult to use that to support the defence of plain packaging in a legal challenge.</li>
-                                </ul>
+                            <div class="section-tertiary-title">Legal issues</div>
+                            <ul class="custom">
+                                <li>International legal challenges, as well as many national legal jurisdictions, often
+                                    include a test of whether it is necessary or justified to introduce a measure that
+                                    has the potential to restrict trade in goods or commercial activity. This type of
+                                    legal argument includes consideration of whether there are less restrictive
+                                    alternative measures that could also meet the policy objectives. If a comprehensive
+                                    TAPS ban is not in place or being introduced, a court could consider that a TAPS ban
+                                    may be a less restrictive option for achieving the policy objectives than
+                                    introducing plain packaging.
+                                </li>
+                                <li>Tobacco companies could argue that that the efficacy of the policy would be
+                                    undermined by other forms of advertising.
+                                </li>
+                                <li>There is significant research evidence that shows plain packaging is effective at
+                                    increasing the noticeability of health warnings. But without regulations requiring
+                                    effective health warnings that are in accordance with F C T C recommendations, it
+                                    would be difficult to use that to support the defence of plain packaging in a legal
+                                    challenge.
+                                </li>
+                            </ul>
                             </p>
                         </div>
                         <div class="col-lg-10 col-lg-offset-1">
                             <div class="inner-box-style">
-                                    <div class="section-tertiary-title fc-brown">Key resources</div>
-                                    <ul class="custom">
-                                        <li>WHO publication Plain Packaging of Tobacco Products – Evidence, Design and Implementation: <a class="fc-black" href="www.who.int/tobacco/publications/industry/plain-packaging-tobaccoproducts/en/" target="_blank"><b><i>www.who.int/tobacco/publications/industry/plain-packaging-tobaccoproducts/en/</i></b></a></li>
-                                        <li>Australian legislation that sets out the objectives of the law <a class="fc-black" target="_blank" href="www.comlaw.gov.au/Details/C2013C00190"><b><i>www.comlaw.gov.au/Details/C2013C00190</i></b></a></li>
-                                        <li>UK 2012 consultation that describes the aims and objectives of the proposed policy: <a class="fc-black" target="_blank" href="www.gov.uk/government/uploads/system/uploads/attachment_data/file/170568/dh_133575.pdf"><b><i>www.gov.uk/government/uploads/system/uploads/attachment_data/file/170568/dh_133575.pdf</i></b></a></li>
-                                        <li>New Zealand’s Regulatory Impact Assessment from 2012 sets out the objectives for the proposal: <a class="fc-black" target="_blank" href="www.health.govt.nz/about-ministry/legislation-and-regulation/regulatory-impact-statements/plain-packaging-tobacco-productsregulatory-impact-statement-consultation-phase"><b><i>www.health.govt.nz/about-ministry/legislation-and-regulation/regulatory-impact-statements/plain-packaging-tobacco-productsregulatory-impact-statement-consultation-phase</i></b></a></li>
-                                    </ul>
+                                <div class="section-tertiary-title fc-brown">Key resources</div>
+                                <ul class="custom">
+                                    <li>WHO publication Plain Packaging of Tobacco Products – Evidence, Design and
+                                        Implementation: <a class="fc-black"
+                                                           href="www.who.int/tobacco/publications/industry/plain-packaging-tobaccoproducts/en/"
+                                                           target="_blank"><b><i>www.who.int/tobacco/publications/industry/plain-packaging-tobaccoproducts/en/</i></b></a>
+                                    </li>
+                                    <li>Australian legislation that sets out the objectives of the law <a
+                                                class="fc-black" target="_blank"
+                                                href="www.comlaw.gov.au/Details/C2013C00190"><b><i>www.comlaw.gov.au/Details/C2013C00190</i></b></a>
+                                    </li>
+                                    <li>UK 2012 consultation that describes the aims and objectives of the proposed
+                                        policy: <a class="fc-black" target="_blank"
+                                                   href="www.gov.uk/government/uploads/system/uploads/attachment_data/file/170568/dh_133575.pdf"><b><i>www.gov.uk/government/uploads/system/uploads/attachment_data/file/170568/dh_133575.pdf</i></b></a>
+                                    </li>
+                                    <li>New Zealand’s Regulatory Impact Assessment from 2012 sets out the objectives for
+                                        the proposal: <a class="fc-black" target="_blank"
+                                                         href="www.health.govt.nz/about-ministry/legislation-and-regulation/regulatory-impact-statements/plain-packaging-tobacco-productsregulatory-impact-statement-consultation-phase"><b><i>www.health.govt.nz/about-ministry/legislation-and-regulation/regulatory-impact-statements/plain-packaging-tobacco-productsregulatory-impact-statement-consultation-phase</i></b></a>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                     </div>
@@ -628,20 +766,24 @@ function nav_content($menu,$var = null)
                         <img class="pagination-url-back-img" src="<?php echo $base_url; ?>img/scroll-page.png"> Guide 1.1 Set the Policy Objectives</a> -->
                     </div>
                     <div class="col-xs-6 pagination-url-forward">
-                        <a href="<?php echo $base_url; ?>getting-prepared/establish-document-development-retention">Guide 1.2 Establish Document Development and Retention
-                        <img class="pagination-url-forward-img" src="<?php echo $base_url; ?>img/scroll-page.png"> </a>
+                        <a href="<?php echo $base_url; ?>getting-prepared/establish-document-development-retention">Guide
+                            1.2 Establish Document Development and Retention
+                            <img class="pagination-url-forward-img" src="<?php echo $base_url; ?>img/scroll-page.png">
+                        </a>
                     </div>
                 </div>
             </div>
             <div class="pagination-arrow mobile container">
                 <div class="col-lg-12">
                     <div class="col-xs-12 pagination-url-back">
-                       <!--  <a href="<?php echo $base_url ?>">
+                        <!--  <a href="<?php echo $base_url ?>">
                         <img class="pagination-url-back-img" src="<?php echo $base_url; ?>img/scroll-page.png"><br>Guide 1.1 Set the Policy Objectives</a> -->
                     </div>
                     <div class="col-xs-12 pagination-url-forward">
                         <a href="<?php echo $base_url; ?>getting-prepared/establish-document-development-retention">
-                        Guide 1.2 Establish Document Development and Retention<br><img class="pagination-url-forward-img" src="<?php echo $base_url; ?>img/scroll-page.png"> </a>
+                            Guide 1.2 Establish Document Development and Retention<br><img
+                                    class="pagination-url-forward-img"
+                                    src="<?php echo $base_url; ?>img/scroll-page.png"> </a>
                     </div>
                 </div>
             </div>
@@ -649,8 +791,7 @@ function nav_content($menu,$var = null)
             break;
 
         case 'establish-document-development-retention':
-            if ($var == 'og_desc')
-            {
+            if ($var == 'og_desc') {
                 $og_desc = 'It is important that a comprehensive document development and retention policy, in line with government practice, is in place so that the policy development processes can be fully demonstrated if the measure is legally challenged.';
 
                 return $og_desc;
@@ -666,32 +807,91 @@ function nav_content($menu,$var = null)
                     <div class="content-desc-cont">
                         <div class="col-lg-10 col-lg-offset-1">
                             <p>
-                                It is important that a comprehensive document development and retention policy, in line with government practice, is in place so that the policy development processes can be fully demonstrated if the measure is legally challenged.
+                                It is important that a comprehensive document development and retention policy, in line
+                                with government practice, is in place so that the policy development processes can be
+                                fully demonstrated if the measure is legally challenged.
                             </p>
                             <div class="inner-box-style">
-                                <div class="section-tertiary-title fc-violet">Each step of the policy development and drafting process should be recorded and documented. This means keeping a careful record of:</div>
+                                <div class="section-tertiary-title fc-violet">Each step of the policy development and
+                                    drafting process should be recorded and documented. This means keeping a careful
+                                    record of:
+                                </div>
                                 <ol class="custom">
-                                    <li>Key Ministry of Health meetings where the policy is discussed or decisions are taken on aspects of the policy;</li>
-                                    <li>The reasons for policy decisions taken about any aspect of the policy (see for instance the key initial policy development decisions outlined in <a href="<?php echo $base_url; ?>crafting-the-legislation/make-key-policy-decisions"><b class="fc-violet">Guide 3.1</b></a>);</li>
-                                    <li>Communications or meetings with other government departments (see <a href="<?php echo $base_url; ?>procedural-steps-for-a-secure-policy/coordinate-across-government"><b class="fc-violet">Guide 4.1</b></a>)</li>
-                                    <li>Communications or meetings with external public health bodies, experts or civil society organisations with documentation of attendees;</li>
-                                    <li>Interactions with industry or industry representatives outside of public consultations with documentation of attendees*;</li>
-                                    <li>All the evidence that has been considered as part of the evidence review, when it was considered and by whom;</li>
-                                    <li>Any external written submissions received from organisations or industry whether as part of the a consultation or otherwise;</li>
-                                    <li>Both internal and external correspondence including emails relating to the policy.</li>
+                                    <li>Key Ministry of Health meetings where the policy is discussed or decisions are
+                                        taken on aspects of the policy;
+                                    </li>
+                                    <li>The reasons for policy decisions taken about any aspect of the policy (see for
+                                        instance the key initial policy development decisions outlined in <a
+                                                href="<?php echo $base_url; ?>crafting-the-legislation/make-key-policy-decisions"><b
+                                                    class="fc-violet">Guide 3.1</b></a>);
+                                    </li>
+                                    <li>Communications or meetings with other government departments (see <a
+                                                href="<?php echo $base_url; ?>procedural-steps-for-a-secure-policy/coordinate-across-government"><b
+                                                    class="fc-violet">Guide 4.1</b></a>)
+                                    </li>
+                                    <li>Communications or meetings with external public health bodies, experts or civil
+                                        society organisations with documentation of attendees;
+                                    </li>
+                                    <li>Interactions with industry or industry representatives outside of public
+                                        consultations with documentation of attendees*;
+                                    </li>
+                                    <li>All the evidence that has been considered as part of the evidence review, when
+                                        it was considered and by whom;
+                                    </li>
+                                    <li>Any external written submissions received from organisations or industry whether
+                                        as part of the a consultation or otherwise;
+                                    </li>
+                                    <li>Both internal and external correspondence including emails relating to the
+                                        policy.
+                                    </li>
                                 </ol>
-                                <p class="table-note"><i>*Meetings with the tobacco industry or industry representatives should only take place, and be conducted, in line with the WHO FCTC Article 5.3 and the FCTC Article 5.3 guidelines so as to protect tobacco control polices from commercial and other vested interests.</i></p>
+                                <p class="table-note"><i>*Meetings with the tobacco industry or industry representatives
+                                        should only take place, and be conducted, in line with the WHO FCTC Article 5.3
+                                        and the FCTC Article 5.3 guidelines so as to protect tobacco control polices
+                                        from commercial and other vested interests.</i></p>
                             </div>
-                            <p>Internal government discussions between different departments are an important part of the policy development process so demonstrating that they took place can show proper due process. Records of meetings should include agendas and minutes. A regulatory impact analysis (<i>see</i> <b class="fc-violet">Guide 2.2</b>) can act as a useful part of the record of policy development.</p>
-                            <p><b class="fc-violet">LEGAL CHALLENGES</b> to a tobacco control policy, in both national courts and international tribunals, can often include a claim that due process has not been adhered to or that effective consideration of all the relevant evidence and issues was not had before a final decision was made. It is important that a government can demonstrate the steps it has taken.</p>
-                            <p><span class="fc-violet"><b>IN THE INTERNATIONAL INVESTMENT ARBITRATION</b></span> claim brought by Philip Morris International against two of Uruguay’s tobacco control laws2, the arbitrator appointed by Philip Morris, Gary Born, gave a dissenting opinion on certain issues where he disagreed with the outcome of the tribunal award (<i>see</i> <span class="fc-violet"><b>Guide 4.2</b></span>). Gary Born’s dissenting opinion was that Uruguay’s Single Presentation Requirement (that only permits each brand to have a single variant) was adopted without due process or proper consideration of the evidence and was therefore arbitrary and in breach of Uruguay’s Bilateral Investment Treaty with Switzerland:</p>
-                            <p class="p-blockquote">“In my view, <b>the record does not support</b> a conclusion that the single presentation requirement … was preceded by any meaningful internal study, discussions or deliberations at the Ministry of Public Health, or by other Uruguayan authorities…</p>
-                            <p class="p-blockquote">It is significant that the evidentiary record contains no minutes, agendas, protocols, preparatory materials, memoranda, letters, emails or other documentary evidence suggesting that any meetings, conference calls or other interactions concerning the single presentation requirement ever occurred.” [108 – 109] (emphasis added)</p>
-                            <p>The position of the Uruguayan Government was that the policy was properly considered before being adopted and the majority of the tribunal agreed, but the fact that one of the three arbitrators was prepared to find a breach of the Investment Treaty that could have led to huge damages being awarded is a reminder to Governments of the need to follow due process and <b>keep a record of that process.</b></p>
+                            <p>Internal government discussions between different departments are an important part of
+                                the policy development process so demonstrating that they took place can show proper due
+                                process. Records of meetings should include agendas and minutes. A regulatory impact
+                                analysis (<i>see</i> <b class="fc-violet">Guide 2.2</b>) can act as a useful part of the
+                                record of policy development.</p>
+                            <p><b class="fc-violet">LEGAL CHALLENGES</b> to a tobacco control policy, in both national
+                                courts and international tribunals, can often include a claim that due process has not
+                                been adhered to or that effective consideration of all the relevant evidence and issues
+                                was not had before a final decision was made. It is important that a government can
+                                demonstrate the steps it has taken.</p>
+                            <p><span class="fc-violet"><b>IN THE INTERNATIONAL INVESTMENT ARBITRATION</b></span> claim
+                                brought by Philip Morris International against two of Uruguay’s tobacco control laws2,
+                                the arbitrator appointed by Philip Morris, Gary Born, gave a dissenting opinion on
+                                certain issues where he disagreed with the outcome of the tribunal award (<i>see</i>
+                                <span class="fc-violet"><b>Guide 4.2</b></span>). Gary Born’s dissenting opinion was
+                                that Uruguay’s Single Presentation Requirement (that only permits each brand to have a
+                                single variant) was adopted without due process or proper consideration of the evidence
+                                and was therefore arbitrary and in breach of Uruguay’s Bilateral Investment Treaty with
+                                Switzerland:</p>
+                            <p class="p-blockquote">“In my view, <b>the record does not support</b> a conclusion that
+                                the single presentation requirement … was preceded by any meaningful internal study,
+                                discussions or deliberations at the Ministry of Public Health, or by other Uruguayan
+                                authorities…</p>
+                            <p class="p-blockquote">It is significant that the evidentiary record contains no minutes,
+                                agendas, protocols, preparatory materials, memoranda, letters, emails or other
+                                documentary evidence suggesting that any meetings, conference calls or other
+                                interactions concerning the single presentation requirement ever occurred.” [108 – 109]
+                                (emphasis added)</p>
+                            <p>The position of the Uruguayan Government was that the policy was properly considered
+                                before being adopted and the majority of the tribunal agreed, but the fact that one of
+                                the three arbitrators was prepared to find a breach of the Investment Treaty that could
+                                have led to huge damages being awarded is a reminder to Governments of the need to
+                                follow due process and <b>keep a record of that process.</b></p>
                         </div>
                         <div class="col-lg-10 col-lg-offset-1">
                             <div class="section-secondary-title fc-violet">Freedom of information requests</div>
-                            <p>In addition, governments need to be aware that tobacco companies have lodged a significant number of freedom-of-information requests in countries considering plain packaging. These requests can be designed to tie up government resources and to be ‘fishing’ exercises in preparation for legal challenges. Governments should consider strategies to prepare themselves to respond to such requests, by developing an approach to document management from the outset.</p>
+                            <p>In addition, governments need to be aware that tobacco companies have lodged a
+                                significant number of freedom-of-information requests in countries considering plain
+                                packaging. These requests can be designed to tie up government resources and to be
+                                ‘fishing’ exercises in preparation for legal challenges. Governments should consider
+                                strategies to prepare themselves to respond to such requests, by developing an approach
+                                to document management from the outset.</p>
                         </div>
                     </div>
                 </div>
@@ -700,20 +900,31 @@ function nav_content($menu,$var = null)
             <div class="pagination-arrow desktop container">
                 <div class="col-lg-12">
                     <div class="col-xs-6 pagination-url-back">
-                        <a href="<?php echo $base_url ?>getting-prepared/set-policy-objectives"><img class="pagination-url-back-img" src="<?php echo $base_url; ?>img/scroll-page.png"> Guide 1.1 Set the Policy Objectives</a>
+                        <a href="<?php echo $base_url ?>getting-prepared/set-policy-objectives"><img
+                                    class="pagination-url-back-img" src="<?php echo $base_url; ?>img/scroll-page.png">
+                            Guide 1.1 Set the Policy Objectives</a>
                     </div>
                     <div class="col-xs-6 pagination-url-forward">
-                        <a href="<?php echo $base_url; ?>getting-prepared/prepare-tobacco-industry-interference">Guide 1.3 Prepare for Tobacco Industry Interference<img class="pagination-url-forward-img" src="<?php echo $base_url; ?>img/scroll-page.png"> </a>
+                        <a href="<?php echo $base_url; ?>getting-prepared/prepare-tobacco-industry-interference">Guide
+                            1.3 Prepare for Tobacco Industry Interference<img class="pagination-url-forward-img"
+                                                                              src="<?php echo $base_url; ?>img/scroll-page.png">
+                        </a>
                     </div>
                 </div>
             </div>
             <div class="pagination-arrow mobile container">
                 <div class="col-lg-12">
                     <div class="col-xs-12 pagination-url-back">
-                        <a href="<?php echo $base_url ?>getting-prepared/set-policy-objectives"><img class="pagination-url-back-img" src="<?php echo $base_url; ?>img/scroll-page.png"><br>Guide 1.1 Set the Policy Objectives</a>
+                        <a href="<?php echo $base_url ?>getting-prepared/set-policy-objectives"><img
+                                    class="pagination-url-back-img"
+                                    src="<?php echo $base_url; ?>img/scroll-page.png"><br>Guide 1.1 Set the Policy
+                            Objectives</a>
                     </div>
                     <div class="col-xs-12 pagination-url-forward">
-                        <a href="<?php echo $base_url; ?>getting-prepared/prepare-tobacco-industry-interference">Guide 1.3 Prepare for Tobacco Industry Interference<br><img class="pagination-url-forward-img" src="<?php echo $base_url; ?>img/scroll-page.png"> </a>
+                        <a href="<?php echo $base_url; ?>getting-prepared/prepare-tobacco-industry-interference">Guide
+                            1.3 Prepare for Tobacco Industry Interference<br><img class="pagination-url-forward-img"
+                                                                                  src="<?php echo $base_url; ?>img/scroll-page.png">
+                        </a>
                     </div>
                 </div>
             </div>
@@ -721,8 +932,7 @@ function nav_content($menu,$var = null)
             break;
 
         case 'prepare-tobacco-industry-interference':
-            if ($var == 'og_desc')
-            {
+            if ($var == 'og_desc') {
                 $og_desc = 'Details and examples of the media campaigns and interference tactics used by the tobacco industry are given in the OPPOSING ARGUMENTS section of the Reference Materials. That section demonstrates how the industry arguments are flawed, often lacking any rational basis, and sets out the counter arguments that can be used to combat the industry campaigns. That Reference Section highlights the industry’s use of experts that lack independence and whose evidence does not meet basic standards; and the fact that the industry has never disclosed any of its own consumer research into the likely impacts of plain packaging.';
 
                 return $og_desc;
@@ -738,171 +948,320 @@ function nav_content($menu,$var = null)
                     <div class="content-desc-cont">
                         <div class="col-lg-10 col-lg-offset-1">
                             <p>
-                                Details and examples of the media campaigns and interference tactics used by the tobacco industry are given in the <a class="fc-violet" href="<?php echo $base_url; ?>opposing-arguments-and-how-to-counter-them"><b>Reference Section J: OPPOSING ARGUMENTS AND EVIDENCE</b></a>. That section demonstrates how the industry arguments are flawed, often lacking any rational basis, and sets out the counter arguments that can be used to combat the industry campaigns. That Reference Section highlights the industry’s use of experts that lack independence and whose evidence does not meet basic standards; and the fact that the industry has never disclosed any of its own consumer research into the likely impacts of plain packaging.
+                                Details and examples of the media campaigns and interference tactics used by the tobacco
+                                industry are given in the <a class="fc-violet"
+                                                             href="<?php echo $base_url; ?>opposing-arguments-and-how-to-counter-them"><b>Reference
+                                        Section J: OPPOSING ARGUMENTS AND EVIDENCE</b></a>. That section demonstrates
+                                how the industry arguments are flawed, often lacking any rational basis, and sets out
+                                the counter arguments that can be used to combat the industry campaigns. That Reference
+                                Section highlights the industry’s use of experts that lack independence and whose
+                                evidence does not meet basic standards; and the fact that the industry has never
+                                disclosed any of its own consumer research into the likely impacts of plain packaging.
                             </p>
-                            <p>In addition, the <a class="fc-violet" href="<?php echo $base_url; ?>policy-tools/policy-briefs"><b>POLICY BREIFING PAPERS</b> in <b>Reference Section A</b></a> includes a short paper which sets out the main counter arguments to each of the key arguments used by the industry.</p>
+                            <p>In addition, the <a class="fc-violet"
+                                                   href="<?php echo $base_url; ?>policy-tools/policy-briefs"><b>POLICY
+                                        BREIFING PAPERS</b> in <b>Reference Section A</b></a> includes a short paper
+                                which sets out the main counter arguments to each of the key arguments used by the
+                                industry.</p>
                         </div>
                         <div class="col-lg-10 col-lg-offset-1">
-                            <div class="section-secondary-title fc-violet">1. The tobacco industry coordinates aggressive and well-funded campaigns</div>
+                            <div class="section-secondary-title fc-violet">1. The tobacco industry coordinates
+                                aggressive and well-funded campaigns
+                            </div>
                             <p>
-                                These campaigns oppose plain packaging in every country that has proposed or considered the policy. These campaigns go much further than the typical opposition to tobacco control measures. With plain packaging, the industry campaigns have used:
-                                <ul class="custom">
-                                    <li>full page advertisements in national newspapers</li>
-                                    <li>billboard campaigns,</li>
-                                    <li>dedicated websites setup to promulgate the tobacco industry’s views,</li>
-                                    <li>social media,</li>
-                                    <li>short films,</li>
-                                    <li>strong political lobbying at all levels,</li>
-                                    <li>street level campaigning and surveys,</li>
-                                    <li>heavy use of proxy organisations or front groups , and</li>
-                                    <li>in Sweden, JTI even set up a whole fake super market at a political convention, where all the goods (coffee, bread, milk etc.) were in plain packaging.</li>
-                                </ul>
+                                These campaigns oppose plain packaging in every country that has proposed or considered
+                                the policy. These campaigns go much further than the typical opposition to tobacco
+                                control measures. With plain packaging, the industry campaigns have used:
+                            <ul class="custom">
+                                <li>full page advertisements in national newspapers</li>
+                                <li>billboard campaigns,</li>
+                                <li>dedicated websites setup to promulgate the tobacco industry’s views,</li>
+                                <li>social media,</li>
+                                <li>short films,</li>
+                                <li>strong political lobbying at all levels,</li>
+                                <li>street level campaigning and surveys,</li>
+                                <li>heavy use of proxy organisations or front groups , and</li>
+                                <li>in Sweden, JTI even set up a whole fake super market at a political convention,
+                                    where all the goods (coffee, bread, milk etc.) were in plain packaging.
+                                </li>
+                            </ul>
                             </p>
-                            <p>These campaigns have the potential to be effective in swaying public opinion and some parts of government. <b>The reason the tobacco industry is so vehemently opposed to plain packaging is because the policy works.</b></p>
+                            <p>These campaigns have the potential to be effective in swaying public opinion and some
+                                parts of government. <b>The reason the tobacco industry is so vehemently opposed to
+                                    plain packaging is because the policy works.</b></p>
                         </div>
                         <div class="col-lg-10 col-lg-offset-1">
-                            <div class="section-secondary-title fc-violet">2. The tobacco industry’s flawed arguments</div>
-                            <p>The tobacco industry’s arguments opposing plain packaging are now well established and vary little from one country to another although the focus can be different. For instance in France, the tobacco retailers (backed by the industry) generated much of the opposition with the argument that it would lead to job losses. Where as in Slovenia, the argument that it would increase illicit trade and fund criminal gangs was used more. But the industry has no hesitation in recycling arguments in multiple jurisdictions, even after they have been wholly discredited elsewhere.</p>
+                            <div class="section-secondary-title fc-violet">2. The tobacco industry’s flawed arguments
+                            </div>
+                            <p>The tobacco industry’s arguments opposing plain packaging are now well established and
+                                vary little from one country to another although the focus can be different. For
+                                instance in France, the tobacco retailers (backed by the industry) generated much of the
+                                opposition with the argument that it would lead to job losses. Where as in Slovenia, the
+                                argument that it would increase illicit trade and fund criminal gangs was used more. But
+                                the industry has no hesitation in recycling arguments in multiple jurisdictions, even
+                                after they have been wholly discredited elsewhere.</p>
                             <div class="inner-box-style">
-                                <div class="section-tertiary-title fc-violet">Commonly used tobacco industry arguments</div>
+                                <div class="section-tertiary-title fc-violet">Commonly used tobacco industry arguments
+                                </div>
                                 <ul class="custom">
-                                    <li><b class="fc-violet">There is no evidence</b> that plain packaging will work</li>
-                                    <li><b class="fc-violet">It will increase the illicit trade</b> in tobacco – because plain packs are easier to counterfeit</li>
-                                    <li><b class="fc-violet">It is the start of a slippery slope</b> or domino effect – leading to plain packaging of other products</li>
-                                    <li><b class="fc-violet">It will breach intellectual property laws</b> – leading to huge compensation claims</li>
-                                    <li><b class="fc-violet">It will lead to price reductions</b> – thereby increasing consumption</li>
-                                    <li><b class="fc-violet">It will increase costs for small retail businesses</b> – by increasing consumer transaction times</li>
-                                    <li><b class="fc-violet">It will cause job losses</b> in domestic tobacco manufacturing industries</li>
+                                    <li><b class="fc-violet">There is no evidence</b> that plain packaging will work
+                                    </li>
+                                    <li><b class="fc-violet">It will increase the illicit trade</b> in tobacco – because
+                                        plain packs are easier to counterfeit
+                                    </li>
+                                    <li><b class="fc-violet">It is the start of a slippery slope</b> or domino effect –
+                                        leading to plain packaging of other products
+                                    </li>
+                                    <li><b class="fc-violet">It will breach intellectual property laws</b> – leading to
+                                        huge compensation claims
+                                    </li>
+                                    <li><b class="fc-violet">It will lead to price reductions</b> – thereby increasing
+                                        consumption
+                                    </li>
+                                    <li><b class="fc-violet">It will increase costs for small retail businesses</b> – by
+                                        increasing consumer transaction times
+                                    </li>
+                                    <li><b class="fc-violet">It will cause job losses</b> in domestic tobacco
+                                        manufacturing industries
+                                    </li>
                                 </ul>
                             </div>
-                            <p>These arguments are largely made by mere assertion, with no evidence to back them up, and can be easily refuted by using available evidence and judgments from decided legal cases. See the <a href="<?php echo $base_url; ?>policy-tools/policy-briefs" class="fc-violet"><b>POLICY BREIFING PAPERS</b> in <b>Reference Section A</b></a> for a series of short counter arguments to the industry’s claims.</p>
-                            <p>To date, no empirical studies conducted by, or on behalf of, tobacco companies have been published. The tobacco companies have refused to disclose any of their own consumer research or behavioural studies into the impacts of plain packaging.</p>
-                            <p>Where the tobacco companies have sought to use experts to support their arguments, for instance in the High Court legal challenge to the UK plain packaging regulations, the Court strongly criticised the experts describing their evidence as <i>“not peer reviewed”</i>, <i>“frequently unverifiable”</i> and that it failed to <i>“accord with internationally recognised best practice”</i>.</p>
+                            <p>These arguments are largely made by mere assertion, with no evidence to back them up, and
+                                can be easily refuted by using available evidence and judgments from decided legal
+                                cases. See the <a href="<?php echo $base_url; ?>policy-tools/policy-briefs"
+                                                  class="fc-violet"><b>POLICY BREIFING PAPERS</b> in <b>Reference
+                                        Section A</b></a> for a series of short counter arguments to the industry’s
+                                claims.</p>
+                            <p>To date, no empirical studies conducted by, or on behalf of, tobacco companies have been
+                                published. The tobacco companies have refused to disclose any of their own consumer
+                                research or behavioural studies into the impacts of plain packaging.</p>
+                            <p>Where the tobacco companies have sought to use experts to support their arguments, for
+                                instance in the High Court legal challenge to the UK plain packaging regulations, the
+                                Court strongly criticised the experts describing their evidence as <i>“not peer
+                                    reviewed”</i>, <i>“frequently unverifiable”</i> and that it failed to <i>“accord
+                                    with internationally recognised best practice”</i>.</p>
                         </div>
                         <div class="col-lg-10 col-lg-offset-1">
                             <div class="section-secondary-title fc-violet">3. What can be done to prepare?</div>
-                            <p>An important aspect of progressing any tobacco control policy and in particular plain packaging, is for government and civil society to prepare a strategy to both pre-empt and respond to tobacco industry interference:</p>
+                            <p>An important aspect of progressing any tobacco control policy and in particular plain
+                                packaging, is for government and civil society to prepare a strategy to both pre-empt
+                                and respond to tobacco industry interference:</p>
                             <p>
-                                <ul class="custom">
-                                    <li><b class="fc-violet">Anticipate the likely arguments</b> by the tobacco industry and prepare the counter arguments at an early stage.</li>
-                                    <li><b class="fc-violet">Directly refuting</b> the industry arguments before the industry has a chance to promulgate them.</li>
-                                    <li><b class="fc-violet">Use pre-prepared briefing papers</b> covering key issues for the media, other government departments and interested members of parliament (<i>see</i> the <a class="fc-violet" href="<?php echo $base_url; ?>policy-tools/policy-briefs"><b>POLICY BRIEFING PAPERS</b> in <b>Reference Section A</b></a>.</li>
-                                    <li><b class="fc-violet">Generate positive media</b> campaigns which include information about the global movement towards adopting the policy and the positive results from Australia.</li>
-                                    <li><span class="fc-violet"><b>Engage early with other government departments</b> (<i>see</i> <b>GUIDE 4.1</b>: Coordinate across government)</span></li>
-                                    <li>Endorsements. Use of local and international experts, including prominent doctors, to speak to the media and other government departments about tobacco harms and the real facts about plain packaging</li>
-                                    <li>Civil society media campaign supporting the policy, setting out the facts and shining a light on the industry’s tactics.</li>
-                                </ul>
+                            <ul class="custom">
+                                <li><b class="fc-violet">Anticipate the likely arguments</b> by the tobacco industry and
+                                    prepare the counter arguments at an early stage.
+                                </li>
+                                <li><b class="fc-violet">Directly refuting</b> the industry arguments before the
+                                    industry has a chance to promulgate them.
+                                </li>
+                                <li><b class="fc-violet">Use pre-prepared briefing papers</b> covering key issues for
+                                    the media, other government departments and interested members of parliament
+                                    (<i>see</i> the <a class="fc-violet"
+                                                       href="<?php echo $base_url; ?>policy-tools/policy-briefs"><b>POLICY
+                                            BRIEFING PAPERS</b> in <b>Reference Section A</b></a>.
+                                </li>
+                                <li><b class="fc-violet">Generate positive media</b> campaigns which include information
+                                    about the global movement towards adopting the policy and the positive results from
+                                    Australia.
+                                </li>
+                                <li><span class="fc-violet"><b>Engage early with other government departments</b> (<i>see</i> <b>GUIDE 4.1</b>: Coordinate across government)</span>
+                                </li>
+                                <li>Endorsements. Use of local and international experts, including prominent doctors,
+                                    to speak to the media and other government departments about tobacco harms and the
+                                    real facts about plain packaging
+                                </li>
+                                <li>Civil society media campaign supporting the policy, setting out the facts and
+                                    shining a light on the industry’s tactics.
+                                </li>
+                            </ul>
                             </p>
                         </div>
                         <div class="col-lg-10 col-lg-offset-1">
-                            <div class="section-secondary-title fc-violet">4. Civil society organisations, medical associations and public health bodies</div>
-                            <p>These bodies can play an important role in countering the arguments put forward by the tobacco industry by organising positive publicity campaigns to promote plain packaging in a way that it may not be possible for government to do while it is going through the policy development and decision making process. Medical and public health bodies can make their views known about the evidence and provide <b><i>credible</i></b> experts to speak with the media. Organisations can pre-empt the tobacco industry opposition by engaging with the media ahead of any government announcement to provide the real facts in anticipation of the false opposing arguments the industry and its front groups will put forward.</p>
-                            <p>Cancer Research UK led the campaign to promote plain packaging in the UK. A useful insight into civil society action can be found on their blog post which provides 13 steps that shaped the successful campaign including sending flashy cigarette packs to MPs and attending political party conferences 2.</p>
+                            <div class="section-secondary-title fc-violet">4. Civil society organisations, medical
+                                associations and public health bodies
+                            </div>
+                            <p>These bodies can play an important role in countering the arguments put forward by the
+                                tobacco industry by organising positive publicity campaigns to promote plain packaging
+                                in a way that it may not be possible for government to do while it is going through the
+                                policy development and decision making process. Medical and public health bodies can
+                                make their views known about the evidence and provide <b><i>credible</i></b> experts to
+                                speak with the media. Organisations can pre-empt the tobacco industry opposition by
+                                engaging with the media ahead of any government announcement to provide the real facts
+                                in anticipation of the false opposing arguments the industry and its front groups will
+                                put forward.</p>
+                            <p>Cancer Research UK led the campaign to promote plain packaging in the UK. A useful
+                                insight into civil society action can be found on their blog post which provides 13
+                                steps that shaped the successful campaign including sending flashy cigarette packs to
+                                MPs and attending political party conferences 2.</p>
                         </div>
                         <div class="col-lg-10 col-lg-offset-1">
-                            <div class="section-secondary-title fc-violet">5. Use the evidence to refute industry arguments</div>
-                            <p>The post-implementation evidence from Australia as to what actually happened after implementation is extremely useful in combatting many of the false tobacco industry claims about the negative impacts of the plain packaging.</p>
+                            <div class="section-secondary-title fc-violet">5. Use the evidence to refute industry
+                                arguments
+                            </div>
+                            <p>The post-implementation evidence from Australia as to what actually happened after
+                                implementation is extremely useful in combatting many of the false tobacco industry
+                                claims about the negative impacts of the plain packaging.</p>
                             <table class="table table-inner table-condensed table-responsive">
                                 <thead class="bg-brown">
-                                    <tr>
-                                        <th class="col-lg-5">
-                                            Industry claims before implementation
-                                        </th>
-                                        <th class="col-lg-7">
-                                            Australia’s post–implementation evidence
-                                        </th>
-                                    </tr>
+                                <tr>
+                                    <th class="col-lg-5">
+                                        Industry claims before implementation
+                                    </th>
+                                    <th class="col-lg-7">
+                                        Australia’s post–implementation evidence
+                                    </th>
+                                </tr>
                                 </thead>
                                 <tbody>
-                                    <tr class="table-bg-light-blue">
-                                        <td>
-                                            <b>Retailer confusion and loss of trade</b>
-                                        </td>
-                                        <td>
-                                            Quick adaptation by retailers – consumer transaction times actually reduced after implementation and there was no decline in use of small retailers.
-                                        </td>
-                                    </tr>
-                                    <tr class="table-bg-light-brown">
-                                        <td>
-                                            <b>Explosion in use of illicit tobacco</b>
-                                        </td>
-                                        <td>
-                                            No changes detected pre vs post in major indicators.No counterfeit plain packs discovered. Reduced use of unpackaged tobacco.
-                                        </td>
-                                    </tr>
-                                    <tr class="table-bg-light-blue">
-                                        <td>
-                                            <b>Reduced tobacco prices</b>
-                                        </td>
-                                        <td>
-                                            Tobacco prices increased across all sectors
-                                        </td>
-                                    </tr>
-                                    <tr class="table-bg-light-brown">
-                                        <td>
-                                            <b>Increased consumption</b>
-                                        </td>
-                                        <td>
-                                            Continuing decline in overall consumption and significant reductions in smoking prevalence rates.
-                                        </td>
-                                    </tr>
+                                <tr class="table-bg-light-blue">
+                                    <td>
+                                        <b>Retailer confusion and loss of trade</b>
+                                    </td>
+                                    <td>
+                                        Quick adaptation by retailers – consumer transaction times actually reduced
+                                        after implementation and there was no decline in use of small retailers.
+                                    </td>
+                                </tr>
+                                <tr class="table-bg-light-brown">
+                                    <td>
+                                        <b>Explosion in use of illicit tobacco</b>
+                                    </td>
+                                    <td>
+                                        No changes detected pre vs post in major indicators.No counterfeit plain packs
+                                        discovered. Reduced use of unpackaged tobacco.
+                                    </td>
+                                </tr>
+                                <tr class="table-bg-light-blue">
+                                    <td>
+                                        <b>Reduced tobacco prices</b>
+                                    </td>
+                                    <td>
+                                        Tobacco prices increased across all sectors
+                                    </td>
+                                </tr>
+                                <tr class="table-bg-light-brown">
+                                    <td>
+                                        <b>Increased consumption</b>
+                                    </td>
+                                    <td>
+                                        Continuing decline in overall consumption and significant reductions in smoking
+                                        prevalence rates.
+                                    </td>
+                                </tr>
                                 </tbody>
                             </table>
-                            <p>Key facts about the research evidence and studies that demonstrate these post implementation results can be found on the Cancer Council Victoria website:<br><a href="http://www.cancervic.org.au/plainfacts/browse.asp?ContainerID=industryopposition" target="_blank">http://www.cancervic.org.au/plainfacts/browse.asp?ContainerID=industryopposition</a></p>
+                            <p>Key facts about the research evidence and studies that demonstrate these post
+                                implementation results can be found on the Cancer Council Victoria website:<br><a
+                                        href="http://www.cancervic.org.au/plainfacts/browse.asp?ContainerID=industryopposition"
+                                        target="_blank">http://www.cancervic.org.au/plainfacts/browse.asp?ContainerID=industryopposition</a>
+                            </p>
                         </div>
                         <div class="col-lg-10 col-lg-offset-1">
                             <div class="section-secondary-title fc-violet">6. Highlight contradictory statements</div>
-                            <p>The tobacco companies regularly say different things in different contexts. Highlighting this can be an effective means of countering their arguments. For instance, in the industry challenge to the UK regulations, the tobacco companies sought to argue that branding on packaging is not the same as advertising and has a different function. However, in the challenge before the High Court of Australia, the tobacco companies made a direct comparison between the space on the packets for branding and advertising billboards (<i>see the</i> <a href="<?php echo $base_url; ?>legal-issues-and-international-developments/legal-issues"><b class="fc-violet">Reference Section K: LEGAL ISSUES AND CASE SUMMARIES</b></a>).</p>
-                            <p>Another example of this relates to illicit trade. Philip Morris International claimed that branded packaging is difficult or impossible to counterfeit when arguing against plain packaging but at the same time confirmed that branded packaging is easy to counterfeit in a 2012 brochure on Codentify (a track and trace system developed by PMI). A report by KPMG into illicit tobacco in Australia commissioned by Philip Morris Limited confirms that there have been no counterfeit plain packs identified since implementation. The KPMG report is the only statistical evidence the industry uses to support its contention that plain packaging increases illicit trade but the methodology is so flawed that the industry did not use it (or any other evidence) to support that argument in its legal challenge to UK plain packaging regulations.</p>
+                            <p>The tobacco companies regularly say different things in different contexts. Highlighting
+                                this can be an effective means of countering their arguments. For instance, in the
+                                industry challenge to the UK regulations, the tobacco companies sought to argue that
+                                branding on packaging is not the same as advertising and has a different function.
+                                However, in the challenge before the High Court of Australia, the tobacco companies made
+                                a direct comparison between the space on the packets for branding and advertising
+                                billboards (<i>see the</i> <a
+                                        href="<?php echo $base_url; ?>legal-issues-and-international-developments/legal-issues"><b
+                                            class="fc-violet">Reference Section K: LEGAL ISSUES AND CASE
+                                        SUMMARIES</b></a>).</p>
+                            <p>Another example of this relates to illicit trade. Philip Morris International claimed
+                                that branded packaging is difficult or impossible to counterfeit when arguing against
+                                plain packaging but at the same time confirmed that branded packaging is easy to
+                                counterfeit in a 2012 brochure on Codentify (a track and trace system developed by PMI).
+                                A report by KPMG into illicit tobacco in Australia commissioned by Philip Morris Limited
+                                confirms that there have been no counterfeit plain packs identified since
+                                implementation. The KPMG report is the only statistical evidence the industry uses to
+                                support its contention that plain packaging increases illicit trade but the methodology
+                                is so flawed that the industry did not use it (or any other evidence) to support that
+                                argument in its legal challenge to UK plain packaging regulations.</p>
                             <table class="table table-inner table-condensed table-responsive">
-                                <div class="table-custom header-inner bg-brown">The two faces of PMI on Illicit Trade and Plain Packaging</div>                    
+                                <div class="table-custom header-inner bg-brown">The two faces of PMI on Illicit Trade
+                                    and Plain Packaging
+                                </div>
                                 <tbody>
-                                    <tr class="table-bg-light-blue">
-                                        <td>
-                                            “tobacco manufacturers go to great lengths to design overt authentication features that are difficult, if not impossible, for counterfeiters to imitate.”<sup>3</sup> [2012]
-                                        </td>
-                                        <td>
-                                            “[Cigarette packs] are easily counterfeited, despite the inclusion of innovative holograms, special inks and elaborate design details. Evidence shows that counterfeiters can make copies of even the most sophisticated paper stamps in three weeks.”<sup>4</sup> [2012]
-                                        </td>
-                                    </tr>
-                                    <tr class="table-bg-light-brown">
-                                        <td>
-                                            “plain packs will be easier to xCounterfeit”<sup>5</sup> [2012]
-                                        </td>
-                                        <td>
-                                            “…none of the counterfeit packs collected as part of the Empty Pack Survey [in Australia] were in plain packaging.”<sup>6</sup> [2015]
-                                        </td>
-                                    </tr>
-                                    <tr class="table-bg-light-blue">
-                                        <td>
-                                            “KPMG has concluded that illicit tobacco in Australia has reached record levels… KPMG’s methodology is widely accepted”<sup>7</sup> [2014]
-                                        </td>
-                                        <td>
-                                            “the Tobacco Claimants submit that standardised packaging would increase illicit trades. But they have conducted no material analysis or evidence (that they are prepared to place before the Court) of the impact on illicit trades…”<sup>8</sup> [2016]
-                                        </td>
-                                    </tr>
+                                <tr class="table-bg-light-blue">
+                                    <td>
+                                        “tobacco manufacturers go to great lengths to design overt authentication
+                                        features that are difficult, if not impossible, for counterfeiters to
+                                        imitate.”<sup>3</sup> [2012]
+                                    </td>
+                                    <td>
+                                        “[Cigarette packs] are easily counterfeited, despite the inclusion of innovative
+                                        holograms, special inks and elaborate design details. Evidence shows that
+                                        counterfeiters can make copies of even the most sophisticated paper stamps in
+                                        three weeks.”<sup>4</sup> [2012]
+                                    </td>
+                                </tr>
+                                <tr class="table-bg-light-brown">
+                                    <td>
+                                        “plain packs will be easier to xCounterfeit”<sup>5</sup> [2012]
+                                    </td>
+                                    <td>
+                                        “…none of the counterfeit packs collected as part of the Empty Pack Survey [in
+                                        Australia] were in plain packaging.”<sup>6</sup> [2015]
+                                    </td>
+                                </tr>
+                                <tr class="table-bg-light-blue">
+                                    <td>
+                                        “KPMG has concluded that illicit tobacco in Australia has reached record levels…
+                                        KPMG’s methodology is widely accepted”<sup>7</sup> [2014]
+                                    </td>
+                                    <td>
+                                        “the Tobacco Claimants submit that standardised packaging would increase illicit
+                                        trades. But they have conducted no material analysis or evidence (that they are
+                                        prepared to place before the Court) of the impact on illicit
+                                        trades…”<sup>8</sup> [2016]
+                                    </td>
+                                </tr>
                                 </tbody>
                             </table>
                         </div>
                         <div class="col-lg-10 col-lg-offset-1">
                             <div class="section-secondary-title fc-violet">7. Know the industry tactics</div>
-                            <p><b>FRONT GROUPS.</b> The tobacco industry regularly establish and finance front groups or co-opt third party organisations such as think tanks or libertarian groups, often via public relations agencies, which are then used to give the impression of broad support for the opposing arguments. For instance when plain packaging was proposed in Australia, a front group was established, which claimed only to represent the retail industry. However, internal documentation about this group and other industry counter measures were leaked to the media, revealing that the group was receiving support from several tobacco companies.<sup>10</sup></p>
+                            <p><b>FRONT GROUPS.</b> The tobacco industry regularly establish and finance front groups or
+                                co-opt third party organisations such as think tanks or libertarian groups, often via
+                                public relations agencies, which are then used to give the impression of broad support
+                                for the opposing arguments. For instance when plain packaging was proposed in Australia,
+                                a front group was established, which claimed only to represent the retail industry.
+                                However, internal documentation about this group and other industry counter measures
+                                were leaked to the media, revealing that the group was receiving support from several
+                                tobacco companies.<sup>10</sup></p>
                             <div class="col-lg-12 text-center">
-                                <img height="250px" class="img-responsive" src="<?php echo $base_url; ?>img/lowresimg/guide-1-3.jpg">
+                                <img height="250px" class="img-responsive"
+                                     src="<?php echo $base_url; ?>img/lowresimg/guide-1-3.jpg">
                             </div>
                             <br>&nbsp;<br>
                             <br>&nbsp;<br>
-                            <p>In the UK, a university study showed three-quarters of the organisations outside the industry had direct financial links to one or more of the big four tobacco companies and these were responsible for 60% of the anti-plain packaging campaigning identified. The study, found that organisations which actively opposed plain packaging (including campaigners and business groups) rarely reported any relationship with tobacco companies transparently<sup>11</sup>.</p>
-                            <p><b>SOPHISTICATED AND WELL PLANNED CAMPAIGNS</b>. In 2013 leaked internal tobacco industry documents, including power points, revealed the inner-workings of Philip Morris International’s (P M I) anti-Plain Packaging campaign in the UK during the previous year. The two examples of slides shown below demonstrate P M I ’s key media messages and the sophisticated and detailed timeline planning of which arguments to use and when. Other parts of the documents demonstrate the use of third parties to promulgate the messages<sup>12</sup>.</p>
+                            <p>In the UK, a university study showed three-quarters of the organisations outside the
+                                industry had direct financial links to one or more of the big four tobacco companies and
+                                these were responsible for 60% of the anti-plain packaging campaigning identified. The
+                                study, found that organisations which actively opposed plain packaging (including
+                                campaigners and business groups) rarely reported any relationship with tobacco companies
+                                transparently<sup>11</sup>.</p>
+                            <p><b>SOPHISTICATED AND WELL PLANNED CAMPAIGNS</b>. In 2013 leaked internal tobacco industry
+                                documents, including power points, revealed the inner-workings of Philip Morris
+                                International’s (P M I) anti-Plain Packaging campaign in the UK during the previous
+                                year. The two examples of slides shown below demonstrate P M I ’s key media messages and
+                                the sophisticated and detailed timeline planning of which arguments to use and when.
+                                Other parts of the documents demonstrate the use of third parties to promulgate the
+                                messages<sup>12</sup>.</p>
                         </div>
                         <div class="col-lg-10 col-lg-offset-1">
-                            <div class="section-secondary-title fc-violet">Leaked: PMI’s detailed strategy to oppose Plain Packaging in the UK</div>
+                            <div class="section-secondary-title fc-violet">Leaked: PMI’s detailed strategy to oppose
+                                Plain Packaging in the UK
+                            </div>
                             <div class="col-lg-12 text-center">
                                 <div class="col-lg-6">
-                                    <img class="img-responsive" height="250px" src="<?php echo $base_url; ?>img/lowresimg/guide-1-3-2.jpg">
+                                    <img class="img-responsive" height="250px"
+                                         src="<?php echo $base_url; ?>img/lowresimg/guide-1-3-2.jpg">
                                 </div>
                                 <div class="col-lg-6">
-                                    <img class="img-responsive" height="250px" src="<?php echo $base_url; ?>img/lowresimg/guide-1-3-3.jpg">
+                                    <img class="img-responsive" height="250px"
+                                         src="<?php echo $base_url; ?>img/lowresimg/guide-1-3-3.jpg">
                                 </div>
                             </div>
                         </div>
@@ -914,11 +1273,14 @@ function nav_content($menu,$var = null)
                 <div class="col-lg-12">
                     <div class="col-xs-6 pagination-url-back">
                         <a href="<?php echo $base_url ?>getting-prepared/establish-document-development-retention">
-                        <img class="pagination-url-back-img" src="<?php echo $base_url; ?>img/scroll-page.png"> Guide 1.2 Establish Document Development Retention</a>
+                            <img class="pagination-url-back-img" src="<?php echo $base_url; ?>img/scroll-page.png">
+                            Guide 1.2 Establish Document Development Retention</a>
                     </div>
                     <div class="col-xs-6 pagination-url-forward">
-                        <a href="<?php echo $base_url; ?>collecting-the-evidence/evidence-review">Guide 2.1 Evidence Review
-                        <img class="pagination-url-forward-img" src="<?php echo $base_url; ?>img/scroll-page.png"> </a>
+                        <a href="<?php echo $base_url; ?>collecting-the-evidence/evidence-review">Guide 2.1 Evidence
+                            Review
+                            <img class="pagination-url-forward-img" src="<?php echo $base_url; ?>img/scroll-page.png">
+                        </a>
                     </div>
                 </div>
             </div>
@@ -926,11 +1288,13 @@ function nav_content($menu,$var = null)
                 <div class="col-lg-12">
                     <div class="col-xs-12 pagination-url-back">
                         <a href="<?php echo $base_url ?>getting-prepared/establish-document-development-retention">
-                        <img class="pagination-url-back-img" src="<?php echo $base_url; ?>img/scroll-page.png"><br>Guide 1.2 Establish Document Development Retention</a>
+                            <img class="pagination-url-back-img" src="<?php echo $base_url; ?>img/scroll-page.png"><br>Guide
+                            1.2 Establish Document Development Retention</a>
                     </div>
                     <div class="col-xs-12 pagination-url-forward">
                         <a href="<?php echo $base_url; ?>collecting-the-evidence/evidence-review">
-                        Guide 2.1 Evidence Review<br><img class="pagination-url-forward-img" src="<?php echo $base_url; ?>img/scroll-page.png"> </a>
+                            Guide 2.1 Evidence Review<br><img class="pagination-url-forward-img"
+                                                              src="<?php echo $base_url; ?>img/scroll-page.png"> </a>
                     </div>
                 </div>
             </div>
@@ -938,8 +1302,7 @@ function nav_content($menu,$var = null)
             break;
 
         case 'evidence-review':
-            if ($var == 'og_desc')
-            {
+            if ($var == 'og_desc') {
                 $og_desc = 'There are considerable volumes of evidence, both research studies from a number of countries and statistical evidence from Australia, which demonstrates plain packaging is a policy that will contribute to reducing tobacco use. Standard texts on marketing and branding also show how effective packaging can be at attracting consumers and this is no different for tobacco products.';
 
                 return $og_desc;
@@ -955,110 +1318,254 @@ function nav_content($menu,$var = null)
                     <div class="content-desc-cont">
                         <div class="col-lg-10 col-lg-offset-1">
                             <p>
-                                There are considerable volumes of evidence, both research studies from a number of countries and statistical evidence from Australia, which demonstrates plain packaging is a policy that will contribute to reducing tobacco use. Standard texts on marketing and branding also show how effective packaging can be at attracting consumers and this is no different for tobacco products.
+                                There are considerable volumes of evidence, both research studies from a number of
+                                countries and statistical evidence from Australia, which demonstrates plain packaging is
+                                a policy that will contribute to reducing tobacco use. Standard texts on marketing and
+                                branding also show how effective packaging can be at attracting consumers and this is no
+                                different for tobacco products.
                             </p>
                             <p>
-                                In order to ensure robust policy development, governments should consider the full evidence base relating to plain packaging, including all the arguments against the policy put forward by the industry. Good evidence leads to good policy but also, in case of legal challenge, a <i>careful record</i> of what evidence has been considered, when and by whom, can be crucial in demonstrating proper due process.
+                                In order to ensure robust policy development, governments should consider the full
+                                evidence base relating to plain packaging, including all the arguments against the
+                                policy put forward by the industry. Good evidence leads to good policy but also, in case
+                                of legal challenge, a <i>careful record</i> of what evidence has been considered, when
+                                and by whom, can be crucial in demonstrating proper due process.
                             </p>
                             <p class="section-tertiary-title">The review of the evidence should include:</p>
                         </div>
                         <div class="col-lg-10 col-lg-offset-1">
                             <div class="section-secondary-title fc-green">1. Supporting research evidence</div>
-                            <div class="section-secondary-sub-title fc-green"><i>(full details at <a href="<?php echo $base_url; ?>evidence/research-evidence"><b class="fc-green">Reference Section G: RESEARCH EVIDENCE)</b></a></i></div>
+                            <div class="section-secondary-sub-title fc-green"><i>(full details at <a
+                                            href="<?php echo $base_url; ?>evidence/research-evidence"><b
+                                                class="fc-green">Reference Section G: RESEARCH EVIDENCE)</b></a></i>
+                            </div>
                             <p>
-                                Over the course of 20-30 years there have been many peer reviewed scientific research studies looking at the likely impact plain packaging of tobacco would have on smoking behaviours and attitudes and how that would impact on smoking rates. Research has been conducted in 10 different countries using a range of methodologies and each study taken in isolation only provides part of the picture.
+                                Over the course of 20-30 years there have been many peer reviewed scientific research
+                                studies looking at the likely impact plain packaging of tobacco would have on smoking
+                                behaviours and attitudes and how that would impact on smoking rates. Research has been
+                                conducted in 10 different countries using a range of methodologies and each study taken
+                                in isolation only provides part of the picture.
                             </p>
                             <p>
-                                Countries that have already adopted plain packaging have commissioned independent reviews of the research to ensure that there is a clear, complete and balanced picture of what the overall evidence is on the impact plain packaging will have. By the time of the Hammond review in 2014, a total of 69 original empirical research studies were reviewed (as of October 2016 that number had increased to over 75 relevant studies). The 4 reviews show that the evidence on plain packaging is notable for its breadth and diversity of methods but also for its consistency in the results. The evidence reviews were:
-                                <ol class="custom list-style-none">
-                                    <li>i. Cancer Council Victoria (Australia 2011)<sup>1</sup></li>
-                                    <li>ii. The Stirling Review (United Kingdom 2012 and updated 2013)<sup>2</sup></li>
-                                    <li>iii. The Chanter Review (United Kingdom 2014)<sup>3</sup></li>
-                                    <li>iv. The Hammond Review (Ireland 2014)<sup>4</sup></li>
-                                </ol>
+                                Countries that have already adopted plain packaging have commissioned independent
+                                reviews of the research to ensure that there is a clear, complete and balanced picture
+                                of what the overall evidence is on the impact plain packaging will have. By the time of
+                                the Hammond review in 2014, a total of 69 original empirical research studies were
+                                reviewed (as of October 2016 that number had increased to over 75 relevant studies). The
+                                4 reviews show that the evidence on plain packaging is notable for its breadth and
+                                diversity of methods but also for its consistency in the results. The evidence reviews
+                                were:
+                            <ol class="custom list-style-none">
+                                <li>i. Cancer Council Victoria (Australia 2011)<sup>1</sup></li>
+                                <li>ii. The Stirling Review (United Kingdom 2012 and updated 2013)<sup>2</sup></li>
+                                <li>iii. The Chanter Review (United Kingdom 2014)<sup>3</sup></li>
+                                <li>iv. The Hammond Review (Ireland 2014)<sup>4</sup></li>
+                            </ol>
                             </p>
-                            <p>All these reviews reach the same conclusion: that there is strong and highly consistent evidence to support that plain packaging would contribute to its objectives (as set out in <a href="<?php echo $base_url; ?>getting-prepared/set-policy-objectives"><b class="fc-green">Guide 1.1</b></a>).</p>
-                            <p>The Chantler Review notably concluded that <b>“[all the evidence] points in a single direction, and I am not aware of any convincing evidence pointing the other way.”</b></p>
+                            <p>All these reviews reach the same conclusion: that there is strong and highly consistent
+                                evidence to support that plain packaging would contribute to its objectives (as set out
+                                in <a href="<?php echo $base_url; ?>getting-prepared/set-policy-objectives"><b
+                                            class="fc-green">Guide 1.1</b></a>).</p>
+                            <p>The Chantler Review notably concluded that <b>“[all the evidence] points in a single
+                                    direction, and I am not aware of any convincing evidence pointing the other
+                                    way.”</b></p>
                         </div>
                         <div class="col-lg-10 col-lg-offset-1">
-                            <div class="section-secondary-title fc-green">2. Post-implementation evidence from Australia and elsewhere</div>
-                            <div class="section-secondary-sub-title fc-green"><i>(full details in <a href="<?php echo $base_url; ?>evidence/austalia-post-implementation-evidence" class="fc-green"><b>Reference Section H: AUSTRALIAN POST IMPLEMENTATION EVIDENCE)</b></a></i></div>
+                            <div class="section-secondary-title fc-green">2. Post-implementation evidence from Australia
+                                and elsewhere
+                            </div>
+                            <div class="section-secondary-sub-title fc-green"><i>(full details in <a
+                                            href="<?php echo $base_url; ?>evidence/austalia-post-implementation-evidence"
+                                            class="fc-green"><b>Reference Section H: AUSTRALIAN POST IMPLEMENTATION
+                                            EVIDENCE)</b></a></i></div>
                             <div class="col-lg-12">
                                 <div class="col-lg-8">
-                                    <p><b>The official Post Implementation Review (P I R)</b> was published by the Australian government in February 2016. The review concludes that:</p>
-                                    <p><i>“While the full effect of the tobacco plain packaging measure is expected to be realised over time, the evidence examined in this PIR suggests that the measure is achieving its aims. This evidence shows that tobacco plain packaging is having a positive impact on its specific mechanisms as envisaged in the TPP Act. All of the major datasets examined also showed ongoing drops in national smoking prevalence in Australia.”</i></p>
+                                    <p><b>The official Post Implementation Review (P I R)</b> was published by the
+                                        Australian government in February 2016. The review concludes that:</p>
+                                    <p><i>“While the full effect of the tobacco plain packaging measure is expected to
+                                            be realised over time, the evidence examined in this PIR suggests that the
+                                            measure is achieving its aims. This evidence shows that tobacco plain
+                                            packaging is having a positive impact on its specific mechanisms as
+                                            envisaged in the TPP Act. All of the major datasets examined also showed
+                                            ongoing drops in national smoking prevalence in Australia.”</i></p>
                                 </div>
                                 <div class="col-lg-4">
-                                    <p class="fc-brown fs-20">One quarter of the 2.2 percentage point drop in prevalence is attributed to plain packaging. That’s equivalent to <b>118,000 less people smoking in Australia in just 3 years</b> as a direct result of plain packaging</p>
+                                    <p class="fc-brown fs-20">One quarter of the 2.2 percentage point drop in prevalence
+                                        is attributed to plain packaging. That’s equivalent to <b>118,000 less people
+                                            smoking in Australia in just 3 years</b> as a direct result of plain
+                                        packaging</p>
                                 </div>
                             </div>
-                            <p>Plain packaging contributed a statistically significant decline in smoking prevalence of 0.55 percentage points over a 34 month post implementation period, one quarter of the total decline in average prevalence rates observed.<sup>6</sup></p>
-                            <p><b>Official statistics on smoking rates</b> and tobacco consumption in Australia are published on the Department of Health’s website.<sup>7</sup> There are a range of independent surveys conducted by different research organisations and using different methods and cohorts. Each new survey has shown a continued fall in rates since implementation of plain packaging in 2012.</p>
-                            <p><b>The British Medical Journal edition of Tobacco Control in April 2015</b> on the implementation and evaluation of the Australian plain packaging policy, included 18 research papers<sup>11</sup> dealing with various aspects of policy impact and implementation. These demonstrated that plain packs were impacting positively on the aims and objectives of the policy.</p>
-                            <p>The studies also showed that, contrary to the tobacco industry predictions, there was no evidence that plain packaging led to lower prices for tobacco products or to an increase in the use of illicit tobacco products.</p>
+                            <p>Plain packaging contributed a statistically significant decline in smoking prevalence of
+                                0.55 percentage points over a 34 month post implementation period, one quarter of the
+                                total decline in average prevalence rates observed.<sup>6</sup></p>
+                            <p><b>Official statistics on smoking rates</b> and tobacco consumption in Australia are
+                                published on the Department of Health’s website.<sup>7</sup> There are a range of
+                                independent surveys conducted by different research organisations and using different
+                                methods and cohorts. Each new survey has shown a continued fall in rates since
+                                implementation of plain packaging in 2012.</p>
+                            <p><b>The British Medical Journal edition of Tobacco Control in April 2015</b> on the
+                                implementation and evaluation of the Australian plain packaging policy, included 18
+                                research papers<sup>11</sup> dealing with various aspects of policy impact and
+                                implementation. These demonstrated that plain packs were impacting positively on the
+                                aims and objectives of the policy.</p>
+                            <p>The studies also showed that, contrary to the tobacco industry predictions, there was no
+                                evidence that plain packaging led to lower prices for tobacco products or to an increase
+                                in the use of illicit tobacco products.</p>
                             <div class="div-format-3 bg-light-brown">
                                 <div class="section-secondary-title">Australia’s declining smoking rates</div>
                                 <ul>
-                                    <li>In 2014-15 14.7% of adults aged 18 years and over smoked daily (approximately 2.6 million smokers), decreasing from 16.1% in 2011-2012<sup>8</sup></li>
-                                    <li>From 2012 to 2015 there was an overall 20% decline in the proportion of secondary student and young adults (aged 18–24) smoking at least 100 cigarettes in their lifetime<sup>9</sup>.</li>
-                                    <li>In 2014, 5% of 12 – 17 year olds were current smokers down from 7% in both 2011 and 2008<sup>10</sup></li>
+                                    <li>In 2014-15 14.7% of adults aged 18 years and over smoked daily (approximately
+                                        2.6 million smokers), decreasing from 16.1% in 2011-2012<sup>8</sup></li>
+                                    <li>From 2012 to 2015 there was an overall 20% decline in the proportion of
+                                        secondary student and young adults (aged 18–24) smoking at least 100 cigarettes
+                                        in their lifetime<sup>9</sup>.
+                                    </li>
+                                    <li>In 2014, 5% of 12 – 17 year olds were current smokers down from 7% in both 2011
+                                        and 2008<sup>10</sup></li>
                                 </ul>
                             </div>
                         </div>
                         <div class="col-lg-10 col-lg-offset-1">
-                            <div class="section-secondary-title fc-green">3. Evidence about branding on packaging and its influence on smoking</div>
-                            <div class="section-secondary-sub-title fc-green"><i>(Full details on this topic are set out in <a href="<?php echo $base_url; ?>evidence/tobacco-product-branding"><b class="fc-green">Reference Section I: BRANDING ON TOBACCO PACKAGING)</b></a></i></div>
+                            <div class="section-secondary-title fc-green">3. Evidence about branding on packaging and
+                                its influence on smoking
+                            </div>
+                            <div class="section-secondary-sub-title fc-green"><i>(Full details on this topic are set out
+                                    in <a href="<?php echo $base_url; ?>evidence/tobacco-product-branding"><b
+                                                class="fc-green">Reference Section I: BRANDING ON TOBACCO PACKAGING)</b></a></i>
+                            </div>
                             <div class="col-lg-12">
                                 <div class="col-lg-8">
-                                    <p>It is useful to consider tobacco packaging within the broader context of branding, marketing and packaging of products more generally.</p>
-                                    <p><b>Marketing theory</b> demonstrates that packaging has a number of functions including assisting consumers to identify and distinguish brands but that it is also used to promote the product as an important component of overall marketing strategy. Packaging can heighten a product’s appeal and create positive impressions and emotional connections to help ‘drive the sale’.</p>
-                                    <p><b>Packaging of tobacco products</b> has been shown to be more important as a promotional tool than for other products. Firstly, in many countries where there are TAPS bans it is the last remaining means of advertising a brand. Secondly, tobacco product packs are a ‘badge product’ because users regularly openly display their packs in public.</p>
+                                    <p>It is useful to consider tobacco packaging within the broader context of
+                                        branding, marketing and packaging of products more generally.</p>
+                                    <p><b>Marketing theory</b> demonstrates that packaging has a number of functions
+                                        including assisting consumers to identify and distinguish brands but that it is
+                                        also used to promote the product as an important component of overall marketing
+                                        strategy. Packaging can heighten a product’s appeal and create positive
+                                        impressions and emotional connections to help ‘drive the sale’.</p>
+                                    <p><b>Packaging of tobacco products</b> has been shown to be more important as a
+                                        promotional tool than for other products. Firstly, in many countries where there
+                                        are TAPS bans it is the last remaining means of advertising a brand. Secondly,
+                                        tobacco product packs are a ‘badge product’ because users regularly openly
+                                        display their packs in public.</p>
                                 </div>
                                 <div class="col-lg-4">
-                                    <p class="fc-brown fs-20">“…the pack provides a direct link between consumers and manufacturers, and is particularly important for consumer products such as cigarettes, which have a high degree of social visibility. Unlike many other consumer products, cigarette packages are displayed each time the product is used and are often left in public view between uses. As a result, both smokers and non-smokers report high levels of exposure to tobacco packaging…”</p>
-                                    <p class="fc-brown fs-14">Tobacco Labelling & Packaging Toolkit: A guide to FCTC Article 11. David Hammond, 2009</p>
+                                    <p class="fc-brown fs-20">“…the pack provides a direct link between consumers and
+                                        manufacturers, and is particularly important for consumer products such as
+                                        cigarettes, which have a high degree of social visibility. Unlike many other
+                                        consumer products, cigarette packages are displayed each time the product is
+                                        used and are often left in public view between uses. As a result, both smokers
+                                        and non-smokers report high levels of exposure to tobacco packaging…”</p>
+                                    <p class="fc-brown fs-14">Tobacco Labelling & Packaging Toolkit: A guide to FCTC
+                                        Article 11. David Hammond, 2009</p>
                                 </div>
                             </div>
-                            <p><b>Internal tobacco industry documents show the importance of packaging in promoting tobacco products.</b> There have been a number of studies looking into internal industry documents that have been leaked or released in US litigation settlements. The Hammond Review in particular includes the results of this research which demonstrates how the industry places significant importance on the role of packaging in promoting and advertising its product.</p>
+                            <p><b>Internal tobacco industry documents show the importance of packaging in promoting
+                                    tobacco products.</b> There have been a number of studies looking into internal
+                                industry documents that have been leaked or released in US litigation settlements. The
+                                Hammond Review in particular includes the results of this research which demonstrates
+                                how the industry places significant importance on the role of packaging in promoting and
+                                advertising its product.</p>
                         </div>
                         <div class="col-lg-10 col-lg-offset-1">
-                            <div class="section-secondary-title fc-green">4. Conduct a market survey of the tobacco products and packaging</div>
+                            <div class="section-secondary-title fc-green">4. Conduct a market survey of the tobacco
+                                products and packaging
+                            </div>
                             <div class="col-lg-12">
                                 <div class="col-lg-8">
-                                    <p><b>A survey of tobacco products</b> (and their packaging) available on the market in a country can assist in the design of the policy. It also acts as a demonstration of what branding exists on the market which can assist in showing why the policy is necessary. The issues that the survey should address include: what is the most common form of packet for each type of product? Are there any particularly novel forms of packaging? Is certain packaging clearly aimed at a certain sections of the community? Are there brand families that continue to mislead consumers as to the relative harms of each brand variant (for instance are there ‘gold’ and ‘silver’ variants of a particular brand)?</p>
+                                    <p><b>A survey of tobacco products</b> (and their packaging) available on the market
+                                        in a country can assist in the design of the policy. It also acts as a
+                                        demonstration of what branding exists on the market which can assist in showing
+                                        why the policy is necessary. The issues that the survey should address include:
+                                        what is the most common form of packet for each type of product? Are there any
+                                        particularly novel forms of packaging? Is certain packaging clearly aimed at a
+                                        certain sections of the community? Are there brand families that continue to
+                                        mislead consumers as to the relative harms of each brand variant (for instance
+                                        are there ‘gold’ and ‘silver’ variants of a particular brand)?</p>
                                 </div>
                                 <div class="col-lg-4 text-center">
-                                    <img class="img-responsive" height="250px" src="<?php echo $base_url; ?>img/muliple-packs.jpg">
+                                    <img class="img-responsive" height="250px"
+                                         src="<?php echo $base_url; ?>img/muliple-packs.jpg">
                                 </div>
                             </div>
-                            <p><b>A comprehensive sample of the tobacco product packaging</b> available in a country should be kept as it can be very useful for demonstrations and as evidence in case of legal challenge. One of the most powerful ways of demonstrating the need for plain packaging to people unfamiliar with smoking or tobacco control is to show examples of attractive or health reassurance packs that are available on the domestic market.</p>
+                            <p><b>A comprehensive sample of the tobacco product packaging</b> available in a country
+                                should be kept as it can be very useful for demonstrations and as evidence in case of
+                                legal challenge. One of the most powerful ways of demonstrating the need for plain
+                                packaging to people unfamiliar with smoking or tobacco control is to show examples of
+                                attractive or health reassurance packs that are available on the domestic market.</p>
                         </div>
                         <div class="col-lg-10 col-lg-offset-1">
-                            <div class="section-secondary-title fc-green">5. Country specific statistics on smoking prevalence and tobacco consumption</div>
-                            <p>In order to establish that it is necessary and justified to introduce plain packaging, the aims and objectives should be set within the context of a country’s public health agenda which will include consideration of the smoking prevalence and tobacco consumption rates, and whether these have been falling, rising or stagnating.</p>
+                            <div class="section-secondary-title fc-green">5. Country specific statistics on smoking
+                                prevalence and tobacco consumption
+                            </div>
+                            <p>In order to establish that it is necessary and justified to introduce plain packaging,
+                                the aims and objectives should be set within the context of a country’s public health
+                                agenda which will include consideration of the smoking prevalence and tobacco
+                                consumption rates, and whether these have been falling, rising or stagnating.</p>
                         </div>
                         <div class="col-lg-10 col-lg-offset-1">
                             <div class="section-secondary-title fc-green">6. Arguments opposing plain packaging</div>
-                            <div class="section-secondary-sub-title fc-green"><i>(full details in <a href="<?php echo $base_url; ?>evidence/opposing-arguments-and-how-to-counter-them"><b class="fc-green">Reference Section J: OPPOSING ARGUMENTS AND EVIDENCE</b>)</a></i></div>
+                            <div class="section-secondary-sub-title fc-green"><i>(full details in <a
+                                            href="<?php echo $base_url; ?>evidence/opposing-arguments-and-how-to-counter-them"><b
+                                                class="fc-green">Reference Section J: OPPOSING ARGUMENTS AND
+                                            EVIDENCE</b>)</a></i></div>
                             <div class="col-lg-12">
                                 <div class="col-lg-8">
-                                    <p>It is important for a full and complete policy development process to properly consider the views and arguments of the tobacco industry, proxy organisations or other interested stakeholders. This should include the industry’s analysis of the evidence relating to the impact on smoking rates in Australia post-implementation. In addition, the wider impacts should be carefully considered, in particular the potential or alleged links to down trading and illicit trade. This can lead to better a policy development but importantly it protects a government from accusations of an unfair process.</p>
-                                    <p>This process should take into account the vested interests of those views and also where legitimate criticisms of the opposing arguments have been made. For instance, none of the expert analyses or studies relied upon by the tobacco industry to support their claims have been subjected to peer review process, but have been the subject of both academic12 and judicial criticism. The judge in the High Court legal challenge to UK plain packaging laws said that:</p>
+                                    <p>It is important for a full and complete policy development process to properly
+                                        consider the views and arguments of the tobacco industry, proxy organisations or
+                                        other interested stakeholders. This should include the industry’s analysis of
+                                        the evidence relating to the impact on smoking rates in Australia
+                                        post-implementation. In addition, the wider impacts should be carefully
+                                        considered, in particular the potential or alleged links to down trading and
+                                        illicit trade. This can lead to better a policy development but importantly it
+                                        protects a government from accusations of an unfair process.</p>
+                                    <p>This process should take into account the vested interests of those views and
+                                        also where legitimate criticisms of the opposing arguments have been made. For
+                                        instance, none of the expert analyses or studies relied upon by the tobacco
+                                        industry to support their claims have been subjected to peer review process, but
+                                        have been the subject of both academic12 and judicial criticism. The judge in
+                                        the High Court legal challenge to UK plain packaging laws said that:</p>
                                 </div>
                                 <div class="col-lg-4 text-center">
-                                    <img class="responsive" height="400px" src="<?php echo $base_url; ?>img/plain-packaging.jpg">
+                                    <img class="responsive" height="400px"
+                                         src="<?php echo $base_url; ?>img/plain-packaging.jpg">
                                 </div>
                             </div>
-                            <p><i>“On the basis of my own review of the methodologies adopted by the [tobacco companies’] experts … I conclude that that body of expert evidence does not accord with internationally recognised best practice”<sup>13</sup>.</i></p>
-                            <p>As the <a href="<?php echo $base_url; ?>evidence/opposing-arguments-and-how-to-counter-them"><b class="fc-green">Reference Section J: OPPOSING ARGUMENTS AND EVIDENCE</b></a> shows, the tobacco industry arguments opposing plain packaging are almost wholly unfounded and there are a number of research studies that have demonstrated this; but a fair process requires proper consideration of all views.</p>
+                            <p><i>“On the basis of my own review of the methodologies adopted by the [tobacco
+                                    companies’] experts … I conclude that that body of expert evidence does not accord
+                                    with internationally recognised best practice”<sup>13</sup>.</i></p>
+                            <p>As the <a
+                                        href="<?php echo $base_url; ?>evidence/opposing-arguments-and-how-to-counter-them"><b
+                                            class="fc-green">Reference Section J: OPPOSING ARGUMENTS AND
+                                        EVIDENCE</b></a> shows, the tobacco industry arguments opposing plain packaging
+                                are almost wholly unfounded and there are a number of research studies that have
+                                demonstrated this; but a fair process requires proper consideration of all views.</p>
                         </div>
                         <div class="col-lg-10 col-lg-offset-1">
                             <div class="section-secondary-title fc-green">7. Local evidence and research</div>
-                            <p>In addition to the solid global evidence base supporting the adoption of plain packaging, it is a policy recommended by the implementation guidelines to the evidence based WH O F C T C . This provides effective grounding for a government decision to proceed with the policy, without the necessity of commissioning new local research or studies into its likely impact in a particular country. From a legal perspective, this position has been confirmed in the ruling by the international investment tribunal in <b>PMI v Uruguay</b> <sup>15</sup>.</p>
-                            <p>However, governments should not be dissuaded from commissioning or conducting studies or research into the policy in their country. Additional evidence will be useful for any government seeking to defend the policy against tobacco industry attacks. In addition, there may be circumstances particular to a country that would warrant new research. For instance, in Uruguay there is a brand of cigarettes that has packaging using a colour very similar to the green/brown colour used for tobacco product plain packaging in Australia, UK, France, Ireland and Hungary. Positive associations may have already developed in relation to that colour by some consumers. Some country specific research into the most appropriate colour to use could be of use in such circumstances.</p>
+                            <p>In addition to the solid global evidence base supporting the adoption of plain packaging,
+                                it is a policy recommended by the implementation guidelines to the evidence based WH O F
+                                C T C . This provides effective grounding for a government decision to proceed with the
+                                policy, without the necessity of commissioning new local research or studies into its
+                                likely impact in a particular country. From a legal perspective, this position has been
+                                confirmed in the ruling by the international investment tribunal in <b>PMI v Uruguay</b>
+                                <sup>15</sup>.</p>
+                            <p>However, governments should not be dissuaded from commissioning or conducting studies or
+                                research into the policy in their country. Additional evidence will be useful for any
+                                government seeking to defend the policy against tobacco industry attacks. In addition,
+                                there may be circumstances particular to a country that would warrant new research. For
+                                instance, in Uruguay there is a brand of cigarettes that has packaging using a colour
+                                very similar to the green/brown colour used for tobacco product plain packaging in
+                                Australia, UK, France, Ireland and Hungary. Positive associations may have already
+                                developed in relation to that colour by some consumers. Some country specific research
+                                into the most appropriate colour to use could be of use in such circumstances.</p>
                         </div>
                         <div class=" col-lg-10 col-lg-offset-1">
-                            <p class="text-center"><img class="text-center img-responsive" src="<?php echo $base_url; ?>img/A-selection-of-cigarette-packs.jpg"><span class="text-note">Add pictures of packaging from your country to the policy briefings in <a href="<?php echo $base_url; ?>policy-tools/policy-briefs"><b class="fc-green">Reference Section A.</b></a></span></p>
+                            <p class="text-center"><img class="text-center img-responsive"
+                                                        src="<?php echo $base_url; ?>img/A-selection-of-cigarette-packs.jpg"><span
+                                        class="text-note">Add pictures of packaging from your country to the policy briefings in <a
+                                            href="<?php echo $base_url; ?>policy-tools/policy-briefs"><b
+                                                class="fc-green">Reference Section A.</b></a></span></p>
                         </div>
                     </div>
                 </div>
@@ -1068,11 +1575,14 @@ function nav_content($menu,$var = null)
                 <div class="col-lg-12">
                     <div class="col-xs-6 pagination-url-back">
                         <a href="<?php echo $base_url ?>getting-prepared/prepare-tobacco-industry-interference">
-                        <img class="pagination-url-back-img" src="<?php echo $base_url; ?>img/scroll-page.png"> Guide 1.3 Prepare for Tobacco Industry Interference</a>
+                            <img class="pagination-url-back-img" src="<?php echo $base_url; ?>img/scroll-page.png">
+                            Guide 1.3 Prepare for Tobacco Industry Interference</a>
                     </div>
                     <div class="col-xs-6 pagination-url-forward">
-                        <a href="<?php echo $base_url; ?>collecting-the-evidence/regulatory-impact-analysis">Guide 2.2 Regulatory Impact Analysis
-                        <img class="pagination-url-forward-img" src="<?php echo $base_url; ?>img/scroll-page.png"> </a>
+                        <a href="<?php echo $base_url; ?>collecting-the-evidence/regulatory-impact-analysis">Guide 2.2
+                            Regulatory Impact Analysis
+                            <img class="pagination-url-forward-img" src="<?php echo $base_url; ?>img/scroll-page.png">
+                        </a>
                     </div>
                 </div>
             </div>
@@ -1080,11 +1590,14 @@ function nav_content($menu,$var = null)
                 <div class="col-lg-12">
                     <div class="col-xs-12 pagination-url-back">
                         <a href="<?php echo $base_url ?>getting-prepared/prepare-tobacco-industry-interference">
-                        <img class="pagination-url-back-img" src="<?php echo $base_url; ?>img/scroll-page.png"><br>Guide 1.3 Prepare for Tobacco Industry Interference</a>
+                            <img class="pagination-url-back-img" src="<?php echo $base_url; ?>img/scroll-page.png"><br>Guide
+                            1.3 Prepare for Tobacco Industry Interference</a>
                     </div>
                     <div class="col-xs-12 pagination-url-forward">
                         <a href="<?php echo $base_url; ?>collecting-the-evidence/regulatory-impact-analysis">
-                        Guide 2.2 Regulatory Impact Analysis<br><img class="pagination-url-forward-img" src="<?php echo $base_url; ?>img/scroll-page.png"> </a>
+                            Guide 2.2 Regulatory Impact Analysis<br><img class="pagination-url-forward-img"
+                                                                         src="<?php echo $base_url; ?>img/scroll-page.png">
+                        </a>
                     </div>
                 </div>
             </div>
@@ -1092,8 +1605,7 @@ function nav_content($menu,$var = null)
             break;
 
         case 'regulatory-impact-analysis':
-            if ($var == 'og_desc')
-            {
+            if ($var == 'og_desc') {
                 $og_desc = 'The purpose of a regulatory impact analysis is to provide a detailed and systematic appraisal of the potential positive and negative impacts of a new law or regulation in order to assess whether it is likely to achieve the desired objectives and what the potential unintended consequences may be.';
 
                 return $og_desc;
@@ -1108,25 +1620,83 @@ function nav_content($menu,$var = null)
                     </div>
                     <div class="content-desc-cont col-lg-10 col-lg-offset-1">
                         <div class="section-secondary-title fc-dark-green">1. What is it and why is it needed?</div>
-                        <p>The purpose of a regulatory impact analysis is to provide a detailed and systematic appraisal of the potential positive and negative impacts of a new law or regulation in order to assess whether it is likely to achieve the desired objectives and what the potential unintended consequences may be.</p>
-                        <p>This analysis is not always a necessary requirement and may be unusual for some governments for a public health measure. However, an assessment of the predicted economic, social and public health impacts can assist with the arguments for proceeding with plain packaging that need to be made in government and with the public.</p>
-                        <p>In both domestic and international courts, the tobacco industry regularly alleges that tobacco control laws, especially plain packaging, are arbitrary, not supported by evidence and not adopted with proper due process. A regulatory impact analysis can act as an internal record of the government’s effective policy development and can help to protect the policy against legal challenges.</p>
-                        <p>In some countries, for instance the UK, an impact assessment is a government requirement for any policy that has an impact on business, with specified procedures for how one must be produced. In other countries, such as Kenya, there is specific legislation that stipulates when a regulatory impact assessment must be carried out and what it must contain.<sup>1</sup></p>
-                        <p><a href="<?php echo $base_url; ?>policy-tools/regulatory-impact-analysis-ref"><b class="fc-dark-green">Reference Section B</b></a> contains a draft template for a regulatory impact assessment that can be adapted for a particular country.</p>
+                        <p>The purpose of a regulatory impact analysis is to provide a detailed and systematic appraisal
+                            of the potential positive and negative impacts of a new law or regulation in order to assess
+                            whether it is likely to achieve the desired objectives and what the potential unintended
+                            consequences may be.</p>
+                        <p>This analysis is not always a necessary requirement and may be unusual for some governments
+                            for a public health measure. However, an assessment of the predicted economic, social and
+                            public health impacts can assist with the arguments for proceeding with plain packaging that
+                            need to be made in government and with the public.</p>
+                        <p>In both domestic and international courts, the tobacco industry regularly alleges that
+                            tobacco control laws, especially plain packaging, are arbitrary, not supported by evidence
+                            and not adopted with proper due process. A regulatory impact analysis can act as an internal
+                            record of the government’s effective policy development and can help to protect the policy
+                            against legal challenges.</p>
+                        <p>In some countries, for instance the UK, an impact assessment is a government requirement for
+                            any policy that has an impact on business, with specified procedures for how one must be
+                            produced. In other countries, such as Kenya, there is specific legislation that stipulates
+                            when a regulatory impact assessment must be carried out and what it must
+                            contain.<sup>1</sup></p>
+                        <p><a href="<?php echo $base_url; ?>policy-tools/regulatory-impact-analysis-ref"><b
+                                        class="fc-dark-green">Reference Section B</b></a> contains a draft template for
+                            a regulatory impact assessment that can be adapted for a particular country.</p>
                     </div>
                     <div class="content-desc-cont col-lg-10 col-lg-offset-1">
-                        <div class="section-secondary-title fc-dark-green">2. How to approach a regulatory impact analysis</div>
-                        <p class="text-center"><img class="text-center img-responsive" src="<?php echo $base_url; ?>img/cycle.jpg"></p>
-                        <p><br>The graphic above shows the process for undertaking and recording a regulatory impact assessment. It will incorporate the evidence review of the policy (<i>see</i> <b>Guide 2.1</b>) when the options are assessed at stage 4. An assessment of the options could also include undertaking stakeholder input or a public consultation (<i>see</i> <b>Guide 2.3</b>). Ultimately it will lead to a recommendation of a preferred option for the government decision makers.</p>
+                        <div class="section-secondary-title fc-dark-green">2. How to approach a regulatory impact
+                            analysis
+                        </div>
+                        <p class="text-center"><img class="text-center img-responsive"
+                                                    src="<?php echo $base_url; ?>img/cycle.jpg"></p>
+                        <p><br>The graphic above shows the process for undertaking and recording a regulatory impact
+                            assessment. It will incorporate the evidence review of the policy (<i>see</i> <b>Guide
+                                2.1</b>) when the options are assessed at stage 4. An assessment of the options could
+                            also include undertaking stakeholder input or a public consultation (<i>see</i> <b>Guide
+                                2.3</b>). Ultimately it will lead to a recommendation of a preferred option for the
+                            government decision makers.</p>
                     </div>
                     <div class="content-desc-cont col-lg-10 col-lg-offset-1">
-                        <div class="section-secondary-title fc-dark-green">3. Examples of regulatory impact assessments for plain packaging of tobacco policies</div>
-                        <p><b>Ireland produced a regulatory impact assessment</b> that looked at the costs and benefits of the policy. It concludes that:</p>
-                        <p><i>“The implementation of this measure together with the other measures outlined in Tobacco Free Ireland would have the benefit of reducing smoking prevalence in Ireland and thereby reducing deaths associated with smoking related diseases. This in turn would reduce the costs to the state related to smoking related diseases. A very conservative estimate of the costs of illness attributable to smoking was in the region of €664 million in 2009. The cost of premature mortality in Ireland due to smoking in the same year was estimated at €3.5 billion.”</i><br><a href="health.gov.ie/wp-content/uploads/2013/12/here.pdf" target="_blank">health.gov.ie/wp-content/uploads/2013/12/here.pdf</a></p>
-                        <p><b>France did not produce an impact assessment</b> and this was used as an argument to challenge its legality under the French constitution although the argument was dismissed.</p>
+                        <div class="section-secondary-title fc-dark-green">3. Examples of regulatory impact assessments
+                            for plain packaging of tobacco policies
+                        </div>
+                        <p><b>Ireland produced a regulatory impact assessment</b> that looked at the costs and benefits
+                            of the policy. It concludes that:</p>
+                        <p><i>“The implementation of this measure together with the other measures outlined in Tobacco
+                                Free Ireland would have the benefit of reducing smoking prevalence in Ireland and
+                                thereby reducing deaths associated with smoking related diseases. This in turn would
+                                reduce the costs to the state related to smoking related diseases. A very conservative
+                                estimate of the costs of illness attributable to smoking was in the region of €664
+                                million in 2009. The cost of premature mortality in Ireland due to smoking in the same
+                                year was estimated at €3.5 billion.”</i><br><a
+                                    href="health.gov.ie/wp-content/uploads/2013/12/here.pdf" target="_blank">health.gov.ie/wp-content/uploads/2013/12/here.pdf</a>
+                        </p>
+                        <p><b>France did not produce an impact assessment</b> and this was used as an argument to
+                            challenge its legality under the French constitution although the argument was dismissed.
+                        </p>
                         <p><b>New Zealand produced a similar impact assessment</b> to Ireland. It concludes that:</p>
-                        <p><i>“The status quo does not address the continuing ability of the tobacco industry to use packaging in a way that allows advertising and promotion of tobacco products, despite the ban on tobacco advertising (and other controls). Similarly, though to increase health warning coverage on tobacco packets would reduce the amount of space left on the packet for industry promotions, it does not fully address this gap… Accordingly, this regulatory impact statement recommends that option 3, Regulatory change to require plain packaging of tobacco product.”</i><br><a href="health.govt.nz/system/files/documents/pages/regulatory-impact-statement-plain-packaging-tobaccoproducts.pdf" target="_blank">health.govt.nz/system/files/documents/pages/regulatory-impact-statement-plain-packaging-tobaccoproducts.pdf</a></p>
-                        <p><b>The UK produced an economic impact</b> assessment which fully monetised the impact of the policy on the UK economy as a whole and concluded that it would lead to a potential <b>£30billion benefit over 10 years compared to a £5billion cost</b> (most of the costs were loss of tax revenues from the reduction in tobacco consumption). But the sort of detailed calculations undertaken by the UK can be attacked by the tobacco industry as they rely on assumption and so even where one is produced, an impact assessment should not be relied on as the principle reason for proceeding, but rather one element of the decision making process. In legal challenges in the UK, the tobacco industry focussed on what it said were flaws in the economic impact assessment (although ultimately the court did not agree with the tobacco companies).<br><a href="gov.uk/government/uploads/system/uploads/attachment_data/file/403493/Impact_assessment.pdf" target="_blank">gov.uk/government/uploads/system/uploads/attachment_data/file/403493/Impact_assessment.pdf</a></p>
+                        <p><i>“The status quo does not address the continuing ability of the tobacco industry to use
+                                packaging in a way that allows advertising and promotion of tobacco products, despite
+                                the ban on tobacco advertising (and other controls). Similarly, though to increase
+                                health warning coverage on tobacco packets would reduce the amount of space left on the
+                                packet for industry promotions, it does not fully address this gap… Accordingly, this
+                                regulatory impact statement recommends that option 3, Regulatory change to require plain
+                                packaging of tobacco product.”</i><br><a
+                                    href="health.govt.nz/system/files/documents/pages/regulatory-impact-statement-plain-packaging-tobaccoproducts.pdf"
+                                    target="_blank">health.govt.nz/system/files/documents/pages/regulatory-impact-statement-plain-packaging-tobaccoproducts.pdf</a>
+                        </p>
+                        <p><b>The UK produced an economic impact</b> assessment which fully monetised the impact of the
+                            policy on the UK economy as a whole and concluded that it would lead to a potential <b>£30billion
+                                benefit over 10 years compared to a £5billion cost</b> (most of the costs were loss of
+                            tax revenues from the reduction in tobacco consumption). But the sort of detailed
+                            calculations undertaken by the UK can be attacked by the tobacco industry as they rely on
+                            assumption and so even where one is produced, an impact assessment should not be relied on
+                            as the principle reason for proceeding, but rather one element of the decision making
+                            process. In legal challenges in the UK, the tobacco industry focussed on what it said were
+                            flaws in the economic impact assessment (although ultimately the court did not agree with
+                            the tobacco companies).<br><a
+                                    href="gov.uk/government/uploads/system/uploads/attachment_data/file/403493/Impact_assessment.pdf"
+                                    target="_blank">gov.uk/government/uploads/system/uploads/attachment_data/file/403493/Impact_assessment.pdf</a>
+                        </p>
                     </div>
                 </div>
             </section>
@@ -1135,14 +1705,15 @@ function nav_content($menu,$var = null)
                 <div class="col-lg-12">
                     <div class="col-xs-6 pagination-url-back">
                         <a href="<?php echo $base_url ?>collecting-the-evidence/evidence-review">
-                        <img class="pagination-url-back-img" src="<?php echo $base_url; ?>img/scroll-page.png">
-                        Guide 2.1 Evidence Review
+                            <img class="pagination-url-back-img" src="<?php echo $base_url; ?>img/scroll-page.png">
+                            Guide 2.1 Evidence Review
                         </a>
                     </div>
                     <div class="col-xs-6 pagination-url-forward">
                         <a href="<?php echo $base_url; ?>collecting-the-evidence/stakeholder-input-public-consultation">
-                        Guide 2.3 Stakeholder Input / Public Consultation
-                        <img class="pagination-url-forward-img" src="<?php echo $base_url; ?>img/scroll-page.png"> </a>
+                            Guide 2.3 Stakeholder Input / Public Consultation
+                            <img class="pagination-url-forward-img" src="<?php echo $base_url; ?>img/scroll-page.png">
+                        </a>
                     </div>
                 </div>
             </div>
@@ -1150,14 +1721,15 @@ function nav_content($menu,$var = null)
                 <div class="col-lg-12">
                     <div class="col-xs-12 pagination-url-back">
                         <a href="<?php echo $base_url ?>collecting-the-evidence/evidence-review">
-                        <img class="pagination-url-back-img" src="<?php echo $base_url; ?>img/scroll-page.png"><br>
-                        Guide 2.1 Evidence Review
+                            <img class="pagination-url-back-img" src="<?php echo $base_url; ?>img/scroll-page.png"><br>
+                            Guide 2.1 Evidence Review
                         </a>
                     </div>
                     <div class="col-xs-12 pagination-url-forward">
                         <a href="<?php echo $base_url; ?>collecting-the-evidence/stakeholder-input-public-consultation">
-                        Guide 2.3 Stakeholder Input / Public Consultation
-                        <br><img class="pagination-url-forward-img" src="<?php echo $base_url; ?>img/scroll-page.png"> </a>
+                            Guide 2.3 Stakeholder Input / Public Consultation
+                            <br><img class="pagination-url-forward-img"
+                                     src="<?php echo $base_url; ?>img/scroll-page.png"> </a>
                     </div>
                 </div>
             </div>
@@ -1165,8 +1737,7 @@ function nav_content($menu,$var = null)
             break;
 
         case 'stakeholder-input-public-consultation':
-            if ($var == 'og_desc')
-            {
+            if ($var == 'og_desc') {
                 $og_desc = 'The STAKEHOLDER INPUT section of the Reference Materials provides an example draft public consultation TEMPLATE that can be adapted for a particular country.';
 
                 return $og_desc;
@@ -1179,69 +1750,161 @@ function nav_content($menu,$var = null)
                         <div class="section-title-num fc-blue-green">Guide 2.3</div>
                         <div class="section-title fc-blue-green">Stakeholder Input / Public Consultation</div>
                     </div>
-                    <div class="col-lg-10 col-lg-offset-1"><p><a href="<?php echo $base_url; ?>policy-tools/consultation-document-template"><b class="fc-blue-green">Reference Section C</b></a> provides an template draft public consultation that can be adapted for a particular country.</p></div>
+                    <div class="col-lg-10 col-lg-offset-1"><p><a
+                                    href="<?php echo $base_url; ?>policy-tools/consultation-document-template"><b
+                                        class="fc-blue-green">Reference Section C</b></a> provides an template draft
+                            public consultation that can be adapted for a particular country.</p></div>
                     <div class="content-desc-cont col-lg-10 col-lg-offset-1">
                         <div class="section-secondary-title fc-blue-green">1. What is it and why is it needed?</div>
-                        <p>For novel or complimentary tobacco control polices in particular, allowing all potential stakeholders, including industry, the opportunity to make submissions or comments means the policy is developed having taken all issues and views into account. The advantages of a consultation are:</p>
+                        <p>For novel or complimentary tobacco control polices in particular, allowing all potential
+                            stakeholders, including industry, the opportunity to make submissions or comments means the
+                            policy is developed having taken all issues and views into account. The advantages of a
+                            consultation are:</p>
                         <ul class="custom ">
                             <li>Government may receive useful comments from public health organisations and experts</li>
-                            <li>Tobacco companies may submit comments in a transparent fashion rather than behind closed doors.</li>
-                            <li>From a legal perspective, consultation gives governments another rebuttal to the typical tobacco industry arguments about poorly crafted policies and thoughtless regulatory processes.</li>
-                            <li>Media coverage of the consultation can help promote the measures in advance of implementation</li>
+                            <li>Tobacco companies may submit comments in a transparent fashion rather than behind closed
+                                doors.
+                            </li>
+                            <li>From a legal perspective, consultation gives governments another rebuttal to the typical
+                                tobacco industry arguments about poorly crafted policies and thoughtless regulatory
+                                processes.
+                            </li>
+                            <li>Media coverage of the consultation can help promote the measures in advance of
+                                implementation
+                            </li>
                         </ul>
-                        <p>Most countries (but not all) that have adopted plain packaging laws, did so after a process that allowed stakeholder input.</p>
-                        <p>The process for stake holder input should be guided by the normal administrative procedures in each country. One option is to have full public consultation; alternatively the process may, for instance, form part of parliamentary committee procedures allowing key stakeholders to make written submissions or by way of public hearings which can be a shorter procedure. In Ireland the Public Health (Standardised Packaging of Tobacco) Bill was referred to the parliamentary Joint Committee on Health, which ran public hearings for key stakeholders.</p>
-                        <p>It may be unusual for the Health Ministry in some countries to run public consultations in respect of public health measures. Governments do not need to undertake a process for plain packaging that is outside of its normal constitutional requirements. It is also important to bear in mind that a poorly run public consultation which does not allow effective responses or which is a mere sham because the government has already made up its mind, can lead to greater legal problems than not running one at all.</p>
+                        <p>Most countries (but not all) that have adopted plain packaging laws, did so after a process
+                            that allowed stakeholder input.</p>
+                        <p>The process for stake holder input should be guided by the normal administrative procedures
+                            in each country. One option is to have full public consultation; alternatively the process
+                            may, for instance, form part of parliamentary committee procedures allowing key stakeholders
+                            to make written submissions or by way of public hearings which can be a shorter procedure.
+                            In Ireland the Public Health (Standardised Packaging of Tobacco) Bill was referred to the
+                            parliamentary Joint Committee on Health, which ran public hearings for key stakeholders.</p>
+                        <p>It may be unusual for the Health Ministry in some countries to run public consultations in
+                            respect of public health measures. Governments do not need to undertake a process for plain
+                            packaging that is outside of its normal constitutional requirements. It is also important to
+                            bear in mind that a poorly run public consultation which does not allow effective responses
+                            or which is a mere sham because the government has already made up its mind, can lead to
+                            greater legal problems than not running one at all.</p>
                     </div>
                     <div class="content-desc-cont col-lg-10 col-lg-offset-1">
                         <div class="section-secondary-title fc-blue-green">2. Article 5.3 of the WHO FCTC</div>
-                        <p>“When seeking comments or submissions from tobacco companies, Governments need to be careful to comply with Article 5.3 of the WHO FCTC which stipulates that Parties shall act to protect tobacco control policies from commercial and other vested interests of the tobacco industry. Given that plain packaging involves technical regulations that impact on the way in which a product is manufactured, it can be important that those parts of industry that are impacted be allowed to have their input considered. They key to interaction with the industry is to be clear about exactly what issues comments are sought on and to ensure there is complete transparency in respect of any meeting or discussion.</p>
-                        <p>Tobacco companies can provide written submissions, which should then made publicly available. Meetings can take place but should be limited to where specific information is needed in relation to potential costs to industry or to technical drafting of the legislation which may impact on the manufacturing process in an unnecessary way. Where meetings do take place, full records should be made publicly available about the arrangements, who was present at the meeting and minutes of what was discussed.”</p>
+                        <p>“When seeking comments or submissions from tobacco companies, Governments need to be careful
+                            to comply with Article 5.3 of the WHO FCTC which stipulates that Parties shall act to
+                            protect tobacco control policies from commercial and other vested interests of the tobacco
+                            industry. Given that plain packaging involves technical regulations that impact on the way
+                            in which a product is manufactured, it can be important that those parts of industry that
+                            are impacted be allowed to have their input considered. They key to interaction with the
+                            industry is to be clear about exactly what issues comments are sought on and to ensure there
+                            is complete transparency in respect of any meeting or discussion.</p>
+                        <p>Tobacco companies can provide written submissions, which should then made publicly available.
+                            Meetings can take place but should be limited to where specific information is needed in
+                            relation to potential costs to industry or to technical drafting of the legislation which
+                            may impact on the manufacturing process in an unnecessary way. Where meetings do take place,
+                            full records should be made publicly available about the arrangements, who was present at
+                            the meeting and minutes of what was discussed.”</p>
                     </div>
                     <div class="content-desc-cont col-lg-10 col-lg-offset-1">
                         <div class="section-secondary-title fc-blue-green">3. How should it be run?</div>
-                        <p>If a public consultation is run by the Health Ministry, sufficient time needs to be factored into the process to allow stakeholders to respond and also to allow the Health Ministry officials time to properly consider the submissions and any amendments to the legislation that flow from those submissions.</p>
-                        <p>Consultations on tobacco product plain packaging have generated huge volumes of responses because of campaigns funded by the tobacco industry on one side, and tobacco control advocacy groups on the other. This led to 650,000 responses to the first UK consultation – more than any previous public consultation. If resources are not available to consider huge numbers of responses an alternative method of allowing key stakeholders to provide their submissions should be used which invites the key interested bodies or organisations to make submissions. A consultation is not a vote but a means of ensuring all relevant issues and views are considered.</p>
-                        <p>A decision must be taken as to the best stage to have stakeholder input and this will depend on local circumstances. One option is to consult or take submissions on the principle of whether or not to proceed with the plain packaging, but it may be preferable to consult not on whether to proceed but on on the detail of proposal.</p>
+                        <p>If a public consultation is run by the Health Ministry, sufficient time needs to be factored
+                            into the process to allow stakeholders to respond and also to allow the Health Ministry
+                            officials time to properly consider the submissions and any amendments to the legislation
+                            that flow from those submissions.</p>
+                        <p>Consultations on tobacco product plain packaging have generated huge volumes of responses
+                            because of campaigns funded by the tobacco industry on one side, and tobacco control
+                            advocacy groups on the other. This led to 650,000 responses to the first UK consultation –
+                            more than any previous public consultation. If resources are not available to consider huge
+                            numbers of responses an alternative method of allowing key stakeholders to provide their
+                            submissions should be used which invites the key interested bodies or organisations to make
+                            submissions. A consultation is not a vote but a means of ensuring all relevant issues and
+                            views are considered.</p>
+                        <p>A decision must be taken as to the best stage to have stakeholder input and this will depend
+                            on local circumstances. One option is to consult or take submissions on the principle of
+                            whether or not to proceed with the plain packaging, but it may be preferable to consult not
+                            on whether to proceed but on on the detail of proposal.</p>
                     </div>
                     <div class="content-desc-cont col-lg-10 col-lg-offset-1">
                         <div class="section-secondary-title fc-blue-green"> 4. Key principles</div>
                         <ul class="custom">
-                            <li>Set clear time frames — these need to be tailored to the specific country’s circumstances, for the purposes of planning a legislative timetable it is suggested that a consultation run for a minimum of 6 weeks and that the time to review and consider the responses be at least 4 weeks, although this is very dependent on how many responses are received.</li>
-                            <li>Set clear parameters of the policy intentions, and the questions that are being asked</li>
-                            <li>Ensure that all relevant stakeholders have convenient access to the consultation document and an efficient means of responding</li>
-                            <li>Mobilise an alliance of health orientated stakeholders to respond and to communicate with the media</li>
+                            <li>Set clear time frames — these need to be tailored to the specific country’s
+                                circumstances, for the purposes of planning a legislative timetable it is suggested that
+                                a consultation run for a minimum of 6 weeks and that the time to review and consider the
+                                responses be at least 4 weeks, although this is very dependent on how many responses are
+                                received.
+                            </li>
+                            <li>Set clear parameters of the policy intentions, and the questions that are being asked
+                            </li>
+                            <li>Ensure that all relevant stakeholders have convenient access to the consultation
+                                document and an efficient means of responding
+                            </li>
+                            <li>Mobilise an alliance of health orientated stakeholders to respond and to communicate
+                                with the media
+                            </li>
                             <li>Do not commit to responding to individual submissions.</li>
                         </ul>
-                        <p>A consultation document also needs to be meaningful and provide stakeholders with sufficient information to respond. It is recommended that it includes the following:</p>
+                        <p>A consultation document also needs to be meaningful and provide stakeholders with sufficient
+                            information to respond. It is recommended that it includes the following:</p>
                         <p>
-                            <ol class="custom list-style-none">
-                                <li>a. the existing tobacco control measures already in place in the country;</li>
-                                <li>b. the current smoking prevalence and consumption rates and the costs and harms to society from these;</li>
-                                <li>d. a proposal that plain packaging of tobacco products be introduced (alongside any other tobacco control measures that are being introduced at the same time);</li>
-                                <li>e. the aims and objectives of the policy (as described in <a href="<?php echo $base_url; ?>getting-prepared/set-policy-objectives"><b class="fc-blue-green">Guide 1.1</b></a>);</li>
-                                <li>f. a summary of the evidence base that supports the introduction of plain packaging (<a href="<?php echo $base_url; ?>collecting-the-evidence/evidence-review"><b class="fc-blue-green">Guide 2.1</a></b>);</li>
-                                <li>g. what the features the proposed legislation would include in sufficient detail to allow comment (or a draft of the proposed legislation if that is available);</li>
-                                <li>h. the time frame that the government proposes;</li>
-                                <li>i. how to make submissions and the deadline for them.</li>
-                            </ol>
+                        <ol class="custom list-style-none">
+                            <li>a. the existing tobacco control measures already in place in the country;</li>
+                            <li>b. the current smoking prevalence and consumption rates and the costs and harms to
+                                society from these;
+                            </li>
+                            <li>d. a proposal that plain packaging of tobacco products be introduced (alongside any
+                                other tobacco control measures that are being introduced at the same time);
+                            </li>
+                            <li>e. the aims and objectives of the policy (as described in <a
+                                        href="<?php echo $base_url; ?>getting-prepared/set-policy-objectives"><b
+                                            class="fc-blue-green">Guide 1.1</b></a>);
+                            </li>
+                            <li>f. a summary of the evidence base that supports the introduction of plain packaging (<a
+                                        href="<?php echo $base_url; ?>collecting-the-evidence/evidence-review"><b
+                                            class="fc-blue-green">Guide 2.1</a></b>);
+                            </li>
+                            <li>g. what the features the proposed legislation would include in sufficient detail to
+                                allow comment (or a draft of the proposed legislation if that is available);
+                            </li>
+                            <li>h. the time frame that the government proposes;</li>
+                            <li>i. how to make submissions and the deadline for them.</li>
+                        </ol>
                         </p>
                         <div class="col-lg-10 col-lg-offset-1">
                             <div class="inner-box-style">
-                                    <div class="section-tertiary-title fc-brown">Country examples</div>
-                                    <ol class="custom list-style-none padding-0">
-                                        <li><b class="fc-brown">1. NORWAY.</b> Public consultation paper [June 2015]<br><a href="http://ec.europa.eu/growth/tools-databases/tris/en/index.cfm/search/?trisaction=search.detail&year=2015&num=9009&iLang=EN" target="_blank">http://ec.europa.eu/growth/tools-databases/tris/en/index.cfm/search/?trisaction=search.detail&year=2015&num=9009&iLang=EN</a></li>
-                                        <br>
-                                        <li><b class="fc-brown">2. UNITED KINGDOM.</b> Public consultation paper [April 2012]<br><a href="https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/170568/dh_133575.pdf" target="_blank">https://www.gov.uk/government/uploads/system/uploads/<br>attachment_data/file/170568/dh_133575.pdf</a></li>
-                                        <br>
-                                        <li><b class="fc-brown">3. SINGAPORE.</b> Public consultation paper [March 2016]<br><a href="http://www.healthhub.sg/sites/assets/Assets/PDFs/HPB/News/HPB%20News%2029Dec2015%20-%20Public%20Consultation_Tobacco%20Control.pdf" target="_blank">http://www.healthhub.sg/sites/assets/Assets/PDFs/HPB/News/<br>HPB%20News%2029Dec2015%20-%20Public%20Consultation_Tobacco%20Control.pdf</a></li>
-                                        <br>
-                                        <li><b class="fc-brown">4. CANADA.</b> Public consultation paper [May 2016]<br><a href="http://healthycanadians.gc.ca/health-system-systeme-sante/consultations/tobaccopackages-emballages-produits-tabac/document-eng.php" target="_blank">http://healthycanadians.gc.ca/health-system-systeme-sante/consultations/tobaccopackages-emballages-produits-tabac/document-eng.php</a></li>
-                                        <br>
-                                        <li><b class="fc-brown">5. NEW ZEALAND.</b> Public consultation paper [May 2016]<br><a href="http://www.health.govt.nz/publication/standardised-tobacco-products-and-packagingdraft-regulations" target="_blank">http://www.health.govt.nz/publication/standardised-tobacco-products-and-packagingdraft-regulations</a></li>
-                                        <br>
-                                        <li><b class="fc-brown">6. IRELAND.</b> Report of the Joint Committee on Health following public stakeholder hearings [April 2014]<br><a href="https://www.oireachtas.ie/parliament/media/committees/healthandchildren/Public-Health-SPT-Bill--Vol-1.pdf" target="_blank">https://www.oireachtas.ie/parliament/media/committees/healthandchildren/Public-Health-SPT-Bill--Vol-1.pdf</a></li>
-                                    </ol>
+                                <div class="section-tertiary-title fc-brown">Country examples</div>
+                                <ol class="custom list-style-none padding-0">
+                                    <li><b class="fc-brown">1. NORWAY.</b> Public consultation paper [June 2015]<br><a
+                                                href="http://ec.europa.eu/growth/tools-databases/tris/en/index.cfm/search/?trisaction=search.detail&year=2015&num=9009&iLang=EN"
+                                                target="_blank">http://ec.europa.eu/growth/tools-databases/tris/en/index.cfm/search/?trisaction=search.detail&year=2015&num=9009&iLang=EN</a>
+                                    </li>
+                                    <br>
+                                    <li><b class="fc-brown">2. UNITED KINGDOM.</b> Public consultation paper [April
+                                        2012]<br><a
+                                                href="https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/170568/dh_133575.pdf"
+                                                target="_blank">https://www.gov.uk/government/uploads/system/uploads/<br>attachment_data/file/170568/dh_133575.pdf</a>
+                                    </li>
+                                    <br>
+                                    <li><b class="fc-brown">3. SINGAPORE.</b> Public consultation paper [March 2016]<br><a
+                                                href="http://www.healthhub.sg/sites/assets/Assets/PDFs/HPB/News/HPB%20News%2029Dec2015%20-%20Public%20Consultation_Tobacco%20Control.pdf"
+                                                target="_blank">http://www.healthhub.sg/sites/assets/Assets/PDFs/HPB/News/<br>HPB%20News%2029Dec2015%20-%20Public%20Consultation_Tobacco%20Control.pdf</a>
+                                    </li>
+                                    <br>
+                                    <li><b class="fc-brown">4. CANADA.</b> Public consultation paper [May 2016]<br><a
+                                                href="http://healthycanadians.gc.ca/health-system-systeme-sante/consultations/tobaccopackages-emballages-produits-tabac/document-eng.php"
+                                                target="_blank">http://healthycanadians.gc.ca/health-system-systeme-sante/consultations/tobaccopackages-emballages-produits-tabac/document-eng.php</a>
+                                    </li>
+                                    <br>
+                                    <li><b class="fc-brown">5. NEW ZEALAND.</b> Public consultation paper [May 2016]<br><a
+                                                href="http://www.health.govt.nz/publication/standardised-tobacco-products-and-packagingdraft-regulations"
+                                                target="_blank">http://www.health.govt.nz/publication/standardised-tobacco-products-and-packagingdraft-regulations</a>
+                                    </li>
+                                    <br>
+                                    <li><b class="fc-brown">6. IRELAND.</b> Report of the Joint Committee on Health
+                                        following public stakeholder hearings [April 2014]<br><a
+                                                href="https://www.oireachtas.ie/parliament/media/committees/healthandchildren/Public-Health-SPT-Bill--Vol-1.pdf"
+                                                target="_blank">https://www.oireachtas.ie/parliament/media/committees/healthandchildren/Public-Health-SPT-Bill--Vol-1.pdf</a>
+                                    </li>
+                                </ol>
                             </div>
                         </div>
                     </div>
@@ -1252,14 +1915,15 @@ function nav_content($menu,$var = null)
                 <div class="col-lg-12">
                     <div class="col-xs-6 pagination-url-back">
                         <a href="<?php echo $base_url ?>collecting-the-evidence/regulatory-impact-analysis">
-                        <img class="pagination-url-back-img" src="<?php echo $base_url; ?>img/scroll-page.png"> 
-                        Guide 2.2 Regulatory Impact Analysis
+                            <img class="pagination-url-back-img" src="<?php echo $base_url; ?>img/scroll-page.png">
+                            Guide 2.2 Regulatory Impact Analysis
                         </a>
                     </div>
                     <div class="col-xs-6 pagination-url-forward">
                         <a href="<?php echo $base_url; ?>crafting-the-legislation/make-key-policy-decisions">
-                        Guide 3.1 Make Key Policy Decisions
-                        <img class="pagination-url-forward-img" src="<?php echo $base_url; ?>img/scroll-page.png"> </a>
+                            Guide 3.1 Make Key Policy Decisions
+                            <img class="pagination-url-forward-img" src="<?php echo $base_url; ?>img/scroll-page.png">
+                        </a>
                     </div>
                 </div>
             </div>
@@ -1267,14 +1931,15 @@ function nav_content($menu,$var = null)
                 <div class="col-lg-12">
                     <div class="col-xs-12 pagination-url-back">
                         <a href="<?php echo $base_url ?>collecting-the-evidence/regulatory-impact-analysis">
-                        <img class="pagination-url-back-img" src="<?php echo $base_url; ?>img/scroll-page.png"><br>
-                        Guide 2.2 Regulatory Impact Analysis
+                            <img class="pagination-url-back-img" src="<?php echo $base_url; ?>img/scroll-page.png"><br>
+                            Guide 2.2 Regulatory Impact Analysis
                         </a>
                     </div>
                     <div class="col-xs-12 pagination-url-forward">
                         <a href="<?php echo $base_url; ?>crafting-the-legislation/make-key-policy-decisions">
-                        Guide 3.1 Make Key Policy Decisions
-                        <br><img class="pagination-url-forward-img" src="<?php echo $base_url; ?>img/scroll-page.png"> </a>
+                            Guide 3.1 Make Key Policy Decisions
+                            <br><img class="pagination-url-forward-img"
+                                     src="<?php echo $base_url; ?>img/scroll-page.png"> </a>
                     </div>
                 </div>
             </div>
@@ -1282,8 +1947,7 @@ function nav_content($menu,$var = null)
             break;
 
         case 'make-key-policy-decisions':
-            if ($var == 'og_desc')
-            {
+            if ($var == 'og_desc') {
                 $og_desc = 'Plain Packaging of Tobacco Products involves many different elements and as with all tobacco control policies, the tobacco industry will look for loop holes or ways to get around or undermine the policy. It is important to get the detail right to ensure the policy is robust and ‘future proofed’.';
 
                 return $og_desc;
@@ -1297,38 +1961,81 @@ function nav_content($menu,$var = null)
                         <div class="section-title fc-blue">Make Key Policy Decisions</div>
                     </div>
                     <div class="col-lg-10 col-lg-offset-1">
-                        <p><b>Plain Packaging of Tobacco Products involves many different elements and as with all tobacco control policies, the tobacco industry will look for loop holes or ways to get around or undermine the policy. It is important to get the detail right to ensure the policy is robust and ‘future proofed’.</b></p>
-                        <p>This means the legislation will likely be quite detailed – aiming for simplicity risks the tobacco industry developing novel ways to differentiate their products which don’t currently exist on the market (<i>see</i> <b>GUIDE 3.2: DRAFTING THE LAW</b>).</p>
+                        <p><b>Plain Packaging of Tobacco Products involves many different elements and as with all
+                                tobacco control policies, the tobacco industry will look for loop holes or ways to get
+                                around or undermine the policy. It is important to get the detail right to ensure the
+                                policy is robust and ‘future proofed’.</b></p>
+                        <p>This means the legislation will likely be quite detailed – aiming for simplicity risks the
+                            tobacco industry developing novel ways to differentiate their products which don’t currently
+                            exist on the market (<i>see</i> <b>GUIDE 3.2: DRAFTING THE LAW</b>).</p>
                         <p>The key initial policy development decisions are listed below.</p>
                     </div>
                     <div class="content-desc-cont col-lg-10 col-lg-offset-1">
-                        <div class="section-secondary-title fc-blue">1. Apply plain packaging to all tobacco product categories</div>
+                        <div class="section-secondary-title fc-blue">1. Apply plain packaging to all tobacco product
+                            categories
+                        </div>
                         <div class="col-lg-12">
                             <div class="col-lg-8">
-                                <p><b>The WHO FCTC guidelines to Article 13 imply that plain packaging should be applied to all tobacco products.</b> Failure to include all tobacco products, could result in those products not subject to the requirements gaining market share (in Canada, for instance, flavoured cigarillos became popular after flavoured cigarettes were banned).</p>
-                                <p>There must be good policy reasons for any decision to apply the policy to only some products because otherwise there is a risk that a claim would be made that the policy is discriminatory and in violation of World Trade Organization (WTO) rules (<i>see</i> <b>GUIDE 4.3 WTO NOTIFICATIONS</b>). Australia and Ireland’s legislation applies to all tobacco products. However, UK, Norway, France and Hungary apply the legislation to just cigarettes and hand rolled tobacco. Decisions in those countries were made because of the limited prevalence of less common tobacco products such as cigars or pipe tobacco, especially among younger people.</p>
+                                <p><b>The WHO FCTC guidelines to Article 13 imply that plain packaging should be applied
+                                        to all tobacco products.</b> Failure to include all tobacco products, could
+                                    result in those products not subject to the requirements gaining market share (in
+                                    Canada, for instance, flavoured cigarillos became popular after flavoured cigarettes
+                                    were banned).</p>
+                                <p>There must be good policy reasons for any decision to apply the policy to only some
+                                    products because otherwise there is a risk that a claim would be made that the
+                                    policy is discriminatory and in violation of World Trade Organization (WTO) rules
+                                    (<i>see</i> <b>GUIDE 4.3 WTO NOTIFICATIONS</b>). Australia and Ireland’s legislation
+                                    applies to all tobacco products. However, UK, Norway, France and Hungary apply the
+                                    legislation to just cigarettes and hand rolled tobacco. Decisions in those countries
+                                    were made because of the limited prevalence of less common tobacco products such as
+                                    cigars or pipe tobacco, especially among younger people.</p>
                             </div>
                             <div class="col-lg-4 text-center">
-                                <div><img height="250px" class="img-responsive" src="<?php echo $base_url; ?>img/lowresimg/guide-3-1-1.jpg"></div>
-                                <div><img height="250px" class="img-responsive" src="<?php echo $base_url; ?>img/lowresimg/guide-3-1-2.jpg"></div>
+                                <div><img height="250px" class="img-responsive"
+                                          src="<?php echo $base_url; ?>img/lowresimg/guide-3-1-1.jpg"></div>
+                                <div><img height="250px" class="img-responsive"
+                                          src="<?php echo $base_url; ?>img/lowresimg/guide-3-1-2.jpg"></div>
                             </div>
                         </div>
                     </div>
                     <div class="content-desc-cont col-lg-10 col-lg-offset-1">
                         <div class="section-secondary-title fc-blue">2. Regulate individual sticks</div>
                         <div class="col-lg-12">
-                            <div class="col-lg-8"><p><b>All existing plain packaging legislation apply plain cigarette stick requirements.</b> White sticks with a white tip or imitation cork tip. In Australia an alpha numeric code is permitted that cannot amount to branding. Australia also stipulates the size and shape of the sticks because ‘slim sticks’ can create the impression that they are less harmful. In UK and Ireland, the brand name and variant is permitted in a specified typeface and location on the stick. It is recommended that sticks be regulated because failure to do so could lead to more branding and the use of attractive colours on the cigarette sticks themselves. If sticks are being regulated, then consideration should be given whether to allow the brand name on them or not.</p></div>
-                            <div class="col-lg-4 text-center"><img height="300px" src="<?php echo $base_url; ?>img/cigarette.png"></div>
+                            <div class="col-lg-8"><p><b>All existing plain packaging legislation apply plain cigarette
+                                        stick requirements.</b> White sticks with a white tip or imitation cork tip. In
+                                    Australia an alpha numeric code is permitted that cannot amount to branding.
+                                    Australia also stipulates the size and shape of the sticks because ‘slim sticks’ can
+                                    create the impression that they are less harmful. In UK and Ireland, the brand name
+                                    and variant is permitted in a specified typeface and location on the stick. It is
+                                    recommended that sticks be regulated because failure to do so could lead to more
+                                    branding and the use of attractive colours on the cigarette sticks themselves. If
+                                    sticks are being regulated, then consideration should be given whether to allow the
+                                    brand name on them or not.</p></div>
+                            <div class="col-lg-4 text-center"><img height="300px"
+                                                                   src="<?php echo $base_url; ?>img/cigarette.png">
+                            </div>
                         </div>
                     </div>
                     <div class="content-desc-cont col-lg-10 col-lg-offset-1">
                         <div class="section-secondary-title fc-blue">3. Minimum quantity per pack</div>
-                        <p><b>Most countries are adopting 20 cigarettes as the minimum individual pack size</b> as part of their plain packaging requirement. Australia and the EU also put minimum quantities on hand rolled (or roll your own) tobacco per pack (30g). The legislation should also prohibit the sale of tobacco in the absence of packaging as this prevents the sale of individual cigarettes or bidi’s, a common practice in some countries.</p>
-                        <p>The principle reason for prohibiting smaller packs and individual sticks is that these are cheaper and therefore more accessible to young people and children, and thereby encourage smoking initiation and addiction. This element of the measures is in accordance with WH O F C T C article 16.4</p>
+                        <p><b>Most countries are adopting 20 cigarettes as the minimum individual pack size</b> as part
+                            of their plain packaging requirement. Australia and the EU also put minimum quantities on
+                            hand rolled (or roll your own) tobacco per pack (30g). The legislation should also prohibit
+                            the sale of tobacco in the absence of packaging as this prevents the sale of individual
+                            cigarettes or bidi’s, a common practice in some countries.</p>
+                        <p>The principle reason for prohibiting smaller packs and individual sticks is that these are
+                            cheaper and therefore more accessible to young people and children, and thereby encourage
+                            smoking initiation and addiction. This element of the measures is in accordance with WH O F
+                            C T C article 16.4</p>
                     </div>
                     <div class="content-desc-cont col-lg-10 col-lg-offset-1">
                         <div class="section-secondary-title fc-blue">4. Information permitted on the pack</div>
-                        <p><b>Other than the brand and variant name, and the mandatory prescribed health warnings, there is information that a government may want to allow or require on tobacco packs.</b> These other pieces of information (sometimes given as symbols) may already appear on packs. Depending on how the legislation is drafted, it may need to specifically provide for or allow any additional information that is required by other laws (ie consumer protection) or is otherwise desirable. Examples could include:</p>
+                        <p><b>Other than the brand and variant name, and the mandatory prescribed health warnings, there
+                                is information that a government may want to allow or require on tobacco packs.</b>
+                            These other pieces of information (sometimes given as symbols) may already appear on packs.
+                            Depending on how the legislation is drafted, it may need to specifically provide for or
+                            allow any additional information that is required by other laws (ie consumer protection) or
+                            is otherwise desirable. Examples could include:</p>
                         <div class="col-lg-12 margin-btm-30">
                             <div class="col-lg-6">
                                 <ul class="custom">
@@ -1350,25 +2057,69 @@ function nav_content($menu,$var = null)
                                 </ul>
                             </div>
                         </div>
-                        <p><i>* Symbols for recycling and no littering are not permitted in Australian, Irish or UK legislation because they imply a positive social connection for the tobacco industry. W H O F C T C Article 11 implementation guidelines (paragraph 44) recommends that TNC emissions information should not be permitted on packs because emission yields are misleading to consumers.)</i></p>
-                        <p>A review of existing requirements and legislation (including general consumer laws that apply to all product packaging) is recommended to identify which information should continue, which should be not be allowed, and whether there is legislation that already permits or requires any information on tobacco packaging. This will inform the how the law is drafted.</p>
+                        <p><i>* Symbols for recycling and no littering are not permitted in Australian, Irish or UK
+                                legislation because they imply a positive social connection for the tobacco industry. W
+                                H O F C T C Article 11 implementation guidelines (paragraph 44) recommends that TNC
+                                emissions information should not be permitted on packs because emission yields are
+                                misleading to consumers.)</i></p>
+                        <p>A review of existing requirements and legislation (including general consumer laws that apply
+                            to all product packaging) is recommended to identify which information should continue,
+                            which should be not be allowed, and whether there is legislation that already permits or
+                            requires any information on tobacco packaging. This will inform the how the law is
+                            drafted.</p>
                     </div>
-                     <div class="content-desc-cont col-lg-10 col-lg-offset-1">
+                    <div class="content-desc-cont col-lg-10 col-lg-offset-1">
                         <div class="section-secondary-title fc-blue">5. Apply only to retail packaging</div>
-                        <p><b>In order to ensure that the policy is least restrictive, it needs to be aimed at consumers and no wider.</b> Therefore it should be applied to ‘retail packaging’ or only packaging that will or could be seen by consumers; rather than ‘in trade’ packaging that is only used in warehouses or wholesalers.</p>
-                        <p>There are good legal reasons for this limitation. Plain packaging is a measure designed to merely control the use of tobacco trademarks rather than to completely prohibit the trademarks in all circumstances. Applying the measure only to packing that consumers may see will assist in defending some of the legal claims the tobacco industry may make against the policy.</p>
-                        <p>In some countries small shop keepers use the large boxes that are normally only used in warehouses and which may not fall within a definition of ‘retail packaging’. In such situations, where consumers may be exposed to branding on what is normally ‘trade packaging’, a government may consider extending the application of the law and if so, different ways of drafting the legislation can be developed and CTFK can assist or advice on possible options.</p>
+                        <p><b>In order to ensure that the policy is least restrictive, it needs to be aimed at consumers
+                                and no wider.</b> Therefore it should be applied to ‘retail packaging’ or only packaging
+                            that will or could be seen by consumers; rather than ‘in trade’ packaging that is only used
+                            in warehouses or wholesalers.</p>
+                        <p>There are good legal reasons for this limitation. Plain packaging is a measure designed to
+                            merely control the use of tobacco trademarks rather than to completely prohibit the
+                            trademarks in all circumstances. Applying the measure only to packing that consumers may see
+                            will assist in defending some of the legal claims the tobacco industry may make against the
+                            policy.</p>
+                        <p>In some countries small shop keepers use the large boxes that are normally only used in
+                            warehouses and which may not fall within a definition of ‘retail packaging’. In such
+                            situations, where consumers may be exposed to branding on what is normally ‘trade
+                            packaging’, a government may consider extending the application of the law and if so,
+                            different ways of drafting the legislation can be developed and CTFK can assist or advice on
+                            possible options.</p>
                     </div>
                     <div class="content-desc-cont col-lg-10 col-lg-offset-1">
-                        <div class="section-secondary-title fc-blue">6. Transition arrangements and sell through periods</div>
-                        <p><b>Manufacturers and retailers will have existing stock that does not comply with new packaging laws.</b> Sufficient notice of when the law will come into force ensures that producers and retailers have sufficient time to sell existing stock before changing packaging to comply with the new law. This weakens any industry argument that it has suffered loss as a consequence of holding unsold stock. Australia allowed a 3 month sell through period for plain packaging, after which old packs could no longer be sold; the UK allowed a full year.</p>
-                        <p>The question of what is a sufficient period of time may differ from country to country. Officials should consider what periods have been allowed for previous packaging requirements, such as changes to health warnings.</p>
+                        <div class="section-secondary-title fc-blue">6. Transition arrangements and sell through
+                            periods
+                        </div>
+                        <p><b>Manufacturers and retailers will have existing stock that does not comply with new
+                                packaging laws.</b> Sufficient notice of when the law will come into force ensures that
+                            producers and retailers have sufficient time to sell existing stock before changing
+                            packaging to comply with the new law. This weakens any industry argument that it has
+                            suffered loss as a consequence of holding unsold stock. Australia allowed a 3 month sell
+                            through period for plain packaging, after which old packs could no longer be sold; the UK
+                            allowed a full year.</p>
+                        <p>The question of what is a sufficient period of time may differ from country to country.
+                            Officials should consider what periods have been allowed for previous packaging
+                            requirements, such as changes to health warnings.</p>
                     </div>
                     <div class="content-desc-cont col-lg-10 col-lg-offset-1">
-                        <div class="section-secondary-title fc-blue">7. Technical details in parliamentary act or subsequent regulations</div>
-                        <p><b>It is recommended that new and specific legal authority is obtained from the legislature or parliament to implement the policy, rather than relying on existing Ministerial or executive powers.</b></p>
-                        <p>A parliamentary Act could provide simple powers so that the Minister of Health can later adopt regulations or a decree that set out the detailed requirement; or the Act could set out most of the detailed requirements. This will depend on the style of legislative drafting and law-making practices for each country as well as the political situation. A shorter Act, or a short provision that is part of a wider tobacco control Act, which just provides simple powers may be easier to get through parliament and less subject to political interference. On the other hand, if there is doubt as to whether the Minister will move quickly to bring in regulations, technical orders or decrees, then it may be better to include the detail in the Act and set a legislative timetable for implementation.</p>
-                        <p>If simple powers are taken it is important they are drafted so as to give authority to regulate all aspects of the packaging as well as the appearance of individual tobacco products such as cigarette sticks.</p>
+                        <div class="section-secondary-title fc-blue">7. Technical details in parliamentary act or
+                            subsequent regulations
+                        </div>
+                        <p><b>It is recommended that new and specific legal authority is obtained from the legislature
+                                or parliament to implement the policy, rather than relying on existing Ministerial or
+                                executive powers.</b></p>
+                        <p>A parliamentary Act could provide simple powers so that the Minister of Health can later
+                            adopt regulations or a decree that set out the detailed requirement; or the Act could set
+                            out most of the detailed requirements. This will depend on the style of legislative drafting
+                            and law-making practices for each country as well as the political situation. A shorter Act,
+                            or a short provision that is part of a wider tobacco control Act, which just provides simple
+                            powers may be easier to get through parliament and less subject to political interference.
+                            On the other hand, if there is doubt as to whether the Minister will move quickly to bring
+                            in regulations, technical orders or decrees, then it may be better to include the detail in
+                            the Act and set a legislative timetable for implementation.</p>
+                        <p>If simple powers are taken it is important they are drafted so as to give authority to
+                            regulate all aspects of the packaging as well as the appearance of individual tobacco
+                            products such as cigarette sticks.</p>
                     </div>
                 </div>
             </section>
@@ -1377,14 +2128,15 @@ function nav_content($menu,$var = null)
                 <div class="col-lg-12">
                     <div class="col-xs-6 pagination-url-back">
                         <a href="<?php echo $base_url ?>collecting-the-evidence/stakeholder-input-public-consultation">
-                        <img class="pagination-url-back-img" src="<?php echo $base_url; ?>img/scroll-page.png"> 
-                        Guide 2.3 Stakeholder Input / Public Consultation
+                            <img class="pagination-url-back-img" src="<?php echo $base_url; ?>img/scroll-page.png">
+                            Guide 2.3 Stakeholder Input / Public Consultation
                         </a>
                     </div>
                     <div class="col-xs-6 pagination-url-forward">
                         <a href="<?php echo $base_url; ?>crafting-the-legislation/draft-the-law">
-                        Guide 3.2 Draft the Law
-                        <img class="pagination-url-forward-img" src="<?php echo $base_url; ?>img/scroll-page.png"> </a>
+                            Guide 3.2 Draft the Law
+                            <img class="pagination-url-forward-img" src="<?php echo $base_url; ?>img/scroll-page.png">
+                        </a>
                     </div>
                 </div>
             </div>
@@ -1392,14 +2144,15 @@ function nav_content($menu,$var = null)
                 <div class="col-lg-12">
                     <div class="col-xs-12 pagination-url-back">
                         <a href="<?php echo $base_url ?>collecting-the-evidence/stakeholder-input-public-consultation">
-                        <img class="pagination-url-back-img" src="<?php echo $base_url; ?>img/scroll-page.png"><br>
-                        Guide 2.3 Stakeholder Input / Public Consultation
+                            <img class="pagination-url-back-img" src="<?php echo $base_url; ?>img/scroll-page.png"><br>
+                            Guide 2.3 Stakeholder Input / Public Consultation
                         </a>
                     </div>
                     <div class="col-xs-12 pagination-url-forward">
                         <a href="<?php echo $base_url; ?>crafting-the-legislation/draft-the-law">
-                        Guide 3.2 Draft the Law
-                        <br><img class="pagination-url-forward-img" src="<?php echo $base_url; ?>img/scroll-page.png"> </a>
+                            Guide 3.2 Draft the Law
+                            <br><img class="pagination-url-forward-img"
+                                     src="<?php echo $base_url; ?>img/scroll-page.png"> </a>
                     </div>
                 </div>
             </div>
@@ -1407,8 +2160,7 @@ function nav_content($menu,$var = null)
             break;
 
         case 'draft-the-law':
-            if ($var == 'og_desc')
-            {
+            if ($var == 'og_desc') {
                 $og_desc = 'Drafting the detailed legislation can take time and it is sensible to start the process early, making adjustments as policy decision are made. The International Legal Consortium at the Campaign for Tobacco- Free Kids can provide technical legal assistance with drafting the law.';
 
                 return $og_desc;
@@ -1422,12 +2174,33 @@ function nav_content($menu,$var = null)
                         <div class="section-title fc-blue-green-2">Draft the Law</div>
                     </div>
                     <div class="col-lg-10 col-lg-offset-1">
-                        <p>Drafting the detailed legislation can take time and it is sensible to start the process early, making adjustments as policy decision are made. The International Legal Consortium at the Campaign for Tobacco- Free Kids can provide technical legal assistance with drafting the law.</p>
-                        <p>This brief guide gives some of the key principles in approaching the drafting process for plain packaging but full details are in <a href="<?php echo $base_url; ?>legislation-drafting-tools/drafting-the-legislation-in-detail"><b class="fc-blue-green-2">Reference Section D: DRAFTING THE LEGISLATION</b></a>, together with <a href="<?php echo $base_url; ?>legislation-drafting-tools/template-draft-model-law"><b class="fc-blue-green-2">Reference Section F, which is a DRAFT MODEL LAW</b></a>. These reference material provide recommended solutions to all the issues listed below, and the reasons for them, together with straight forward options on how the legislation could be drafted. They draw on existing legislative examples and the policy development undertaken in Australia, UK, Ireland and France.</p>
+                        <p>Drafting the detailed legislation can take time and it is sensible to start the process
+                            early, making adjustments as policy decision are made. The International Legal Consortium at
+                            the Campaign for Tobacco- Free Kids can provide technical legal assistance with drafting the
+                            law.</p>
+                        <p>This brief guide gives some of the key principles in approaching the drafting process for
+                            plain packaging but full details are in <a
+                                    href="<?php echo $base_url; ?>legislation-drafting-tools/drafting-the-legislation-in-detail"><b
+                                        class="fc-blue-green-2">Reference Section D: DRAFTING THE LEGISLATION</b></a>,
+                            together with <a
+                                    href="<?php echo $base_url; ?>legislation-drafting-tools/template-draft-model-law"><b
+                                        class="fc-blue-green-2">Reference Section F, which is a DRAFT MODEL LAW</b></a>.
+                            These reference material provide recommended solutions to all the issues listed below, and
+                            the reasons for them, together with straight forward options on how the legislation could be
+                            drafted. They draw on existing legislative examples and the policy development undertaken in
+                            Australia, UK, Ireland and France.</p>
                     </div>
                     <div class="content-desc-cont col-lg-10 col-lg-offset-1">
                         <div class="section-secondary-title fc-blue-green-2">1. Regulate every part of the pack</div>
-                        <p>Every aspect of the packaging presents the tobacco industry with a potential opportunity to introduce novel or different elements which could differentiate and promote the product and undermine the intention to create truly standard packs. Experience shows that tobacco companies will seek to exploit whatever avenue is left to them to differentiate their product in a way that is attractive or which allows positive associations with the brand. The guiding principle behind plain packaging is that the only means of differentiation is through the brand and variant name, which are presented in a standard typeface. Achieving this requires regulating each aspect of the packaging and the appearance of individual products, such as cigarette sticks, including:</p>
+                        <p>Every aspect of the packaging presents the tobacco industry with a potential opportunity to
+                            introduce novel or different elements which could differentiate and promote the product and
+                            undermine the intention to create truly standard packs. Experience shows that tobacco
+                            companies will seek to exploit whatever avenue is left to them to differentiate their
+                            product in a way that is attractive or which allows positive associations with the brand.
+                            The guiding principle behind plain packaging is that the only means of differentiation is
+                            through the brand and variant name, which are presented in a standard typeface. Achieving
+                            this requires regulating each aspect of the packaging and the appearance of individual
+                            products, such as cigarette sticks, including:</p>
                         <div class="col-lg-12 margin-btm-30">
                             <div class="col-lg-4">
                                 <ul class="custom">
@@ -1462,38 +2235,76 @@ function nav_content($menu,$var = null)
                                 </ul>
                             </div>
                         </div>
-                        <p>This means the legislation can end up being quite detailed – aiming for simplicity risks the tobacco industry developing novel ways to differentiate their products.</p>
+                        <p>This means the legislation can end up being quite detailed – aiming for simplicity risks the
+                            tobacco industry developing novel ways to differentiate their products.</p>
                         <div class="margin-btm-30 text-center">
                             <img class="img-responsive text-center" src="<?php echo $base_url; ?>img/anatomy.jpg">
                         </div>
                     </div>
                     <div class="content-desc-cont col-lg-10 col-lg-offset-1">
                         <div class="section-secondary-title fc-blue-green-2">2. Emulate existing laws</div>
-                        <p>The legislation in force in Australia, the UK, Ireland, France and Hungary (and at the time of writing the proposed laws in New Zealand, Slovenia and Norway) are, in their effect, all very similar (although there are some differences which are highlighted in this toolkit).</p>
-                        <p>There have been a number of positive legal rulings on challenges to plain packaging laws in Australia, the EU and the UK, and a ruling is expected in early 2017 on a WTO dispute (<i>see</i> <a href="<?php echo $base_url; ?>procedural-steps-for-a-secure-policy/wto-notification"><b class="fc-blue-green-2">Guide 4.3</b></a>). Some of the evidence supporting the policy is based around the specific policy decisions that were first developed in Australia. Deviating from those key evidence based policy decisions could risk providing tobacco companies with sufficient grounds to mount legal challenges.</p>
-                        <p>Countries considering plain packaging should therefore be cautious of introducing legislation that differs significantly from the plain packaging laws already in force. Emulating existing laws will allow the government to rely on both the evidence base and the positive legal rulings from around the world.</p>
+                        <p>The legislation in force in Australia, the UK, Ireland, France and Hungary (and at the time
+                            of writing the proposed laws in New Zealand, Slovenia and Norway) are, in their effect, all
+                            very similar (although there are some differences which are highlighted in this
+                            toolkit).</p>
+                        <p>There have been a number of positive legal rulings on challenges to plain packaging laws in
+                            Australia, the EU and the UK, and a ruling is expected in early 2017 on a WTO dispute (<i>see</i>
+                            <a href="<?php echo $base_url; ?>procedural-steps-for-a-secure-policy/wto-notification"><b
+                                        class="fc-blue-green-2">Guide 4.3</b></a>). Some of the evidence supporting the
+                            policy is based around the specific policy decisions that were first developed in Australia.
+                            Deviating from those key evidence based policy decisions could risk providing tobacco
+                            companies with sufficient grounds to mount legal challenges.</p>
+                        <p>Countries considering plain packaging should therefore be cautious of introducing legislation
+                            that differs significantly from the plain packaging laws already in force. Emulating
+                            existing laws will allow the government to rely on both the evidence base and the positive
+                            legal rulings from around the world.</p>
                     </div>
                     <div class="content-desc-cont col-lg-10 col-lg-offset-1">
                         <div class="section-secondary-title fc-blue-green-2">3. Keep it flexible</div>
-                        <p>It is prudent to adopt legislation that allows for subsequent changes through delegated regulatory powers to the appropriate ministry. Unanticipated issues may arise and the tobacco industry will inevitably try to find ways to undermine the policy.</p>
+                        <p>It is prudent to adopt legislation that allows for subsequent changes through delegated
+                            regulatory powers to the appropriate ministry. Unanticipated issues may arise and the
+                            tobacco industry will inevitably try to find ways to undermine the policy.</p>
                     </div>
                     <div class="content-desc-cont col-lg-10 col-lg-offset-1">
                         <div class="section-secondary-title fc-blue-green-2">4. Color</div>
                         <div class="col-lg-12">
                             <div class="col-lg-8">
-                                <p>The color of packs provides a good example of the need for detail and for emulating existing legislation. Unless the exact color required for the packaging is prescribed very precisely, variations of color will appear, defeating the intention of standardizing packaging. Simply requiring ‘brown’, or a ‘green/brown’ in legislation is insufficient. Australia commissioned research into which color was perceived to be the least appealing for tobacco packaging :</p>
+                                <p>The color of packs provides a good example of the need for detail and for emulating
+                                    existing legislation. Unless the exact color required for the packaging is
+                                    prescribed very precisely, variations of color will appear, defeating the intention
+                                    of standardizing packaging. Simply requiring ‘brown’, or a ‘green/brown’ in
+                                    legislation is insufficient. Australia commissioned research into which color was
+                                    perceived to be the least appealing for tobacco packaging :</p>
                             </div>
-                            <div class="col-lg-4 text-center"><img class="img-responsive text-center" src="<?php echo $base_url; ?>img/cigarette-box-color.jpg"></div>
+                            <div class="col-lg-4 text-center"><img class="img-responsive text-center"
+                                                                   src="<?php echo $base_url; ?>img/cigarette-box-color.jpg">
+                            </div>
                         </div>
-                        <p>Pantone 448C (opaque couche) with a matt finish is the dull brown/green color specified in the Australian, UK, Ireland, France and Hungary legislation for the packaging.<sup>1</sup></p>
-                        <p><b>Pantone Cool Grey 2 C</b> with a matt finish is the color specified in those countries for any text permitted on the packaging, such as brand name or contact details.</p>
-                        <p>Unless there is specific evidence or research that demonstrates different colors would be more effective in a particular country at achieving the aims of the policy, it is recommended that these colors are used in all plain packaging legislation because of the research already conducted that demonstrates the colour to be effective. A ‘matt finish’ to the surface should also be specified to avoid some packs appearing with a glossy finish.</p>
+                        <p>Pantone 448C (opaque couche) with a matt finish is the dull brown/green color specified in
+                            the Australian, UK, Ireland, France and Hungary legislation for the packaging.<sup>1</sup>
+                        </p>
+                        <p><b>Pantone Cool Grey 2 C</b> with a matt finish is the color specified in those countries for
+                            any text permitted on the packaging, such as brand name or contact details.</p>
+                        <p>Unless there is specific evidence or research that demonstrates different colors would be
+                            more effective in a particular country at achieving the aims of the policy, it is
+                            recommended that these colors are used in all plain packaging legislation because of the
+                            research already conducted that demonstrates the colour to be effective. A ‘matt finish’ to
+                            the surface should also be specified to avoid some packs appearing with a glossy finish.</p>
                     </div>
-                     <div class="content-desc-cont col-lg-10 col-lg-offset-1">
+                    <div class="content-desc-cont col-lg-10 col-lg-offset-1">
                         <div class="section-secondary-title fc-blue-green-2">5. Shape, size and opening of pack</div>
                         <div class="col-lg-12">
                             <div class="col-lg-8">
-                                <p>This is another area where it is recommended that particular care be taken to provide detail and to follow existing legislation. Many of the policy decisions in Australia, UK and Ireland, require cigarette packs must be in the form that is generally the standard or most common type of packet - a cuboid box made of cardboard with 20 cigarettes in it, which uses a flip top lid. Because this is the most common form of packaging for cigarettes, tobacco companies will not have to make any major adjustments to their machinery to produce this packaging and therefore it is a least restrictive approach which should be followed unless a different type or style of packet is more common in the particular country considering plain packaging.</p>
+                                <p>This is another area where it is recommended that particular care be taken to provide
+                                    detail and to follow existing legislation. Many of the policy decisions in
+                                    Australia, UK and Ireland, require cigarette packs must be in the form that is
+                                    generally the standard or most common type of packet - a cuboid box made of
+                                    cardboard with 20 cigarettes in it, which uses a flip top lid. Because this is the
+                                    most common form of packaging for cigarettes, tobacco companies will not have to
+                                    make any major adjustments to their machinery to produce this packaging and
+                                    therefore it is a least restrictive approach which should be followed unless a
+                                    different type or style of packet is more common in the particular country
+                                    considering plain packaging.</p>
                             </div>
                             <div class="col-lg-4 text-center">
                                 <img class="img-responsive text-center" src="<?php echo $base_url ?>img/shape.jpg">
@@ -1501,24 +2312,49 @@ function nav_content($menu,$var = null)
                         </div>
                     </div>
                     <div class="content-desc-cont col-lg-10 col-lg-offset-1">
-                        <div class="section-secondary-title fc-blue-green-2">6. Plain packaging ‘light’ policy should be avoided</div>
+                        <div class="section-secondary-title fc-blue-green-2">6. Plain packaging ‘light’ policy should be
+                            avoided
+                        </div>
                         <div class="col-lg-12">
                             <div class="col-lg-8">
-                                <p>For instance, legislation should not allow for a small amount of space for branding on a pack, or permit certain figurative logos (such as a small logo in the same colour as the text such as in the picture below). With no specific evidence available as to whether or how effective such a policy would be, a policy choice of that nature could introduce unnecessary legal risks.</p>
+                                <p>For instance, legislation should not allow for a small amount of space for branding
+                                    on a pack, or permit certain figurative logos (such as a small logo in the same
+                                    colour as the text such as in the picture below). With no specific evidence
+                                    available as to whether or how effective such a policy would be, a policy choice of
+                                    that nature could introduce unnecessary legal risks.</p>
                             </div>
                             <div class="col-lg-4 text-center">
-                                <img class="text-center img-responsive" src="<?php echo $base_url; ?>img/lowresimg/plain-pack.jpg">
+                                <img class="text-center img-responsive"
+                                     src="<?php echo $base_url; ?>img/lowresimg/plain-pack.jpg">
                             </div>
                         </div>
                     </div>
                     <div class="content-desc-cont col-lg-10 col-lg-offset-1">
-                        <div class="section-secondary-title fc-blue-green-2">7. Include a trademark registration saving provision</div>
-                        <p><b>There are important legal reasons to ensure that tobacco companies can maintain their trademark registrations even if the use of those trademarks is severely restricted by plain packaging.</b> There are international, regional and national laws which oblige states to maintain trademark registrations. For instance Article 15 of the WTO Trade Related aspects of Intellectual Property Rights Agreement (TRIPS) obliges member states to permit registration of signs as trademarks so long as they are capable of distinguishing the goods of one undertaking from those of another.</p>
-                        <p>In most jurisdictions non-use of a trademark in practice can lead to applications for de-registration of that trademark, typically after 5 years where there is no good reason for the non-use.</p>
-                        <p>If a country’s plain packaging laws mean that tobacco trademarks are fully prohibited or the trademark registration will necessarily be liable to cancellation this may breach international obligations. In addition, plain packaging is better viewed as a control on the use of trademarks rather than a deprivation or expropriation of trademarks.</p>
-                        <p>Therefore, most plain packaging legislation (for instance in Australia, UK and Ireland1) has a trademark registration saving provision which states that the legislation does not amount to a prohibition on the use of the trademarks in all circumstances, and that non-use of a trademark as a result of the legislation amounts to a good reason for non-use.</p>
-                        <p>The way in which plain packaging might otherwise intersect with a country’s domestic trademark laws needs to be considered carefully.</p>
-                        <p>An example of a trademark registration saving provision is in the <b>DRAFT MODEL BILL</b> at Article 13.</p>
+                        <div class="section-secondary-title fc-blue-green-2">7. Include a trademark registration saving
+                            provision
+                        </div>
+                        <p><b>There are important legal reasons to ensure that tobacco companies can maintain their
+                                trademark registrations even if the use of those trademarks is severely restricted by
+                                plain packaging.</b> There are international, regional and national laws which oblige
+                            states to maintain trademark registrations. For instance Article 15 of the WTO Trade Related
+                            aspects of Intellectual Property Rights Agreement (TRIPS) obliges member states to permit
+                            registration of signs as trademarks so long as they are capable of distinguishing the goods
+                            of one undertaking from those of another.</p>
+                        <p>In most jurisdictions non-use of a trademark in practice can lead to applications for
+                            de-registration of that trademark, typically after 5 years where there is no good reason for
+                            the non-use.</p>
+                        <p>If a country’s plain packaging laws mean that tobacco trademarks are fully prohibited or the
+                            trademark registration will necessarily be liable to cancellation this may breach
+                            international obligations. In addition, plain packaging is better viewed as a control on the
+                            use of trademarks rather than a deprivation or expropriation of trademarks.</p>
+                        <p>Therefore, most plain packaging legislation (for instance in Australia, UK and Ireland1) has
+                            a trademark registration saving provision which states that the legislation does not amount
+                            to a prohibition on the use of the trademarks in all circumstances, and that non-use of a
+                            trademark as a result of the legislation amounts to a good reason for non-use.</p>
+                        <p>The way in which plain packaging might otherwise intersect with a country’s domestic
+                            trademark laws needs to be considered carefully.</p>
+                        <p>An example of a trademark registration saving provision is in the <b>DRAFT MODEL BILL</b> at
+                            Article 13.</p>
                     </div>
                 </div>
             </section>
@@ -1527,14 +2363,15 @@ function nav_content($menu,$var = null)
                 <div class="col-lg-12">
                     <div class="col-xs-6 pagination-url-back">
                         <a href="<?php echo $base_url ?>crafting-the-legislation/make-key-policy-decisions">
-                        <img class="pagination-url-back-img" src="<?php echo $base_url; ?>img/scroll-page.png"> 
-                        Guide 3.1 Make Key Policy Decisions
+                            <img class="pagination-url-back-img" src="<?php echo $base_url; ?>img/scroll-page.png">
+                            Guide 3.1 Make Key Policy Decisions
                         </a>
                     </div>
                     <div class="col-xs-6 pagination-url-forward">
                         <a href="<?php echo $base_url; ?>procedural-steps-for-a-secure-policy/coordinate-across-government">
-                        Guide 4.1 Coordinate Across Government
-                        <img class="pagination-url-forward-img" src="<?php echo $base_url; ?>img/scroll-page.png"> </a>
+                            Guide 4.1 Coordinate Across Government
+                            <img class="pagination-url-forward-img" src="<?php echo $base_url; ?>img/scroll-page.png">
+                        </a>
                     </div>
                 </div>
             </div>
@@ -1542,14 +2379,15 @@ function nav_content($menu,$var = null)
                 <div class="col-lg-12">
                     <div class="col-xs-12 pagination-url-back">
                         <a href="<?php echo $base_url ?>crafting-the-legislation/make-key-policy-decisions">
-                        <img class="pagination-url-back-img" src="<?php echo $base_url; ?>img/scroll-page.png"><br>
-                        Guide 3.1 Make Key Policy Decisions
+                            <img class="pagination-url-back-img" src="<?php echo $base_url; ?>img/scroll-page.png"><br>
+                            Guide 3.1 Make Key Policy Decisions
                         </a>
                     </div>
                     <div class="col-xs-12 pagination-url-forward">
                         <a href="<?php echo $base_url; ?>procedural-steps-for-a-secure-policy/coordinate-across-government">
-                        Guide 4.1 Coordinate Across Government
-                        <br><img class="pagination-url-forward-img" src="<?php echo $base_url; ?>img/scroll-page.png"> </a>
+                            Guide 4.1 Coordinate Across Government
+                            <br><img class="pagination-url-forward-img"
+                                     src="<?php echo $base_url; ?>img/scroll-page.png"> </a>
                     </div>
                 </div>
             </div>
@@ -1557,8 +2395,7 @@ function nav_content($menu,$var = null)
             break;
 
         case 'coordinate-across-government':
-            if ($var == 'og_desc')
-            {
+            if ($var == 'og_desc') {
                 $og_desc = 'Because of issues such as business regulation, excise tax, and cooperation in combating the illicit trade in tobacco, the tobacco industry will often have closer links with Ministries other than Health Ministries — such as trade, business, treasury, customs and revenue, intellectual property and the foreign affairs office. These other Ministries will have their own concerns and agendas and may seek to delay or prevent adoption and implementation of plain packaging because of those concerns.';
 
                 return $og_desc;
@@ -1572,31 +2409,80 @@ function nav_content($menu,$var = null)
                         <div class="section-title fc-orange">Coordinate Across Government</div>
                     </div>
                     <div class="col-lg-10 col-lg-offset-1">
-                        <p>Because of issues such as business regulation, excise tax, and cooperation in combating the illicit trade in tobacco, the tobacco industry will often have closer links with Ministries other than Health Ministries — such as trade, business, treasury, customs and revenue, intellectual property and the foreign affairs office. These other Ministries will have their own concerns and agendas and may seek to delay or prevent adoption and implementation of plain packaging because of those concerns.</p>
-                        <p>To assist with the initial coordination with other Government Ministries this Toolkit includes a series of <b>POLICY BRIEFING PAPERS</b> which provide basic information about the policy and address the key opposing arguments, explaining the evidence and why those arguments are flawed.</p>
-                        <p>Plain packaging does have implications for these other Ministries which they will need to provide input on, for instance, plain packaging will impact on treasury receipts and there are alleged impacts on down trading and illicit trade (<i>see</i> <b>GUIDE 1.3</b>). Notwithstanding these concerns, the critical public health agenda should remain the priority.</p>
+                        <p>Because of issues such as business regulation, excise tax, and cooperation in combating the
+                            illicit trade in tobacco, the tobacco industry will often have closer links with Ministries
+                            other than Health Ministries — such as trade, business, treasury, customs and revenue,
+                            intellectual property and the foreign affairs office. These other Ministries will have their
+                            own concerns and agendas and may seek to delay or prevent adoption and implementation of
+                            plain packaging because of those concerns.</p>
+                        <p>To assist with the initial coordination with other Government Ministries this Toolkit
+                            includes a series of <b>POLICY BRIEFING PAPERS</b> which provide basic information about the
+                            policy and address the key opposing arguments, explaining the evidence and why those
+                            arguments are flawed.</p>
+                        <p>Plain packaging does have implications for these other Ministries which they will need to
+                            provide input on, for instance, plain packaging will impact on treasury receipts and there
+                            are alleged impacts on down trading and illicit trade (<i>see</i> <b>GUIDE 1.3</b>).
+                            Notwithstanding these concerns, the critical public health agenda should remain the
+                            priority.</p>
                     </div>
                     <div class="content-desc-cont col-lg-10 col-lg-offset-1">
                         <div class="section-secondary-title fc-orange">1. Whole of government approach</div>
-                        <p>It is important that coordination occurs across departments to ensure that there is an agreed approach, that the other Ministries understand the need for the policy and are not influenced by the industry’s contrived arguments opposing it. It is useful to have agreed lines on each of the key issues that will be alleged by the industry so that mixed messages are not put out by different parts of government.</p>
-                        <p>One possible approach is to form a cross government working group. Another is to ensure all correspondence to any government department about plain packaging are directed to the Ministry of Health for a response. Establishing a whole of government approach to the policy, where possible, can be important for its success and early engagement with the other Ministries can be key. For instance, in the UK the Her Majesty’s Revenue and Customs produced a full analysis of the likely impact of plain packaging on the illicit market. This analysis identified no evidence or reasons that plain packaging would increase the overall burden of illicit tobacco1, which was highly useful in combatting industry arguments can be key, depending on the political situation in a particular country.</p>
+                        <p>It is important that coordination occurs across departments to ensure that there is an agreed
+                            approach, that the other Ministries understand the need for the policy and are not
+                            influenced by the industry’s contrived arguments opposing it. It is useful to have agreed
+                            lines on each of the key issues that will be alleged by the industry so that mixed messages
+                            are not put out by different parts of government.</p>
+                        <p>One possible approach is to form a cross government working group. Another is to ensure all
+                            correspondence to any government department about plain packaging are directed to the
+                            Ministry of Health for a response. Establishing a whole of government approach to the
+                            policy, where possible, can be important for its success and early engagement with the other
+                            Ministries can be key. For instance, in the UK the Her Majesty’s Revenue and Customs
+                            produced a full analysis of the likely impact of plain packaging on the illicit market. This
+                            analysis identified no evidence or reasons that plain packaging would increase the overall
+                            burden of illicit tobacco1, which was highly useful in combatting industry arguments can be
+                            key, depending on the political situation in a particular country.</p>
                     </div>
                     <div class="content-desc-cont col-lg-10 col-lg-offset-1">
-                        <div class="section-secondary-title fc-orange">2. The issues on which cross government agreement should be developed</div>
+                        <div class="section-secondary-title fc-orange">2. The issues on which cross government agreement
+                            should be developed
+                        </div>
                         <ul class="custom">
                             <li>The impact of plain packaging on illicit trade – Ministry of Customs and Revenue.</li>
-                            <li>The impact of alleged down trade or price reductions – Treasury / Ministry of Business/Finance.</li>
+                            <li>The impact of alleged down trade or price reductions – Treasury / Ministry of
+                                Business/Finance.
+                            </li>
                             <li>The impact on tax receipts – Treasury.</li>
                             <li>The impact on tobacco industry jobs – Ministry of Business/Finance.</li>
-                            <li>The impact on trademark registration and compatibility with intellectual property law – Ministry for Intellectual Property.</li>
-                            <li>The ‘slippery slope’ argument (i.e. if tobacco now, what next – plain alcohol packaging?) – Ministry responsible for Intellectual Property and food/alcohol regulation.</li>
+                            <li>The impact on trademark registration and compatibility with intellectual property law –
+                                Ministry for Intellectual Property.
+                            </li>
+                            <li>The ‘slippery slope’ argument (i.e. if tobacco now, what next – plain alcohol
+                                packaging?) – Ministry responsible for Intellectual Property and food/alcohol
+                                regulation.
+                            </li>
                             <li>Compatibility with international legal obligations – Ministry of Foreign Affairs.</li>
                         </ul>
                     </div>
                     <div class="content-desc-cont col-lg-10 col-lg-offset-1">
-                        <div class="section-secondary-title fc-orange">3. External experts and officials from other governments</div>
-                        <p>It can sometimes assist to have external experts on these issues address officials from the other Ministries. For instance, one of the arguments that is put forward most strongly by the tobacco industry is that plain packaging will increase illicit trade. This argument can be very effective in causing concern within other government departments or with Members of Parliament. However, it is a contrived argument used by the industry to oppose many tobacco control measures and the evidence to support the argument in relation to plain packaging is extremely weak. There are a number of academic researchers who are able to effectively and convincingly demonstrate how the industry is wrong in its allegations about illicit trade. If a Ministry of Health considers that an external expert could assist in the policy development or governmental/parliamentary processes, CTFK may be able help with identifying appropriate persons and organising their visit.</p>
-                        <p>In addition, government officials from countries that have already implemented plain packaging are often willing assist to provide information about their policy development and there are many instances of official government visits taking place in relation to the proposed policy. It is highly recommended that Ministry of Health officials make contact with counterparts in those countries that have already adopted plain packaging laws.</p>
+                        <div class="section-secondary-title fc-orange">3. External experts and officials from other
+                            governments
+                        </div>
+                        <p>It can sometimes assist to have external experts on these issues address officials from the
+                            other Ministries. For instance, one of the arguments that is put forward most strongly by
+                            the tobacco industry is that plain packaging will increase illicit trade. This argument can
+                            be very effective in causing concern within other government departments or with Members of
+                            Parliament. However, it is a contrived argument used by the industry to oppose many tobacco
+                            control measures and the evidence to support the argument in relation to plain packaging is
+                            extremely weak. There are a number of academic researchers who are able to effectively and
+                            convincingly demonstrate how the industry is wrong in its allegations about illicit trade.
+                            If a Ministry of Health considers that an external expert could assist in the policy
+                            development or governmental/parliamentary processes, CTFK may be able help with identifying
+                            appropriate persons and organising their visit.</p>
+                        <p>In addition, government officials from countries that have already implemented plain
+                            packaging are often willing assist to provide information about their policy development and
+                            there are many instances of official government visits taking place in relation to the
+                            proposed policy. It is highly recommended that Ministry of Health officials make contact
+                            with counterparts in those countries that have already adopted plain packaging laws.</p>
                     </div>
                 </div>
             </section>
@@ -1605,14 +2491,15 @@ function nav_content($menu,$var = null)
                 <div class="col-lg-12">
                     <div class="col-xs-6 pagination-url-back">
                         <a href="<?php echo $base_url ?>crafting-the-legislation/draft-the-law">
-                        <img class="pagination-url-back-img" src="<?php echo $base_url; ?>img/scroll-page.png"> 
-                        Guide 3.2 Draft the Law
+                            <img class="pagination-url-back-img" src="<?php echo $base_url; ?>img/scroll-page.png">
+                            Guide 3.2 Draft the Law
                         </a>
                     </div>
                     <div class="col-xs-6 pagination-url-forward">
                         <a href="<?php echo $base_url; ?>procedural-steps-for-a-secure-policy/obtain-legal-advice">
-                        Guide 4.2 Obtain Legal Advice
-                        <img class="pagination-url-forward-img" src="<?php echo $base_url; ?>img/scroll-page.png"> </a>
+                            Guide 4.2 Obtain Legal Advice
+                            <img class="pagination-url-forward-img" src="<?php echo $base_url; ?>img/scroll-page.png">
+                        </a>
                     </div>
                 </div>
             </div>
@@ -1620,14 +2507,15 @@ function nav_content($menu,$var = null)
                 <div class="col-lg-12">
                     <div class="col-xs-12 pagination-url-back">
                         <a href="<?php echo $base_url ?>crafting-the-legislation/draft-the-law">
-                        <img class="pagination-url-back-img" src="<?php echo $base_url; ?>img/scroll-page.png"><br>
-                        Guide 3.2 Draft the Law
+                            <img class="pagination-url-back-img" src="<?php echo $base_url; ?>img/scroll-page.png"><br>
+                            Guide 3.2 Draft the Law
                         </a>
                     </div>
                     <div class="col-xs-12 pagination-url-forward">
                         <a href="<?php echo $base_url; ?>procedural-steps-for-a-secure-policy/obtain-legal-advice">
-                        Guide 4.2 Obtain Legal Advice
-                        <br><img class="pagination-url-forward-img" src="<?php echo $base_url; ?>img/scroll-page.png"> </a>
+                            Guide 4.2 Obtain Legal Advice
+                            <br><img class="pagination-url-forward-img"
+                                     src="<?php echo $base_url; ?>img/scroll-page.png"> </a>
                     </div>
                 </div>
             </div>
@@ -1635,8 +2523,7 @@ function nav_content($menu,$var = null)
             break;
 
         case 'obtain-legal-advice':
-            if ($var == 'og_desc')
-            {
+            if ($var == 'og_desc') {
                 $og_desc = 'The tobacco industry has a long track record of using legal challenges to prevent or delay governments’ tobacco control measures. Countries that were early adopters of plain packaging laws have faced legal challenges in domestic and regional courts, in international investment arbitration tribunals and under the World Trade Organisation dispute settlement procedures. All the legal challenges decided, as of the end of 2016, have upheld the legality of plain packaging of tobacco products.';
 
                 return $og_desc;
@@ -1650,49 +2537,92 @@ function nav_content($menu,$var = null)
                         <div class="section-title fc-dark-orange">Obtain Legal Advice</div>
                     </div>
                     <div class="col-lg-10 col-lg-offset-1">
-                        <p>The tobacco industry has a long track record of using legal challenges to prevent or delay governments’ tobacco control measures. Countries that were early adopters of plain packaging laws have faced legal challenges in domestic and regional courts, in international investment arbitration tribunals and under the World Trade Organisation dispute settlement procedures. <b>All the legal challenges decided, as of the end of 2016, have upheld the legality of plain packaging of tobacco products.</b></p>
-                        <p>The key message is that if plain packaging of tobacco products is adopted using appropriate domestic constitutional, administrative and legislative arrangements then there is no inherent reason why plain packaging should be found unlawful. However, this toolkit can only provide generalized legal information taking into account the academic literature and the results of legal challenges that have already been decided across different jurisdictions. To protect the policy in the face of legal challenge it is important to undertake the appropriate processes and sound legal drafting. The procedural steps and drafting advice set out in this toolkit should provide a good grounding for the administrative processes and legislative drafting needed to secure a robust plain packaging law.</p>
-                            <div class="table-custom header bg-orange">Obtain legal advice</div>                    
-                            <div class="table-custom content-wo-bg-color bg-brown padding-0 col-lg-12">
-                                <div class="col-lg-12 bg-brown fc-white">
-                                    Constitutional requirements and the priority given to different rights and obligations in national legal jurisprudence vary from country to country. Therefore it is important that a country specific legal analysis (by internal government lawyers and/or through an opinion from external lawyers) is undertaken on the legal issues raised by plain packaging. Given the possibility of legal challenge and the likely threats and allegations that will be made by the industry if the measure is proposed, it is a sensible precaution to have ready answers to the legal issues that will be raised.
-                                </div>
+                        <p>The tobacco industry has a long track record of using legal challenges to prevent or delay
+                            governments’ tobacco control measures. Countries that were early adopters of plain packaging
+                            laws have faced legal challenges in domestic and regional courts, in international
+                            investment arbitration tribunals and under the World Trade Organisation dispute settlement
+                            procedures. <b>All the legal challenges decided, as of the end of 2016, have upheld the
+                                legality of plain packaging of tobacco products.</b></p>
+                        <p>The key message is that if plain packaging of tobacco products is adopted using appropriate
+                            domestic constitutional, administrative and legislative arrangements then there is no
+                            inherent reason why plain packaging should be found unlawful. However, this toolkit can only
+                            provide generalized legal information taking into account the academic literature and the
+                            results of legal challenges that have already been decided across different jurisdictions.
+                            To protect the policy in the face of legal challenge it is important to undertake the
+                            appropriate processes and sound legal drafting. The procedural steps and drafting advice set
+                            out in this toolkit should provide a good grounding for the administrative processes and
+                            legislative drafting needed to secure a robust plain packaging law.</p>
+                        <div class="table-custom header bg-orange">Obtain legal advice</div>
+                        <div class="table-custom content-wo-bg-color bg-brown padding-0 col-lg-12">
+                            <div class="col-lg-12 bg-brown fc-white">
+                                Constitutional requirements and the priority given to different rights and obligations
+                                in national legal jurisprudence vary from country to country. Therefore it is important
+                                that a country specific legal analysis (by internal government lawyers and/or through an
+                                opinion from external lawyers) is undertaken on the legal issues raised by plain
+                                packaging. Given the possibility of legal challenge and the likely threats and
+                                allegations that will be made by the industry if the measure is proposed, it is a
+                                sensible precaution to have ready answers to the legal issues that will be raised.
                             </div>
+                        </div>
                     </div>
                     <div class="content-desc-cont col-lg-10 col-lg-offset-1">
                         <div class="section-secondary-title fc-dark-orange">1. Key legal issues</div>
-                        <p>The tobacco industry continues to aggressively assert that plain packaging is unlawful in countries considering the policy, even though industry legal challenges have all so far been defeated in Australia, the UK, France and the European Union. There are similar broad themes to the legal arguments used by the industry across jurisdictions. They are that plain packaging:</p>
+                        <p>The tobacco industry continues to aggressively assert that plain packaging is unlawful in
+                            countries considering the policy, even though industry legal challenges have all so far been
+                            defeated in Australia, the UK, France and the European Union. There are similar broad themes
+                            to the legal arguments used by the industry across jurisdictions. They are that plain
+                            packaging:</p>
                         <ul class="custom">
                             <li>Is an expropriation/deprivation of property;</li>
-                            <li>Is an unreasonable, dis-proportionate or unnecessary measure, because it is not justified by the evidence;</li>
+                            <li>Is an unreasonable, dis-proportionate or unnecessary measure, because it is not
+                                justified by the evidence;
+                            </li>
                             <li>Is adopted without due process or in an arbitrary manner;</li>
                             <li>Breaches rights to freedom of expression and to run a business</li>
                             <li>Is incompatible with intellectual property laws and the ‘right to use’ a trademark</li>
-                            <li>Breaches international obligations under World Trade Organisation rules and investment treaties.</li>
+                            <li>Breaches international obligations under World Trade Organisation rules and investment
+                                treaties.
+                            </li>
                         </ul>
-                        <p>These issues may arise out of domestic laws or constitutions, regional obligations or international law. More explanation of these issues is set in the <a href="<?php echo $base_url; ?>legal-issues-and-international-developments/legal-issues"><b class="fc-dark-orange">Reference Section K: LEGAL ISSUES AND CASE SUMMARIES</b></a></p>
+                        <p>These issues may arise out of domestic laws or constitutions, regional obligations or
+                            international law. More explanation of these issues is set in the <a
+                                    href="<?php echo $base_url; ?>legal-issues-and-international-developments/legal-issues"><b
+                                        class="fc-dark-orange">Reference Section K: LEGAL ISSUES AND CASE SUMMARIES</b></a>
+                        </p>
                     </div>
                     <div class="content-desc-cont col-lg-10 col-lg-offset-1">
                         <div class="section-secondary-title fc-dark-orange">2. Legal challenges</div>
-                        <p>There have been a number of legal challenges to plain packaging laws already decided and some that are ongoing (at the end of 2016, the time of writing). All the challenges that have been  etermined have resulting in the claims being dismissed. More details about these cases are given in the <a href="<?php echo $base_url; ?>legal-issues-and-international-developments/legal-issues"><b class="fc-dark-orange">Reference Section K: LEGAL ISSUES AND CASE SUMMARIES</b></a></p>
+                        <p>There have been a number of legal challenges to plain packaging laws already decided and some
+                            that are ongoing (at the end of 2016, the time of writing). All the challenges that have
+                            been etermined have resulting in the claims being dismissed. More details about these cases
+                            are given in the <a
+                                    href="<?php echo $base_url; ?>legal-issues-and-international-developments/legal-issues"><b
+                                        class="fc-dark-orange">Reference Section K: LEGAL ISSUES AND CASE SUMMARIES</b></a>
+                        </p>
                         <div class="col-lg-12 custom-2-cont bg-gray">
                             <ul class="custom-2">
                                 <div class="col-lg-6">
                                     <li><b>AUSTRALIA</b></li>
                                     <ul>
-                                        <li>Constitutional challenge in the High Court of Australia – <i><b>dismissed</b> August 2012</i></li>
-                                        <li>International investment arbitration claim – <i><b>dismissed</b> December 2015</i></li>
-                                        <li>Complaint before the WTO dispute panel – <i>proceedings concluded but ruling due in 2017</i></li>
+                                        <li>Constitutional challenge in the High Court of Australia –
+                                            <i><b>dismissed</b> August 2012</i></li>
+                                        <li>International investment arbitration claim – <i><b>dismissed</b> December
+                                                2015</i></li>
+                                        <li>Complaint before the WTO dispute panel – <i>proceedings concluded but ruling
+                                                due in 2017</i></li>
                                     </ul>
                                     <li><b>UNITED KINGDOM</b></li>
                                     <ul>
-                                        <li>Claim in the High Court of England and Wales – <i><b>dismissed</b> in May 2016 [ruling upheld by Court of Appeal in December 2016]</i></li>
+                                        <li>Claim in the High Court of England and Wales – <i><b>dismissed</b> in May
+                                                2016 [ruling upheld by Court of Appeal in December 2016]</i></li>
                                     </ul>
                                 </div>
                                 <div class="col-lg-6">
                                     <li><b>FRANCE</b></li>
                                     <ul>
-                                        <li>1 referal to the Conseil Constitutionale and 6 challenges in the Conseil d'Etate (the highest administrative court) – <i><b>dismissed</b> January 2016 and December 2017</i></li>
+                                        <li>1 referal to the Conseil Constitutionale and 6 challenges in the Conseil
+                                            d'Etate (the highest administrative court) – <i><b>dismissed</b> January
+                                                2016 and December 2017</i></li>
                                     </ul>
                                     <li><b>IRELAND</b></li>
                                     <ul>
@@ -1700,7 +2630,8 @@ function nav_content($menu,$var = null)
                                     </ul>
                                     <li><b>EUROPEAN UNION</b></li>
                                     <ul>
-                                        <li>Challenge to the EU Tobacco Products Directive in the EU Court of Justice – <i><b>dismissed</b> in May 2016</i></li>
+                                        <li>Challenge to the EU Tobacco Products Directive in the EU Court of Justice –
+                                            <i><b>dismissed</b> in May 2016</i></li>
                                     </ul>
                                 </div>
                             </ul>
@@ -1708,14 +2639,28 @@ function nav_content($menu,$var = null)
                     </div>
                     <div class="content-desc-cont col-lg-10 col-lg-offset-1">
                         <div class="section-secondary-title fc-dark-orange">3. Highlights from key judgments</div>
-                        <p>These rulings express legal principles and decisions that will be of value to lawyers in other jurisdictions that may have to defend plain packaging in their own countries. The judgments also contain clear and concise passages that will help policy makers and civil society organizations to provide information about the policy or promote its implementation. These are explored in more detail in the <a href="<?php echo $base_url; ?>legal-issues-and-international-developments/legal-issues"><b class="fc-dark-orange">Reference Section K: LEGAL ISSUES AND CASE SUMMARIES</b></a> but here are some highlights:</p>
+                        <p>These rulings express legal principles and decisions that will be of value to lawyers in
+                            other jurisdictions that may have to defend plain packaging in their own countries. The
+                            judgments also contain clear and concise passages that will help policy makers and civil
+                            society organizations to provide information about the policy or promote its implementation.
+                            These are explored in more detail in the <a
+                                    href="<?php echo $base_url; ?>legal-issues-and-international-developments/legal-issues"><b
+                                        class="fc-dark-orange">Reference Section K: LEGAL ISSUES AND CASE SUMMARIES</b></a>
+                            but here are some highlights:</p>
                         <ul class="custom">
-                            <li>Plain packaging requirements “are no different in kind from any legislation that requires labels that warn against the use or misuse of a product.” <sup>1</sup></li>
-                            <li>“[The tobacco companies’] body of expert evidence does not accord with internationally recognised best practice.” <sup>2</sup></li>
-                            <li>“In my judgment the qualitative evidence relied upon by the [Government] is cogent, substantial and overwhelmingly one-directional in its conclusion” <sup>3</sup></li>
-                            <li>“[WTO] TRIPS and the FCTC can be read together without any risk of them colliding or being mutually inconsistent” <sup>4</sup></li>
-                            <li>Trademarks provide “a right of use that exists vis-à-vis other persons, an exclusive right, but a relative one. It is not an absolute right to use that can be asserted against the State.” <sup>6</sup></li>
-                            <li>“Manufacturers and distributors of harmful products such as cigarettes can have no expectation that new and more onerous regulations will not be imposed” <sup>5</sup></li>
+                            <li>Plain packaging requirements “are no different in kind from any legislation that
+                                requires labels that warn against the use or misuse of a product.” <sup>1</sup></li>
+                            <li>“[The tobacco companies’] body of expert evidence does not accord with internationally
+                                recognised best practice.” <sup>2</sup></li>
+                            <li>“In my judgment the qualitative evidence relied upon by the [Government] is cogent,
+                                substantial and overwhelmingly one-directional in its conclusion” <sup>3</sup></li>
+                            <li>“[WTO] TRIPS and the FCTC can be read together without any risk of them colliding or
+                                being mutually inconsistent” <sup>4</sup></li>
+                            <li>Trademarks provide “a right of use that exists vis-à-vis other persons, an exclusive
+                                right, but a relative one. It is not an absolute right to use that can be asserted
+                                against the State.” <sup>6</sup></li>
+                            <li>“Manufacturers and distributors of harmful products such as cigarettes can have no
+                                expectation that new and more onerous regulations will not be imposed” <sup>5</sup></li>
                         </ul>
                     </div>
                 </div>
@@ -1725,14 +2670,15 @@ function nav_content($menu,$var = null)
                 <div class="col-lg-12">
                     <div class="col-xs-6 pagination-url-back">
                         <a href="<?php echo $base_url ?>procedural-steps-for-a-secure-policy/coordinate-across-government">
-                        <img class="pagination-url-back-img" src="<?php echo $base_url; ?>img/scroll-page.png"> 
-                        Guide 4.1 Coordinate Across Government
+                            <img class="pagination-url-back-img" src="<?php echo $base_url; ?>img/scroll-page.png">
+                            Guide 4.1 Coordinate Across Government
                         </a>
                     </div>
                     <div class="col-xs-6 pagination-url-forward">
                         <a href="<?php echo $base_url; ?>procedural-steps-for-a-secure-policy/wto-notification">
-                        Guide 4.3 WTO Notification
-                        <img class="pagination-url-forward-img" src="<?php echo $base_url; ?>img/scroll-page.png"> </a>
+                            Guide 4.3 WTO Notification
+                            <img class="pagination-url-forward-img" src="<?php echo $base_url; ?>img/scroll-page.png">
+                        </a>
                     </div>
                 </div>
             </div>
@@ -1740,14 +2686,15 @@ function nav_content($menu,$var = null)
                 <div class="col-lg-12">
                     <div class="col-xs-12 pagination-url-back">
                         <a href="<?php echo $base_url ?>procedural-steps-for-a-secure-policy/coordinate-across-government">
-                        <img class="pagination-url-back-img" src="<?php echo $base_url; ?>img/scroll-page.png"><br>
-                        Guide 4.1 Coordinate Across Government
+                            <img class="pagination-url-back-img" src="<?php echo $base_url; ?>img/scroll-page.png"><br>
+                            Guide 4.1 Coordinate Across Government
                         </a>
                     </div>
                     <div class="col-xs-12 pagination-url-forward">
                         <a href="<?php echo $base_url; ?>procedural-steps-for-a-secure-policy/wto-notification">
-                        Guide 4.3 WTO Notification
-                        <br><img class="pagination-url-forward-img" src="<?php echo $base_url; ?>img/scroll-page.png"> </a>
+                            Guide 4.3 WTO Notification
+                            <br><img class="pagination-url-forward-img"
+                                     src="<?php echo $base_url; ?>img/scroll-page.png"> </a>
                     </div>
                 </div>
             </div>
@@ -1755,8 +2702,7 @@ function nav_content($menu,$var = null)
             break;
 
         case 'wto-notification':
-            if ($var == 'og_desc')
-            {
+            if ($var == 'og_desc') {
                 $og_desc = 'To avoid accusations that a government has failed to notify a relevant standard, it is recommended that plain packaging legislation is notified to the World Trade Organisations (WTO) under Technical Barriers to Trade (T B T ) Article 2.9. This is a procedural process that allows other governments to comment on a technical requirement and does not mean that plain packaging of tobacco products breaches any of the WTO agreements.';
 
                 return $og_desc;
@@ -1770,46 +2716,120 @@ function nav_content($menu,$var = null)
                         <div class="section-title fc-yellow-gold">WTO Notification</div>
                     </div>
                     <div class="content-desc-cont col-lg-10 col-lg-offset-1">
-                        <div class="section-secondary-title fc-yellow-gold">1. World Trade Organisation Article 2.9 of the technical barriers to trade agreement</div>
-                        <p>To avoid accusations that a government has failed to notify a relevant standard, it is recommended that plain packaging legislation is notified to the World Trade Organisations (WTO) under Technical Barriers to Trade (T B T ) Article 2.9. This is a procedural process that allows other governments to comment on a technical requirement and does not mean that plain packaging of tobacco products breaches any of the WTO agreements.</p>
-                        <p>The purpose of the TBT Agreement is to avoid unnecessary regulatory obstacles to international trade while <b>allowing for the regulatory autonomy of states to protect legitimate public interests such as public health.</b> Article 2.9 obliges WTO member to notify drafts of technical regulations that could impact on international trade and which are not international standards, so that other WTO members can consider the regulations and make comments.</p>
-                        <p>A technical regulation is defined as being a regulation that: <i>“lays down product characteristics or their related processes and production methods. Compliance is mandatory. They may also deal with terminology, symbols, packaging, marking and labelling requirements.”</i></p>
-                        <p><b>Plain packaging falls within the definition of a technical regulation</b> that relates to the trade in goods and is one that has not as yet been established as an international standard.</p>
+                        <div class="section-secondary-title fc-yellow-gold">1. World Trade Organisation Article 2.9 of
+                            the technical barriers to trade agreement
+                        </div>
+                        <p>To avoid accusations that a government has failed to notify a relevant standard, it is
+                            recommended that plain packaging legislation is notified to the World Trade Organisations
+                            (WTO) under Technical Barriers to Trade (T B T ) Article 2.9. This is a procedural process
+                            that allows other governments to comment on a technical requirement and does not mean that
+                            plain packaging of tobacco products breaches any of the WTO agreements.</p>
+                        <p>The purpose of the TBT Agreement is to avoid unnecessary regulatory obstacles to
+                            international trade while <b>allowing for the regulatory autonomy of states to protect
+                                legitimate public interests such as public health.</b> Article 2.9 obliges WTO member to
+                            notify drafts of technical regulations that could impact on international trade and which
+                            are not international standards, so that other WTO members can consider the regulations and
+                            make comments.</p>
+                        <p>A technical regulation is defined as being a regulation that: <i>“lays down product
+                                characteristics or their related processes and production methods. Compliance is
+                                mandatory. They may also deal with terminology, symbols, packaging, marking and
+                                labelling requirements.”</i></p>
+                        <p><b>Plain packaging falls within the definition of a technical regulation</b> that relates to
+                            the trade in goods and is one that has not as yet been established as an international
+                            standard.</p>
                     </div>
                     <div class="content-desc-cont col-lg-10 col-lg-offset-1">
-                        <div class="section-secondary-title fc-yellow-gold">2. The notification should be of draft legislation</div>
-                        <p>This means that it should be at a stage which sets out the detail of what the government intends to adopt but is still capable of amendment. The W T O T B T procedure then requires <b>a 60 day stand still period</b> during which the legislative adoption process is frozen so that written comments from other WTO members can be sent on the draft measure. <b>This period must be factored into the legislative timetable.</b></p>
-                        <p>There is also a requirement under Article 2.9 that the final adopted measure be published and it is recommended that there is a 6 month period between publication and coming into force.</p>
-                        <p>The WTO webpage that provides details and materials on the WTO notification procedure can be found at <a href="www.wto.org/english/tratop_e/tbt_e/tbt_notifications_e.htm" target="_blank">www.wto.org/english/tratop_e/tbt_e/tbt_notifications_e.htm</a> and the guidelines and forms are available in English, Spanish and French.</p>
-                        <p><b>Most governments have a single agency or department that administers all the country’s notifications.</b> But the Ministry of Health responsible for plain packaging will need to coordinate with that other department or agency to enable the notification to be made effectively.</p>
+                        <div class="section-secondary-title fc-yellow-gold">2. The notification should be of draft
+                            legislation
+                        </div>
+                        <p>This means that it should be at a stage which sets out the detail of what the government
+                            intends to adopt but is still capable of amendment. The W T O T B T procedure then requires
+                            <b>a 60 day stand still period</b> during which the legislative adoption process is frozen
+                            so that written comments from other WTO members can be sent on the draft measure. <b>This
+                                period must be factored into the legislative timetable.</b></p>
+                        <p>There is also a requirement under Article 2.9 that the final adopted measure be published and
+                            it is recommended that there is a 6 month period between publication and coming into
+                            force.</p>
+                        <p>The WTO webpage that provides details and materials on the WTO notification procedure can be
+                            found at <a href="www.wto.org/english/tratop_e/tbt_e/tbt_notifications_e.htm"
+                                        target="_blank">www.wto.org/english/tratop_e/tbt_e/tbt_notifications_e.htm</a>
+                            and the guidelines and forms are available in English, Spanish and French.</p>
+                        <p><b>Most governments have a single agency or department that administers all the country’s
+                                notifications.</b> But the Ministry of Health responsible for plain packaging will need
+                            to coordinate with that other department or agency to enable the notification to be made
+                            effectively.</p>
                     </div>
                     <div class="content-desc-cont col-lg-10 col-lg-offset-1">
-                        <div class="section-secondary-title fc-yellow-gold">3. Examples of plain packaging of tobacco products WTO notifications</div>
-                        <p>To date, each country to have adopted plain packaging has notified their legislation under TBT 2.9. Examples of existing notifications can assist any government seeking comply with the notification procedures.</p>
+                        <div class="section-secondary-title fc-yellow-gold">3. Examples of plain packaging of tobacco
+                            products WTO notifications
+                        </div>
+                        <p>To date, each country to have adopted plain packaging has notified their legislation under
+                            TBT 2.9. Examples of existing notifications can assist any government seeking comply with
+                            the notification procedures.</p>
                         <div class="col-lg-12 margin-btm-30">
                             <div class="col-lg-6">
                                 <ul class="custom">
-                                    <li>Ireland’s WTO TBT notification of 17 June 2014 is available here:<br><a href="https://docs.wto.org/dol2fe/Pages/FE_Search/DDFDocuments/125256/q/G/TBTN14/IRL1.pdf" target="_blank">https://docs.wto.org/dol2fe/Pages/<br>FE_Search/DDFDocuments/125256/<br>q/G/TBTN14/IRL1.pdf</a></li>
-                                    <li>The UK’s WTO TBT notification of September 2014 is available here:<br><a href="https://docs.wto.org/dol2fe/Pages/FE_Search/DDFDocuments/126836/q/G/TBTN14/GBR24.pdf" target="_blank">https://docs.wto.org/dol2fe/Pages/<br>FE_Search/DDFDocuments/126836/<br>q/G/TBTN14/GBR24.pdf</a></li>
+                                    <li>Ireland’s WTO TBT notification of 17 June 2014 is available here:<br><a
+                                                href="https://docs.wto.org/dol2fe/Pages/FE_Search/DDFDocuments/125256/q/G/TBTN14/IRL1.pdf"
+                                                target="_blank">https://docs.wto.org/dol2fe/Pages/<br>FE_Search/DDFDocuments/125256/<br>q/G/TBTN14/IRL1.pdf</a>
+                                    </li>
+                                    <li>The UK’s WTO TBT notification of September 2014 is available here:<br><a
+                                                href="https://docs.wto.org/dol2fe/Pages/FE_Search/DDFDocuments/126836/q/G/TBTN14/GBR24.pdf"
+                                                target="_blank">https://docs.wto.org/dol2fe/Pages/<br>FE_Search/DDFDocuments/126836/<br>q/G/TBTN14/GBR24.pdf</a>
+                                    </li>
                                 </ul>
                             </div>
                             <div class="col-lg-6">
                                 <ul class="custom">
-                                    <li>Norway's WTO TBT notification of 18 May 2015 is available here:<br><a href="https://docs.wto.org/dol2fe/Pages/FE_Search/DDFDocuments/132085/q/G/TBTN15/NOR23.pdf" target="_blank">https://docs.wto.org/dol2fe/Pages/<br>FE_Search/DDFDocuments/132085/<br>q/G/TBTN15/NOR23.pdf</a></li>
-                                    <li>Hungary’s WTO TBT notification of 12 December 2015 is available here:<br><a href="https://docs.wto.org/imrd/directdoc.asp?DDFDocuments/t/G/TBTN15/HUN31.DOC" target="_blank">https://docs.wto.org/imrd/<br>directdoc.asp?DDFDocuments/t/G/<br>TBTN15/HUN31.DOC</a></li>
+                                    <li>Norway's WTO TBT notification of 18 May 2015 is available here:<br><a
+                                                href="https://docs.wto.org/dol2fe/Pages/FE_Search/DDFDocuments/132085/q/G/TBTN15/NOR23.pdf"
+                                                target="_blank">https://docs.wto.org/dol2fe/Pages/<br>FE_Search/DDFDocuments/132085/<br>q/G/TBTN15/NOR23.pdf</a>
+                                    </li>
+                                    <li>Hungary’s WTO TBT notification of 12 December 2015 is available here:<br><a
+                                                href="https://docs.wto.org/imrd/directdoc.asp?DDFDocuments/t/G/TBTN15/HUN31.DOC"
+                                                target="_blank">https://docs.wto.org/imrd/<br>directdoc.asp?DDFDocuments/t/G/<br>TBTN15/HUN31.DOC</a>
+                                    </li>
                                 </ul>
                             </div>
                         </div>
-                        <p>Many of these notifications received comments from other member countries in T B T committee meetings. Some countries, including those that brought a WTO dispute procedure against Australia (such as Indonesia, Dominican Republic, Cuba and Honduras) and some tobacco producing countries (such as Malawi, Zimbabwe and Nicaragua), have given negative comments to the committees; but many countries including New Zealand, Norway, Canada, Uruguay and the EU also provided positive comments supporting the position that plain packaging does not breach the WTO agreements and is a legitimate public health measure. In a number of committee meetings where Member State’s proposals for plain packaging were discussed, a representative of the World Health Organisation provided support for the measure and stressed that there is a strong body of evidence to support the position that plain packaging will achieve its objectives<sup>1</sup>.</p>
-                        <p>None of these comments in committee have led to further dispute procedures being commenced against any country that has adopted plain packaging laws, other than Australia.</p>
+                        <p>Many of these notifications received comments from other member countries in T B T committee
+                            meetings. Some countries, including those that brought a WTO dispute procedure against
+                            Australia (such as Indonesia, Dominican Republic, Cuba and Honduras) and some tobacco
+                            producing countries (such as Malawi, Zimbabwe and Nicaragua), have given negative comments
+                            to the committees; but many countries including New Zealand, Norway, Canada, Uruguay and the
+                            EU also provided positive comments supporting the position that plain packaging does not
+                            breach the WTO agreements and is a legitimate public health measure. In a number of
+                            committee meetings where Member State’s proposals for plain packaging were discussed, a
+                            representative of the World Health Organisation provided support for the measure and
+                            stressed that there is a strong body of evidence to support the position that plain
+                            packaging will achieve its objectives<sup>1</sup>.</p>
+                        <p>None of these comments in committee have led to further dispute procedures being commenced
+                            against any country that has adopted plain packaging laws, other than Australia.</p>
                     </div>
                     <div class="content-desc-cont col-lg-10 col-lg-offset-1">
-                        <div class="section-secondary-title fc-yellow-gold">4. WTO dispute procedures against Australia’s plain packaging laws</div>
-                        <p>At the time of writing, a WTO dispute settlement panel is adjudicating complaints by Cuba, the Dominican Republic, Honduras and Indonesia with respect to Australia’s plain packaging laws. It has been widely reported that British American Tobacco and Philip Morris are providing funding and legal support for Honduras and Dominican Republic in the proceedings.</p>
+                        <div class="section-secondary-title fc-yellow-gold">4. WTO dispute procedures against
+                            Australia’s plain packaging laws
+                        </div>
+                        <p>At the time of writing, a WTO dispute settlement panel is adjudicating complaints by Cuba,
+                            the Dominican Republic, Honduras and Indonesia with respect to Australia’s plain packaging
+                            laws. It has been widely reported that British American Tobacco and Philip Morris are
+                            providing funding and legal support for Honduras and Dominican Republic in the
+                            proceedings.</p>
                         <p>The panel’s decision is expected not before May 2017.</p>
-                        <p>There are well established principles and rules that demonstrate the flexibility for WTO Members to regulate for public health. These are described in the WHO publication on plain packaging of tobacco products2 and are set out briefly in in <a href="<?php echo $base_url; ?>legal-issues-and-international-developments/legal-issues"><b class="fc-yellow-gold">Reference Section K: LEGAL ISSUES AND CASE SUMMARIES</b></a> and the <a href="<?php  echo $base_url; ?>policy-tools/policy-briefs"><b class="fc-yellow-gold">POLICY BRIEFING PAPERS</b></a> in the Reference Materials. The main issues of dispute fall under Article 2.2 of the T B T Agreement and Article 20 of the Trade Related Aspects of Intellectual Property Agreement (TRIPS).</p>
-                        <p>The WTO panel decision may be the subject of an appeal by the Parties but in the meantime it appears unlikely that any further dispute will arise concerning plain packaging laws of other WTO Members until that dispute is fully resolved.</p>
-                        <p><b>The issues in this dispute are separate from the procedural requirement to notify regulations under TBT Article 2.9.</b></p>
+                        <p>There are well established principles and rules that demonstrate the flexibility for WTO
+                            Members to regulate for public health. These are described in the WHO publication on plain
+                            packaging of tobacco products2 and are set out briefly in in <a
+                                    href="<?php echo $base_url; ?>legal-issues-and-international-developments/legal-issues"><b
+                                        class="fc-yellow-gold">Reference Section K: LEGAL ISSUES AND CASE SUMMARIES</b></a>
+                            and the <a href="<?php echo $base_url; ?>policy-tools/policy-briefs"><b
+                                        class="fc-yellow-gold">POLICY BRIEFING PAPERS</b></a> in the Reference
+                            Materials. The main issues of dispute fall under Article 2.2 of the T B T Agreement and
+                            Article 20 of the Trade Related Aspects of Intellectual Property Agreement (TRIPS).</p>
+                        <p>The WTO panel decision may be the subject of an appeal by the Parties but in the meantime it
+                            appears unlikely that any further dispute will arise concerning plain packaging laws of
+                            other WTO Members until that dispute is fully resolved.</p>
+                        <p><b>The issues in this dispute are separate from the procedural requirement to notify
+                                regulations under TBT Article 2.9.</b></p>
                     </div>
                 </div>
             </section>
@@ -1818,14 +2838,15 @@ function nav_content($menu,$var = null)
                 <div class="col-lg-12">
                     <div class="col-xs-6 pagination-url-back">
                         <a href="<?php echo $base_url ?>procedural-steps-for-a-secure-policy/obtain-legal-advice">
-                        <img class="pagination-url-back-img" src="<?php echo $base_url; ?>img/scroll-page.png"> 
-                        Guide 4.2 Obtain Legal Advice
+                            <img class="pagination-url-back-img" src="<?php echo $base_url; ?>img/scroll-page.png">
+                            Guide 4.2 Obtain Legal Advice
                         </a>
                     </div>
                     <div class="col-xs-6 pagination-url-forward">
                         <a href="<?php echo $base_url; ?>">
-                        Home
-                        <img class="pagination-url-forward-img" src="<?php echo $base_url; ?>img/scroll-page.png"> </a>
+                            Home
+                            <img class="pagination-url-forward-img" src="<?php echo $base_url; ?>img/scroll-page.png">
+                        </a>
                     </div>
                 </div>
             </div>
@@ -1833,26 +2854,26 @@ function nav_content($menu,$var = null)
                 <div class="col-lg-12">
                     <div class="col-xs-12 pagination-url-back">
                         <a href="<?php echo $base_url ?>procedural-steps-for-a-secure-policy/obtain-legal-advice">
-                        <img class="pagination-url-back-img" src="<?php echo $base_url; ?>img/scroll-page.png"><br>
-                        Guide 4.2 Obtain Legal Advice
+                            <img class="pagination-url-back-img" src="<?php echo $base_url; ?>img/scroll-page.png"><br>
+                            Guide 4.2 Obtain Legal Advice
                         </a>
                     </div>
                     <div class="col-xs-12 pagination-url-forward">
                         <a href="<?php echo $base_url; ?>">
-                        Home
-                        <br><img class="pagination-url-forward-img" src="<?php echo $base_url; ?>img/scroll-page.png"> </a>
+                            Home
+                            <br><img class="pagination-url-forward-img"
+                                     src="<?php echo $base_url; ?>img/scroll-page.png"> </a>
                     </div>
                 </div>
             </div>
             <?php
             break;
-        
+
         // reference materials
 
         // a
         case 'policy-briefs':
-            if ($var == 'og_desc')
-            {
+            if ($var == 'og_desc') {
                 $og_desc = 'We have produced some short policy briefs that can be given to officials in other government departments, politicians or the media. These policy briefs provide condensed information about plain packaging of tobacco products. These are available to download as Word documents so they can be adapted or changed to suit your circumstances. For instance, images of local branded packs could be used or information included about national smoking rates.';
 
                 return $og_desc;
@@ -1865,11 +2886,19 @@ function nav_content($menu,$var = null)
                         <div class="section-margin-top-25 section-title fc-ref-mat-1">Policy Briefs</div>
                     </div>
                     <div class="content-desc-cont col-lg-10 col-lg-offset-1">
-                        <p>We have produced some short policy briefs that can be given to officials in other government departments, politicians or the media. These policy briefs provide condensed information about plain packaging of tobacco products. These are available to download as Word documents so they can be adapted or changed to suit your circumstances. For instance, images of local branded packs could be used or information included about national smoking rates.</p>
+                        <p>We have produced some short policy briefs that can be given to officials in other government
+                            departments, politicians or the media. These policy briefs provide condensed information
+                            about plain packaging of tobacco products. These are available to download as Word documents
+                            so they can be adapted or changed to suit your circumstances. For instance, images of local
+                            branded packs could be used or information included about national smoking rates.</p>
                         <ol class="custom list-style-none">
-                            <li><a href="<?php echo $base_url ?>files/Ref-Sec-A-what-and-why.docx" target="_blank">1. What is Plain Packaging of Tobacco and why is it needed?</a></li>
-                            <li><a href="<?php echo $base_url ?>files/Ref-Sec-A-Countering Industry Arguments.docx" target="_blank">2. Plain Packaging of tobacco products – Countering tobacco industry arguments</a></li>
-                            <li><a href="<?php echo $base_url ?>files/Ref-Sec-A-Is-it-legal.docx" target="_blank">3. Plain Packaging of tobacco products – Is it legal?</a></li>
+                            <li><a href="<?php echo $base_url ?>files/Ref-Sec-A-what-and-why.docx" target="_blank">1.
+                                    What is Plain Packaging of Tobacco and why is it needed?</a></li>
+                            <li><a href="<?php echo $base_url ?>files/Ref-Sec-A-Countering Industry Arguments.docx"
+                                   target="_blank">2. Plain Packaging of tobacco products – Countering tobacco industry
+                                    arguments</a></li>
+                            <li><a href="<?php echo $base_url ?>files/Ref-Sec-A-Is-it-legal.docx" target="_blank">3.
+                                    Plain Packaging of tobacco products – Is it legal?</a></li>
                         </ol>
                     </div>
                 </div>
@@ -1879,8 +2908,7 @@ function nav_content($menu,$var = null)
 
         // b
         case 'regulatory-impact-analysis-ref':
-            if ($var == 'og_desc')
-            {
+            if ($var == 'og_desc') {
                 $og_desc = 'To assist with the process of a regulatory impact assessment for plain packaging, we have produced a template document that can be downloaded in Word format.';
 
                 return $og_desc;
@@ -1893,7 +2921,8 @@ function nav_content($menu,$var = null)
                         <div class="section-margin-top-25 section-title fc-ref-mat-1">Regulatory Impact Analysis</div>
                     </div>
                     <div class="content-desc-cont col-lg-10 col-lg-offset-1">
-                        <p>To assist with the process of a regulatory impact assessment for plain packaging, we have produced a template document that can be downloaded in Word format.</p>
+                        <p>To assist with the process of a regulatory impact assessment for plain packaging, we have
+                            produced a template document that can be downloaded in Word format.</p>
                         <ol class="custom list-style-none">
                             <li>Regulatory Impact Analysis Template</li>
                         </ol>
@@ -1905,8 +2934,7 @@ function nav_content($menu,$var = null)
 
         // c
         case 'consultation-document-template':
-            if ($var == 'og_desc')
-            {
+            if ($var == 'og_desc') {
                 $og_desc = 'To assist with undertaking a consultation process we have produced a template document that can be downloaded in Word format. This can be added to and adjusted to suit local circumstances and procedures.';
 
                 return $og_desc;
@@ -1916,12 +2944,17 @@ function nav_content($menu,$var = null)
                 <div class="row abt-st-r">
                     <div class="col-lg-10 col-lg-offset-1"><?php echo breadcrumbs(' / ', 'Home'); ?></div>
                     <div class="col-lg-10 col-lg-offset-1">
-                        <div class="section-margin-top-25 section-title fc-ref-mat-1">Consultation Document Template</div>
+                        <div class="section-margin-top-25 section-title fc-ref-mat-1">Consultation Document Template
+                        </div>
                     </div>
                     <div class="content-desc-cont col-lg-10 col-lg-offset-1">
-                        <p>To assist with undertaking a consultation process we have produced a template document that can be downloaded in Word format. This can be added to and adjusted to suit local circumstances and procedures.</p>
+                        <p>To assist with undertaking a consultation process we have produced a template document that
+                            can be downloaded in Word format. This can be added to and adjusted to suit local
+                            circumstances and procedures.</p>
                         <ol class="custom list-style-none">
-                            <li><a href="<?php echo $base_url ?>files/Ref-Sec-C-Draft-consultation-on-the-Introduction-of-Plain-Packaging-of-Tobacco-Products.docx" target="_blank">Consultation Document Template</a></li>
+                            <li>
+                                <a href="<?php echo $base_url ?>files/Ref-Sec-C-Draft-consultation-on-the-Introduction-of-Plain-Packaging-of-Tobacco-Products.docx"
+                                   target="_blank">Consultation Document Template</a></li>
                         </ol>
                     </div>
                 </div>
@@ -1931,8 +2964,7 @@ function nav_content($menu,$var = null)
 
         // f
         case 'template-draft-model-law':
-            if ($var == 'og_desc')
-            {
+            if ($var == 'og_desc') {
                 $og_desc = 'To assist with the drafting of detailed regulations we have produced a template model law. This covers every aspect of the plain packaging to tobacco products policy detailed in Reference Section D: Drafting the legislation. The International Legal Consortium at Tobacco Free Kids has lawyers with extensive experience in drafting and reviewing tobacco control laws across many jurisdictions around the world. Legislative drafting styles vary widely from country to country and there is no ‘one size fits all’ draft law. The template included here provides language that can be adapted but for further assistance including a review of any draft legislation please contact the ILC directly.';
 
                 return $og_desc;
@@ -1945,9 +2977,17 @@ function nav_content($menu,$var = null)
                         <div class="section-margin-top-25 section-title fc-ref-mat-2">Template Draft Model Law</div>
                     </div>
                     <div class="content-desc-cont col-lg-10 col-lg-offset-1">
-                        <p>To assist with the drafting of detailed regulations we have produced a template model law. This covers every aspect of the plain packaging to tobacco products policy detailed in Reference Section D: Drafting the legislation. The International Legal Consortium at Tobacco Free Kids has lawyers with extensive experience in drafting and reviewing tobacco control laws across many jurisdictions around the world. Legislative drafting styles vary widely from country to country and there is no ‘one size fits all’ draft law. The template included here provides language that can be adapted but for further assistance including a review of any draft legislation please contact the ILC directly.</p>
+                        <p>To assist with the drafting of detailed regulations we have produced a template model law.
+                            This covers every aspect of the plain packaging to tobacco products policy detailed in
+                            Reference Section D: Drafting the legislation. The International Legal Consortium at Tobacco
+                            Free Kids has lawyers with extensive experience in drafting and reviewing tobacco control
+                            laws across many jurisdictions around the world. Legislative drafting styles vary widely
+                            from country to country and there is no ‘one size fits all’ draft law. The template included
+                            here provides language that can be adapted but for further assistance including a review of
+                            any draft legislation please contact the ILC directly.</p>
                         <ol class="custom list-style-none">
-                            <li><a href="<?php echo $base_url ?>files/template-model-law.docx" target="_blank">Template Draft Model Law</a></li>
+                            <li><a href="<?php echo $base_url ?>files/template-model-law.docx" target="_blank">Template
+                                    Draft Model Law</a></li>
                         </ol>
                     </div>
                 </div>
@@ -2810,8 +3850,7 @@ function nav_content($menu,$var = null)
 
         // e
         case 'comparison-table-of-existing-plain-packaging-laws':
-            if ($var == 'og_desc')
-            {
+            if ($var == 'og_desc') {
                 $og_desc = 'This table provides a comparison of the key features in plain packaging legislation from different countries. It is intended to provide examples but is not fully comprehensive for all features in each piece of legislation. The laws for some countries impose extremely detailed requirements, and it is recommended that officials refer to the specific legislation for these.';
 
                 return $og_desc;
@@ -2825,478 +3864,526 @@ function nav_content($menu,$var = null)
                     </div>
                     <div class="content-desc-cont col-lg-10 col-lg-offset-1">
                         <p>
-                            This table provides a comparison of the key features in plain packaging legislation from different countries. It is intended to provide examples but is not fully comprehensive for all features in each piece of legislation. The laws for some countries impose extremely detailed requirements, and it is recommended that officials refer to the specific legislation for these. 
+                            This table provides a comparison of the key features in plain packaging legislation from
+                            different countries. It is intended to provide examples but is not fully comprehensive for
+                            all features in each piece of legislation. The laws for some countries impose extremely
+                            detailed requirements, and it is recommended that officials refer to the specific
+                            legislation for these.
                         </p>
                     </div>
                     <div class="content-desc-cont col-lg-10 col-lg-offset-1">
                         <table class="table table-bordered ref-e">
-                            <thead> 
-                                <tr> 
-                                    <th>
-                                        <h4>Feature or Element</h4>
-                                    </th> 
-                                    <th>
-                                        <h4>Australia</h4>
-                                        <p>
-                                            <a href="https://www.legislation.gov.au/Details/C2016C00892" target="_blank">Tobacco Plain Packaging Act 2011(TPPA)</a>
-                                        </p>
-                                        <p>
-                                            <a href="http://www.comlaw.gov.au/Details/F2013C00801" target="_blank">Tobacco Plain Packaging Regulations 2011 (TPPR)</a>
-                                        </p>
-                                    </th> 
-                                    <th>
-                                        <h4>UK</h4>
-                                        <p>
-                                           <a href="http://www.legislation.gov.uk/uksi/2015/829/contents/made" target="_blank">Standardised Packaging of Tobacco Products Regulations 2015 (SPTPR)</a>
-                                        </p>
-                                    </th> 
-                                    <th>
-                                        <h4>France</h4>
-                                        <p>
-                                            <a href="https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000032276123&dateTexte=20170126" target="_blank">Ministerial Decree on Neutrality of Packaging of cigarettes and rolling tobacco of 21 March 2016 (MDNP)</a>
-                                        </p>
-                                        <p>
-                                           <a href="https://www.legifrance.gouv.fr/affichCode.do?idSectionTA=LEGISCTA000033045524&cidTexte=LEGITEXT000006072665&dateTexte=20170126" target="_blank">Public Health Code (PHC)</a>
-                                        </p>
-                                    </th> 
-                                    <th>
-                                        <h4>Ireland</h4>
-                                        <p>
-                                            <a href="http://www.irishstatutebook.ie/eli/2015/act/4/section/23/enacted/en/print.html" target="_blank">Public Health (Standardised Packaging of Tobacco) Act 2015 (PHA)</a>
-                                        </p>
-                                        <p>
-                                            <span class="h4-color">(draft)</span> <a href="http://ec.europa.eu/growth/tools-databases/tris/en/index.cfm/search/?trisaction=search.detail&year=2015&num=650&dLang=EN" target="_blank">Public Health(Standardised Packaging of Tobacco) Regulations 2016 (PHR)</a>
-                                        </p>
-                                    </th> 
+                            <thead>
+                            <tr>
+                                <th>
+                                    <h4>Feature or Element</h4>
+                                </th>
+                                <th>
+                                    <h4>Australia</h4>
+                                    <p>
+                                        <a href="https://www.legislation.gov.au/Details/C2016C00892" target="_blank">Tobacco
+                                            Plain Packaging Act 2011(TPPA)</a>
+                                    </p>
+                                    <p>
+                                        <a href="http://www.comlaw.gov.au/Details/F2013C00801" target="_blank">Tobacco
+                                            Plain Packaging Regulations 2011 (TPPR)</a>
+                                    </p>
+                                </th>
+                                <th>
+                                    <h4>UK</h4>
+                                    <p>
+                                        <a href="http://www.legislation.gov.uk/uksi/2015/829/contents/made"
+                                           target="_blank">Standardised Packaging of Tobacco Products Regulations 2015
+                                            (SPTPR)</a>
+                                    </p>
+                                </th>
+                                <th>
+                                    <h4>France</h4>
+                                    <p>
+                                        <a href="https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000032276123&dateTexte=20170126"
+                                           target="_blank">Ministerial Decree on Neutrality of Packaging of cigarettes
+                                            and rolling tobacco of 21 March 2016 (MDNP)</a>
+                                    </p>
+                                    <p>
+                                        <a href="https://www.legifrance.gouv.fr/affichCode.do?idSectionTA=LEGISCTA000033045524&cidTexte=LEGITEXT000006072665&dateTexte=20170126"
+                                           target="_blank">Public Health Code (PHC)</a>
+                                    </p>
+                                </th>
+                                <th>
+                                    <h4>Ireland</h4>
+                                    <p>
+                                        <a href="http://www.irishstatutebook.ie/eli/2015/act/4/section/23/enacted/en/print.html"
+                                           target="_blank">Public Health (Standardised Packaging of Tobacco) Act 2015
+                                            (PHA)</a>
+                                    </p>
+                                    <p>
+                                        <span class="h4-color">(draft)</span> <a
+                                                href="http://ec.europa.eu/growth/tools-databases/tris/en/index.cfm/search/?trisaction=search.detail&year=2015&num=650&dLang=EN"
+                                                target="_blank">Public Health(Standardised Packaging of Tobacco)
+                                            Regulations 2016 (PHR)</a>
+                                    </p>
+                                </th>
 
-                                    <th>
-                                        <h4>Hungary</h4>
-                                        <p>
-                                           <a href="http://www.tobaccocontrollaws.org/files/live/Hungary/Hungary - Decree No. 239_2016 - national.pdf" target="_blank">Decree No. 239/2016 (D239)</a>
-                                        </p>
-                                        <p>
-                                           <a href="http://www.tobaccocontrollaws.org/files/live/Hungary/Hungary - Regulation 239_2016.pdf" target="_blank">(English)</a>
-                                        </p>
-                                    </th> 
-                                </tr> 
+                                <th>
+                                    <h4>Hungary</h4>
+                                    <p>
+                                        <a href="http://www.tobaccocontrollaws.org/files/live/Hungary/Hungary - Decree No. 239_2016 - national.pdf"
+                                           target="_blank">Decree No. 239/2016 (D239)</a>
+                                    </p>
+                                    <p>
+                                        <a href="http://www.tobaccocontrollaws.org/files/live/Hungary/Hungary - Regulation 239_2016.pdf"
+                                           target="_blank">(English)</a>
+                                    </p>
+                                </th>
+                            </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td>Pack Color</td>
-                                    <td>
-                                        <p>Exterior: Pantone 448C, matte finish. <span class="h4-color">TPPR 2.2.1(2)</span></p>
-                                        <p>Interior: white. <span class="h4-color">TPPR 2.2.1(3)</span></p>
-                                    </td>
-                                    <td>
-                                        <p>Exterior: Pantone 448C, matte finish. <span class="h4-color">SPTPR 2(2)</span></p>
-                                        <p>Interior: white or Pantone 448C. <span class="h4-color">SPTPR 3(3)</span></p>
-                                    </td>
-                                    <td>
-                                        <p>Exterior: Pantone 448C. <span class="h4-color">MDNP–1.a</span></p>
-                                        <p>Interior: white or Pantone 448C. <span class="h4-color">MDNP - 3§1</span></p>
-                                    </td>
-                                    <td>
-                                        <p>Exterior: Pantone 448C, matte finish. <span class="h4-color">PHR –6</span></p>
-                                        <p>Interior: white or Pantone 448C .<span class="h4-color">PHR – 6</span></p>
-                                    </td>
-                                    <td>
-                                        <p>Exterior: Pantone 448M, matte finish.</p>
-                                        <p>Interior: white. <span class="h4-color">D239 – 6B§3(a)</span></p>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Text Color</td>
-                                    <td>
-                                        <p>Pantone Cool Gray 2C, matte finish. <span class="h4-color">TPPR 2.4.2(2)</span></p>
-                                    </td>
-                                    <td>
-                                        <p>Pantone Cool Gray 2C, matte finish. <span class="h4-color">SPTPR sch1 ¶1(2) and Sch3 ¶1(2)</span></p>
-                                    </td>
-                                     <td>
-                                        <p>Pantone Cool Gray 2C, matte finish. <span class="h4-color">MDNP - 2§2d</span></p>
-                                    </td>
-                                    <td>
-                                        <p>Pantone Cool Gray 2C, matte finish. <span class="h4-color">PHR 7(f)</span></p>
-                                    </td>
-                                    <td>
-                                        <p>Pantone Cool Gray 1M, matte finish. <span class="h4-color">D239 – 6B§4(a)</span></p>
-                                    </td>
-                                </tr>
+                            <tr>
+                                <td>Pack Color</td>
+                                <td>
+                                    <p>Exterior: Pantone 448C, matte finish. <span class="h4-color">TPPR 2.2.1(2)</span>
+                                    </p>
+                                    <p>Interior: white. <span class="h4-color">TPPR 2.2.1(3)</span></p>
+                                </td>
+                                <td>
+                                    <p>Exterior: Pantone 448C, matte finish. <span class="h4-color">SPTPR 2(2)</span>
+                                    </p>
+                                    <p>Interior: white or Pantone 448C. <span class="h4-color">SPTPR 3(3)</span></p>
+                                </td>
+                                <td>
+                                    <p>Exterior: Pantone 448C. <span class="h4-color">MDNP–1.a</span></p>
+                                    <p>Interior: white or Pantone 448C. <span class="h4-color">MDNP - 3§1</span></p>
+                                </td>
+                                <td>
+                                    <p>Exterior: Pantone 448C, matte finish. <span class="h4-color">PHR –6</span></p>
+                                    <p>Interior: white or Pantone 448C .<span class="h4-color">PHR – 6</span></p>
+                                </td>
+                                <td>
+                                    <p>Exterior: Pantone 448M, matte finish.</p>
+                                    <p>Interior: white. <span class="h4-color">D239 – 6B§3(a)</span></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Text Color</td>
+                                <td>
+                                    <p>Pantone Cool Gray 2C, matte finish. <span class="h4-color">TPPR 2.4.2(2)</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>Pantone Cool Gray 2C, matte finish. <span class="h4-color">SPTPR sch1 ¶1(2) and Sch3 ¶1(2)</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>Pantone Cool Gray 2C, matte finish. <span class="h4-color">MDNP - 2§2d</span></p>
+                                </td>
+                                <td>
+                                    <p>Pantone Cool Gray 2C, matte finish. <span class="h4-color">PHR 7(f)</span></p>
+                                </td>
+                                <td>
+                                    <p>Pantone Cool Gray 1M, matte finish. <span class="h4-color">D239 – 6B§4(a)</span>
+                                    </p>
+                                </td>
+                            </tr>
 
-                                <tr>
-                                    <td>Permitted text</td>
-                                    <td>
-                                        <p>Brand name, variant name. </p> 
-                                        <p><span class="h4-color">TPPA 20(1-3) and 21(1)</span></p>
-                                        <p>
-                                            Producers’ name and address, fire risk statement, locally made product statement, origin mark.
-                                        </p>
-                                        <p><span class="h4-color">TPPR 2.3.1(1)</span></p>
-                                    </td>
-                                    <td>
-                                        <p>Brand name, variant name.</p> 
-                                        <p><span class="h4-color">SPTPR sch1 ¶1 and Sch3 ¶1</span></p>
-                                        <p>
-                                            Producers’ name and address, fire risk statement, locally made product statement, origin mark.
-                                        </p>
-                                        <p><span class="h4-color">SPTPR sch1 ¶3 and Sch3 ¶3</span></p>
-                                    </td>
-                                    <td>
-                                        <p>Brand name, variant name.</p> 
-                                        <p><span class="h4-color">MDNP - 2§1</span></p>
-                                        <p>
-                                            Producers’ name and address, fire risk statement, locally made product statement, origin mark.
-                                        </p>
-                                        <p><span class="h4-color">MDNP - 2§3</span></p>
-                                    </td>
-                                    <td>
-                                        <p>Brand name, variant name.</p> 
-                                        <p><span class="h4-color">PHA – 7(3)</span></p>
-                                        <p>Contact Details of Manufacturer.</p>
-                                        <p><span class="h4-color">PHR - 13</span></p>
-                                    </td>
-                                    <td>
-                                        <p>Brand Name and type of cigarette or cigarette tobacco brand.</p>
-                                        <p><span class="h4-color">D239 – 6B§3(f)</span></p>
-                                    </td>
-                                </tr>
+                            <tr>
+                                <td>Permitted text</td>
+                                <td>
+                                    <p>Brand name, variant name. </p>
+                                    <p><span class="h4-color">TPPA 20(1-3) and 21(1)</span></p>
+                                    <p>
+                                        Producers’ name and address, fire risk statement, locally made product
+                                        statement, origin mark.
+                                    </p>
+                                    <p><span class="h4-color">TPPR 2.3.1(1)</span></p>
+                                </td>
+                                <td>
+                                    <p>Brand name, variant name.</p>
+                                    <p><span class="h4-color">SPTPR sch1 ¶1 and Sch3 ¶1</span></p>
+                                    <p>
+                                        Producers’ name and address, fire risk statement, locally made product
+                                        statement, origin mark.
+                                    </p>
+                                    <p><span class="h4-color">SPTPR sch1 ¶3 and Sch3 ¶3</span></p>
+                                </td>
+                                <td>
+                                    <p>Brand name, variant name.</p>
+                                    <p><span class="h4-color">MDNP - 2§1</span></p>
+                                    <p>
+                                        Producers’ name and address, fire risk statement, locally made product
+                                        statement, origin mark.
+                                    </p>
+                                    <p><span class="h4-color">MDNP - 2§3</span></p>
+                                </td>
+                                <td>
+                                    <p>Brand name, variant name.</p>
+                                    <p><span class="h4-color">PHA – 7(3)</span></p>
+                                    <p>Contact Details of Manufacturer.</p>
+                                    <p><span class="h4-color">PHR - 13</span></p>
+                                </td>
+                                <td>
+                                    <p>Brand Name and type of cigarette or cigarette tobacco brand.</p>
+                                    <p><span class="h4-color">D239 – 6B§3(f)</span></p>
+                                </td>
+                            </tr>
 
-                                <tr>
-                                    <td>Other text requirements</td>
-                                    <td>
-                                        <p>All text: Lucida Sans, normal weighted regular font.</p>
-                                        <p><span class="h4-color">Various</span></p>
-                                        <p>Brand name: point 14.</p>
-                                        <p><span class="h4-color">TPPR 2.4.2(2)(b)</span></p>
-                                        <p>All other text: point 10.</p>
-                                        <p><span class="h4-color">Various</span></p>
-                                    </td>
-                                    <td>
-                                        <p>All text: Helvetica, normal weighted regular font.</p>
-                                        <p><span class="h4-color">SPTPR – sch1 and sch3 various</span></p>
-                                        <p>Brand name: point 14.</p>
-                                        <p><span class="h4-color">SPTPR sch1 ¶1(2)(j) and sch3 ¶1(2)(j)</span></p>
-                                        <p>All other text: point 10.</p>
-                                        <p><span class="h4-color">SPTPR sch1 and sch3 various</span></p>
-                                    </td>
-                                    <td>
-                                        <p>All text: Helvetica, normal weighted regular font. Brand name: point 14. All other text: point 10.</p>
-                                        <p><span class="h4-color">MDNP - 2§2 and 2§3</span></p>
-                                    </td>
-                                    <td>
-                                        <p>All text: Helvetica, normal weighted regular typeface.</p>
-                                        <p><span class="h4-color">PHR 7(d)-(e)</span></p>
-                                        <p>First letter capitalized and the rest in lower case</p>
-                                        <p><span class="h4-color">PHR 7(b)</span></p>
-                                        <p>Brand name: point 14.</p>
-                                        <p><span class="h4-color">PHR 7(j)</span></p>
-                                        <p>Variant name and manufacturer contact details: point 10.</p>
-                                        <p><span class="h4-color">PHR 7(k)</span></p>
-                                    </td>
-                                     <td>
-                                        <p>
-                                            All text: Helvetica, normal weighted regular typeface.
-                                            First letter capitalized and the rest in lower case
-                                            Brand name: point 14. 
-                                            Variant name and manufacturer contact details: point 10.
-                                        </p>
-                                        <p><span class="h4-color">D239 – 6C§4</span></p>
-                                    </td>
-                                </tr>
+                            <tr>
+                                <td>Other text requirements</td>
+                                <td>
+                                    <p>All text: Lucida Sans, normal weighted regular font.</p>
+                                    <p><span class="h4-color">Various</span></p>
+                                    <p>Brand name: point 14.</p>
+                                    <p><span class="h4-color">TPPR 2.4.2(2)(b)</span></p>
+                                    <p>All other text: point 10.</p>
+                                    <p><span class="h4-color">Various</span></p>
+                                </td>
+                                <td>
+                                    <p>All text: Helvetica, normal weighted regular font.</p>
+                                    <p><span class="h4-color">SPTPR – sch1 and sch3 various</span></p>
+                                    <p>Brand name: point 14.</p>
+                                    <p><span class="h4-color">SPTPR sch1 ¶1(2)(j) and sch3 ¶1(2)(j)</span></p>
+                                    <p>All other text: point 10.</p>
+                                    <p><span class="h4-color">SPTPR sch1 and sch3 various</span></p>
+                                </td>
+                                <td>
+                                    <p>All text: Helvetica, normal weighted regular font. Brand name: point 14. All
+                                        other text: point 10.</p>
+                                    <p><span class="h4-color">MDNP - 2§2 and 2§3</span></p>
+                                </td>
+                                <td>
+                                    <p>All text: Helvetica, normal weighted regular typeface.</p>
+                                    <p><span class="h4-color">PHR 7(d)-(e)</span></p>
+                                    <p>First letter capitalized and the rest in lower case</p>
+                                    <p><span class="h4-color">PHR 7(b)</span></p>
+                                    <p>Brand name: point 14.</p>
+                                    <p><span class="h4-color">PHR 7(j)</span></p>
+                                    <p>Variant name and manufacturer contact details: point 10.</p>
+                                    <p><span class="h4-color">PHR 7(k)</span></p>
+                                </td>
+                                <td>
+                                    <p>
+                                        All text: Helvetica, normal weighted regular typeface.
+                                        First letter capitalized and the rest in lower case
+                                        Brand name: point 14.
+                                        Variant name and manufacturer contact details: point 10.
+                                    </p>
+                                    <p><span class="h4-color">D239 – 6C§4</span></p>
+                                </td>
+                            </tr>
 
-                                <tr>
-                                    <td>Shape and type of packets for cigarettes</td>
-                                    <td>
-                                        <p>Rectangular, with 90 degree angles and specified dimensions for each surface.</p>
-                                        <p><span class="h4-color">TPPA18(2)(b) and TPPR 2.1.1(1)</span></p>
-                                    </td>
-                                    <td>
-                                        <p>Cuboid (rounded or bevelled edges permitted).</p>
-                                        <p><span class="h4-color">SPTPR 4(3)</span></p>
-                                    </td>
-                                    <td>
-                                        <p>Cuboid.</p>
-                                        <span class="h4-color">MDNP – 7§1</span>
-                                    </td>
-                                    <td>
-                                        <p>Cuboid (rounded or bevelled edges permitted).</p>
-                                        <p><span class="h4-color">PHA – 7(6)</span></p>
-                                    </td>
-                                    <td>
-                                        <p>Cuboid.</p>
-                                        <p><span class="4-color">D239 – 6§4</span></p>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Type of opening for cigarettes</td>
-                                    <td>
-                                        <p>Flip-top lid only.</p>
-                                        <p><span class="h4-color">TPPA 18(3)(b) and TPPR 2.1.1(3)</span></p>
-                                    </td>
-                                     <td>
-                                        <p>If the opening may be reclosed, then only flip-top lid and shoulder box.</p>
-                                        <p><span class="h4-color">SPTPR 4(4-6)</span></p>
-                                    </td>
-                                    <td>
-                                        <p>If the opening may be reclosed, then only flip-top lid and shoulder box.</p>
-                                        <p><span class="h4-color">PHC R. 3512-23</span></p>
-                                    </td>
-                                    <td>
-                                        <p>If the opening may be reclosed, then only flip-top lid and shoulder box.</p>
-                                        <p><span class="h4-color">PHA – 7(6)</span></p>
-                                    </td>
-                                     <td>
-                                        <p>If the opening may be reclosed, then only flip-top lid and shoulder box.</p>
-                                        <p><span class="h4-color">D239 – 6§4</span></p>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Minimum Content</td>
-                                    <td>
-                                        <p>Cigarettes: 20.</p>
-                                        <p><span class="h4-color">Sale of Tobacco Act 2004 A 12</span></p>
-                                        <p>Roll-your-own: NA.</p>
-                                    </td>
-                                    <td>
-                                        <p>Cigarettes: 20.</p>
-                                        <p><span class="h4-color">SPTPR 4(8)</span></p>
-                                        <p>Roll-your-own: 30g.</p>
-                                        <p><span class="h4-color">SPTPR 8(4)</span></p>
-                                    </td>
-                                    <td>
-                                        <p>Cigarettes: 20.</p>
-                                        <p>Roll-your-own: 30g.</p>
-                                        <p><span class="h4-color">PHC L. 3512-14</span></p>
-                                    </td>
-                                    <td>
-                                        <p>Cigarettes: 20.</p>
-                                        <p><span class="h4-color">Public Health (Tobacco) Act, 2002– Sec 38(1)</span></p>
-                                        <p>Roll-your-own: 30g.</p>
-                                        <p><span class="h4-color">
+                            <tr>
+                                <td>Shape and type of packets for cigarettes</td>
+                                <td>
+                                    <p>Rectangular, with 90 degree angles and specified dimensions for each surface.</p>
+                                    <p><span class="h4-color">TPPA18(2)(b) and TPPR 2.1.1(1)</span></p>
+                                </td>
+                                <td>
+                                    <p>Cuboid (rounded or bevelled edges permitted).</p>
+                                    <p><span class="h4-color">SPTPR 4(3)</span></p>
+                                </td>
+                                <td>
+                                    <p>Cuboid.</p>
+                                    <span class="h4-color">MDNP – 7§1</span>
+                                </td>
+                                <td>
+                                    <p>Cuboid (rounded or bevelled edges permitted).</p>
+                                    <p><span class="h4-color">PHA – 7(6)</span></p>
+                                </td>
+                                <td>
+                                    <p>Cuboid.</p>
+                                    <p><span class="4-color">D239 – 6§4</span></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Type of opening for cigarettes</td>
+                                <td>
+                                    <p>Flip-top lid only.</p>
+                                    <p><span class="h4-color">TPPA 18(3)(b) and TPPR 2.1.1(3)</span></p>
+                                </td>
+                                <td>
+                                    <p>If the opening may be reclosed, then only flip-top lid and shoulder box.</p>
+                                    <p><span class="h4-color">SPTPR 4(4-6)</span></p>
+                                </td>
+                                <td>
+                                    <p>If the opening may be reclosed, then only flip-top lid and shoulder box.</p>
+                                    <p><span class="h4-color">PHC R. 3512-23</span></p>
+                                </td>
+                                <td>
+                                    <p>If the opening may be reclosed, then only flip-top lid and shoulder box.</p>
+                                    <p><span class="h4-color">PHA – 7(6)</span></p>
+                                </td>
+                                <td>
+                                    <p>If the opening may be reclosed, then only flip-top lid and shoulder box.</p>
+                                    <p><span class="h4-color">D239 – 6§4</span></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Minimum Content</td>
+                                <td>
+                                    <p>Cigarettes: 20.</p>
+                                    <p><span class="h4-color">Sale of Tobacco Act 2004 A 12</span></p>
+                                    <p>Roll-your-own: NA.</p>
+                                </td>
+                                <td>
+                                    <p>Cigarettes: 20.</p>
+                                    <p><span class="h4-color">SPTPR 4(8)</span></p>
+                                    <p>Roll-your-own: 30g.</p>
+                                    <p><span class="h4-color">SPTPR 8(4)</span></p>
+                                </td>
+                                <td>
+                                    <p>Cigarettes: 20.</p>
+                                    <p>Roll-your-own: 30g.</p>
+                                    <p><span class="h4-color">PHC L. 3512-14</span></p>
+                                </td>
+                                <td>
+                                    <p>Cigarettes: 20.</p>
+                                    <p><span class="h4-color">Public Health (Tobacco) Act, 2002– Sec 38(1)</span></p>
+                                    <p>Roll-your-own: 30g.</p>
+                                    <p><span class="h4-color">
                                             European Union (Manufacture, Presentation and Sale of tobacco and Related Products) Regulations 2016 Reg 13(1)
                                         </span></p>
-                                    </td>
-                                    <td>
-                                        <p>Cigarettes: not less than 20 but no more than 25.</p>
-                                        <p><span class="h4-color">D239 – 15A§ (a)</span></p>
-                                        <p>Roll-your-own: no less than 30g but no more than 50g and the weight must be divisible by 10 with no remainder.</p>
-                                        <p><span class="h4-color">
+                                </td>
+                                <td>
+                                    <p>Cigarettes: not less than 20 but no more than 25.</p>
+                                    <p><span class="h4-color">D239 – 15A§ (a)</span></p>
+                                    <p>Roll-your-own: no less than 30g but no more than 50g and the weight must be
+                                        divisible by 10 with no remainder.</p>
+                                    <p><span class="h4-color">
                                             D239 – 15A§ (c)
                                         </span></p>
-                                    </td>
-                                </tr>
+                                </td>
+                            </tr>
 
-                                <tr>
-                                    <td>Material for cigarette packs</td>
-                                    <td>
-                                        <p>Rigid cardboard</p>
-                                        <p><span class="h4-color">TPPA 18(2)(a)</span></p>
-                                    </td>
-                                    <td>
-                                        <p>Carton or soft material</p>
-                                        <p><span class="h4-color">SPTPR 4(2)</span></p>
-                                    </td>
-                                    <td>
-                                        <p>Carton or flexible material</p>
-                                        <p><span class="h4-color">PHC R. 3512-22.I</span></p>
-                                    </td>
-                                    <td>
-                                        <p>Carton or soft material</p>
-                                        <p><span class="h4-color">PHA – 7(6)</span></p>
-                                    </td>
-                                    <td>
-                                        <p>Carton or soft material</p>
-                                        <p><span class="h4-color">D239 - 6§4</span></p>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Linings</td>
-                                    <td>
-                                        <p>Cigarettes: Silver foil with white paper backing, regular embossed dots permitted.</p>
-                                        <p><span class="h4-color">TPPA 18(3)(d) and TPPR 2.2.1(4)</span></p>
-                                    </td>
-                                    <td>
-                                        <p>Cigarettes: Silver foil with white paper backing, regular embossed dots permitted.</p>
-                                        <p><span class="h4-color">SPTPR sch2 ¶3(1)</span></p>
-                                    </td>
-                                    <td>
-                                        <p>Cigarettes: Silver foil with white paper backing, regular embossed dots permitted.</p>
-                                        <p><span class="h4-color">MDNP 3§2&3</span></p>
-                                    </td>
-                                    <td>
-                                        <p>Cigarettes: Silver foil with white paper backing.<br>
-                                        Other products: white or the colour of the packaging material in its natural state.<br>
+                            <tr>
+                                <td>Material for cigarette packs</td>
+                                <td>
+                                    <p>Rigid cardboard</p>
+                                    <p><span class="h4-color">TPPA 18(2)(a)</span></p>
+                                </td>
+                                <td>
+                                    <p>Carton or soft material</p>
+                                    <p><span class="h4-color">SPTPR 4(2)</span></p>
+                                </td>
+                                <td>
+                                    <p>Carton or flexible material</p>
+                                    <p><span class="h4-color">PHC R. 3512-22.I</span></p>
+                                </td>
+                                <td>
+                                    <p>Carton or soft material</p>
+                                    <p><span class="h4-color">PHA – 7(6)</span></p>
+                                </td>
+                                <td>
+                                    <p>Carton or soft material</p>
+                                    <p><span class="h4-color">D239 - 6§4</span></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Linings</td>
+                                <td>
+                                    <p>Cigarettes: Silver foil with white paper backing, regular embossed dots
+                                        permitted.</p>
+                                    <p><span class="h4-color">TPPA 18(3)(d) and TPPR 2.2.1(4)</span></p>
+                                </td>
+                                <td>
+                                    <p>Cigarettes: Silver foil with white paper backing, regular embossed dots
+                                        permitted.</p>
+                                    <p><span class="h4-color">SPTPR sch2 ¶3(1)</span></p>
+                                </td>
+                                <td>
+                                    <p>Cigarettes: Silver foil with white paper backing, regular embossed dots
+                                        permitted.</p>
+                                    <p><span class="h4-color">MDNP 3§2&3</span></p>
+                                </td>
+                                <td>
+                                    <p>Cigarettes: Silver foil with white paper backing.<br>
+                                        Other products: white or the colour of the packaging material in its natural
+                                        state.<br>
                                         Embossed dots or squares permitted</p>
-                                        <p><span class="h4-color">PHR - 16</span></p>
-                                    </td>
-                                    <td>
-                                        <p>Cigarettes: white or matte silver color. No decorative grooving, embossing or other decorative elements, except roughening used for non-decorative purposes.</p>
-                                        <p><span class="h4-color">D239 –6B7§7</span></p>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Texture</td>
-                                    <td>
-                                        <p>No embellishments permitted inside or out.</p>
-                                        <p><span class="h4-color">TPPA 18(1)(a)</span></p>
-                                    </td>
-                                    <td>
-                                        <p>Must be smooth and flat, and must contain no ridges, embossing or other irregularities of shape or texture.</p>
-                                        <p><span class="h4-color">SPTPR sch2 ¶1(1)</span></p>
-                                    </td>
-                                    <td>
-                                        <p>Must be smooth and flat.</p>
-                                        <p><span class="h4-color">PHC R. 3512-22.III</span></p>
-                                    </td>
-                                    <td>
-                                        <p>No decorative ridges, embossing or other embellishments.</p>
-                                        <p><span class="h4-color">PHA – 7(1)(d)</span></p>
-                                    </td>
-                                    <td>
-                                        <p>No decorative grooving, embossing or other decorative elements.</p>
-                                        <p><span class="h4-color">D239 -6B7§7</span></p>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Wrappers</td>
-                                    <td>
-                                        <p>Must be clear and transparent. Tear strip permitted. Single bar code permitted.</p>
-                                        <p><span class="h4-color">TPPA 22 and TPPR 2.3.1 and 2.3.5</span></p>
-                                    </td>
-                                    <td>
-                                        <p>Must be clear and transparent. Tear strip permitted. Single bar code permitted.</p>
-                                        <p><span class="h4-color">SPTPR sch2 ¶4 and sch4 ¶4</span></p>
-                                    </td>
-                                    <td>
-                                        <p>Must be clear and transparent. Tear strip permitted. Single bar code permitted.</p>
-                                        <p><span class="h4-color">PHC R. 3512-19 and MDNP 5§1</span></p>
-                                    </td>
-                                    <td>
-                                        <p>Must be transparent and uncolored. Black tear strip permitted.</p>
-                                        <p><span class="h4-color">PHA – 7(8)</span></p>
-                                    </td>
-                                    <td>
-                                        <p>Must be un-tinted and transparent. Tear strip permitted.</p>
-                                        <p><span class="h4-color">D239 – 6A§8</span></p>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Sound and smell</td>
-                                    <td>
-                                        <p>Characteristic noises or scents prohibited.</p>
-                                        <p><span class="h4-color">TPPA 25</span></p>
-                                    </td>
-                                    <td>
-                                        <p>Characteristic sound and smell prohibited.</p>
-                                        <p><span class="h4-color">SPTPR 11</span></p>
-                                    </td>
-                                    <td>
-                                        <p>Characteristic sound and smell prohibited.</p>
-                                        <p><span class="h4-color">PHC R. 3512-20.I</span></p>
-                                    </td>
-                                    <td>
-                                        <p>Audio effects or scents that promote the product are prohibited.</p>
-                                        <p><span class="h4-color">PHA 14(a)</span></p>
-                                    </td>
-                                    <td>
-                                        <p>Scents that modify the smell of tobacco products are prohibited.</p>
-                                        <p><span class="h4-color">4A§2</span></p>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Features designed to change after sale</td>
-                                    <td>
-                                        <p>Prohibited.</p>
-                                        <p><span class="h4-color">TPPA 24</span></p>
-                                    </td>
-                                    <td>
-                                        <p>Prohibited.</p>
-                                        <p><span class="h4-color">SPTPR 12</span></p>
-                                    </td>
-                                     <td>
-                                        <p>Prohibited.</p>
-                                        <p><span class="h4-color">PHC R. 3512-20.I</span></p>
-                                    </td>
-                                    <td>
-                                        <p>Prohibited.</p>
-                                        <p><span class="h4-color">PHA 14(b)</span></p>
-                                    </td>
-                                    <td>
-                                        <p>Likely prohibited. Packs may not contain any elements other than those specified in the Act.</p>
-                                        <p><span class="h4-color">6C§1(c)</span></p>
-                                    </td>
-                                </tr>
-                                <tr>
-                                   <td>Inserts, onserts and stickers</td>
-                                    <td>
-                                        <p>Prohibited.</p>
-                                        <p><span class="h4-color">TPPA 23</span></p>
-                                    </td>
-                                    <td>
-                                        <p>Prohibited (except for cigarette papers and filters in packs of roll-your-own).</p>
-                                        <p><span class="h4-color">SPTPR sch2 ¶2 and sch4 ¶2</span></p>
-                                    </td>
-                                    <td>
-                                        <p>Prohibited (except for cigarette papers and filters in packs of roll-your-own).</p>
-                                        <p><span class="h4-color">PHC R 3511-18.II and R. 3511-20.II</span></p>
-                                    </td>
-                                     <td>
-                                        <p>Prohibited.</p>
-                                        <p><span class="h4-color">PHA – 7(1)(f)</span></p>
-                                    </td>
-                                    <td>
-                                        <p>Not permitted.</p>
-                                        <p><span class="h4-color">D239 – 6B§3(d)</span></p>
-                                    </td>
-                                </tr>
-                                <tr>
-                                   <td>Barcodes</td>
-                                    <td>
-                                        <p>One permitted. Must be black and white and not form a picture.</p>
-                                        <p><span class="h4-color">TPPR 2.3.1(1)(d) and 2.3.5</span></p>
-                                    </td>
-                                    <td>
-                                        <p>One permitted. Must be black and white or Pantone 448C and white. Must not be on front and must not form a picture.</p>
-                                        <p><span class="h4-color">SPTPR sch1 ¶4 and sch3 ¶5</span></p>
-                                    </td>
-                                    <td>
-                                        <p>One permitted. Must be black and white or Pantone 448C and white. Must not be on front and must not form a picture.</p>
-                                        <p><span class="h4-color">PHC R 3511-17 and MDNP 1.b</span></p>
-                                    </td>
-                                    <td>
-                                        <p>One permitted. Must be black and white and not form a picture.</p>
-                                        <p><span class="h4-color">PHR - 14</span></p>
-                                    </td>
-                                    <td>
-                                        <p>One permitted.</p>
-                                        <p><span class="h4-color">D239 – 6B§11</span></p>
-                                    </td>
-                                </tr>
-                                <tr>
-                                   <td>The appearance of individual products</td>
-                                   <td>
-                                        <p>Cigarettes: White casing with white or imitation cork tip. Standardised small alphanumeric code permitted.</p>
-                                        <p><span class="h4-color">TPPR 3.1.1 and 3.1.2</span></p>
-                                        <p>Cigars: standardised band permitted around the circumference of cigar.</p>
-                                        <p><span class="h4-color">TPPR 3.2.1(1)and(2)</span></p>
-                                    </td>
-                                    <td>
-                                        <p>Cigarettes: White casing with white or imitation cork tip. Brand/variant name permitted next to tip in standard typeface.</p>
-                                        <p><span class="h4-color">SPTPR 5(2)-(5)</span></p>
-                                    </td>
-                                    <td>
-                                        <p>Cigarettes: White casing with white or imitation cork tip. Brand/variant name permitted next to tip in standard typeface.</p>
-                                        <p><span class="h4-color">MDNP 4§1-3</span></p>
-                                    </td>
-                                    <td>
-                                        <p>Cigarettes: White casing with white or imitation cork tip. Brand and variant name permitted next to tip in standard typeface.</p>
-                                        <p><span class="h4-color">PHA – 8(1)-2</span></p>
-                                    </td>
-                                    <td>
-                                        <p>Cigarettes: White casing with white or imitation cork tip. Brand and variant name permitted next to tip in standard typeface.</p>
-                                        <p><span class="h4-color">6C§(1) –(2)</span></p>
-                                    </td>
-                                </tr>
+                                    <p><span class="h4-color">PHR - 16</span></p>
+                                </td>
+                                <td>
+                                    <p>Cigarettes: white or matte silver color. No decorative grooving, embossing or
+                                        other decorative elements, except roughening used for non-decorative
+                                        purposes.</p>
+                                    <p><span class="h4-color">D239 –6B7§7</span></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Texture</td>
+                                <td>
+                                    <p>No embellishments permitted inside or out.</p>
+                                    <p><span class="h4-color">TPPA 18(1)(a)</span></p>
+                                </td>
+                                <td>
+                                    <p>Must be smooth and flat, and must contain no ridges, embossing or other
+                                        irregularities of shape or texture.</p>
+                                    <p><span class="h4-color">SPTPR sch2 ¶1(1)</span></p>
+                                </td>
+                                <td>
+                                    <p>Must be smooth and flat.</p>
+                                    <p><span class="h4-color">PHC R. 3512-22.III</span></p>
+                                </td>
+                                <td>
+                                    <p>No decorative ridges, embossing or other embellishments.</p>
+                                    <p><span class="h4-color">PHA – 7(1)(d)</span></p>
+                                </td>
+                                <td>
+                                    <p>No decorative grooving, embossing or other decorative elements.</p>
+                                    <p><span class="h4-color">D239 -6B7§7</span></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Wrappers</td>
+                                <td>
+                                    <p>Must be clear and transparent. Tear strip permitted. Single bar code
+                                        permitted.</p>
+                                    <p><span class="h4-color">TPPA 22 and TPPR 2.3.1 and 2.3.5</span></p>
+                                </td>
+                                <td>
+                                    <p>Must be clear and transparent. Tear strip permitted. Single bar code
+                                        permitted.</p>
+                                    <p><span class="h4-color">SPTPR sch2 ¶4 and sch4 ¶4</span></p>
+                                </td>
+                                <td>
+                                    <p>Must be clear and transparent. Tear strip permitted. Single bar code
+                                        permitted.</p>
+                                    <p><span class="h4-color">PHC R. 3512-19 and MDNP 5§1</span></p>
+                                </td>
+                                <td>
+                                    <p>Must be transparent and uncolored. Black tear strip permitted.</p>
+                                    <p><span class="h4-color">PHA – 7(8)</span></p>
+                                </td>
+                                <td>
+                                    <p>Must be un-tinted and transparent. Tear strip permitted.</p>
+                                    <p><span class="h4-color">D239 – 6A§8</span></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Sound and smell</td>
+                                <td>
+                                    <p>Characteristic noises or scents prohibited.</p>
+                                    <p><span class="h4-color">TPPA 25</span></p>
+                                </td>
+                                <td>
+                                    <p>Characteristic sound and smell prohibited.</p>
+                                    <p><span class="h4-color">SPTPR 11</span></p>
+                                </td>
+                                <td>
+                                    <p>Characteristic sound and smell prohibited.</p>
+                                    <p><span class="h4-color">PHC R. 3512-20.I</span></p>
+                                </td>
+                                <td>
+                                    <p>Audio effects or scents that promote the product are prohibited.</p>
+                                    <p><span class="h4-color">PHA 14(a)</span></p>
+                                </td>
+                                <td>
+                                    <p>Scents that modify the smell of tobacco products are prohibited.</p>
+                                    <p><span class="h4-color">4A§2</span></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Features designed to change after sale</td>
+                                <td>
+                                    <p>Prohibited.</p>
+                                    <p><span class="h4-color">TPPA 24</span></p>
+                                </td>
+                                <td>
+                                    <p>Prohibited.</p>
+                                    <p><span class="h4-color">SPTPR 12</span></p>
+                                </td>
+                                <td>
+                                    <p>Prohibited.</p>
+                                    <p><span class="h4-color">PHC R. 3512-20.I</span></p>
+                                </td>
+                                <td>
+                                    <p>Prohibited.</p>
+                                    <p><span class="h4-color">PHA 14(b)</span></p>
+                                </td>
+                                <td>
+                                    <p>Likely prohibited. Packs may not contain any elements other than those specified
+                                        in the Act.</p>
+                                    <p><span class="h4-color">6C§1(c)</span></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Inserts, onserts and stickers</td>
+                                <td>
+                                    <p>Prohibited.</p>
+                                    <p><span class="h4-color">TPPA 23</span></p>
+                                </td>
+                                <td>
+                                    <p>Prohibited (except for cigarette papers and filters in packs of
+                                        roll-your-own).</p>
+                                    <p><span class="h4-color">SPTPR sch2 ¶2 and sch4 ¶2</span></p>
+                                </td>
+                                <td>
+                                    <p>Prohibited (except for cigarette papers and filters in packs of
+                                        roll-your-own).</p>
+                                    <p><span class="h4-color">PHC R 3511-18.II and R. 3511-20.II</span></p>
+                                </td>
+                                <td>
+                                    <p>Prohibited.</p>
+                                    <p><span class="h4-color">PHA – 7(1)(f)</span></p>
+                                </td>
+                                <td>
+                                    <p>Not permitted.</p>
+                                    <p><span class="h4-color">D239 – 6B§3(d)</span></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Barcodes</td>
+                                <td>
+                                    <p>One permitted. Must be black and white and not form a picture.</p>
+                                    <p><span class="h4-color">TPPR 2.3.1(1)(d) and 2.3.5</span></p>
+                                </td>
+                                <td>
+                                    <p>One permitted. Must be black and white or Pantone 448C and white. Must not be on
+                                        front and must not form a picture.</p>
+                                    <p><span class="h4-color">SPTPR sch1 ¶4 and sch3 ¶5</span></p>
+                                </td>
+                                <td>
+                                    <p>One permitted. Must be black and white or Pantone 448C and white. Must not be on
+                                        front and must not form a picture.</p>
+                                    <p><span class="h4-color">PHC R 3511-17 and MDNP 1.b</span></p>
+                                </td>
+                                <td>
+                                    <p>One permitted. Must be black and white and not form a picture.</p>
+                                    <p><span class="h4-color">PHR - 14</span></p>
+                                </td>
+                                <td>
+                                    <p>One permitted.</p>
+                                    <p><span class="h4-color">D239 – 6B§11</span></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>The appearance of individual products</td>
+                                <td>
+                                    <p>Cigarettes: White casing with white or imitation cork tip. Standardised small
+                                        alphanumeric code permitted.</p>
+                                    <p><span class="h4-color">TPPR 3.1.1 and 3.1.2</span></p>
+                                    <p>Cigars: standardised band permitted around the circumference of cigar.</p>
+                                    <p><span class="h4-color">TPPR 3.2.1(1)and(2)</span></p>
+                                </td>
+                                <td>
+                                    <p>Cigarettes: White casing with white or imitation cork tip. Brand/variant name
+                                        permitted next to tip in standard typeface.</p>
+                                    <p><span class="h4-color">SPTPR 5(2)-(5)</span></p>
+                                </td>
+                                <td>
+                                    <p>Cigarettes: White casing with white or imitation cork tip. Brand/variant name
+                                        permitted next to tip in standard typeface.</p>
+                                    <p><span class="h4-color">MDNP 4§1-3</span></p>
+                                </td>
+                                <td>
+                                    <p>Cigarettes: White casing with white or imitation cork tip. Brand and variant name
+                                        permitted next to tip in standard typeface.</p>
+                                    <p><span class="h4-color">PHA – 8(1)-2</span></p>
+                                </td>
+                                <td>
+                                    <p>Cigarettes: White casing with white or imitation cork tip. Brand and variant name
+                                        permitted next to tip in standard typeface.</p>
+                                    <p><span class="h4-color">6C§(1) –(2)</span></p>
+                                </td>
+                            </tr>
                             </tbody>
                         </table>
                     </div>
@@ -3306,9 +4393,8 @@ function nav_content($menu,$var = null)
             break;
 
         // g
-        case 'research-evidence': 
-            if ($var == 'og_desc')
-            {
+        case 'research-evidence':
+            if ($var == 'og_desc') {
                 $og_desc = 'This section summarises the empirical research evidence that supports the implementation of plain packaging.';
 
                 return $og_desc;
@@ -3321,430 +4407,973 @@ function nav_content($menu,$var = null)
                         <div class="section-margin-top-25 section-title fc-ref-mat-3">Research Evidence</div>
                     </div>
                     <div class="content-desc-cont col-lg-10 col-lg-offset-1 ref -g1">
-                        <div class="section-secondary-title fc-ref-mat-3">1. Introduction</div>
-                        <p>This section summarises the empirical research evidence that supports the implementation of plain packaging.</p>
-                        <p>Over the course of 20-30 years there have been many <b>peer reviewed scientific research studies</b>studieslooking at the impact that plain packaging of tobacco would have on smoking behaviours and attitudes and thelikely consequentialimpact on smoking rates.</p>
-                        <p><b>Research has been conducted in more than 10 different countries using a range of methodologies</b>methodologiesand each study taken in isolation only provides part of the picture.</p>
-                        <p>This Toolkit will continue to be updated. It would be helpful if government officials notify CTFK of any alternative forms of packaging that are regulated under new draft legislation, so that this Toolkit and the Draft Model Law can be adapted and updated.</p>
-                        <p>The different types of research studies include:</p>
-                        <ul class="custom">
-                            <li>Behavioural studies aimed to test whether participants believed that plain packaging would change their purchasing behaviour.</li>
-                            <li>Surveys of consumer groups to consider the appeal of plain packs compared with branded packs</li>
-                            <li>Studies using mock-ups of standardised packaging to see how smokers and potential smokers react to them.</li>
-                            <li>Eye tracking studies that looked at whether people focused more on the health warnings when branding was removed</li>
-                            <li>Qualitative and survey research looking at the impact of removing branding on smoker image and product associations. </li>
-                            <li>Studies into whether and how perceptions of the harmfulness and strength of standardised packages differ frombranded packs (and how different kinds of plain packages differ in this regard).</li>
-                            <li>Studies using a “pack-offer” task to assess the demand for plain packaging. In each of these studies, youth participants were offered a choice of packs.</li>
-                            <li>Naturalistic trials of plain packaging where smokers used brown ‘plain’ packs for two weeks and their regular packs for two weeks in “real-life” settings. The studies analysed avoidance behaviours, such as hiding or covering the pack.</li>
-                        </ul>
-                        <p>
-                            This research is criticised by the tobacco industry because the studies consider attitudes, beliefs, and predictions of future behaviour but fail, they claim, to demonstrate a link with actual behaviour. They also criticise the methodology of individual studies. But the research is persuasive because of the high degree of consistency across more than 75 studies from numerous countries and using different methodologies.
-                        </p>
-                        <p>The tobacco industry also criticises the research for failing to include a randomised control trial of plain packaging. But as has been pointed out, it would not be possible or ethical to undertake such a trial. To do so would require studies to be carried out within a suitably large and isolated population free of known confounding factors that influence smoking and prevalence. Such studies would expose a randomised group of children and/ or adults to nicotine exposure and addiction. </p>
-                        <p>
-                            <b>As is highlighted elsewhere in this toolkit, the tobacco industry is rarely, if ever, able to rely on peer reviewed studies to support its arguments that plain packaging will not be effective; and the tobacco companies have consistently refused to disclose any of their own research or behavioural studies into the likely effects of plain packaging.</b>
-                        </p>
-                    </div>
-                    <div class="content-desc-cont col-lg-10 col-lg-offset-1 ref -g2">
-                        <div class="section-secondary-title fc-ref-mat-3">2. Outcomes of the research</div>
-                        <h4 class="fc-ref-mat-3 sub-section-title">2.1 Attractiveness of tobacco products and packaging as advertising.</h4>
-                        <p>
-                            <b>A substantial number of studies that examine plain packaging support the conclusions that the measure reduces the attractiveness and appeal of tobacco products</b>
-                        </p>
-                        <p>
-                            This includes experimental studies from Australia<sup>2</sup>,Brazil<sup>3</sup>,Canada<sup>4</sup>,
-                            New Zealand<sup>5</sup>, and the USA<sup>6</sup>;
-                            survey evidence from Australia<sup>7</sup>,France<sup>8</sup>,the UK<sup>9</sup>and the USA<sup>10</sup>;
-                            and focus group studies from New Zealand<sup>11</sup> and the United Kingdom<sup>12</sup>.
-                            Evidence also shows that the advertising function of tobacco packaging has also been specifically targeted at youth by the tobacco companies<sup>13</sup>.
-                        </p>
+                        <div>
+                            <div class="section-secondary-title fc-ref-mat-3">Introduction</div>
+                            <p>These pages summarise the empirical research evidence that supports the implementation of
+                                plain packaging. </p>
+                            <p>Over the course of 20-30 years there have been many <b>peer reviewed scientific research
+                                    studies</b> looking at the
+                                impact
+                                that plain packaging of tobacco would have on smoking behaviours and attitudes and the
+                                likely consequential impact
+                                on smoking rates.</p>
+                            <p>Research has been conducted in more than 10 different countries using a range of
+                                methodologies and each study taken
+                                in isolation only provides part of the picture. </p>
 
-                        <h4 class="fc-ref-mat-3 sub-section-title">2.2 The effectiveness of health warnings</h4>
-                        <p>
-                            <b>Studies show that colourful and attractive branding on packaging detracts and distracts from health warnings thereby reducing their effectiveness.</b>
-                        </p>
-                        <p>
-                            A number of studies suggest that plain packaging increases the salience of health warnings, including experimental and survey studies from Australia and Canada<sup>14</sup>,
-                            with impacts that go above and beyond simply introducing larger health warnings without plain packaging<sup>15</sup>.
-                        </p>
+                            <p><u>The different types of research studies include</u>:</p>
+                            <p>Behavioural studies aimed to test whether participants believed that plain packaging
+                                would change their purchasing
+                                behaviour. </p>
+                            <p>Surveys of consumer groups to consider the appeal of plain packs compared with branded
+                                packs.</p>
+                            <p>Studies using mock-ups of standardised packaging to see how smokers and potential smokers
+                                react to them.</p>
+                            <p>Eye tracking studies that looked at whether people focused more on the health warnings
+                                when branding was
+                                removed. </p>
+                            <p>Qualitative and survey research looking at the impact of removing branding on smoker
+                                image and product
+                                associations. </p>
+                            <p>Studies into whether and how perceptions of the harmfulness and strength of standardised
+                                packages differ from
+                                branded packs (and how different kinds of plain packages differ in this regard). </p>
+                            <p>Studies using a “pack-offer” task to assess the demand for plain packaging. In each of
+                                these studies, youth
+                                participants were offered a choice of packs.</p>
+                            <p>Naturalistic trials of plain packaging where smokers used brown ‘plain’ packs for two
+                                weeks and their regular packs
+                                for two weeks in “real-life” settings. The studies analysed avoidance behaviours, such
+                                as hiding or covering the
+                                pack.</p>
 
-                        <h4 class="fc-ref-mat-3 sub-section-title">2.3 Misleading tobacco packaging</h4>
-                        <p>
-                            <b>Studies have demonstrated there is a strong association between pack design and false consumer perceptions of risk<sup>16</sup>.</b>
-                        </p>
-                        <p>
-                            Tobacco branding can mislead consumers as to the relative harms of one product compared to other products. Many countries have banned terms such as ‘light’ and ‘mild’ for this reason as all the evidence shows that these products are equally dangerous. However, smokers and non-smokers continue to hold mistaken believes about different tobacco products because of the tobacco companies’ use of colors and branding. Some pack designs preserve the branding used for prohibited brand variants. For instance, Marlboro Lights became Marlboro Gold and Marlboro Ultra Lights became Marlboro Silver. Similar tactics were used by other companies. The color of packs in particular affects consumers’ perceptions of risk. Lighter packs are perceived as being less harsh and having lower tar levels that darker colors even when there is identical products in them<sup>17</sup>.
-                        </p>
-                        <p>
-                            Peer reviewed studies from many countries show that plain packaging will minimize the ability of packaging and brand variants to mislead consumers about the relative harms of different products<sup>18</sup>
-                        </p>
-                    </div>
+                            <p>This research is criticised by the tobacco industry because the studies consider
+                                attitudes, beliefs, and predictions
+                                of future behaviour but fail, they claim, to demonstrate a link with actual behaviour.
+                                They also criticise the
+                                methodology of individual studies. But the research is persuasive because of the high
+                                degree of consistency across
+                                more than 75 studies from numerous countries and using different methodologies. </p>
+                            <p>The tobacco industry also criticises the research for failing to include a randomised
+                                control trial of plain
+                                packaging. But as has been pointed out, it would not be possible or ethical to undertake
+                                such a trial. To do so
+                                would require studies to be carried out within a suitably large and isolated population
+                                free of known confounding
+                                factors that influence smoking and prevalence. Such studies would expose a randomised
+                                group of children and/ or
+                                adults to nicotine exposure and addiction. </p>
+                            <p>As is highlighted elsewhere in this toolkit, <b>the tobacco industry is rarely, if ever,
+                                    able to rely on peer
+                                    reviewed
+                                    studies to support its arguments that plain packaging will not be effective; and the
+                                    tobacco companies have
+                                    consistently refused to disclose any of their own research or behavioural studies
+                                    into the likely effects of
+                                    plain
+                                    packaging</b>.</p>
 
-                     <div class="content-desc-cont col-lg-10 col-lg-offset-1 ref -g3">
-                        <div class="section-secondary-title fc-ref-mat-3">3. Expert reviews of the research evidence</div>
-                        <p>Australia, the UK and Ireland, when considering plain packaging commissioned independent reviews of the research evidence to ensure that there is a clear, complete and balanced picture.</p>
-                        <p>The 4 reviews show that the evidence on plain packaging is notable for its breadth and diversity of methods but also for strong consistency of the results in supporting that plain packaging will contribute to its objectives. The evidence reviews were:</p>
-                        <ol class="g-list">
-                            <li>Cancer Council Victoria (Australia 2011)</li>
-                            <li>The Stirling Review (United Kingdom 2012 and updated 2013)</li>
-                            <li>The Chanter Review (United Kingdom 2014)</li>
-                            <li>The Hammond Review (Ireland 2014) </li>
-                        </ol>
-                       <p>
-                           By the time of the Hammond Review commissioned by the Irish Government in 2014, a total of 69 original empirical studies were reviewed. Research continues to be undertaken throughout the world and there have also been many post-implementation studies conducted in Australia 
-                           (see <b>REFERENCE SECTION H: Australia’s post implementation evidence</b>).
-                       </p>
-                       <p>
-                           This section summarises the findings of these 4 reviews and goes onto outline some of the additional research evidence that has been produced since 2014.
-                       </p>
-                       <p>
-                           It is important to emphasise that these evidence reviews <b>only considered peer reviewed studies published in academic or medical journals.</b>
-                       </p>
-                        
-                       <h4 class="fc-ref-mat-3 sub-section-title">Obtain full copies of the Reviews</h4>
-                       <p>
-                           For Ministry of Health officials considering taking plain packaging forward, it is recommended that full copies of these reviews are obtained and considered; and records kept of when the copies were obtained, when they were considered and by whom (See 
-                           <b>Guide 1.2 Document development and retention policy</b>). They should also conduct a review of those studies that have taken place since the latest evidence review (see below at part 4).
-                       </p>
+                            <div class="section-secondary-title fc-ref-mat-3">Outcomes of the research</div>
+                            <h3 class="fc-ref-mat-4 sub-title">Attractiveness of tobacco products and packaging as
+                                advertising</h3>
+                            <p><b>A substantial number of studies that examine plain packaging support the conclusions
+                                    that the measure reduces the
+                                    attractiveness and appeal of tobacco products.</b></p>
+                            <p>This includes experimental studies from Australia, <sup>1</sup> Brazil, <sup>2</sup>
+                                Canada, <sup>3</sup> New
+                                Zealand, <sup>4</sup> and the
+                                USA <sup>5</sup>; survey
+                                evidence
+                                from
+                                Australia <sup>6</sup>, France <sup>7</sup>, the UK <sup>8</sup>, and the USA
+                                <sup>9</sup>; and focus group
+                                studies from New
+                                Zealand <sup>10</sup> and
+                                the United
+                                Kingdom <sup>11</sup>.
+                                Evidence
+                                also shows that the advertising function of tobacco packaging has also been specifically
+                                targeted at youth by the
+                                tobacco companies. <sup>12</sup></p>
 
-                        <h4 class="fc-ref-mat-3 sub-section-secondary-title">3.1 Cancer Council Victoria</h4>
-                        <p>
-                            In 2011 Cancer Council Victoriain Australia produced a paper to present the findings of research over two decades and across five countries on the topic of plain packaging. It includes the results of more than 25 published experimental studies and summarises the results of research papers that analyse industry arguments about barriers to legislation resulting from international law and trade agreements:
-                        </p>
-                        <p class="indented">
+                            <h3 class="fc-ref-mat-4 sub-title">The effectiveness of health warnings</h3>
+                            <p><b>Studies show that colorful and attractive branding on packaging detracts and distracts
+                                    from health warnings,
+                                    thereby reducing their effectiveness.</b></p>
+                            <p>A number of studies suggest that plain packaging increases the salience of health
+                                warnings, including experimental
+                                and survey studies from Australia and Canada <sup>13</sup>, with impacts that go above
+                                and beyond simply
+                                introducing larger
+                                health
+                                warnings without plain packaging <sup>14</sup>. </p>
+
+                            <h3 class="fc-ref-mat-4 sub-title">Misleading tobacco packaging</h3>
+                            <p><b>Studies have demonstrated there is a strong association between pack design and false
+                                    consumer perceptions of
+                                    risk. <sup>15</sup> </b></p>
+                            <p>Tobacco branding can mislead consumers as to the relative harms of one product compared
+                                to other products. Many
+                                countries have banned terms such as “light” and “mild” for this reason, as all the
+                                evidence shows that these
+                                products are equally dangerous. However, smokers and non-smokers continue to hold
+                                mistaken beliefs about different
+                                tobacco products because of the tobacco companies’ use of colors and branding. Some pack
+                                designs preserve the
+                                branding used for prohibited brand variants. For instance, Marlboro Lights became
+                                Marlboro Gold, and Marlboro Ultra
+                                Lights became Marlboro Silver. Similar tactics were used by other companies. The color
+                                of packs in particular
+                                affects consumers’ perceptions of risk. Lighter packs are perceived as being less harsh
+                                and having lower tar levels
+                                than darker colors, even when there is identical products in them. <sup>16</sup></p>
+
+                            <p>Peer-reviewed studies from many countries show that plain packaging will minimize the
+                                ability of packaging and brand
+                                variants to mislead consumers about the relative harms of different products.
+                                <sup>17</sup></p>
+
+                            <div class="section-secondary-title fc-ref-mat-3">Expert reviews of the research evidence
+                            </div>
+                            <p>Australia, the UK, and Ireland, when considering plain packaging, commissioned
+                                independent reviews of the research
+                                evidence to ensure that there is a clear, complete, and balanced picture. More recently,
+                                <a
+                                        href="http://www.cochrane.org/about-us">Cochrane</a>, a global
+                                independent non-profit organization, undertook a review of the research studies that
+                                evaluated plain or standardised
+                                packaging.</p>
+
+                            <p>The four reviews show that the evidence on plain packaging is notable for its breadth and
+                                diversity of methods but
+                                also for the strong consistency of the results in supporting that plain packaging will
+                                contribute to its objectives.
+                                The evidence reviews were:</p>
+
+                            <ol>
+                                <li>Cancer Council Victoria (Australia 2011)</li>
+                                <li>The Stirling Review (United Kingdom 2012 and updated 2013)</li>
+                                <li>The Chantler Review (United Kingdom 2014)</li>
+                                <li>The Hammond Review (Ireland 2014)</li>
+                                <li>The Cochrane Review (2017)</li>
+                            </ol>
+
+                            <p>By the time of the Hammond Review commissioned by the Irish Government in 2014, a total
+                                of 69 original empirical
+                                studies were reviewed. Research continues to be undertaken throughout the world and
+                                there have also been many
+                                post-implementation studies conducted in Australia (see the <b>Australia’s Post-
+                                    Implementation Evidence</b> page of
+                                the
+                                Tools and Resources). </p>
+                            <p>This page summarises the findings of these five reviews and goes onto outline some of the
+                                additional research
+                                evidence that has been produced since 2014.</p>
+                            <p>It is important to emphasize that these evidence <u>reviews only considered peer-reviewed
+                                    studies published in
+                                    academic
+                                    or medical journals</u>. </p>
+
+                            <h3 class="fc-ref-mat-4 sub-title">Obtain full copies of the reviews</h3>
+                            <p>For Ministry of Health officials considering taking plain packaging forward, it is
+                                recommended that full copies of
+                                these reviews are obtained and considered, and records kept of when the copies were
+                                obtained, when they were
+                                considered and by whom (See <b>Guide 1.2 Establish a document record</b> ). They should
+                                also consider those studies
+                                that
+                                have taken place since the latest evidence review (see below). </p>
+
+                            <div class="section-secondary-title fc-ref-mat-3">1. Cancer Council Victoria</div>
+                            <p>In 2011, Cancer Council Victoria in Australia produced a paper to present the findings of
+                                research over two decades
+                                and across five countries on the topic of plain packaging. It includes the results of
+                                more than 25 published
+                                experimental studies and summarizes the results of research papers that analyze industry
+                                arguments about barriers to
+                                legislation resulting from international law and trade agreements:</p>
+
                             <a href="http://www.cancervic.org.au/plainfacts/plainfacts-evidence">http://www.cancervic.org.au/plainfacts/plainfacts-evidence</a>
-                        </p>
-                        <p>
-                            This was the first evidence review that provided the support for Australia to move ahead with the policy. To avoid repetition this section focuses on the outcomes of more recent reviews.
-                        </p>
 
-                        <h4 class="fc-ref-mat-3 sub-section-secondary-title">3.2 The Stirling Review</h4>
-                        <div class="background-3-2">
-                            <h4 class="fc-ref-mat-3 sub-section-title">Background</h4>
-                            <p>
-                                In 2012 the UK Department of Health commissioned a systematic review of the evidence on plain tobacco packaging. The review was supported through the Public Health Research Consortium (PHRC), a network of researchers at the University of Stirling, The University of Nottingham and the Institute of Education, London.
-                            </p>
-                            <p>
-                                Screening led to 37 studies being analysed. The resulting report was peer-reviewed and published at the same time as the 2012 consultation. It was made clear that the PHRC report represented the work and views of the authors, not necessarily those of the UK Department of Health. An update was published in September 2013, which considered 17 new studies published since the original Stirling Review in 2012.
-                            </p>
-                            <p class="indented">
-                                <a href="http://phrc.lshtm.ac.uk/project_2011-2016_006.html">http://phrc.lshtm.ac.uk/project_2011-2016_006.html</a>(Original)
-                                <a href="http://www.stir.ac.uk/media/schools/management/documents/Plain%20Packaging%20Studies%20Update.pdf">http://www.stir.ac.uk/media/schools/management/documents/Plain%20Packaging%20Studies%20Update.pdf.</a>(Update)
-                            </p>
-                            <p>
-                                The Stirling Review found that:
-                            </p>
-                            <p class="indented">
-                                “there is strong evidence to support the propositions … that plain packaging would reduce the attractiveness and appeal of tobacco products, it would increase the noticeability and effectiveness of health warnings and messages and it would reduce the use of design techniques that may mislead consumers about the harmfulness of tobacco products”.
-                            </p>
-                        </div>
-                        <div class="review-3-2">
-                            <h4 class="fc-ref-mat-3 sub-section-title">Review methodology</h4>
-                            <p>
-                                The review aimed to examine all available current evidence on the effects of plain packaging in the areas of pack appeal; effectiveness of health warnings; and perceptions of product harm and strength.  It employed systematic review methodology and examined studies from 1980 to the date of review.
-                            </p>
-                            <p>
-                                A total of 4,518 citations were identified following initial searching, and after screening and quality appraisal 37 studies were included in the systematic review.  Most of the studies included in the review were conducted in Australasia, North America or Western Europe.
-                            </p>
-                        </div>
+                            <p>This was the first evidence review that provided the support for Australia to move ahead
+                                with the policy. The more
+                                recent reviews looked at the studies considered in this paper as well as subsequent
+                                ones. To avoid repetition, these
+                                pages focuses on the outcomes of more recent reviews. </p>
 
-                        <div class="findings-3-2">
-                        <h4 class="fc-ref-mat-3 sub-section-title">Findings</h4>
-                            <p class="sub-title">
-                                Appeal of Cigarettes, Packs and Brands. 
-                            </p>
+                            <div class="section-secondary-title fc-ref-mat-3">2. The Stirling Review</div>
 
-                            <ul>
-                                <li>All studies reported that plain packs were rated as less attractive than branded equivalent packs, by both adults and children.</li>
-                                <li>Plain packs were perceived to be poorer quality, poorer tasting and cheaper than branded equivalent packs.</li>
-                                <li>Positive impressions of smoker identity and personality attributes associated with specific brands were weakened or disappeared with plain packaging.</li>
-                                <li>Non-smokers and younger people responded more negatively to plain packs than smokers and older people.</li>
-                            </ul>
+                            <h3 class="fc-ref-mat-4 sub-title">Background</h3>
+                            <p>In 2012,the UK Department of Health commissioned a systematic review of the evidence on
+                                plain tobacco packaging. The
+                                review was supported through the Public Health Research Consortium (PHRC), a network of
+                                researchers at the
+                                University of Stirling, the University of Nottingham, and the Institute of Education,
+                                London.</p>
 
-                            <p class="sub-title">
-                                Effectiveness of Health Warnings. 
-                            </p>
-                            <ul>
-                                <li>Overall, the studies suggest that plain packaging tends to increase the recall of health warnings, the attention paid to them and their perceived seriousness and believability.</li>
-                                <li>Findings appear to be moderated by the type, size and position of health warning used.</li>
-                                <li>Only one study examined sub-group differences, and reported that non-smokers and weekly smokers may pay more attention to warnings on plain packs than daily smokers.</li>
-                            </ul>
+                            <p>Screening led to 37 studies being analyzed. The resulting report was peer reviewed and
+                                published at the same time as
+                                the 2012 consultation. It was made clear that the PHRC report represented the work and
+                                views of the authors, not
+                                necessarily those of the UK Department of Health. An update was published in September
+                                2013, which considered
+                                seventeen new studies published since the original Stirling Review in 2012.</p>
 
-                            <p class="sub-title">Perceptions of Product Harm and Strength.</p>
-                            <ul>
-                                <li>Plain packaging can reduce misperceptions about the relative harmfulness of different brands.</li>
-                                <li>Colours of packs affect perceptions of product harm and strength.  In general, plain packs are perceived as more harmful than branded packs if in a darker colour such as brown and, conversely, less harmful than branded packs if in lighter colours such as white.  Red packs are perceived to contain stronger cigarettes than light-coloured packs.</li>
-                                <li>Use of descriptors such as ‘gold’ or ‘smooth’ on plain packs have the potential to mislead consumers, as they do on branded packs.</li>
-                                <li>In general, smokers are more likely to have misperceptions about the harmfulness of packs, both branded and plain, than non-smokers.</li>
-                            </ul>
+                            <a href="http://phrc.lshtm.ac.uk/project_2011-2016_006.html">http://phrc.lshtm.ac.uk/project_2011-2016_006.html</a>(Original)
+                            <a href="http://www.stir.ac.uk/media/schools/management/documents/Plain%20Packaging%20Studies%20Update.pdf">http://www.stir.ac.uk/media/schools/management/documents/Plain%20Packaging%20Studies%20Update.pdf</a>.
+                            (Update)
 
-                            <p class="sub-title">Smoking Related Attitudes, Beliefs, Intentions and Behaviour</p>
-                            <ul>
-                                <li>Plain packs appear to increase negative feelings about smoking.</li>
-                                <li>Plain packs are generally perceived as likely to have a deterrent effect on the onset of smoking by young people and as likely to encourage existing smokers to reduce their consumption or to quit, although in some studies they are perceived as likely to have little impact.</li>
-                                <li>Non-smokers, lighter smokers and younger people are more likely to perceive that plain packs would discourage or reduce smoking.</li>
-                            </ul>
-                        </div>
+                            <p>The Stirling Review found that:</p>
 
-                        <div class="conclusions-3-2">
-                            <h4 class="fc-ref-mat-3 sub-section-title">Conclusions</h4>
+                            <p class="p-states">“There is strong evidence to support the propositions. . . that plain
+                                packaging would reduce the
+                                attractiveness and appeal of tobacco products, it would increase the noticeability and
+                                effectiveness of health
+                                warnings and messages and it would reduce the use of design techniques that may mislead
+                                consumers about the
+                                harmfulness of tobacco products.”</p>
+                            <h3 class="fc-ref-mat-4 sub-title">Methodology</h3>
+
+                            <p>The review aimed to examine all available current evidence on the effects of plain
+                                packaging in the areas of pack
+                                appeal; effectiveness of health warnings; and perceptions of product harm and strength.
+                                It employed systematic
+                                review methodology and examined studies from 1980 to the date of review.</p>
+
+                            <p>A total of 4,518 citations were identified following initial searching, and, after
+                                screening and quality appraisal,
+                                37 studies were included in the systematic review. Most of the studies included in the
+                                review were conducted in
+                                Australasia, North America, or Western Europe.</p>
+
+                            <h3 class="fc-ref-mat-4 sub-title">Findings</h3>
+
+                            <p>Appeal of cigarettes, packs and brands: </p>
+                            <p>All studies reported that plain packs were rated as less attractive than branded
+                                equivalent packs by both adults
+                                and children. </p>
+                            <p>Plain packs were perceived to be poorer quality, poorer tasting, and cheaper than branded
+                                equivalent packs.</p>
+                            <p>Positive impressions of smoker identity and personality attributes associated with
+                                specific brands were weakened or
+                                disappeared with plain packaging.</p>
+                            <p>Non-smokers and younger people responded more negatively to plain packs than smokers and
+                                older people. </p>
+
+                            <h3 class="fc-ref-mat-4 sub-title">Effectiveness of health warnings</h3>
+                            <p>Overall, the studies suggest that plain packaging tends to increase the recall of health
+                                warnings, the attention
+                                paid to them, and their perceived seriousness and believability. </p>
+                            <p>Findings appear to be moderated by the type, size, and position of health warning
+                                used.</p>
+                            <p>Only one study examined sub-group differences and reported that non-smokers and weekly
+                                smokers may pay more
+                                attention to warnings on plain packs than daily smokers. </p>
+
+                            <h3 class="fc-ref-mat-4 sub-title">Perceptions of product harm and strength:</h3>
+                            <p>Plain packaging can reduce misperceptions about the relative harmfulness of different
+                                brands.</p>
+                            <p>Colors of packs affect perceptions of product harm and strength. In general, plain packs
+                                are perceived as more
+                                harmful than branded packs if in a darker color, such as brown, and, conversely, less
+                                harmful than branded packs if
+                                in lighter colors, such as white. Red packs are perceived to contain stronger cigarettes
+                                than light-colored
+                                packs.</p>
+                            <p>Use of descriptors, such as “gold” or “smooth,” on plain packs have the potential to
+                                mislead consumers, as they do
+                                on branded packs.</p>
+                            <p>In general, smokers are more likely to have misperceptions about the harmfulness of
+                                packs, both branded and plain,
+                                than non-smokers. </p>
+
+                            <h3 class="fc-ref-mat-4 sub-title">Smoking-related attitudes, beliefs, intentions, and
+                                behavior:</h3>
+                            <p>Plain packs appear to increase negative feelings about smoking. </p>
+                            <p>Plain packs are generally perceived as likely to have a deterrent effect on the onset of
+                                smoking by young people
+                                and as likely to encourage existing smokers to reduce their consumption or to quit,
+                                although in some studies they
+                                are perceived as likely to have little impact. </p>
+                            <p>Non-smokers, lighter smokers, and younger people are more likely to perceive that plain
+                                packs would discourage or
+                                reduce smoking. </p>
+
+                            <h3 class="fc-ref-mat-4 sub-title">Conclusions</h3>
                             <p>Plain packaging has been shown to:</p>
-                            <ul>
-                                <li>reduce pack and product appeal, by making packs appear less attractive and of lower quality, and by weakening the positive smoker identity and personality attributes associated with branded packs</li>
-                                <li>increase the salience of health warning, in terms of improving the recall and perceived seriousness and believability of warnings; and</li>
-                                <li> reduce the confusion about product harm that can result from branded packs.</li>
-                            </ul>
-                            <p>Plain packaging was also perceived as likely to have a deterrent effect on the onset of smoking by young people and as likely to encourage existing smokers to quit. The review also found some evidence that non-smokers and, to a lesser extent, smokers, approved of the idea of plain packaging, with both groups feeling it would make smoking less attractive, particularly to young people.</p>
-                        </div>
+                            <p>reduce pack and product appeal by making packs appear less attractive and of lower
+                                quality, and by weakening the
+                                positive smoker identity and personality attributes associated with branded packs;</p>
+                            <p>increase the salience of health warnings in terms of improving the recall and perceived
+                                seriousness and
+                                believability of warnings; and</p>
+                            <p>reduce the confusion about product harm that can result from branded packs. </p>
 
-                        <div class="update-3-2">
-                            <h4 class="fc-ref-mat-3 seb-section-title">
-                                The authors provided an update to this review, summarising subsequent evidence, in 2013 . The findings were consistent with the original review, and the overarching summary is laid out below:
-                            </h4>
-                            <p class="indented">
-                                <i>
-                                    ‘This update of the literature, which now includes 54 published studies (37 in our original review and 17 here) shows that since the systematic review the evidence base has continued to grow at considerable pace.’
-                                    ‘The evidence summarised in this update of the literature, in general, provides further support for the proposed benefits of plain packaging.’
-                                </i>
-                            </p>
-                        </div>
-                        
-                        <h4 class="fc-ref-mat-3 sub-section-secondary-title">3.3 The Chantler Review</h4>
-                        <div class="background-3-3">
-                            <h4 class="fc-ref-mat-3 sub-section-title">Background</h4>
-                            <p>
-                                In November 2013, the UK Department of Health commissioned Sir Cyril Chantler to undertake an independent review of whether the introduction of standardised packaging of tobacco was likely to have an effect on public health, in particular in relation to children.
-                            </p>
-                            <p>
-                                The remit of this review was wider than the Stirling Review and includedconsideration of evidence on the impact in Australia as well as industry arguments and possible unintended consequences. 
-                            </p>
-                        </div>
-                        
-                        <div class="methodology-3-3">
-                            <h4 class="fc-ref-mat-3 sub-section-title">Methodology</h4>
-                            <p>
-                            The Chantler Review considered all the evidence relevant to whether the introduction of standardised packaging would be beneficial to public health. The validity of the Stirling systematic review was also considered. </p>
-                            <p>
-                                He commissioned further expert advice to assist in the analysis of the key evidence. In particular, two specific pieces of independent analysis on the qualitative and quantitative studies in the Stirling Review (and the subsequent Research Update) using Critical Appraisal Skills Programme assessment tools. These were undertaken by academics at Southampton University and Kings College London respectively.
-                            </p>
-                            <p>
-                                The report of the Chantler Review was published in April 2014 and is available here:
-                                <a href="http://www.kcl.ac.uk/health/10035-TSO-2901853-Chantler-Review-ACCESSIBLE.PDF">http://www.kcl.ac.uk/health/10035-TSO-2901853-Chantler-Review-ACCESSIBLE.PDF</a>
-                            </p>
+                            <p>Plain packaging was also perceived as likely to have a deterrent effect on the onset of
+                                smoking by young people and
+                                as likely to encourage existing smokers to quit. The review also found some evidence
+                                that non-smokers and, to a
+                                lesser extent, smokers approved of the idea of plain packaging, with both groups feeling
+                                it would make smoking less
+                                attractive, particularly to young people.</p>
 
-                            <p>
-                                A full record of the meetings, evidence  and written submissions from the review are available here:
+                            <p>Despite some limitations of the review identified by the researchers, they say that it is
+                                worth emphasizing the
+                                remarkable consistency in study findings regarding the potential impact of plain
+                                packaging. Across studies using
+                                different designs, conducted in a range of countries, with young and older populations
+                                and with smokers and
+                                non-smokers the key findings are similar. This consistency of evidence can provide
+                                confidence about the observed
+                                potential effects of plain packaging.</p>
+
+                            <h3 class="fc-ref-mat-4 sub-title">Update</h3>
+                            <p>The authors provided an update to this review, summarizing subsequent evidence, in 2013
+                                <sup>18</sup>. The findings
+                                were
+                                consistent
+                                with the original review, and the overarching summary is laid out below:</p>
+
+                            <p class="p-states">“This update of the literature, which now includes 54 published studies
+                                (37 in our original review
+                                and 17 here) shows that since the systematic review the evidence base has continued to
+                                grow at considerable
+                                pace.”</p>
+
+                            <p>and</p>
+
+                            <p class="p-states">“The evidence summarised in this update of the literature, in general,
+                                provides further support for
+                                the proposed benefits of plain packaging.”</p>
+
+                            <div class="section-secondary-title fc-ref-mat-3">3. The Chantler Review</div>
+
+                            <h3 class="fc-ref-mat-4 sub-title">Background</h3>
+                            <p>In November 2013, the UK Department of Health commissioned Sir Cyril Chantler to
+                                undertake an independent review of
+                                whether or not the introduction of standardized packaging of tobacco was likely to have
+                                an effect on public health,
+                                in particular in relation to children.</p>
+                            <p>The remit of this review was wider than the Stirling Review and included consideration of
+                                evidence on the impact in
+                                Australia as well as industry arguments and possible unintended consequences.</p>
+
+                            <h3 class="fc-ref-mat-4 sub-title">Methodology</h3>
+                            <p>The Chantler Review considered all the evidence relevant to whether or not the
+                                introduction of standardized packaging
+                                would be beneficial to public health. The validity of the Stirling systematic review was
+                                also considered. </p>
+                            <p>The Chantler Review invited interested parties to submit research-based material, and
+                                took evidence during two
+                                meetings. Separate meetings were held withthe Smokefree Action Coalition, the Tobacco
+                                Manufacturers Association,and
+                                representatives of Philip Morris Ltd. Sir Cyril also visited Australia to study its
+                                experience of implementing plain
+                                packaging.</p>
+                            <p>He commissioned further expert advice to assist in the analysis of the key evidence. In
+                                particular, two specific
+                                pieces of independent analysis on the qualitative and quantitative studies in the
+                                Stirling Review (and the
+                                subsequent update) using Critical Appraisal Skills Programme assessment tools. These
+                                were undertaken by academics at
+                                Southampton University and Kings College London, respectively.</p>
+                            <p>The report of the Chantler Review was published in April 2014 and is available here: <a
+                                        href="http://www.kcl.ac.uk/health/10035-TSO-2901853-Chantler-Review-ACCESSIBLE.PDF">http://www.kcl.ac.uk/health/10035-TSO-2901853-Chantler-Review-ACCESSIBLE.PDF</a>
+                            </p>
+                            <p>A full record of the meetings, evidence, and written submissions from the review is
+                                available here:
                                 <a href="http://webarchive.nationalarchives.gov.uk/20140911094224/http://www.kcl.ac.uk/health/packaging-docs.aspx">http://webarchive.nationalarchives.gov.uk/20140911094224/http://www.kcl.ac.uk/health/packaging-docs.aspx</a>
                             </p>
-                        </div>
 
-                        
-                        <div class="findings-3-3">
-                            <h4 class="fc-ref-mat-3 sub-title">Findings</h4>
-                            <p>
-                                Sir Cyril Chantler’soverall conclusion was that it is 
-                                <b><i>‘highly likely that standardised packaging would serve to reduce the rate of children taking up smoking and implausible that it would increase the consumption of tobacco …I am satisfied that the body of evidence shows that standardised packaging, in conjunction with the current tobacco control regime, is very likely to lead to a modest but important reduction over time on the uptake and prevalence of smoking and thus have a positive impact on public health’.</i></b>
+                            <h3 class="fc-ref-mat-4 sub-title">Findings</h3>
+
+                            <p>Sir Cyril Chantler’s overall conclusion was that it is “<b>highly likely that
+                                    standardised packaging would serve to
+                                    reduce the rate of children taking up smoking and implausible that it would increase
+                                    the consumption of tobacco
+                                    . . . I am satisfied that the body of evidence shows that standardised packaging, in
+                                    conjunction with the
+                                    current tobacco control regime, is very likely to lead to a modest but important
+                                    reduction over time on the
+                                    uptake and prevalence of smoking and thus have a positive impact on public
+                                    health</b>.”</p>
+
+                            <p>Tobacco marketing and branding</p>
+
+                            <p class="p-states">“<b>There is very strong evidence that exposure to tobacco advertising
+                                    and promotion increases the
+                                    likelihood of children taking up smoking. Industry documents show that tobacco
+                                    packaging has for decades been
+                                    designed, in the light of market research, with regard to what appeals to target
+                                    groups</b>. Branded cigarettes
+                                are
+                                ‘badge’ products, frequently on display, which therefore act as a “silent salesman.”
+                                Tobacco packages appear to be
+                                especially important as a means of communicating brand imagery in countries like
+                                Australia and the UK which have
+                                comprehensive bans on advertising and promotion. . .</p>
+
+                            <p class="p-states">The tobacco industry argues that all of its marketing activity,
+                                including packaging, aims solely to
+                                persuade existing adult smokers to switch brand and never targets children or new
+                                smokers. However, in my opinion,
+                                whatever their intent, it is not plausible that the effect of branded packaging is only
+                                to encourage brand switching
+                                amongst adult smokers, and never to encourage non-smokers from taking up smoking. I have
+                                heard no coherent argument
+                                as to how this purported separation occurs in practice and in my opinion a ‘spillover
+                                effect’ is highly plausible
+                                whereby packages that are designed to appeal to a young adult, also, albeit
+                                inadvertently, appeal to children. <b>It
+                                    seems to me that children and non-smokers are not, and cannot be, quarantined from
+                                    seeing tobacco packaging and
+                                    in
+                                    my view once they are exposed to this packaging, they are susceptible to its appeal
+                                    whether it is intended to
+                                    target
+                                    them or not. In the light of these and other considerations set out in my report I
+                                    believe that branded
+                                    packaging
+                                    contributes to increased tobacco consumption</b>.”</p>
+
+                            <p>The evidence</p>
+                            <p class="p-states">“There has been, as opponents of standardised packaging have rightly
+                                pointed out to me in the course
+                                of this Review, no randomised controlled trial carried out to test the impact of
+                                standardised packaging on the take
+                                up of smoking amongst children.
+
+                                <br>
+                                <br>
+                                I do not consider it to be possible or ethical to undertake such a trial. To do so would
+                                require studies to be
+                                carried out within a suitably large and isolated population free of known confounding
+                                factors that influence smoking
+                                and prevalence. Such studies would expose a randomised group of children to nicotine
+                                exposure and possible
+                                addiction.
+
+                                <br>
+                                <br>
+                                <b>I see the importance of Stirling as being the consistency of its results on appeal,
+                                    salience and perceptions of
+                                    harm, most notably that standardised packaging is less appealing than branded
+                                    packaging</b>. This evidence is
+                                direct and
+                                not reliant on stated intentions. Evidence from other spheres shows a strong
+                                non-conscious link between appeal and
+                                subsequent behaviour regardless of stated intentions. I therefore conclude that, by
+                                reducing its appeal,
+                                standardised packaging would affect smoking behaviour.”
                             </p>
 
-                            <h4 class="fc-ref-mat-3 sub-title">Tobacco Marketing and branding</h4>
-                            <p class="indented">
-                                <b><i>“There is very strong evidence that exposure to tobacco advertising and promotion increases the likelihood of children taking up smoking. Industry documents show that tobacco packaging has for decades been designed, in the light of market research, with regard to what appeals to target groups.</i></b>
-                                Branded cigarettes are ‘badge’ products, frequently on display, which therefore act as a “silent salesman.” Tobacco packages appear to be especially important as a means of communicating brand imagery in countries like Australia and the UK which have comprehensive bans on advertising and promotion…
-                            </p>
+                            <p>Industry arguments</p>
+                            <p><i>Plain packaging will lead to price reductions:</i></p>
 
-                            <p class="indented">
-                                <i>
-                                    The tobacco industry argues that all of its marketing activity, including packaging, aims solely to persuade existing adult smokers to switch brand and never targets children or new smokers. However, in my opinion, whatever their intent, it is not plausible that the effect of branded packaging is only to encourage brand switching amongst adult smokers, and never to encourage non-smokers from taking up smoking. I have heard no coherent argument as to how this purported separation occurs in practice and in my opinion a ‘spillover effect’ is highly plausible whereby packages that are designed to appeal to a young adult, also, albeit inadvertently, appeal to children.
-                                    <b>It seems to me that children and non‑smokers are not, and cannot be, quarantined from seeing tobacco packaging and in my view once they are exposed to this packaging, they are susceptible to its appeal whether it is intended to target them or not. In the light of these and other considerations set out in my report I believe that branded packaging contributes to increased tobacco consumption.”</b>
-                                </i>
-                            </p>
+                            <p class="p-states">“First, tobacco companies have argued that standardised packaging will
+                                result in falling prices that
+                                in turn will increase the consumption of tobacco. They argue that, in the long-run at
+                                least, standardised packaging
+                                will reduce brand loyalty, causing smokers to switch to cheaper brands and encouraging
+                                price competition between
+                                manufacturers. However, <b>early evidence from Australia does not show falling prices;
+                                    rather price rises have
+                                    continued over and above tax increases</b>. There is some evidence of trading down
+                                towards cheaper brands, but
+                                this
+                                appears to be a continuation of an ongoing market trend. Were all this to change, the
+                                Government can in any case
+                                mitigate any price reduction by increasing tobacco taxes.”</p>
 
-                            <h4 class="fc-ref-mat-3 sub-title">The Evidence</h4>
-                            <p class="indented">
-                                <i>
-                                    “There has been, as opponents of standardised packaging have rightly pointed out to me in the course of this Review, no randomised controlled trial carried out to test the impact of standardised packaging on the take up of smoking amongst children.However, I do not consider that these limitations prevent me from reaching a view on the issue in respect of which my advice has been sought.
-                                </i>
-                            </p>
-                            <p class="indented">
-                                <i>
-                                    I do not consider it to be possible or ethical to undertake such a trial. To do so would require studies to be carried out within a suitably large and isolated population free of known confounding factors that influence smoking and prevalence. Such studies would expose a randomised group of children to nicotine exposure and possible addiction. Australia does not constitute that trial because a number of things have happened together, including tax rises. Disentangling and evaluating these will take years, not months.
-                                </i>
-                            </p>
+                            <p><i>Plain packaging will lead to price reductions:</i></p>
 
-                            <p class="indented">
-                                <i>
-                                    <b>I see the importance of Stirling as being the consistency of its results on appeal, salience and perceptions of harm, most notably that standardised packaging is less appealing than branded packaging.</b>
-                                    This evidence is direct and not reliant on stated intentions. Evidence from other spheres shows a strong non-conscious link between appeal and subsequent behaviour regardless of stated intentions. I therefore conclude that, by reducing its appeal, standardised packaging would affect smoking behaviour.”
-                                </i>
-                            </p>
+                            <p class="p-states">“Second, I am not convinced by the tobacco industry’s argument that
+                                standardised packaging would
+                                increase the illicit market, especially in counterfeit cigarettes. There is <b>no
+                                    evidence that standardised
+                                    packaging
+                                    is easier to counterfeit, and indeed in Australia, hardly any counterfeit
+                                    standardised packages have been found
+                                    to
+                                    date</b>. The tobacco industry has a history of attacking new tobacco control
+                                measures on the basis that they
+                                will boost
+                                illicit sales, arguing that illicit suppliers benefit from not having to follow the same
+                                restrictions.” </p>
 
-                            <h4 class="fc-ref-mat-3 sub-title">Industry Arguments</h4>
-                            <p>
-                                Plain packaging will lead to price reductions - 
-                            </p>
-
-                            <p class="indented">
-                                <i>
-                                    “First, tobacco companies have argued that standardised packaging will result in falling prices that in turn will increase the consumption of tobacco. They argue that, in the long-run at least, standardised packaging will reduce brand loyalty, causing smokers to switch to cheaper brands and encouraging price competition between manufacturers. However,
-                                    <b>early evidence from Australia does not show falling prices; rather price rises have continued over and above tax increases.</b>
-                                    There is some evidence of trading down towards cheaper brands, but this appears to be a continuation of an ongoing market trend. Were all this to change, the Government can in any case mitigate any price reduction by increasing tobacco taxes.”
-                                </i>
-                            </p>
-
-                            <p>
-                                Plain packaging will lead to an increase in illicit tobacco -
-                            </p>
-                            <p class="indented">
-                                <i>
-                                    “Second, I am not convinced by the tobacco industry’s argument that standardised packaging would increase the illicit market, especially in counterfeit cigarettes.
-                                    <b>There is no evidence that standardised packaging is easier to counterfeit, and indeed in Australia, hardly any counterfeit standardised packages have been found to date.</b>
-                                    The tobacco industry has a history of attacking new tobacco control measures on the basis that they will boost illicit sales, arguing that illicit suppliers benefit from not having to follow the same restrictions.”
-                                </i> 
-                            </p>
-                        </div>
-
-                        <h4 class="fc-ref-mat-3 sub-section-secondary-title">3.4 The Hammond Review</h4>
-                        <div class="background-3-4">
-                            <h4 class="fc-ref-mat-3 sub-section-title">Background</h4>
-                            <p>In March 2014 Professor David Hammond, an associate Professor of health behaviour and health policy at the University of Waterloo, Canada, published an evidence review on standardised packaging which had been commissioned by the Irish Department of Health. </p>
-                            <p class="indented">
+                            <div class="section-secondary-title fc-ref-mat-3">4. The Hammond Review</div>
+                            <h3 class="fc-ref-mat-4 sub-title">Background</h3>
+                            <p>In March 2014, Professor David Hammond, an associate Professor of health behaviour and
+                                health policy at the
+                                University of Waterloo, Canada, published an evidence review on standardized packaging,
+                                which had been commissioned
+                                by the Irish Department of Health. </p>
+                            <p>The report is available here:
                                 <a href="http://health.gov.ie/blog/publications/standardised-packaging-d-hammond/">http://health.gov.ie/blog/publications/standardised-packaging-d-hammond/</a>
                             </p>
-                            <p>
-                                It reviews the scientific evidence on standardised packaging and the extent to which standardised packaging regulations would help Ireland to achieve its tobacco control objectives.
+
+                            <p>It reviews the scientific evidence on standardized packaging and the extent to which
+                                standardized packaging
+                                regulations would help Ireland to achieve its tobacco control objectives.</p>
+
+                            <p>Professor Hammond also included an the results of important research into the <b>evidence
+                                    from millions of internal
+                                    industry documents released through court disclosure</b>, which contribute to the
+                                evidence base on tobacco
+                                packaging and
+                                the industry’s extensive use of packaging as a marketing tool. This part of his report
+                                is dealt with in detail on
+                                the <b>Tobacco Branding</b> page of the Tools and Resources.</p>
+
+                            <h3 class="fc-ref-mat-4 sub-title">Methodology</h3>
+                            <p class="p-states">“A total of 69 original empirical articles were reviewed as part of this
+                                report, in addition to
+                                evidence contained in corporate documents from the tobacco industry and the broader
+                                literature on tobacco
+                                advertising and marketing. The evidence on plain packaging is notable for its breadth
+                                and diversity: research has
+                                been conducted in 10 different countries using a range of methodologies, including
+                                consumer perceptions,
+                                eye-tracking technology, neuroimaging, measures of consumer demand, and behavioural
+                                tasks, as well as evidence on
+                                the impact of plain packaging in Australia. Public opinion articles, reviews and
+                                commentaries were excluded from
+                                this review.”</p>
+
+                            <h3 class="fc-ref-mat-4 sub-title">Findings</h3>
+
+                            <p>Professor Hammond summarizes the academic literature with respect to six primary
+                                outcomes: health warnings,
+                                perceptions of risk, consumer appeal, measures of consumer demand and smoking behavior,
+                                post-implementation research
+                                from Australia, and research on differences in plain packaging colors. The findings
+                                are:</p>
+
+                            <p>Health warnings</p>
+                            <p class="p-states">“Overall, the evidence suggests that health warnings are more noticeable
+                                on plain packs, associated
+                                with greater recall of health messages, and may lead to greater cognitive processing,
+                                particularly among youth
+                                non-smokers. The evidence also indicates that the effect of package branding persists
+                                even in the context of large
+                                pictorial warnings, and that plain packaging and health warnings have complimentary, but
+                                independent effects on
+                                consumer perceptions.”</p>
+
+                            <p>Perceptions of risk</p>
+                            <p class="p-states">“Many consumers continue to hold false beliefs that some cigarette
+                                brands are less harmful than
+                                others, despite scientific evidence to the contrary. Pack design and colour promote
+                                false beliefs about the relative
+                                risks between brands. A variety of experimental studies indicate that plain packaging is
+                                associated with fewer false
+                                health beliefs.”</p>
+
+                            <p>Consumer appeal</p>
+                            <p class="p-states">“The evidence unequivocally demonstrates that plain packaging is
+                                perceived as less attractive and
+                                less appealing, particularly among youth and young adults, including smokers and
+                                non-smokers. Plain packaging is
+                                also associated with less positive brand imagery, including smoker traits, such as cool,
+                                stylish, thin. The findings
+                                suggest that plain packaging is less socially desirable and limits the ability of
+                                packaging to target sub-groups of
+                                youth and young adults.”</p>
+
+                            <p>Measures of consumer demand and smoking behavior</p>
+                            <p class="p-states">“Evidence from a range of methodologies indicates that plain packaging
+                                reduces consumer demand.
+                                Evidence from a limited number of naturalistic studies suggest that plain packaging may
+                                promote smoking cessation
+                                among established smokers, although additional studies are required to demonstrate this
+                                effect. Findings from
+                                clinical studies also indicates that branded tobacco packaging is a reliable cue for
+                                smoking and can prompt urges to
+                                smoke among former smokers, and that exposure to plain packages reduces urges and
+                                motivation to smoke compared to
+                                branded packages.”</p>
+
+                            <p>Post-implementation: the impact of plain packaging regulations in Australia</p>
+                            <p class="p-states">“Given the novelty of plain packaging regulations in Australia, there
+                                are few studies to assess the
+                                impact of plain packaging. To date, three published studies provide preliminary evidence
+                                suggesting that plain
+                                packaging has had a positive public health impact in Australia. Of the three studies,
+                                objective data indicating a
+                                significant increase in calls to the Quitline — an effective form of smoking
+                                cessation149 — are most compelling. No
+                                studies have examined the impact of plain packaging within the context of smoking
+                                initiation.”</p>
+
+                            <p>Plain pack color</p>
+                            <p class="p-states">“Studies are consistent in demonstrating that darker, non-white colours
+                                are perceived as
+                                significantly less appealing and more effective. Therefore, while the primary objective
+                                of standardizing colour
+                                would be to have uniform appearance, to minimize the belief that some products are less
+                                harmful than others, using a
+                                darker colour may reduce the overall appeal of all packages.”</p>
+
+                            <h3 class="fc-ref-mat-4 sub-title">Conclusions</h3>
+                            <p>The report draws some strong conclusions, which are in line with the conclusions of the
+                                Chantler Review:</p>
+
+                            <p class="p-states">“Tobacco advertising and marketing are among the most important factors
+                                in the rise of smoking in
+                                the 20th century. Industry marketing campaigns have sought to communicate three
+                                fundamental themes: 1) product
+                                satisfaction; 2) reassurance about the health concerns; and 3) positive associations
+                                between smoking and desirable
+                                outcomes, such as independence, social status, sexual attraction and thinness. Tobacco
+                                industry documents and
+                                independent evidence indicates that packaging has played a fundamental role in executing
+                                each of these themes, and
+                                has grown in importance as other forms of advertising and marketing have been
+                                prohibited.
+
+                                <br>
+                                <br>
+
+                                “The scientific evidence on plain packaging includes more than 70 original empirical
+                                articles from a wide variety of
+                                research domains. Most of the research on plain packaging is experimental in nature and
+                                has been conducted in
+                                jurisdictions without plain packaging given that plain packaging regulations were only
+                                implemented in December 2012
+                                in Australia. The evidence is highly consistent across different research domain and
+                                study designs, as well as
+                                between experimental and more recent “post-implementation” studies conducted in
+                                Australia.
                             </p>
-                            <p>
-                                Professor Hammond also included an the results of important research into the
-                                <b>evidence from millions of internal industry documents released through court disclosure,</b>
-                                which contribute to the evidence base on tobacco packaging and the industry’s extensive use of packaging as a marketing tool. This part of his report is dealt with in detail in
-                                <b>
-                                    Reference Section I: BRANDING ON TOBACCO PACKING.
-                                </b>
+
+                            <p>“Overall, the existing evidence on plain packaging supports four primary conclusions:</p>
+                            <ol>
+                                <li>Plain packaging will reduce smoking initiation among youth and young adults.</li>
+                                <li>Plain packaging will promote smoking cessation among established smokers.</li>
+                                <li>Plain packaging will support former smokers to remain abstinent.</li>
+                                <li>Plain packaging will help to denormalize tobacco use”</li>
+                            </ol>
+
+                            <div class="section-secondary-title fc-ref-mat-3">5. The Cochrane Review</div>
+                            <p><a href="http://www.cochrane.org/uk/about-us">Cochrane</a> is a non-profit,
+                                non-governmental organization formed to
+                                organize medical research findings to facilitate
+                                evidence-based choices about health interventions. The group conducts systematic reviews
+                                of health-care
+                                interventions and publishes them in <a href="http://www.cochranelibrary.com/">The
+                                    Cochrane Library</a>.</p>
+                            <p>Cochrane <a
+                                        href="http://onlinelibrary.wiley.com/doi/10.1002/14651858.CD011244.pub2/full">published
+                                    a review in April
+                                    2017</a> which looked at the peer-reviewed published evidence assessing the effect
+                                of plain packaging on tobacco use, uptake, cessation, and reduction.</p>
+
+                            <h3 class="fc-ref-mat-4 sub-title">Methodology</h3>
+                            <p>The review searched nine databases for articles evaluating standardised packaging that
+                                had been already reviewed by
+                                academics and published before January 2016. We also checked references in those papers
+                                to other studies and
+                                contacted the authors where necessary. The research found 51 studies involving
+                                approximately 800,000
+                                participants.</p>
+
+                            <h3 class="fc-ref-mat-4 sub-title">Primary Outcomes</h3>
+                            <p>The primary outcome measured by the review was changes in tobacco use prevalence
+                                including uptake, cessation and
+                                reduction in overall consumption. </p>
+                            <p>The review found only 5 studies that addressed these primary outcomes measurements. The
+                                reason for this may be that
+                                even in Australia, it is at an early stage of implementation to get reliable statistical
+                                data on the impacts of
+                                plain packaging on overall prevalence. </p>
+                            <p>The only study that considered overall prevalence was the analysis by Professor Chipty
+                                that is included in
+                                Australia’s Post Implementation Review (see the pages on <b>Australia Post
+                                    Implementation Evidence</b> in the Tools
+                                and
+                                Resources). That analysis of statistical data concluded that a drop of 0.55 percentage
+                                points in smoking prevalence
+                                was attributable to plain packaging. </p>
+                            <p>3 studies on consumption in Australia and the UK found little change in smokers’
+                                consumption levels.</p>
+                            <p>A national study of adult smoker quit attempts showed an increase from 20% prior to the
+                                introduction of plain
+                                packaging, compared to 26.6% 1 year after implementation. This was backed up by the fact
+                                that calls to quit lines
+                                increased by 78%. </p>
+
+                            <h3 class="fc-ref-mat-4 sub-title">Secondary Outcomes</h3>
+                            <p>The review anticipated very few studies on the primary outcome at this stage of
+                                implementation. The review therefore
+                                also reviewed studies on secondary outcomes including:</p>
+                            <p>behaviours such as stubbing out cigarettes early, covering the pack, and eye tracking in
+                                experimental studies,
+                                and</p>
+                            <p>non-behavioural studies such as intentions of young people, pack appeal, recall of health
+                                warnings and perceptions
+                                of harm.</p>
+
+                            <p>These studies found evidence of increased avoidance behaviours, increased attention to
+                                health warnings and reduced
+                                cravings. Studies also indicated that plain packs were less likely to motivate
+                                initiation among youth.</p>
+
+                            <h3 class="fc-ref-mat-4 sub-title">Conclusion</h3>
+                            <p>The review concluded that the evidence suggests that standardised packaging may reduce
+                                smoking prevalence. The review
+                                noted the limitations on the currently available data on prevalence but concludes that a
+                                reduction in smoking
+                                behavior is supported by routinely collected data by the Australian government. Data on
+                                the effects of standardized
+                                packaging on non-behavioral outcomes (e.g. pack appeal and recall of health warnings)
+                                are clearer and provide
+                                plausible mechanisms for the observed decline in prevalence.</p>
+
+                            <p>The review did not find any evidence suggesting standardized packaging may increase
+                                tobacco use. <sup>19</sup></p>
+
+                            <div class="section-secondary-title fc-ref-mat-3">Further research evidence</div>
+
+                            <p>Further research into likely impacts of tobacco plain packaging has continued to be
+                                undertaken around the world since
+                                these evidence reviews were published. The following is not intended to be a
+                                comprehensive review of this additional
+                                evidence but provides examples and information about the continued research into the
+                                likely impacts of plain
+                                packaging of tobacco products. </p>
+
+                            <ol>
+                                <li>A systematic review of existing literature was undertaken in 2016 to consider the
+                                    impact of plain packaging in
+                                    low- and middle-income countries and in low-income settings in high-income
+                                    countries. It concluded that plain
+                                    packaging had less appeal than branded packaging in low- income settings.
+                                    <sup>20</sup>
+                                </li>
+                                <li>A 2015 study undertook experimental research into the effects of plain packaging and
+                                    graphic health warnings
+                                    on adolescents in Spain, France, and the USA, and concluded that both policies
+                                    impacted on cravings and evoked
+                                    fear and thoughts of quitting. <sup>21</sup>
+                                </li>
+                                <li>A study in France considered young roll-your-own smokers’ response to using plain
+                                    packaging in real-world
+                                    settings and found them to be associated with less-positive product perceptions,
+                                    negative feelings about
+                                    smoking, and increased reported feelings about reducing consumption and quit
+                                    attempts. <sup>22</sup>
+                                </li>
+                                <li>Two experiments in the UK found that branded packs primed a greater percentage of
+                                    tobacco seeking behavior in
+                                    current smokers. <sup>23</sup>
+                                </li>
+                                <li>A study in Thailand used a variety of methods withstudents to look at the impact of
+                                    plain packaging on health
+                                    warning salience on cigarette packs. <sup>24</sup>
+                                </li>
+                                <li>A 2016 study led to results demonstrating that plain packaging and health warnings
+                                    work independently and in
+                                    unison to influence smokers’ and non-smokers’ behavioral intentions. <sup>25</sup>
+                                </li>
+                                <li>A 2016 study considered the impact of cigarette packaging design, such as “slims”
+                                    branding and warning
+                                    labels, on perceptions of taste harm and interest among young females in Canada. The
+                                    study concludes that plain
+                                    packaging may decrease demand and reduce misleading perceptions in young females.
+                                    <sup>26</sup>
+                                </li>
+                            </ol>
+
+                            <p>In addition, there is significant research into the impacts of the policy after it was
+                                implemented in Australia,
+                                which is set out on the <b>AUSTRALIA’S POST-IMPLEMENTATION EVIDENCE</b> PAGE OF THE
+                                TOOLS AND RESOURCES. </p>
+
+                            <div class="section-secondary-title fc-ref-mat-3">4.1 Post-implementation research planned
+                                in the UK and France
+                            </div>
+
+                            <p>Plain packaging has come into full effect in France and the UK in early 2017. As with
+                                Australia, there are a number
+                                of studies being undertaken to assess the impact the policy has
+                                post-implementation. </p>
+
+                            <p>For instance, Cancer Research UK has provided grants for a series of research studies
+                                including a Youth Tobacco
+                                Policy Survey and Adult Tobacco Policy Survey, which conducts in-home surveys across the
+                                UK to assess harm ratings,
+                                and appeal of packs. A retail audit that will review the cost of tobacco products
+                                before, during and after the
+                                introduction of plain packaging and the extent to which new brands have been introduced.
+                                More information can be
+                                obtained from Cancer Research UK.</p>
+
+                            <p>In France, 4,000 adults (18–64 years old) and 2,000 young people (12–17 years old) will
+                                be interviewed by telephone
+                                before and after the introduction of plain packaging about their perception of smoking,
+                                as part of a scientific
+                                study undertaken by DePICT (Description des Perceptions, Images et Comportements liés au
+                                Tabac), to better
+                                understand the evolution of attitudes and behaviors related to smoking and the
+                                introduction of neutral tobacco
+                                packages. More information is available here: </p>
+
+                            <a href="http://www.inserm.fr/actualites/rubriques/actualites-recherche/les-francais-et-le-tabac-lancement-d-une-enquete-inserm">http://www.inserm.fr/actualites/rubriques/actualites-recherche/les-francais-et-le-tabac-lancement-d-une-enquete-inserm</a>
+
+                            <p>Government officials considering plain packaging should review the most recently
+                                published research data from all
+                                those countries that have already implemented the policy. Links to this data will be
+                                available on the plain
+                                packaging pages of the CTFK website as it is published. </p>
+
+                            <div class="section-secondary-title fc-ref-mat-3">End Notes</div>
+                            <p><sup>1</sup>Wakefield M, Germain D, Durkin S, Hammond D, Goldberg M, Borland R. Do larger
+                                pictorial health warnings
+                                diminish the need for plain packaging of cigarettes? Addiction, 2012; 107:1159–1167</p>
+                            <p><sup>2</sup>White CM, Hammond D, Thrasher JF, Fong GT. The potential impact of plain
+                                packaging of cigarette products
+                                among Brazilian young women: an experimental study. BMC Public Health, 2012; 12:737–747
+                            </p>
+                            <p><sup>3</sup> Doxey J, Hammond D. Deadly in pink: the impact of cigarette packaging among
+                                youngwomen. Tobacco Control,
+                                2011; 20:353e-360</p>
+                            <p><sup>4</sup> Hoek J, Wong J, Gendall P, Louviere J, Cong K. Effects of dissuasive
+                                packaging on young adult smokers.
+                                Tobacco Control, 2011; 20:183e-188.</p>
+                            <p><sup>5</sup> Thrasher JF, Rousuc MC, Hammond MC, Navarro A, Corrigan JR. Estimating the
+                                impact of pictorial health
+                                warnings and “plain” cigarette packaging: evidence from experimental auctions among
+                                adult smokers in the United
+                                States. Health Policy, 2011; 102:41–48.</p>
+                            <p><sup>6</sup> Borland R, Savvas S, Sharkie F, Moore K. The impact of structural packaging
+                                design on young adult
+                                smokers’ perceptions of tobacco products. Tobacco Control, 2013; 22:97–102</p>
+                            <p><sup>7</sup> Gallopel-Morvan K, Moodie C, Hammond D, Eker F, Beguinot E, Martinet Y.
+                                Consumer perceptions of
+                                cigarette pack design in France: a comparison of regular, limited edition and plain
+                                packaging. Tobacco Control,
+                                2012; 21:502-506.</p>
+                            <p><sup>8</sup> Ford A, MacKintosh AM, Moodie C, Richardson S, Hastings G. Cigarette pack
+                                design and adolescent smoking
+                                susceptibility: a cross-sectional survey. BMJ Open, 2013, 3:e003282.
+                                doi:10.1136/bmjopen-2013- 003282.</p>
+                            <p><sup>9</sup> Bansal-Travers M, Hammond D, Smith P, Cummings KM. The impact of cigarette
+                                pack design, descriptors, and
+                                warning labels on risk perception in the US. American Journal of Preventive Medicine,
+                                2011; 40(6):674–682</p>
+                            <p><sup>10</sup> Hoek J, Gendall P, Gifford H, Pirikahu G, McCool, Pene G et al. Tobacco
+                                branding, plain packaging,
+                                pictorial warnings, and symbolic consumption. Qualitative Health Research, 2012;
+                                22(5):630-639</p>
+                            <p><sup>11</sup> Ford A, Moodie C, MacKintosh AM, Hastings G. Adolescent perceptions of
+                                cigarette appearance. European
+                                Journal of Public Health, 2014, 24(3):464–468.</p>
+                            <p><sup>12</sup> Wakefield M, Morley C, Horan JK, Cummings KM. The cigarette pack as image:
+                                new evidence from tobacco
+                                industry documents. Tobacco Control, 2002; 11(Supplement 1): Discoveries and disclosures
+                                in the corporate documents,
+                                March 2002, pp. i73-i80.</p>
+                            <p><sup>13</sup> i) Al-Hamdani M. The effect of cigarette plain packaging on individuals’
+                                health warning recall.
+                                Healthcare Policy, 2013; 8(3):68-77.
+                                ii) Borland R, Savvas S, Sharkie F, Moore K. The impact of structural packaging design
+                                on adult smokers’ perceptions
+                                of tobacco products. Tobacco Control, 2013; 22:97–102.
+                                iii) Germain D, Wakefield M, Durkin S. Adolescents’ perceptions of cigarette brand
+                                image: does plain packaging make
+                                a difference? Journal of Adolescent Health, 2010; 46:385–392;
+                            </p>
+                            <p><sup>14</sup> Wakefield M, Germain D, Durkin S, Hammond D, Goldberg M, Borland R. Do
+                                larger pictorial health warnings
+                                diminish the need for plain packaging of cigarettes? Addiction, 2012; 107:1159–1167.</p>
+                            <p><sup>15</sup> Bansal-Travers M, Hammond D, Smith P, Cummings KM. the impact of cigarette
+                                pack design, descriptors,
+                                and warning labels
+                                on risk perception in the US. American Journal of Preventive Medicine, 2011; 40(6):674 –
+                                682.
+                            </p>
+                            <p><sup>16</sup> Philip Morris, Identified HTI Test Of Marlboro Ultra Lights In A Blue Pack
+                                Versus Marlboro Ultra Lights
+                                In A Red Pack (Project No. 1256/1257), September 3, 1996, Bates no.
+                                2047387079-2047387089, available at
+                                <a href="https://industrydocuments.library.ucsf.edu/tobacco/docs/#id=zthl0019">https://industrydocuments.library.ucsf.edu/tobacco/docs/#id=zthl0019</a>
+                                .</p>
+                            <p><sup>17</sup> i) Wakefield M, Germain G, Durkin S, Hammond D, Goldberg M, Borland R. Do
+                                larger pictorial health
+                                warnings diminish the need for plain packaging of cigarettes? Addiction, 2012;
+                                107:1159–1167.
+                                ii) White CM, Hammond D, Thrasher JF, Fong GT. The potential impact of plain packaging
+                                of cigarette products among
+                                Brazilian young women: an experimental study. BMC Public Health 2012; 12:737–747.
+                                iii) Doxey J, Hammond D. Deadly in pink: the impact of cigarette packaging among young
+                                women. Tobacco Control, 2011,
+                                20:353e-360.
+                                iv)Gallopel-Morvan K, Moodie C, Hammond C, Eker F, Beguinot E, Martinet Y. Consumer
+                                perceptions of cigarette pack
+                                design in France: a comparison of regular, limited edition and plain packaging. Tobacco
+                                Control, 2012; 21:502-506.
+                                v) Hammond D, Dockrell M, Arnott D, Lee A, McNeill A. Cigarette pack design and
+                                perceptions of risk among UK adults
+                                and youth. European Journal of Public Health, 2009; 19(6):631–637.
+                                vi) Bansal-Travers M, Hammond D, Smith P, Cummings KM. The impact of cigarette pack
+                                design, descriptors, and warning
+                                labels on risk perception in the US. American Journal of Preventive Medicine, 2011;
+                                40(6):674–682;
+                            </p>
+                            <p><sup>18</sup> C. Moodie,, K. Angus, M. Stead, &I Bauld.Plain Tobacco Packaging Research:
+                                An update.Stirling,
+                                Scotland: Centre for Tobacco Control Research, Institute for Social marketing,
+                                University of Stirling; 2013.</p>
+                            <p><sup>19</sup> McNeill A, Gravely S, Hitchman SC, Bauld L, Hammond D, Hartmann-Boyce J.
+                                Tobacco packaging design for
+                                reducing tobacco use. Cochrane Database of Systematic Reviews 2017, Issue 4. Art. No.:
+                                CD011244. DOI: 10.1002.
+                                <a href="http://onlinelibrary.wiley.com/doi/10.1002/14651858.CD011244.pub2/full">http://onlinelibrary.wiley.com/doi/10.1002/14651858.CD011244.pub2/full</a>
+                            </p>
+                            <p><sup>20</sup> Nicole Hughes, Monika Arora, and Nathan Grills. Perceptions and impact of
+                                plain packaging of tobacco
+                                products in low and middle income countries, middle to upper income countries and
+                                low-income settings in high-income
+                                countries: a systematic review of the literature BMJ Open. 2016; 6(3): e010391.</p>
+                            <p><sup>21</sup> Andrews, Netemeyer, Burton, Jeremy Kees. Effects of plain package branding
+                                and graphic health warnings
+                                on adolescent smokers in the USA, Spain and France. Tob Control 2016;25:e120-e126
+                                doi:10.1136</p>
+                            <p><sup>22</sup> Gallopel-Morvan, Moodie, Eker, Beguinot. Perceptions of plain packaging
+                                among young adult roll-your-own
+                                smokers in France: a naturalistic approach. Tob Control 2015;24:e39-e44 doi:10.1136</p>
+                            <p><sup>23</sup> Hogarth, L., Maynard, O. M. and Munafò, M. R. (2015), Plain cigarette packs
+                                do not exert Pavlovian to
+                                instrumental transfer of control over tobacco-seeking. Addiction, 110: 174–182.
+                                doi:10.1111/add.12756</p>
+                            <p><sup>24</sup> Auemaneekul, Silpasuwan, Sirichotiratana, Satitvipawee, Sompopcharoen,
+                                Viwatwongkasem, Sujirarat.
+                                The Impact of Cigarette Plain Packaging on Health Warning Salience and Perceptions:
+                                Implications for Public Health
+                                Policy.Asia Pac J Public Health. 2015 Nov; <a
+                                        href="http://journals.sagepub.com/doi/10.1177/101053951560208">http://journals.sagepub.com/doi/10.1177/101053951560208</a>
+                            </p>
+                            <p><sup>25</sup> Karine Gallopel-Morvan, Janet Hoek, Sophie Rieunier. Do plain packaging and
+                                pictorial warnings affect
+                                smokers' and non-smokers' behavioral intentions? Journal of Consumer Affairs, Wiley,
+                                2017
+                                http://onlinelibrary.wiley.com/doi/10.1111/joca.12145/full</p>
+                            <p><sup>26</sup> Kathy Kotnowski, Geoffrey T. Fong, Karine Gallopel-Morvan, Towhidul Islam,
+                                David Hammond. The Impact of
+                                Cigarette Packaging Design Among Young Females in Canada: Findings From a Discrete
+                                Choice Experiment.
+                                Nicotine and Tobacco Research (2016) 18 (5): 1348-1356. DOI: <a
+                                        href="https://doi.org/10.1093/ntr/ntv114">https://doi.org/10.1093/ntr/ntv114</a>
                             </p>
                         </div>
-                        <div class="methodology-3-4">
-                            <h4 class="fc-ref-mat-3 sub-section-title">Methodology</h4>
-                            <p class="indented">
-                                <i>‘A total of 69 original empirical articles were reviewed as part of this report, in addition to evidence contained in corporate documents from the tobacco industry and the broader literature on tobacco advertising and marketing. The evidence on plain packaging is notable for its breadth and diversity: research has been conducted in 10 different countries using a range of methodologies, including consumer perceptions, eye-tracking technology, neuroimaging, measures of consumer demand, and behavioural tasks, as well as evidence on the impact of plain packaging in Australia.’</i>
-                            </p>
-                            <p class="indented"><i>‘Public opinion articles, reviews and commentaries were excluded from this review.’</i></p>
-                        </div>
-                        
-                         <div class="findings-3-4">
-                            <h4 class="fc-ref-mat-3 sub-section-title">Findings</h4>
-                            <p class="normal">
-                                Professor Hammond summarises the academic literature with respect to six primary outcomes: health warnings, perceptions of risk, consumer appeal, measures of consumer demand and smoking behaviour, post-implementation research from Australia, and research on differences in plain packaging colours. The findings are:
-                            </p>
-
-                            <h4 class="fc-ref-mat-3 sub-title">Health Warnings</h4>
-                            <p class="indented">
-                                <i>‘Overall, the evidence suggests that health warnings are more noticeable on plain packs, associated with greater recall of health messages, and may lead to greater cognitive processing, particularly among youth non-smokers. The evidence also indicates that the effect of package branding persists even in the context of large pictorial warnings, and that plain packaging and health warnings have complimentary, but independent effects on consumer perceptions.’</i>
-                            </p>
-                            
-                            <h4 class="fc-ref-mat-3 sub-title">Perceptions of risk</h4>
-                            <p class="indented">
-                                <i>‘Many consumers continue to hold false beliefs that some cigarette brands are less harmful than others, despite scientific evidence to the contrary. Pack design and colour promote false beliefs about the relative risks between brands. A variety of experimental studies indicate that plain packaging is associated with fewer false health beliefs.’</i>
-                            </p>
-
-                            <h4 class="fc-ref-mat-3 sub-title">Consumer appeal</h4>
-                            <p class="indented">
-                                <i>‘The evidence unequivocally demonstrates that plain packaging is perceived as less attractive and less appealing, particularly among youth and young adults, including smokers and non-smokers. Plain packaging is also associated with less positive brand imagery, including smoker traits, such as cool, stylish, thin. The findings suggest that plain packaging is less socially desirable and limits the ability of packaging to target sub-groups of youth and young adults.’</i>
-                            </p>
-
-                            <h4 class="fc-ref-mat-3 sub-title">Measures of consumer demand and smoking behaviour</h4>
-                            <p class="indented">
-                                <i>
-                                    “Evidence from a range of methodologies indicates that plain packaging reduces consumer demand. Evidence from a limited number of naturalistic studies suggest that plain packaging may promote smoking cessation among established smokers, although additional studies are required to demonstrate this effect. Findings from clinical studies also indicates that branded tobacco packaging is a reliable cue for smoking and can prompt urges to smoke among former smokers, and that exposure to plain packages reduces urges and motivation to smoke compared to branded packages.”
-                                </i>
-                            </p>
-
-                            <h4 class="fc-ref-mat-3 sub-title">Post-implementation: the impact of plain packaging regulations in Australia</h4>
-                            <p class="indented">
-                                <i>
-                                    “Given the novelty of plain packaging regulations in Australia, there are few studies to assess the impact of plain packaging. To date, three published studies provide preliminary evidence suggesting that plain packaging has had a positive public health impact in Australia. Of the three studies, objective data indicating a significant increase in calls to the Quitline —an effective form of smoking cessation149—are most compelling. No studies have examined the impact of plain packaging within the context of smoking initiation.”
-                                </i>
-                            </p>
-                            <h4 class="fc-ref-mat-3 sub-title">
-                                Plain pack color
-                            </h4>
-                            <p class="indented">
-                                “Studies are consistent in demonstrating that darker, non-white colours are perceived as significantly less appealing and more effective. Therefore, while the primary objective of standardizing colour would be to have uniform appearance, to minimize the belief that some products are less harmful than others, using a darker colour may reduce the overall appeal of all packages.”
-                            </p>
-                         </div>
-
-                         <div class="conclusions-3-4">
-                             <p>
-                                 The report draws some strong conclusions which are in line with the conclusions of the Chantler review:
-                             </p>
-                             <p class="indented">
-                                 <i>
-                                     “Tobacco advertising and marketing are among the most important factors in the rise of smoking in the 20th century. Industry marketing campaigns have sought to communicate three fundamental themes: 1) product satisfaction; 2) reassurance about the health concerns; and 3) positive associations between smoking and desirable outcomes, such as independence, social status, sexual attraction and thinness. Tobacco industry documents and independent evidence indicates that packaging has played a fundamental role in executing each of these themes, and has grown in importance as other forms of advertising and marketing have been prohibited.
-                                 </i>
-                             </p>
-
-                             <p class="indented">
-                                 <i>
-                                     The scientific evidence on plain packaging includes more than 70 original empirical articles from a wide variety of research domains. Most of the research on plain packaging is experimental in nature and has been conducted in jurisdictions without plain packaging given that plain packaging regulations were only implemented in December 2012 in Australia. The evidence is highly consistent across different research domain and study designs, as well as between experimental and more recent “post-implementation” studies conducted in Australia.’
-                                 </i>
-                             </p>
-                             <p>
-                                <i>‘Overall, the existing evidence on plain packaging supports four primary conclusions:</i>
-                                <ul class="g-list">
-                                    <li>1) Plain packaging will reduce smoking initiation among youth and young adults.</li>
-                                    <li>2) Plain packaging will promote smoking cessation among established smokers.</li>
-                                    <li>3) Plain packaging will support former smokers to remain abstinent.</li>
-                                    <li>4) Plain packaging will help to denormalize tobacco use”</li>
-                                </ul>
-                             </p>
-                         </div>
-               </div>
-
-               <div class="content-desc-cont col-lg-10 col-lg-offset-1 ref -g3">
-                    <div class="section-secondary-title fc-ref-mat-3">4. Further research evidence</div>
-                    <p>
-                        Further research into likely impacts of tobacco plain packaging has continued to be undertaken around the world since these evidence reviews were published. The following is not intended to be a comprehensive review ofthis additional evidence but provides examples and information about the continued research into thelikely impacts of plain packaging of tobacco products. 
-                    </p>
-
-                    <ol>
-                        <li>A systematic review of existing literature was undertaken in 2016 to consider the impact of plain packaging in low and middle income countries and low income settings in high income countries. It concluded that plain packaging had less appeal than branded packaging in low income settings<sup>19</sup>.</li>
-                        <li>A 2015 study undertook experimental research into the effects of plain packaging and graphic health warnings on adolescents in Spain, France and the USA, and concluded that both policies impacted on cravings, and evoked fear and thoughts of quitting<sup>20</sup>.</li>
-                        <li>A study in France considered young roll-your-own smokers’ response to using plain packaging in real-world settings and found them to be associated with less positive product perceptions, negative feelings about smoking, and increased reported feelings about reducing consumption and quit attempts<sup>21</sup>.</li>
-                        <li>Two experiments in the UK found that branded packs primed a greater percentage of tobacco seeking behaviour in current smokers<sup>22</sup>.</li>
-                        <li>A study in Thailand used mixed methods to students to look at the impact of plain packaging on health warning salience on cigarette packs<sup>23</sup>.</li>
-                        <li>A 2016 study led to results demonstrating that plain packaging and health warnings work independently and in unison to influence smokers’ and non-smokers’ behavioural intentions<sup>24</sup>.</li>
-                        <li>A 2016 study considered the impact of cigarette packaging design, such as ‘slims’ branding, and warning labels, on perceptions of taste harm and interest among young females in Canada. The study concludes that plain packaging may decrease demand and reduce misleading perceptions in young females<sup>25</sup>.</li>
-                    </ol>
-
-                    <p>
-                        In addition there is significant research into the impacts of the policy after it was implemented in Australia which is set out in
-                        <b>REFERENCE SECTION H: AUSTRALIA’S POST IMPLEMENTATION EVIDENCE.</b>
-                    </p>
-
-                    <h4 class="fc-ref-mat-3 sub-section-secondary-title">4.1 Post implementation research planned in the UK and France</h4>
-                    <p>
-                        Plain packaging comes into full effect in France and the UK in early 2017. As with Australia, there are a number of studies being undertaken to assess the impact the policy has post-implementation. 
-                    </p>
-                    <p>
-                        For instance, Cancer Research UK has provided grants for a series of research studies including a Youth Tobacco Policy Survey and Adult Tobacco Policy Survey which conducts in-home surveys across the UK to assess harm ratings and appeal of packs. A retail audit that will review the cost of tobacco products before, during and after the introduction of plain packaging and the extent to which new brands have been introduced. More information can be obtained from Cancer Research UK. 
-                    </p>
-                    <p>
-                        In France, 4,000 adults (18-64 years) and 2,000 young people (12-17 years old) will be interviewed by telephone before and after the introduction of plain packaging, about their perception of smoking, as part of a scientific study undertaken byDePICT (Description des Perceptions, Images et Comportementsliés au Tabac), to a better understand the evolution of attitudes and behaviors related to smoking and the introduction of neutral tobacco packages. More information is available here: 
-                    </p>
-                    <p>
-                        <a href="http://www.inserm.fr/actualites/rubriques/actualites-recherche/les-francais-et-le-tabac-lancement-d-une-enquete-inserm">http://www.inserm.fr/actualites/rubriques/actualites-recherche/les-francais-et-le-tabac-lancement-d-une-enquete-inserm</a>
-                    </p>
-                    <p>
-                        Government officials considering plain packaging should review the most recently published research data from all those countries that have already implemented the policy. Links to this data will be available on the plain packaging pages of the CTFK website as it is published.
-                    </p>
-                </div>
+                    </div>
             </section>
             <?php
             break;
 
         // h
-        case 'austalia-post-implementation-evidence': 
-            if ($var == 'og_desc')
-            {
+        case 'austalia-post-implementation-evidence':
+            if ($var == 'og_desc') {
                 $og_desc = 'Plain packaging in Australia has been a casebook example of effective tobacco control—a policy measure driven by evidence, carefully designed and implemented, and now rigorously assessed. Further, it is set within the context of wider Australian tobacco control, reinforcing the most basic lesson learned over the last half century: action has to be strategic and comprehensive. There are no silver bullets.';
                 return $og_desc;
             }
@@ -3753,264 +5382,618 @@ function nav_content($menu,$var = null)
                 <div class="row abt-st-r">
                     <div class="col-lg-10 col-lg-offset-1"><?php echo breadcrumbs(' / ', 'Home'); ?></div>
                     <div class="col-lg-10 col-lg-offset-1">
-                        <div class="section-margin-top-25 section-title fc-ref-mat-3">Post-implementation evidence from Australia</div>
-                    </div>
-                    <div class="content-desc-cont col-lg-10 col-lg-offset-1">
-                        <div class="section-secondary-title fc-ref-mat-3">1. Introduction</div>
-                        <p>‘Plain packaging in Australia has been a casebook example of effective tobacco control—a policy measure driven by evidence, carefully designed and implemented, and now rigorously assessed. Further, it is set within the context of wider Australian tobacco control, reinforcing the most basic lesson learned over the last half century: action has to be strategic and comprehensive. There are no silver bullets'<sup>1</sup>.</p>
-                        <p>The information contained in this Reference Section gives just some examples of the observational, research and survey studies that have been conducted in Australia to assess the impact of plain packaging there, together with the statistical data on tobacco use. </p>
-                        <p>A more comprehensive compilation of the evidence can be found on Cancer Council Victoria’s “Plain Facts” website: <a href="http://www.cancervic.org.au/plainfacts/">http://www.cancervic.org.au/plainfacts/</a> which includes some detailed <span class="underline">fact sheets.</span> </p>
-                        <p>The research demonstrates that the policy is starting to have the anticipated impacts on the intended mechanisms of reducing tobacco appeal, increasing the effectiveness of health warnings and reducing misperceptions about the harms of tobacco products. It should nevertheless be recognised that it is a policy intended to have impacts over time. It was introduced at the same time as a number of other tobacco control measures and isolating the specific influence of plain packaging will also take time.</p>
-                        <p>The tobacco industry have sought to highlight isolated anomalies in the statistical data to argue that plain packaging has not worked or is having a negative impact. These examples, set out below, have no statistical significance and should not detract from the vast majority of the evidence that all points to the policy working as intended. The tobacco industry has also commissioned reports that try to analyse the statistical data to show that plain packaging has not increased the existing rate of decline in smoking rates.
-                        These reports<sup>2</sup> have not been peer reviewed, have been undermined by academics<sup>3</sup> nd criticised by Courts. (For more details on those reports see part 4.1.3 of <b>Reference Section J: Opposition Arguments.)</b>
-                    </div>
-                    <div id="Ref-H" class="content-desc-cont col-lg-10 col-lg-offset-1">
-                        <div class="section-secondary-title fc-ref-mat-3">2. Research Evidence</div>
-                        <p>
-                            <b>The British Medical Journal edition of Tobacco Control</b> Controledition of April 2015 was on the implementation and evaluation of the Australian plain packaging policyand included 18 research papers:
-                        </p>
-                        <p>
-                            <a class="word-break-all" href="http://tobaccocontrol.bmj.com/content/24/Suppl_2?utm_source=World%20Congress%20on%20Tobacco%20and%20Health&utm_medium=Email&utm_campaign=plain%20packaging">http://tobaccocontrol.bmj.com/content/24/Suppl_2?utm_source=World%20Congress%20on%20Tobacco%20and%20Health&utm_medium=Email&utm_campaign=plain%20packaging</a>
-                        </p>
-                        <p>Further peer reviewed research studies have been published since then. Combined these studies show:</p>
-                        <ul class="h-list">
-                            <li>
-                                <span class="title">Reduced Appeal of tobacco:</span> A number of studies with <span class="underline">adult smokers</span> point to plain packaging fulfilling its core aims of reducing appeal, particularly among young adults, and increasing warning salience<sup>4</sup></p>
-                                <p>These research papers also suggest that plain packaging is severely restricting the ability of the pack to communicate and create appeal with <span class="underline">adolescents and young people</span>. For instance, school-based surveys with students aged 12–17 year in 2011 and 2013 show that the removal of branding and uniformity of pack appearance has increased negative pack ratings and decreased positive ones <sup>5</sup>.
-                            </li>
-                            <li>
-                                    <span class="title">Increased Quit Attempts:</span>
-                                    In a cross-sectional tracking survey of cigarette smokers, plain packaging was associated with increased thinking about quitting and quit attempts. In addition, dislike of the pack, lower satisfaction from cigarettes and attributing motivation to quit to the warnings predicted daily thoughts of quitting<sup>6</sup>.
-                                    <br>
-                                    Research has also found a significant increase in the number of calls to the smoking cessation helpline, Quitline, in NSW and the ACT<sup>7</sup>. The research showed a 78% increase in the number of calls to the Quitline associated with the introduction of plain packaging. This research found the increase in calls was sustained and was not attributable to anti-tobacco advertising activity, cigarette price increases, nor other identifiable causes.
-                            <li>
-                                    <span class="title">Increased impact of health warnings:</span>
-                                    A number of studies using large national survey samples found that more adult smokers noticed graphic health warnings and this lead to increased pack avoidance, greater perceived harm, and an increased understanding of cancer risks<sup>2</sup>.
-                            </li>
-                            <li>
-                                     <span class="title">Reduced pack displays:</span>
-                                     Studies of outdoor venues before and after implementation showed that smokers were more likely to conceal their packs in outdoor venues after the introduction of plain packaging<sup>2</sup>.
-                            </li>
-                            <li>
-                                     <span class="title">Reduced misperceptions:</span>
-                                     A recent study showed that following plain packaging implementation, there was a significant reduction in perceptions that ‘some cigarette brands are more harmful than others’<sup>10</sup>.
-                            </li>
-                            <li>
-                                     <span class="title">Increase in positive attitudes to plain packs: </span>
-                                     A recent study showed that the positive response of young people to plain packaging was greater than anticipated prior to their introduction, and support for plain packaging increased from pre-implementation to post-implementation among all groups of youth<sup>11</sup>.
-                            </li>
-                        </ul>
-                         <p>
-                            The research also examines whether plain packaging had any of the unintended consequences as the tobacco industry alleged would occur.
-                        </p>
-                        <ul class="h-list">
-                            <li>
-                                    <span class="title">Tobacco prices continue to rise in all sectors:</span> 
-                                    Studies showed that there was no evidence that plain packaging led to lower prices for tobacco. A review of retail magazines, for instance, showed that following the introduction of plain packaging, average inflation-adjusted recommended retail prices actually increased for cigarettes in all price segments (value, mainstream and premium)<sup>12</sup>.
-                            </li>
-                            <li>
-                                    <span class="title">No increase in illicit tobacco:</span> 
-                                    The evidence clearly shows that the consumption of illicit ‘cheap white’ cigarettes has remained consistently small or even declined after implementation of plain packaging<sup>13</sup>.
-                                    And the total amount of tobacco intercepted by Border Service in 2014-15 was considerably lower than in recent years<sup>14</sup>. 
-                                    <br>
-                                    The tobacco companies have argued that use of illicit tobacco increased<sup>15</sup>
-                                    by relying on a report they commissioned from KPMG<sup>16</sup>.
-                                    However those reports have been heavily criticised and KPMG has stated that its report 
-                                    <i>“has been somewhat misrepresented by others, without our consent, to suggest it supports the contention that plain paper packaging could lead of itself to an increase in tobacco smuggling”<sup>17</sup></i>.
-                                    Litter surveys have found no evidence of any counterfeit plain packs to date. 
-                            </li>
-                            <li>
-                                    <span class="title">No increase in retail transaction time:</span> 
-                                    Again, in contrast to the claims made by the tobacco companies that plain packs would increase the time that retailers took to find packs, real life observational studies showed that average transactions times declined for plain packs after implementation<sup>18</sup>.
-                                    possibly because packs were now stored alphabetically.
-                            </li>
-                        </ul>
-
-                        <div class="section-secondary-title fc-ref-mat-3">3. Statistical Data: Smoking prevalence and tobacco consumption rates</div>
-                        <p>
-                            Official statistics on smoking rates and tobacco consumption in Australia are published on the Department of Health’s website:
-                        </p>
-                        <p>
-                            <a class="word-break-all" href="http://www.health.gov.au/internet/main/publishing.nsf/content/tobacco-kff">http://www.health.gov.au/internet/main/publishing.nsf/content/tobacco-kff</a>
-                        </p>
-                        <p>
-                            The key statistics on smoking rates and tobacco consumption since implementation of plain packaging are:
-                        </p>
-
-                        <h3 class="fc-ref-mat-3 title">Smoking Prevalence Rates decline:</h3>
-                        <ul class="custom">
-                            <li>
-                                    Australian Institute of Health and Welfare (AIHW) has published the key findings of the 2013 National Drug Strategy Household Survey.
-                            </li>
-                        </ul>
-                        <ul class="table-custom">
-                            <li>
-                                <ol class="h-list-roman">
-                                    <li>
-                                            <span class="title">There has been a significant decrease in daily smokers aged 14 years or older</span>
-                                            in Australia, falling from 16.6% in 2007, 15.1% in 2010 to 12.8% in 2013.
-                                    </li>
-                                    <li>
-                                            <span class="title">Young people are delaying commencing smoking.</span>
-                                            The age at which 14 to 24 year olds smoked their first full cigarette increased from 15.4 
-                                            years of age in 2010 to 15.9 years of age in 2013.
-                                    </li>
-                                    <li>
-                                            <span class="title">The proportion of 18 to 24 year olds who have never smoked increased significantly</span>
-                                            between 2010 and 2013, from 72% to 77% respectively.
-                                    </li>
-                                    <li>
-                                            <span class="title">Use of unbranded illicit tobacco declined.</span>
-                                            3.6% of smokers reported using unbranded tobacco (half the time or more) in 2013, declining from 4.9% in 2010.
-
-                                        <div class="graph-img">
-                                            <img class="img-responsive center-block" src="<?php echo $base_url; ?>img/ref-h/graph-1.png">
-                                            <p class="description">
-                                                Percentage of Australians 14 yrs and over reporting smoking daily, 2004 to 2013
-                                                Source: National Drug Strategy Household Survey
-                                            </p>
-                                        </div>
-                                    </li>
-                        </ol>
-                            </li>
-                        </ul>
-                        
-                        <ul class="custom">
-                            <li>
-                                    <span class="title">The drop in rates between 2010 and 2013 is more than twice as large as the average drop between surveys since 1991.</span>
-                                    The industry try to argue that the decline in rates is just part of an existing trend. But the statistics show a marked increase in the rate of decline<sup>19</sup>.
-                            </li>
-                            <li>
-                                    <span class="title">Statistically insignificant anomalies:</span>
-                                    The figures for 12 – 17 year olds in the National Drug Strategy Household Survey, was 0.9 percentage points higher in 2013 than in 2010. However, the sample size was very small and had a standard error of 25-50% meaning there was no statistically significant change shown.
-                            </li>
-                            <li>
-                                    <span class="title">In 2011 6.7% of children under 17 reported smoking in the last week. In 2014 this had dropped to 5.1%.</span>
-                                    This data came from theAustralian Secondary Students' Alcohol and Drug (ASSAD) survey which used a far larger survey that the NDSHS and has just over 23,000 secondary students aged between 12 and 17 years participating in a national survey undertaken every 3 years since 1984<sup>20</sup>.
-                                    This is the better data on adolescent smoking rates.
-                            </li>
-                            <li>
-                                    <span class="title">A drop in adult smoking rates from 16.1% in 2011-12 to 14.5% in 2014-15</span>
-                                    was also shown in Australia’s 2014-15 National Health Survey<sup>21</sup>.
-                            </li>
-                        </ul>
-                            
-                        <h3 class="fc-ref-mat-3 title">Tobacco Consumption declines:</h3>  
-                        <ul class="h-list">
-                            <li>
-                                   <span class="title">Total consumption of tobacco and cigarettes in the March quarter 2014 was the lowest ever recorded.</span>
-                                   Figures from the Australian Bureau of Statistics (ABS) show that, as measured by estimated expenditure on tobacco products:
-                                   <div class="list">
-                                       <p>
-                                            -   $5.135 billion in September 1959;
-                                       </p>
-                                       <p>
-                                            -   $5.135 billion in September 1959;
-                                       </p>
-                                       <p>
-                                            -    $3.405 billion in March 2014.3
-                                       </p>
-                                   </div>
-                            </li>
-                            <li>
-                                    <span class="title">Tobacco excise and customs clearances fell by 3.4% in 2013 relative to 2012 and fell a further 7.9% in 2014.</span>
-                                    Tobacco clearances provide a reliable indicator of overall tobacco volumes and the treasury has advised that they have fallen a total of 11.0% since 2012 when tobacco plain packaging was introduced<sup>22</sup>.
-                            </li>
-                            <li>
-                                    <span class="title">Tobacco company reports to shareholders indicate a decline in sales:</span>
-                                    In its annual report to shareholders, British American Tobacco (which has the largest market share of the three majorcompanies operating in Australia) 
-                                    stated that volumes were lower for the 2013 reporting year<sup>23</sup>.
-                                    An industry-funded report concerningestimates of use of illicit tobacco[19] also incidentally included an estimate of consumption of taxpaidtobacco (based on estimated weight of tobacco sold) at 0.5% lower in 2013 than in 2012.
-                                    <br>
-                                    In April 2013, the CEO of major tobacco company Imperial Tobacco Company noted a decline intobacco product sales during the first half of the company’s 1 October to 30 September reportingcycle (from 1st October 2012 to 31st March 2013)<sup>24</sup>:
-                                <div class="list">
-                                    <p>
-                                        <i>“As I'm looking at Asia Pacific, I should also mention Australia, we've had the first six monthsof the plain pack environment in Australia. We've seen the market decline roughly 2% to 3%,so maybe not as bad as we might have anticipated.”</i>
-                                    </p>
-                                </div>
-                            </li>
-                        </ul>
-
-                         <div class="section-secondary-title fc-ref-mat-3">4. The Post Implementation Review (PIR)</div>
-                         <p>The Australian government published its Post Implementation Review (PIR) in February 2016:</p>
-                         <p>
-                            <a class="word-break-all" href="https://ris.govspace.gov.au/2016/02/26/tobacco-plain-packaging/">https://ris.govspace.gov.au/2016/02/26/tobacco-plain-packaging/</a>
-                         </p>
-                         <p>
-                            The review concludes that <b>“the measure has begun to achieve its public health objectives of reducing smoking and exposure to tobacco smoke in Australia and it is expected to continue to do so into the future.”</b>
-                         </p>
-                         <p>
-                             In line with Australian government guidance, the PIR examines the post-implementation evidence, data and analysis of the broader costs and benefits to industry, government and the wider community, to evaluate the efficiency and effectiveness of the tobacco plain packaging measure. Much of this evidence and data is described in the first two parts of this Reference Section. The PIR provides the Australian Government’s analysis of that evidence.
-                         </p>
-
-                         <h3 class="fc-ref-mat-3 title">The summary of the PIR states that:</h3>
-                        <p class="article">
-                            <b>
-                                <i>
-                                    While the full effect of the tobacco plain packaging measure is expected to be realised over time, the evidence examined in this PIR suggests that the measure is achieving its aims. 
-                                    This evidence shows that tobacco plain packaging is having a positive impact on its specific mechanisms as envisaged in the TPP Act.
-                                    All of the major datasets examined also showed on-going drops in national smoking prevalence in Australia. 
-                                </i>
-                            </b>
-                            <i>
-                                These decreases cannot be entirely attributed to plain packaging given the range of tobacco control measures in place in Australia, including media campaigns and Australia’s tobacco excise regime
-                            </i>
-                        </p>
-                        <p>
-                            The PIR provides an analysis of peer-reviewed research studies into smoking attitudes and behaviors before and after the introduction of the policy. These show that it is having a positive impact on the three specific mechanisms of reducing the appeal of tobacco products, increasing the effectiveness of health warnings, and reducing the ability of the pack to mislead:
-                        </p>
-                        <p class="article">
-                            <i>
-                                <span class="emp">Taken as a whole, the studies … provide early evidence that the tobacco plain packaging measure is having a positive impacton</span>
-                                impacton the three specific mechanisms of reducing the appeal of tobacco products, reducing the potential for tobacco packaging to mislead consumers, and enhancing the effectiveness of graphic health warnings. Studies also provide early evidence that the measure is resulting in positive changes to smoking behaviours. The body of evidence is diverse, including analyses conducted on a range of different groups (including adolescents, adults, cigarette smokers and cigar/cigarillo smokers) and using different datasets (including the National Tracking Survey, the NSW Tracking Survey, the ASSAD data, the ITC Project data and bespoke surveys).
-                            </i>
-                        </p>
-
-                        <p>
-                            The report also reviews the available data and statistical analysis of smoking prevalence and tobacco consumption rates: 
-                        </p>
-
-                        <p class="article">
-                            <i>
-                                <span class="emp">All the major data sets show continuing declines in smoking prevalence with substantial declines in the period following the introduction of tobacco plain packaging.</span>
-                                Analysis of the Roy Morgan Research data undertaken for the Department (described below) concludes that the 2012 packaging changes have already contributed to the overall decline in smoking prevalence and that over time these impacts will increase.
-                            </i>
-                        </p>
-
-                        <p>
-                            The use of statistical data can be complex and the tobacco industry have produced reports which seek to undermine whether large reductions in the smoking rates can be attributable to plain packaging of reduced smoking. So for instance, the JTI response to the PIR has been to say that <i>"The report fails to properly take into account that smoking rates had been steadily declining for years, long before the introduction of this branding ban, and that the measure hasn’t accelerated this decline"</i><sup>25</sup>.
-                        </p>
-
-                        <p>
-                            Most of the evidence and studies that the PIR refers to and considers were already publicly available. However the PIR was accompanied by a new detailed data analysis by Dr Chipty of Analysis Group, Inc.<sup>26</sup>
-                            , who undertook a regression analysis. This used Roy Morgan Single Source Survey Data<sup>27</sup>
-                            to provide an average prevalence rate for the 34 months prior to implementation of plain packaging and the 34 months following implementation. Those figures were 19.4% and 17.2% respectively – a 2.2% percentage point drop.
-                        </p>
-
-                        <p>
-                            Dr Chipty’s analysis estimated that the packaging changes resulted in a <span class="emp"><i>“statistically significant decline in smoking prevalence of 0.55 percentage points over the post implementation period, relative to what the prevalence would have been without the packaging changes. This decline accounts for approximately one quarter of the total decline in average prevalence rates observed…”</i></span>
-                        </p>
-                        <p>
-                            Trying to use statistical analysis of survey data to separate out the effects of different tobacco control measures is difficult but it is this detailed report by Dr Chipty that undermines the tobacco industry claims of no accelerated decline. 
-                        </p>
-
-                        <div class="graph-img">
-                            <p>Dr Chipty’s analysis was set out in figurative form in the following chart:</p>
-                            <br>&nbsp;<br>
-                            <img class="img-responsive text-center" src="<?php echo $base_url; ?>img/ref-h/graph-2.png">
-                            <br>&nbsp;<br>
+                        <div class="section-margin-top-25 section-title fc-ref-mat-3">Post-implementation evidence from
+                            Australia
                         </div>
+                    </div>
+                    <div class="content-desc-cont col-lg-8 col-lg-offset-1 ref -g1">
+                        <div>
+                            <div class="section-secondary-title fc-ref-mat-3">Introduction</div>
+                            <p class="p-states">“Plain packaging in Australia has been a casebook example of effective
+                                tobacco control—a policy measure driven by evidence, carefully designed and implemented,
+                                and now rigorously assessed. Further, it is set within the context of wider Australian
+                                tobacco control, reinforcing the most basic lesson learned over the last half century:
+                                action has to be strategic and comprehensive. There are no silver bullets”
+                                <sup>1</sup></p>
 
-                        <p>
-                            This chart plots the monthly overall smoking prevalence rates from the Roy Morgan data, with two separate trend lines for before and after the introduction of the 2012 packaging changes. The chart shows the overall decline in smoking prevalence in Australia over the last fifteen years and provides some indication that the “decline in prevalence has accelerated in recent years.”As regards the effects on the illicit market, the PIR considers the post implementation data and peer reviewed studies which found no change in smokers’ reported use of unbranded illicit tobacco, no evidence of increases in use of contraband cigarettes, low levels of use of cigarettes likely to be contraband, and no increase in purchases of tobacco from informal sellers.
-                        </p>
+                            <p>The information contained in this Reference Section gives just some examples of the
+                                observational, research and
+                                survey studies that have been conducted in Australia to assess the impact of plain
+                                packaging there, together with
+                                the statistical data on tobacco use.</p>
 
-                        <p>
-                            The PIR concludes that:
-                        <p>
-                        <p class="article">
-                            <b><i>“the measure has begun to achieve its public health objectives of reducing smoking and exposure to tobacco smoke in Australia and it is expected to continue to do so into the future.”</i></b>
-                        </p>
+                            <p><b>A more comprehensive compilation of the evidence</b> can be found on Cancer Council
+                                Victoria’s “Plain Facts”
+                                website:
+                                <a href="http://www.cancervic.org.au/plainfacts/">http://www.cancervic.org.au/plainfacts/</a>
+                                which includes some
+                                detailed fact sheets. </p>
+
+                            <p>The research demonstrates that the policy is starting to have the anticipated impacts on
+                                the intended mechanisms of
+                                reducing tobacco appeal, increasing the effectiveness of health warnings and reducing
+                                misperceptions about the harms
+                                of tobacco products. It should nevertheless be recognized that it is a policy intended
+                                to have impacts over time. It
+                                was introduced at the same time as a number of other tobacco control measures and
+                                isolating the specific influence
+                                of plain packaging will also take time.</p>
+
+                            <p>The tobacco industry has sought to highlight isolated anomalies in the statistical data
+                                to argue that plain packaging
+                                has not worked or is having a negative impact. These examples, set out below, have no
+                                statistical significance and
+                                should not detract from the vast majority of the evidence that all points to the policy
+                                working as intended. The
+                                tobacco industry has also commissioned reports that try to analyse the statistical data
+                                to show that plain packaging
+                                has <i>not increased the existing rate of decline</i> in smoking rates. These reports
+                                have not been peer reviewed,
+                                have
+                                been
+                                undermined by academics and criticized by Courts. (For more details on those reports see
+                                the‘No reliable evidence’
+                                section of the <b>Opposing Arguments (and how to counter them)</b> pages in the Tools
+                                and Resources)</p>
+
+                            <div class="section-secondary-title fc-ref-mat-3">Research into attitudes and behaviours
+                            </div>
+
+                            <p>The British Medical Journal of Tobacco Control <a
+                                        href="http://tobaccocontrol.bmj.com/content/24/Suppl_2?utm_source=World%20Congress%20on%20Tobacco%20and%20Health&utm_medium=Email&utm_campaign=plain%20packaging">edition
+                                    of April 2015</a> focused on the implementation and evaluation of
+                                the Australian plain packaging policy and included eighteen research papers.</p>
+
+                            <p>Further peer-reviewed research studies have been published since then. Combined these
+                                studies show:</p>
+
+                            <p><b>Reduced appeal of tobacco</b>:A number of studies with adult smokers point to plain
+                                packaging fulfilling its core
+                                aims of
+                                reducing appeal, particularly among young adults, and increasing warning salience. <sup>2</sup>
+                            </p>
+
+                            <p>These research papers also suggest that plain packaging is severely restricting the
+                                ability of the pack to
+                                communicate and create appeal with adolescents and young people. For instance,
+                                school-based surveys with students
+                                aged 12–17 years old in 2011 and 2013 show that the removal of branding and uniformity
+                                of pack appearance has
+                                increased negative pack ratings and decreased positive ones. <sup>3</sup></p>
+
+                            <p><b>Increased quit attempts</b>: In a cross-sectional tracking survey of cigarette
+                                smokers, plain packaging was
+                                associated
+                                with increased thinking about quitting and quit attempts. In addition, dislike of the
+                                pack, lower satisfaction from
+                                cigarettes and attributing motivation to quit to the warnings predicted daily thoughts
+                                of quitting. <sup>4</sup>
+                            </p>
+
+                            <p>Research has also found a significant increase in the number of calls to the smoking
+                                cessation helpline, Quitline, in
+                                NSW and the ACT. <sup>5</sup> The research showed a 78% increase in the number of calls
+                                to the Quitline
+                                associated with the
+                                introduction of plain packaging. This research found the increase in calls was sustained
+                                and not attributable to
+                                anti-tobacco advertising activity, cigarette price increases, or any other identifiable
+                                causes.</p>
+
+                            <p><b>Increased impact of health warnings</b>: A number of studies using large national
+                                survey samples have found that
+                                more
+                                adult smokers noticed graphic health warnings and this led to increased pack avoidance,
+                                greater perceived harm, and
+                                an increased understanding of cancer risks. <sup>6</sup></p>
+
+                            <p>
+                                <b>Reduced pack displays</b>: Studies of outdoor venues before and after implementation
+                                have showed that smokers
+                                were more likely to conceal their packs in outdoor venues after the introduction of
+                                plain packaging. <sup>7</sup>
+                            </p>
+
+                            <p><b>Reduced misperceptions</b>: A recent study showed that following plain-packaging
+                                implementation, there was a
+                                significant reduction in perceptions that “some cigarette brands are more harmful than
+                                others.” <sup>8</sup></p>
+
+                            <p><b>Increase in positive attitudes to plain packs</b>: A recent study showed that the
+                                positive response of young
+                                people to plain packaging was greater than anticipated prior to its introduction, and
+                                support for plain packaging
+                                increased from pre-implementation to post-implementation among all
+                                groups of youth. <sup>9</sup></p>
+
+                            <p><b>Unintended consequences.</b> The research has also examined whether or not plain
+                                packaging had any of the
+                                unintended
+                                consequences that the tobacco industry alleged would occur:</p>
+
+                            <p><b>Tobacco prices continue to rise in all sectors</b>: Studies showed that there was no
+                                evidence that plain packaging
+                                led
+                                to lower prices for tobacco. A review of retail magazines, for instance, showed that
+                                following the introduction of
+                                plain packaging, average inflation-adjusted recommended retail prices actually increased
+                                for cigarettes in all price
+                                segments (value, mainstream, and premium). <sup>10</sup></p>
+
+                            <p><b>No increase in illicit tobacco</b>: The evidence clearly showed that the consumption
+                                of illicit “cheap white”
+                                cigarettes has remained consistently small or even declined after implementation of
+                                plain packaging. <sup>11</sup>
+                                And the
+                                total
+                                amount of tobacco intercepted by Border Service in 2014–15 was considerably lower than
+                                in recent years.
+                                <sup>12</sup></p>
+
+                            <p>The tobacco companies have argued that use of illicit tobacco increased <sup>13</sup> by
+                                relying on a report they
+                                commissioned
+                                from
+                                KPMG. <sup>14</sup> However, those reports have been heavily criticized, and KPMG has
+                                stated that its report<i>“has
+                                    been
+                                    somewhat
+                                    misrepresented by others, without our consent, to suggest it supports the contention
+                                    that plain paper packaging
+                                    could lead of itself to an increase in tobacco smuggling.” <sup>15</sup></i>Litter
+                                surveys have found no
+                                evidence of any counterfeit plain packs to date. </p>
+
+                            <p><b>No increase in retail transaction time</b>: Again, in contrast to the claims made by
+                                the tobacco companies that
+                                plain
+                                packs would increase the time that retailers took to find packs, real-life observational
+                                studies have showed that
+                                average transactions times declined for plain packs after implementation <sup>16</sup>
+                                possibly because packs were
+                                now stored
+                                alphabetically. </p>
+
+                            <div class="section-secondary-title fc-ref-mat-3">Statistical data: smoking prevalence and
+                                tobacco consumption rates
+                            </div>
+
+                            <p>Official statistics on smoking rates and tobacco consumption in Australia are published
+                                on the Department of Health’s
+                                website:</p>
+                            <a href="http://www.health.gov.au/internet/main/publishing.nsf/content/tobacco-kff">http://www.health.gov.au/internet/main/publishing.nsf/content/tobacco-kff</a>
+                            <p>The key statistics on smoking rates and tobacco consumption since implementation of plain
+                                packaging are:</p>
+
+                            <div class="section-secondary-title fc-ref-mat-3">Smoking prevalence rates decline:
+                            </div>
+
+                            <p>Australian Institute of Health and Welfare (AIHW) has published the key findings of the
+                                2013 National Drug Strategy
+                                Household Survey. </p>
+
+                            <ol>
+                                <li><b>There has been a significant decrease in daily smokers aged 14 years or older</b>
+                                    in Australia, falling from
+                                    16.6%
+                                    in 2007, 15.1% in 2010, to 12.8% in 2013.
+                                </li>
+                                <li>
+                                    <b>Young people are delaying commencing smoking.</b> The age at which 14 to 24 year
+                                    olds smoked their first full
+                                    cigarette increased from 15.4 years of age in 2010 to 15.9 years of age in 2013.
+                                </li>
+                                <li>
+                                    <b>The proportion of 18 to 24 year olds who have never smoked increased
+                                        significantly</b> between 2010 and 2013, from
+                                    72% to 77% respectively.
+                                </li>
+                                <li>
+                                    <b>Use of unbranded illicit tobacco declined</b>. 3.6% of smokers reported using
+                                    unbranded tobacco (half the time or
+                                    more) in 2013, declining from 4.9% in 2010.
+                                </li>
+                            </ol>
+
+                            <img class="img-responsive center-block" width="450px"
+                                 src="<?php echo $base_url; ?>img/evidence/australia-1.jpg">
+                            <p class="small text-center">Percentage of Australians 14 years and over reporting smoking
+                                daily, 2004 to 2013
+                                Source: National Drug Strategy Household Survey
+                            </p>
+
+                            <p><b>The drop in rates between 2010 and 2013 is more than twice as large as the average
+                                    drop between surveys since
+                                    1991</b>.The industry tries to argue that the decline in rates is just part of an
+                                existing trend. However, the
+                                statistics show a marked increase in the rate of decline. <sup>17</sup></p>
+                            <p>
+                                <b>Statistically insignificant anomalies</b>. The figures for 12–17 year olds in the
+                                National Drug Strategy
+                                Household
+                                Survey
+                                was 0.9 percentage points higher in 2013 than in 2010. However, the sample size was very
+                                small and had a standard
+                                error of 25–50%, meaning there was no statistically significant change shown.
+                            </p>
+
+                            <p>
+                                <b>In 2011, 6.7% of children under 17 reported smoking in the last week. In 2014 this
+                                    had dropped to 5.1%</b>. This
+                                data
+                                came from the Australian Secondary Students’ Alcohol and Drug (ASSAD) survey, which used
+                                a far larger survey that
+                                the NDSHS and has just over 23,000 secondary students aged between 12 and 17 years
+                                participating in a national
+                                survey undertaken every three years since 1984. <sup>18</sup> This is the better data on
+                                adolescent smoking rates.
+                            </p>
+
+                            <p>
+                                <b>A drop in adult smoking rates from 16.1% in 2011–12 to 14.5% in 2014–15</b> was also
+                                shown in Australia’s 2014-15
+                                National Health Survey. <sup>19</sup>
+                            </p>
+
+                            <div class="section-secondary-title fc-ref-mat-3">Tobacco consumption declines:
+                            </div>
+
+                            <p>
+                                <b>Total consumption of tobacco and cigarettes in the March quarter 2014 was the lowest
+                                    ever recorded</b>. Figures
+                                from the Australian Bureau of Statistics (ABS) show the total consumption of tobacco and
+                                cigarettes as measured by
+                                estimated expenditure on tobacco products:
+
+                            <ul>
+                                <li>$5.135 billion in September 1959</li>
+                                <li>$3.720 billion in December 2012</li>
+                                <li>$3.260 billion in March 2014 <sup>20</sup></li>
+                            </ul>
+                            </p>
+
+                            <p><b>Tobacco excise and customs clearances fell by 3.4% in 2013 relative to 2012 and fell a
+                                    further 7.9% in 2014</b>
+                                . Tobacco
+                                clearances provide a reliable indicator of overall tobacco volumes, and the treasury has
+                                advised that they have
+                                fallen a total of 11.0% since 2012, when tobacco plain packaging was introduced.
+                                <sup>21</sup></p>
+
+                            <p>Tobacco company reports to shareholders indicate a decline in sales.In its annual report
+                                to shareholders, British
+                                American Tobacco (which has the largest market share of the three major companies
+                                operating in Australia) stated
+                                that volumes were lower for the 2013 reporting year. <sup>22</sup> An industry-funded
+                                report concerning estimates
+                                of use of
+                                illicit tobacco <sup>23</sup> also incidentally included an estimate of consumption of
+                                tax-paid tobacco (based on
+                                estimated
+                                weight
+                                of tobacco sold) at 0.5% lower in 2013 than in 2012.
+
+                                <br/>
+
+                                In April 2013, the CEO of Imperial Tobacco noted a decline in tobacco product sales
+                                during the first half of the
+                                company’s October 1 to September 30 reporting cycle (from October 1, 2012, to March 31,
+                                2013) <sup>24</sup>:
+                            </p>
+
+                            <p class="p-states">
+                                “As I'm looking at Asia Pacific, I should also mention Australia, we've had the first
+                                six months of the plain pack
+                                environment in Australia. We've seen the market decline roughly 2% to 3%, so maybe not
+                                as bad as we might have
+                                anticipated.”
+                            </p>
+
+                            <div class="section-secondary-title fc-ref-mat-3">The Post-Implementation Review (PIR)
+                            </div>
+
+                            <p>The Australian government published its Post-Implementation Review (PIR) in February
+                                2016:</p>
+
+                            <a href="https://ris.govspace.gov.au/2016/02/26/tobacco-plain-packaging/">https://ris.govspace.gov.au/2016/02/26/tobacco-plain-packaging/</a>
+
+                            <p>The review concludes that <b><i>“the measure has begun to achieve its public health
+                                        objectives of reducing smoking
+                                        and
+                                        exposure to tobacco smoke in Australia and it is expected to continue to do so
+                                        into the future.”</i></b></p>
+
+                            <p>In line with Australian government guidance, the PIR examines the post-implementation
+                                evidence, data, and analysis of
+                                the broader costs and benefits to industry, government and the wider community, to
+                                evaluate the efficiency and
+                                effectiveness of the tobacco plain packaging measure. Much of this evidence and data is
+                                described in the first two
+                                parts of this Section. The PIR provides the Australian Government’s analysis of that
+                                evidence.</p>
+
+                            <p><b>The summary of the PIR states that:</b></p>
+
+                            <p class="p-states"><b>“While the full effect of the tobacco plain packaging measure is
+                                    expected to be realised over
+                                    time,
+                                    the evidence examined in this PIR suggests that the measure is achieving its aims.
+                                    This evidence shows that
+                                    tobacco
+                                    plain packaging is having a positive impact on its specific mechanisms as envisaged
+                                    in the TPP Act. All of the
+                                    major
+                                    data sets examined also showed on-going drops in national smoking prevalence in
+                                    Australia.</b> These decreases
+                                cannot be
+                                entirely attributed to plain packaging given the range of tobacco control measures in
+                                place in Australia, including
+                                media campaigns and Australia’s tobacco excise regime.”</p>
+
+                            <p>
+                                The PIR provides an analysis of peer-reviewed research studies into smoking attitudes
+                                and behaviors before and after
+                                the introduction of the policy. These show that it is having a positive impact on the
+                                three specific mechanisms of
+                                reducing the appeal of tobacco products, increasing the effectiveness of health
+                                warnings, and reducing the ability
+                                of the pack to mislead:
+                            </p>
+
+                            <p class="p-states">
+                                “Taken as a whole, the studies . . . provide early evidence that the tobacco plain
+                                packaging measure is having a
+                                positive impact on the three specific mechanisms of reducing the appeal of tobacco
+                                products, reducing the potential
+                                for tobacco packaging to mislead consumers, and enhancing the effectiveness of graphic
+                                health warnings. Studies also
+                                provide early evidence that the measure is resulting in positive changes to smoking
+                                behaviours. The body of evidence
+                                is diverse, including analyses conducted on a range of different groups (including
+                                adolescents, adults, cigarette
+                                smokers and cigar/cigarillo smokers) and using different datasets (including the
+                                National Tracking Survey, the NSW
+                                Tracking Survey, the ASSAD data, the ITC Project data and bespoke surveys).”
+                            </p>
+
+                            <p>The report also reviews the available data and statistical analysis of smoking prevalence
+                                and tobacco consumption
+                                rates: </p>
+
+                            <p class="p-states">“All the major data sets show continuing declines in smoking prevalence
+                                with substantial declines in
+                                the period following the introduction of tobacco plain packaging. Analysis of the Roy
+                                Morgan Research data
+                                undertaken for the Department (described below) concludes that the 2012 packaging
+                                changes have already contributed
+                                to the overall decline in smoking prevalence and that over time these impacts will
+                                increase.”</p>
+
+                            <p>The use of statistical data can be complex, and the tobacco industry has produced reports
+                                that seek to undermine the
+                                argument that large reductions in the smoking rates can be attributable to plain
+                                packaging of reduced smoking. Thus,
+                                for instance, the JTI response to the PIR has been to say that,“The report fails to
+                                properly take into account that
+                                smoking rates had been steadily declining for years, long before the introduction of
+                                this branding ban, and that the
+                                measure hasn’t accelerated this decline.” <sup>25</sup></p>
+
+                            <p>Most of the evidence and studies that the PIR refers to and considers was already
+                                publicly available. However, the
+                                PIR was accompanied by a new detailed data analysis by Dr.TasneemChipty of Analysis
+                                Group, Inc., who undertook a
+                                regression analysis. This used Roy Morgan Single Source Survey Data to provide an
+                                average prevalence rate for the 34
+                                months prior to implementation of plain packaging and the 34 months following
+                                implementation. Those figures were
+                                19.4% and 17.2%, respectively — a 2.2% percentage point drop. </p>
+
+                            <p>Dr Chipty’s analysis estimated that the packaging changes resulted in a <b>“statistically
+                                    significant decline in
+                                    smoking
+                                    prevalence of 0.55 percentage points over the post implementation period, relative
+                                    to what the prevalence would
+                                    have
+                                    been without the packaging changes. This decline accounts for approximately one
+                                    quarter of the total decline in
+                                    average prevalence rates observed . . .”</b></p>
+
+                            <p>Trying to use statistical analysis of survey data to separate out the effects of
+                                different tobacco-control measures
+                                is difficult, but it is this detailed report by Dr.Chipty that undermines the tobacco
+                                industry claims of no
+                                accelerated decline. </p>
+
+                            <p>Dr.Chipty’s analysis was set out in figurative form in the following chart:</p>
+
+                            <img class="img-responsive center-block" width="450px"
+                                 src="<?php echo $base_url; ?>img/evidence/australia-2.jpg">
+
+                            <p>This chart plots the monthly overall smoking prevalence rates from the Roy Morgan data,
+                                with two separate trend lines
+                                for before and after the introduction of the 2012 packaging changes. The chart shows the
+                                overall decline in smoking
+                                prevalence in Australia over the last fifteen years and provides some indication that
+                                the “decline in prevalence has
+                                accelerated in recent years.” As regards the effects on the illicit market, the PIR
+                                considers the post-
+                                implementation data and peer-reviewed studies that found no change in smokers’ reported
+                                use of unbranded illicit
+                                tobacco, no evidence of increases in use of contraband cigarettes, low levels of use of
+                                cigarettes likely to be
+                                contraband, and no increase in purchases of tobacco from informal sellers.</p>
+
+                            <p>The PIR concludes that:</p>
+
+                            <p class="p-states">“the measure has begun to achieve its public health objectives of
+                                reducing smoking and exposure to
+                                tobacco smoke in Australia and it is expected to continue to do so into the future</p>
+
+                            <div class="section-secondary-title fc-ref-mat-3">End Notes
+                            </div>
+
+                            <p><sup>1</sup>Gerard B Hastings and Crawford Moodie Death of a salesmanTob Control. 2015
+                                Apr; 24(Suppl 2)</p>
+                            <p><sup>2</sup> i) V. White, T. Williams, A. Faulkner, and M. Wakefield. “Do larger graphic
+                                health warnings on
+                                standardised cigarette packs increase adolescents’cognitive processing of consumer
+                                health information and beliefs
+                                about smoking-related harms?” Tobacco Control, 2015; 24:ii50-ii57. Available from:
+                                <a href="http://tobaccocontrol.bmj.com/content/24/Suppl_2/ii50.full">http://tobaccocontrol.bmj.com/content/24/Suppl_2/ii50.full</a>.
+                                ii) M. Wakefield, K. Coomber, M. Zacher, S. Durkin, E. Brennan, et al. “Australian adult
+                                smokers’ responses to plain
+                                packaging with larger graphic health warnings oneyear after implementation: Results from
+                                a national cross-sectional
+                                tracking survey.” Tobacco Control, 2015; 24:ii17-ii25. Available
+                                from:<a href="http://www.tobaccocontrol.bmj.com/content/24/Suppl_2/ii17.full">www.tobaccocontrol.bmj.com/content/24/Suppl_2/ii17.full</a>.
+                            </p>
+
+                            <p><sup>3</sup> i) V. White, T. Williams, and M. Wakefield. “Has the introduction of plain
+                                packaging with larger graphic
+                                health warnings changed adolescents’ perceptions of cigarette packs and brands?” Tobacco
+                                Control, 2015;
+                                24:ii42-ii49. Available from: <a
+                                        href="http://tobaccocontrol.bmj.com/content/24/Suppl_2/ii42.full">http://tobaccocontrol.bmj.com/content/24/Suppl_2/ii42.full</a>.
+                                ii) S. Dunlop, D. Perez, A. Dessaix, and D. Currow. “Australia’s plain tobacco packs:
+                                Anticipated and actual
+                                responses among adolescents and young adults 2010–2013.” Tobacco Control, 2016.
+                                Available from:
+                                <a href="http://tobaccocontrol.bmj.com/content/early/2016/11/15/tobaccocontrol-2016-053166.abstract?papetoc">http://tobaccocontrol.bmj.com/content/early/2016/11/15/tobaccocontrol-2016-053166.abstract?papetoc</a>.
+                            </p>
+
+                            <p><sup>4</sup> S. Durkin, E. Brennan, K. Coomber, et al. “Short-term changes in
+                                quitting-related cognitions and
+                                behaviours after the implementation of plain packaging with larger health warnings:
+                                Findings from a national cohort
+                                study with Australian adult smokers.” Tobacco Control 2015;24:ii26–32.</p>
+
+                            <p><sup>5</sup> J. M. Young, C. Currow, and S. Dunlop. “The association between tobacco
+                                plain packaging and Quitline
+                                calls.” Med J Aust. 2014;200(6):314–315. Available from: <a
+                                        href="https://www.ncbi.nlm.nih.gov/pubmed/24702081">https://www.ncbi.nlm.nih.gov/pubmed/24702081</a>.
+                            </p>
+
+                            <p><sup>6</sup> i) E. Brennan, S. Durkin, K. Coomber, M. Zacher, M. Scollo, et al. “Are
+                                quitting-related cognitions and
+                                behaviours predicted by proximal responses to plain packaging with larger health
+                                warnings? Findings from a national
+                                cohort study with Australian adult smokers.” Tobacco Control, 2015; 24:ii33-ii41.
+                                Available
+                                from:<a href="http://www.tobaccocontrol.bmj.com/content/24/Suppl_2/ii33.full">www.tobaccocontrol.bmj.com/content/24/Suppl_2/ii33.full</a>.
+                                ii) V.White, T. Williams, A. Faulkner, and M. Wakefield.“Do larger graphic health
+                                warnings on standardised cigarette
+                                packs increase adolescents’cognitive processing of consumer health information and
+                                beliefs about smoking-related
+                                harms?” Tobacco Control, 2015; 24:ii50-ii57. Available from:<a
+                                        href="http://www.tobaccocontrol.bmj.com/content/24/Suppl_2/ii50.full">www.tobaccocontrol.bmj.com/content/24/Suppl_2/ii50.full</a>.
+                            </p>
+
+                            <p><sup>7</sup> i) M. Zacher, M. Bayly, E. Brennan, et al. “Personal tobacco pack display
+                                before and after the
+                                introduction of plain packaging with larger pictorial health warnings in Australia: An
+                                observational study of
+                                outdoor cafe strips.”Addiction. 2014;109(4):653–662. Available from:<a
+                                        href="https://www.ncbi.nlm.nih.gov/pubmed/24428427">https://www.ncbi.nlm.nih.gov/pubmed/24428427</a>.
+                                ii) M.Wakefield, M. Zacher, M. Bayly, E. Brennan, J. Dono, C. Miller, S. J. Durkin, and
+                                M. Scollo.“The silent
+                                salesman: An observational study of personal tobacco pack display at outdoor café strips
+                                in Australia.” Tobacco
+                                Control 2014. pp. 339–344. Available from <a
+                                        href="http://tobaccocontrol.bmj.com/content/23/4/339.abstract">http://tobaccocontrol.bmj.com/content/23/4/339.abstract</a>.
+                            </p>
+
+                            <p><sup>8</sup> R. Maddox et al. “Plain packaging implementation: perceptions of risk and
+                                prestige of cigarette brands
+                                among Aboriginal and Torres Strait Islander people.” 29 December 29, 2015 DOI:
+                                10.1111/1753-6405.12489.</p>
+
+                            <p><sup>9</sup> S. Dunlop, D. Perez, A. Dessaix, and D. Currow. “Australia’s plain tobacco
+                                packs: Anticipated and actual
+                                responses among adolescents and young adults, 2010–2013.” Tobacco Control doi:10.1136.
+                                Available from:
+                                <a href="http://tobaccocontrol.bmj.com/content/early/2016/12/11/tobaccocontrol-2016-053166.abstract?sid=38c19596-f457-4476-aeef-4b86e907b2d2">http://tobaccocontrol.bmj.com/content/early/2016/12/11/tobaccocontrol-2016-053166.abstract?sid=38c19596-f457-4476-aeef-4b86e907b2d2</a>.
+                            </p>
+
+                            <p><sup>10</sup> M.Scollo, M.Bayly, and M. Wakefield. “The advertised price of cigarette
+                                packs in retail outlets across
+                                Australia before and after the implementation of plain packaging: a repeated measures
+                                observational study.” Tobacco
+                                Control 2015;24:ii82-ii89 doi:10.1136. Available
+                                from:<a href="http://tobaccocontrol.bmj.com/content/24/Suppl_2/ii82.abstract?sid=4499bd73-4881-4207-99b8-55dfbba4ecb6">http://tobaccocontrol.bmj.com/content/24/Suppl_2/ii82.abstract?sid=4499bd73-4881-4207-99b8-55dfbba4ecb6</a>.
+                            </p>
+                            <p><sup>11</sup> M. Scollo, M. Zacher, M. Coomber, and M. Wakefield. “Use of illicit tobacco
+                                following introduction of
+                                standardised packaging of tobacco products in Australia: Results from a national
+                                cross-sectional survey.” Tobacco
+                                Control, 2015; 24:ii76-ii81. Available from: <a
+                                        href="http://tobaccocontrol.bmj.com/content/24/Suppl_2/ii76.full">http://tobaccocontrol.bmj.com/content/24/Suppl_2/ii76.full</a>.
+                                See also a comprehensive analysis by Cancer Council Victoria available from:
+                                <a href="http://www.cancervic.org.au/downloads/plainfacts/Facts_sheets/Facts_Sheet_no_3_Illicit_tobacco31May2016.pdf">http://www.cancervic.org.au/downloads/plainfacts/Facts_sheets/Facts_Sheet_no_3_Illicit_tobacco31May2016.pdf</a>.
+                            </p>
+                            <p><sup>12</sup> Australian Customs and Border Protection Service. Annual Report 2014–15.
+                                Canberra:
+                                ACBPS, 2014. Available from: <a
+                                        href="http://www.border.gov.au/about/reportspublications/reports/annual">http://www.border.gov.au/about/reportspublications/reports/annual</a>.
+                            </p>
+                            <p><sup>13</sup> Philip Morris International. 2013 KPMG report: Black market in Australia
+                                reaches record highs. PMI,
+                                2014. Available from: <a
+                                        href="http://www.pmi.com/eng/media_center/media_kit/Pages/2013_kpmg_australia.aspx">http://www.pmi.com/eng/media_center/media_kit/Pages/2013_kpmg_australia.aspx</a>.
+                            </p>
+                            <p><sup>14</sup> KPMG LLP. Illicit tobacco in Australia: 2015 full year report available
+                                from:
+                                <a href="https://home.kpmg.com/content/dam/kpmg/pdf/2016/04/australia-illict-tobacco-2015.pdf">https://home.kpmg.com/content/dam/kpmg/pdf/2016/04/australia-illict-tobacco-2015.pdf</a>.
+                            </p>
+                            <p><sup>15</sup> J. Doward. “How Big tobacco lost its final fight for hearts, lungs and
+                                minds. The Guardian, May 22,
+                                2016. Available from: <a
+                                        href="http://www.theguardian.com/society/2016/may/22/big-tobacco-final-fight-cigarette-branding-uk">http://www.theguardian.com/society/2016/may/22/big-tobacco-final-fight-cigarette-branding-uk</a>
+                            </p>
+                            <p><sup>16</sup> i) O. Carter, M. Welch, B. Mills, T. Phan, and P. Chang. “Plain packaging
+                                for cigarettes improves
+                                retail transaction times.”In British Medical Journal. 2013;346:f1063.
+                                ii) M. Bayly, M. Scollo, and M. Wakefield. “No lasting effects of plain packaging on
+                                cigarette pack retrieval time
+                                in small Australian retail outlets.” Tobacco Control. 2015;24(e1):e108–e109.
+                            </p>
+                            <p><sup>17</sup> National Drug Strategy Household Survey; AIHW 2014. Available
+                                from:<a href="http://www.aihw.gov.au/alcohol-and-other-drugs/ndshs/2013/data-and-references/">http://www.aihw.gov.au/alcohol-and-other-drugs/ndshs/2013/data-and-references/</a>.
+                            </p>
+                            <p><sup>18</sup> See
+                                <a href="https://www.cancervic.org.au/about/media-releases/2015-media-releases/november-2015/tobacco-use-secondary-school-students.html">https://www.cancervic.org.au/about/media-releases/2015-media-releases/november-2015/tobacco-use-secondary-school-students.html</a>.
+                            </p>
+                            <p><sup>19</sup> See <a href="http://www.abs.gov.au/ausstats/abs@.nsf/mf/4364.0.55.001">http://www.abs.gov.au/ausstats/abs@.nsf/mf/4364.0.55.001</a>.
+                            </p>
+                            <p><sup>20</sup> 5206.0 Australian National Accounts: National Income, Expenditure and
+                                Product, Dec 2015 Available at:
+                                Australian National Accounts: National Income, Expenditure and Product</p>
+
+                            <p><sup>21</sup> See <a
+                                        href="http://www.health.gov.au/internet/main/publishing.nsf/content/tobacco-kff">http://www.health.gov.au/internet/main/publishing.nsf/content/tobacco-kff</a>.
+                            </p>
+                            <p><sup>22</sup> British American Tobacco. Annual report 2013. London 2014. Available from:
+                                <a href="http://www.bat.com/ar/2013/assets/pdfs/BAT_AR2013.pdf">www.bat.com/ar/2013/assets/pdfs/BAT_AR2013.pdf</a>
+                            </p>
+                            <p><sup>23</sup> KPMG LLP. Illicit tobacco in Australia: 2013 full-year report. Sydney 2014.
+                            </p>
+                            <p><sup>24</sup> Transcript of Imperial Tobacco half-year 2013 results; Interview with
+                                Alison Cooper, CEO, and Bob
+                                Dyrbus, FD. Available from:
+                                <a href="http://video.merchantcantos.com/media/202678/imperial_tobacco_half_year_results_transcript.pdf">http://video.merchantcantos.com/media/202678/imperial_tobacco_half_year_results_transcript.pdf</a>.
+                            </p>
+                            <p><sup>25</sup> See <a
+                                        href="http://www.jti.com/files/8614/5650/6649/Press_Release_Post-PIR_FINAL_26-02-2016.pdf">http://www.jti.com/files/8614/5650/6649/Press_Release_Post-PIR_FINAL_26-02-2016.pdf</a>.
+                            </p>
+                            <p><sup>26</sup> An economic and business consulting firm with particular expertise and
+                                experience in econometric
+                                analysis.</p>
+                            <p><sup>27</sup> Roy Morgan Research conducts ongoing, nationally representative, monthly
+                                surveys on a range of topics,
+                                including smoking, and collects data about broader socio-demographic variables (such as
+                                financial position and
+                                marital status), which enable analysis of the smoking population in Australia.</p>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -4018,9 +6001,8 @@ function nav_content($menu,$var = null)
             break;
 
         // i
-        case 'tobacco-product-branding': 
-            if ($var == 'og_desc')
-            {
+        case 'tobacco-product-branding':
+            if ($var == 'og_desc') {
                 $og_desc = 'Packaging is used for marketing and advertising. If advertising and promoting tobacco is banned in all other areas, it is simply common sense to ban it on tobacco packaging as well.';
                 return $og_desc;
             }
@@ -4029,606 +6011,11 @@ function nav_content($menu,$var = null)
                 <div class="row abt-st-r" id="Ref-I">
                     <div class="col-lg-10 col-lg-offset-1"><?php echo breadcrumbs(' / ', 'Home'); ?></div>
                     <div class="col-lg-10 col-lg-offset-1">
-                        <div class="section-margin-top-25 section-title fc-ref-mat-3">Branding on tobacco packaging and its impacts on smoking behaviour</div>
-                    </div>
-                    <div class="content-desc-cont col-lg-10 col-lg-offset-1">
-                        <div class="section-secondary-title fc-ref-mat-3">1. Introduction</div>
-                        <p>
-                            <b>Packaging is used for marketing and advertising. If advertising and promoting tobacco is banned in all other areas, it is simply common sense to ban it on tobacco packaging as well.</b>
-                        </p>
-                        <p>
-                            The tobacco industry claims not to target children or non-smokers with their advertising and promotion. This includes with the use of branding on packaging. In fact, the tobacco companies also claim that packaging has no role in advertising and promotion and that it has no impact on overall smoking rates. 
-                        </p>
-                        <p>
-                            This public position of the tobacco companies is contradicted by general marketing theory about the role of packaging as a medium for advertising and promotion. It has been rejected by courts around the world examining the issue. It is also contradicted by the internal industry documents that have been disclosed through litigation. 
-                        </p>
-                        <p>
-                            This Reference Section provides details about marketing theory, evidence about branding on tobacco packaging and evidence from historical internal industry documentation that provides fundamental support for the need for plain packaging of tobacco products.
-                        </p>
-
-                        <p>
-                            The tobacco industries’ position on whether packaging encourages smoking is set out in detail in <b>Reference Section J: Opposing Arguments (at 4.10)</b>.
-                            That section draws on tobacco company submissions to government consultations and their court pleadings in legal challenges to plain packaging in the UK.
-                            <b>Reference Section J</b>
-                            also contains the <span class="underline">counter arguments</span> to the tobacco industry position
-                        </p>
-                    </div>
-
-                    <div class="content-desc-cont col-lg-10 col-lg-offset-1">
-                        <div class="section-secondary-title fc-ref-mat-3">2. Marketing theory and the role of packaging</div>
-                        <h3 class="fc-ref-mat-3 sub-title">Tobacco packaging has a number of functions:</h3>
-                        <p>
-                            As well as containing and protecting a product, packaging assists consumers to identify brands and distinguishing between competing brands; encouraging consumers to switch brands; launching new brands and enabling tobacco manufacturers to build and maintain brand loyalty and command a premium price for its products<sup>1</sup>.
-                        </p>
-
-                        <p>
-                            <b>Japan Tobacco International</b> (JTI)in their response to the 2012 <i>Consultation on Standardised Packaging of Tobacco</i> in the UK, said:
-                        </p>
-                        <p class="indented italic">
-                            ‘In the UK’s system of undistorted competition, businesses must be in a position to communicate to their customers. The UK tobacco market is highly competitive.
-                            JTI invests and innovates in its packaging design and quality in order to compete with other products available to existing adult smokers. 
-                            <span class="underline">JTI and other companies, both within the tobacco sector and also in the context of other FMCGs<sup>2</sup>,  use product packaging in a myriad of ways,</span>
-                            and this scope for creativity motivates efforts to differentiate the product from others.’[emphasis added]
-                        </p>
-                        <p>
-                            The tobacco industry states that the packaging enables adults who want a particular product (i.e. tobacco) to make an informed decision about which brand to buy.
-                        </p>
-                        
-                        <h3 class="fc-ref-mat-3 sub-title">The advertising function of packaging:</h3>
-                        <p>
-                            In addition to the practical functions, research indicates that packaging is an important component of overall tobacco marketing strategy<sup>3</sup>.  Tobacco packaging has multiple functions for tobacco companies, beyond that of brand identification, navigation and selection. 
-                            <b>Tobacco packaging is used to promote the product using the same strategies employed by manufacturers of other consumer goods.</b>
-                            <br>&nbsp;<br>
-                            <img class="img-responsive center-block" width="450px" src="<?php echo $base_url; ?>img/ref-i/marketing slide.jpg">
-                            <br>&nbsp;<br>
-                        </p>
-
-                        <h3 class="fc-ref-mat-3 sub-title">The importance of packaging as part of the overall promotional mix is recognised in marketing literature:</h3>
-                        <p>
-                            Many of the standard marketing text books explain the importance of packaging as a key marketing tool.
-                        </p>
-                        <p>
-                            For example, in Marketing Management, Kotler and Keller argue that the packaging is the buyer’s first encounter with the product and that good packaging draws the consumer in and encourages product choice. In effect, packaging can act as <i>“five second commercials”</i> and is used to <i>“convey persuasive information”</i>.
-                            They also state that packaging updates and redesigns can have an immediate impact on sales<sup>4</sup>.
-                        </p>
-
-                        <p>
-                            Kotler and Keller highlight the importance of color on packaging and the associations and meanings that different colors generate in different market segments. They reproduce the ‘Color Wheel of Branding and Packaging’, which sets out for instance, that
-                            <i>“Red is a powerful color, symbolizing energy, passion or even danger”</i> and <i>“Green connotes cleanliness, freshness and renewal”</i>
-                            while <i>“White…connotes purity and cleanliness”<sup>5</sup>.</i>
-                            <br>&nbsp;<br>
-                            <img class="img-responsive center-block" width="450px" src="<?php echo $base_url; ?>img/ref-i/Kotler and Kelly.jpg">
-                            <br>&nbsp;<br>
-                        </p>
-
-                        <p>
-                            In Strategic Brand Management (a text book referred to as the ‘bible of branding’) Keller writes:
-                        </p>
-
-                        <p class="indented">
-                            <i>Structural packaging innovations can create a point-of-difference that permits a higher margin.</i>
-                            <b>
-                                New packages can also <span class="underline">expand a market</span> and capture new market segments. Packaging changes can have immediate impact on customer shopping behavior and sales…<sup>6</sup>
-                            </b>
-                        </p>
-
-                        <p>
-                            It is noteworthy that Professor Keller was used as an expert by PMI in its legal challenge to the UK plain packaging regulations. His evidence was largely unchallenged by the UK government and the Judge in that case found that elements of his report actually supported the case for plain packaging<sup>7</sup>.
-                        </p>
-
-                        <p>Palmer’s standard text book, The Principles of Marketing, states that packaging <i>‘act(s) as a promotional tool in its own right’<sup>8</sup>.</i></p>
-                        <p>Underwood and Ozanne write that the <i>‘product package is the communication life-blood of the firm’ or the ‘silent salesman that reaches out to customers’<sup>9</sup>.</i></p>
-                        
-                        <p>
-                            In studies of tobacco marketing, Ford et al. say that it has been suggested that packaging should be the fifth “p” of the marketing mix model as it is the only element of the marketing mix intertwined with all of the other “p’s” (product development, pricing, placement and distribution, promotion), and it plays a key role in all of these strategic marketing areas. Indeed, highlighting the importance attached to packaging, it is positioned as a standalone marketing mix element, the fifth “p”, for British American Tobacco<sup>10</sup>.
-                        </p>
-                        
-                        <h3 class="fc-ref-mat-3 sub-title">When tobacco advertising is prohibited, packaging becomes the primary means of marketing:</h3>
-                        <p>As a BAT marketing executive put it,</p>
-                        <p class="indented italic">
-                            “Our final communication vehicle with our smoker is the pack itself.In the absence of any other marketing messages, our packaging...is the sole communicator of our brand essence. Put another way—when you don’t have anything else—our packaging is our marketing.” <sup>11</sup>
-                        </p>
-                    </div>
-                    
-                    <div class="content-desc-cont col-lg-10 col-lg-offset-1">
-                        <div class="section-secondary-title fc-ref-mat-3">3. Why tobacco packaging is different to packaging for other consumer goods</div>
-                        <h3 class="fc-ref-mat-3 sub-title"> Tobacco packaging is defined as a “badge” product in tobacco industry marketing documents<sup>12</sup>:</h3>
-                        <p>
-                            Badge products enable elements of the brand image to be transferred to the user through public displays of the pack.  This is especially applicable to tobacco as smokers keep their packs close by and reveal them countless times every day. Such behaviours expose other consumers to the brand – something termed
-                            <i>‘incidental consumer brand encounters (ICBEs)’</i>
-                            by Ferraro, Bettman, and Chartrand (2009) <sup>13</sup>.
-                            These ICBEs can have a powerful influence on brand choice even when the consumer is unaware of being exposed to the brand <sup>14</sup>.
-                        </p>
-
-                        <p>
-                            Sir Cyril Chantler was provided evidence on tobacco being badge products during his evidence review.  He stated that
-                        </p>
-
-                        <p class="indented italic">
-                            ‘Public health experts argue that packaging of tobacco products is especially able to play a promotional role because unlike many other products, they are generally 
-                            <b>
-                                “constantly being taken out and opened, as well as being left on public display during use [and] in this way cigarette packaging can act as an advertisement” <sup>13</sup>.
-                            </b>
-                        </p>
-
-                        <br>&nbsp;<br>
-                        <img class="img-responsive center-block" width="450px" src="<?php echo $base_url; ?>img/ref-i/A57TPH.jpg"/>
-                        <br>&nbsp;<br>
-                        
-                        <p>In addition to public health experts, the tobacco industry has said a lot about the importance of tobacco packaging.  An employee of Brown and Williamson <sup>18</sup> is quoted as saying:</p>
-                        <p class="indented italic">
-                            ‘…if you smoke, a cigarette pack is one of the few things you use regularly that makes a statement about you. A cigarette pack is the only thing you take out of your pocket 20 times a day and lay out for everyone to see. That’s a lot different than buying your soap powder in generic packaging’ (1985).
-                        </p>
-
-                        <h3 class="fc-ref-mat-3 sub-title">Tobacco packaging serves as an integral component of tobacco marketing:</h3>
-                        <p>
-                            According to Professor Hammond-
-                        </p>
-
-                        <p class="indented italic">
-                            “…the pack provides a direct link be¬tween consumers and manufacturers, and is particularly important for consumer products such as cigarettes, which have a high degree of social visibility.  Unlike many other consumer products,
-                            <span class="underline">cigarette pack¬ages are displayed each time the product is used and are often left in pub¬lic view between uses.  As a result, both smokers and non-smokers report high levels of exposure to tobacco packaging…”<sup>17</sup> [emphasis added]</span>
-                        </p>
-                    </div>
-                    
-                    <div class="content-desc-cont col-lg-10 col-lg-offset-1">
-                        <div class="section-secondary-title fc-ref-mat-3">4. The relationship between branded packaging and tobacco consumption in young people</div>
-                        <h3 class="fc-ref-mat-3 sub-title">Evidence strongly indicates that tobacco advertising, marketing and promotion  influences youth smoking:</h3>
-                        <p>
-                            In 2009, the Public Health Research Consortium (PHRC) in the UK published a review of young people and smoking <sup>19</sup>.
-                            The review found that the onset of smoking is a function of individual factors (e.g. self image), social and community factors (e.g. family circumstances) and societal factors (e.g. tobacco marketing). Interventions therefore need to address all these domains.
-                        </p>
-                        <p>
-                            One of the conclusions of the PHRC’s review was that <span class="italic bold">‘tobacco marketing continues to be a major problem.Notwithstanding the proven success of the Tobacco Advertising and Promotion [laws], tobacco brands are still influencing youth smoking.</span>
-                            <i>
-                                The key remaining transmitters of this branding are point of sale (PoS) presence and the pack’… 
-                            </i>
-                            The review found that tobacco industry is exploiting the pack as a medium for advertising the product and reinforcing the brand. It was concluded that generic packaging is an essential next step (PHRC 2009).  
-                        </p>
-
-                        <p>
-                            The Chantler Review <sup>20</sup>
-                            has an entire section devoted to reviewing the evidence on the question
-                            <i>‘Does branded packaging promote tobacco consumption, especially by encouraging children to take up smoking?’</i>
-                        </p>
-
-                        <p>His conclusion is that packaging does act as one of the factors encouraging young people to take up smoking:</p>
-
-                        <p class="indented italic">‘In my opinion, 
-                            <b>the balance of evidence suggests that the appeal of branded packaging acts as one of the factors encouraging children and young adults to experiment with tobacco and to establish and continue a habit of smoking.</b>
-                            As British American Tobacco Australia’s spokesman acknowledged in our meeting, tobacco companies, like other consumer goods companies, see branded packaging as one of the tools of marketing. This is supported by numerous internal tobacco industry documents. Although the tobacco industry says that the purpose of branded packaging is to encourage brand switching only, they cannot explain how it would only ever attract switchers from one brand to another, and would never encourage initiation from non-smokers or increased overall consumption. Further, they have not been able to explain why, given that advertising and promotion are proven to increase tobacco consumption, the related marketing tool of branded packaging (referred to by Japan Tobacco International’s counsel against the Australian Government as their mobile “billboard”) should so differ in its effect.’
-                        </p>
-
-                        <p>
-                            He describes the evidence regarding the tobacco industry’s attempts to make packaging appeal to different sections of the population, including young adults, and considers that a “spillover” effect is likely:
-                        </p>
-
-                        <p class="indented italic">
-                            ‘I have seen considerable evidence of tobacco companies carrying out market research on all aspects of packaging (e.g. colour, size, shape and opening) to make it appeal to various target groups of young adults. In my opinion a “spillover effect” (as described by tobacco control experts) is extremely plausible, whereby packages that are meticulously designed to appeal to, say, an 18 year old, are highly likely to appeal to a 16 year old. Because 16 year olds look up to 18 year olds and want to emulate them, in my view it is not possible to design packages in such a way as to appeal solely to one group without also appealing to the other. Research looking at the link between branded and innovative packaging and childhood and young adulthood smoking susceptibility bears this out, describing an “inevitable knock on effect” of targeting product design at young adults.’
-                        </p>
-                        
-                        <div class="graph-img">
-                            <img class="img-responsive center-block" width="450px" src="<?php echo $base_url; ?>img/ref-i/girl-with-tobacco-1024x738.jpg"/>
-                            <p class="description">
-                                Young girl with a packet of chewing gum and a packet of cigarettes.
-                                Which is which?  The spill over effect is clear.
-                            </p>
-                        </div>
-
-                        <p>
-                            The involvement of tobacco companies in orientating marketing activities towards young people in the United States is described by Kaufman et al: 
-                        </p>
-
-                        <p class="indented italic">
-                            ‘The tobacco industry states that its purpose in tobacco marketing is to maintain brand loyalty and not to encourage adolescent smoking, arguing that susceptibility to cigarette use is chiefly the result of influence by family members and/or peers.  The documents released as a result of the Minnesota lawsuit and the Master Settlement Agreement between state attorneys general and the tobacco companies confirm that the tobacco industry cultivated the youth market. These documents reflect the tobacco industry's recognition of the 14 to 18-year-old consumers as a growing segment of the smoking population critical to the industry's long-term performance and profitability (2002).’ <sup>21</sup>
-                        </p>
-
-                        <p>
-                            On tobacco promotion and packaging, the US Surgeon General summarised evidence in 2012 and 2014 and concluded that
-                        </p>
-
-                        <p class="indented italic">
-                            ‘The evidence is sufficient to conclude that advertising and promotional activities by the tobacco companies cause the onset and continuation of smoking among adolescents and young adults.’
-                        </p>
-
-                        <p>
-                            Chantler believes that the evidence shows that, more specifically, branding can influence consumption of goods:
-                        </p>
-
-                        <p class="indented italic">
-                            ‘I find it significant that <b>in other consumer goods markets, where children can safely be allowed to participate in experiments, it has been proven that appealing branding does influence consumption.</b>
-                            Clearly, given the risks even of being exposed to tobacco marketing, let alone experimenting with smoking, it would never be possible to gain ethical consent for similar experiments with tobacco products. However, lessons can be learned from the experiments that have taken place in different contexts.’
-                        </p>
-
-                        <p>
-                            Kaufman et al. found that exposure to tobacco advertising and promotion not only increases an adolescent's knowledge of cigarettes, but also increases susceptibility to tobacco use and the likelihood of experimentation and initiation <sup>23</sup>.
-                        </p>
-
-                        <p>
-                            Moodie et al <sup>24</sup>. summarise the different research undertaken on tobacco advertising and smoking uptake by young people, and found that:
-                        </p>
-
-                        <p class="indented italic">
-                            ‘Although, the tobacco industry vehemently denies targeting young people, internal tobacco industry documents from the United Kingdom, United States and Taiwan reveal that it does, and indeed that tobacco companies depend on the youth smoking market for their long-term survival.  Research has consistently revealed that tobacco advertising and promotion increases the likelihood that adolescents will start to smoke,
-                            <b>
-                                , …Furthermore, we know that tobacco branding is continuing to drive UK teen smoking even after [the advertising ban] 
-                            </b>
-                            (2008).’
-                        </p>
-
-                        <p>
-                            Conventional tobacco advertising is banned in the many countries in line with the FCTC Article 11. Branded packaging is therefore used by the tobacco industry to communicate information about consumers.  According to Chantler:
-                        </p>
-
-                        <p class="indented italic">
-                            ‘Branded packaging is seen by the industry as an important way to communicate the quality and product characteristics to consumers, to encourage smokers to maintain their identification with their chosen brand. This appears to be particularly important in the absence of advertising or point of sale display. This is borne out by legal representatives of Japan Tobacco International in proceedings in the Australian High Court, stating that the Commonwealth “is acquiring our billboard, your Honour, in effect” <sup>25</sup>.
-                        </p>
-
-                        <p>
-                            The evidence review prepared for the Irish Department of Health by Professor Hammond <sup>26</sup> also concluded that:
-                        </p>
-
-                        <p class="indented italic">
-                            <b>
-                                ‘Packaging has a powerful influence in establishing brand imagery and promoting appeal among youth and young adults – the critical period when the vast majority of smoking initiation occurs.
-                            </b>
-                            Corporate documents from tobacco companies indicate that packages have been designed to appeal to “starters” as part of a deliberate marketing strategy to recruit new smokers. The evidence indicates that “plain” packaging is unequivocally less appealing and less socially desirable to youth and young adults. Plain packaging is also associated with less positive brand imagery, including smoker traits, such as cool, stylish, thin, as well as less desirable product associations.’
-                        </p>
-                    </div>
-                    
-                    <div class="content-desc-cont col-lg-10 col-lg-offset-1">
-                        <div class="section-secondary-title fc-ref-mat-3">5. Plain packaging ‘de-normalises’ smoking</div>
-
-                        <p>If smoking is seen by young people as a normal part of everyday life, they are much more likely to become smokers themselves.</p>
-                        
-                        <p>
-                            In its 2008 Board of Science Report Forever Cool, <sup>27</sup> the BMA suggests that:
-                        </p>
-
-                        <p class="indented italic">
-                            ‘The way tobacco is perceived and how this integrates with self image is a crucial determinant of youth smoking. With the exception of tobacco marketing, these influences are often subtle and unintentional.  The combination of circumstances prevails to create an environment in which both the prevalence and acceptability of smoking become exaggerated and eases the transition into the habit.’
-                        </p>
-
-                        <p>
-                            Social norms are also suggested by the US Surgeon General as being important in influencing smoking by young people:
-                        </p>
-
-                        <p class="indented italic">
-                            ‘Peer influences; imagery and messages that por¬tray tobacco use as a desirable activity; and environmental cues, including those in both traditional and emerging media platforms, all encourage young people to use tobacco. These influences help attract youth to tobacco use and reinforce the perception that smoking and various forms of tobacco use are a social norm—a particularly strong message during adolescence and young adulthood (2012).’
-                        </p>
-
-                        <p>
-                            The benefits of shaping social norms on smoking could be dramatic, with research suggesting that if the average individual’s views on the social acceptability of smoking changed to more closely resemble the views of Californian residents, <sup>28</sup>
-                            there would be a 15 per cent drop in cigarette consumption (Alamar et al. 2006) <sup>29</sup>.
-                        </p>
-
-                        <p>
-                            Hoek et al. define “denormalisation” and discuss how standardised packaging could be an element of such a strategy:
-                        </p>
-
-                        <p class="indented italic">
-                            ‘…tobacco “denormalisation”, exposes tobacco as a toxic product peddled by an unscrupulous industry and undermines the social cachet of smoking.  Denormalisation reframes smoking as socially unacceptable and challenges the connotations of glamour, sophistication and ruggedness that tobacco brands have used to attract young people.  Over time, denormalisaton reduces smoking’s aspirational attributes, undermines the value tobacco brands deliver to smokers and reduces tobacco consumption.
-                        </p>
-
-                        <p class="indented italic">
-                            Plain packaging extends this approach by moving beyond smokefree social marketing campaigns to focus directly on tobacco packages, which represent a tangible symbol the emotional benefits smokers derive from “their” brand.  These measures reflect increased knowledge of the role that packaging plays in promoting smoking, the meticulous research undertaken into branding by tobacco companies, and the tobacco industry’s growing reliance on packaging as a promotion as traditional mass media becomes more restricted (2012).’ <sup>30</sup>
-                        </p>
-                    </div>
-                    
-                    <div class="content-desc-cont col-lg-10 col-lg-offset-1">
-                        <div class="section-secondary-title fc-ref-mat-3">6. Packaging and smokers’ identity</div>
-                        <p class="sub-title">
-                            Branding enables tobacco manufacturers to sell status, social acceptance and glamour, rather than a mere nicotine delivery device:
-                        </p>
-
-                        <p>
-                            Marketing and retail academics, and packaging experts, have shown how packaging can heighten product appeal, create positive impressions, make emotional connections, influence product perceptions and choice within the store, aid purchase decisions and help “drive the sale” <sup>31</sup>.
-                        </p>
-
-                        <p>
-                            Marketing theory explains how brands function by linking aspirations, attributes and values to products and services, which consumers buy as much for their symbolic value as for their utility.  Smokers use the symbols and imagery evoked by brand attributes to construct and communicate an identity. 
-                        </p>
-
-                        <p class="sub-title">
-                            Analysis of tobacco industry documents highlight the crucial importance of branding on packaging as a medium to communicate brand attributes:
-                        </p>
-
-                        <p>
-                            Cigarette packets are meticulously researched and designed, their livery reassures smokers about the risk and their brand imagery reinforces smokers’ self-image.  Tobacco packaging thus ensures smokers and potential smokers receive messages that promote smoking. <sup>32</sup>
-                            Other industry documents reveal the importance of creating favourable brand image, with one document setting out that 
-                            <i>
-                                ‘In the cigarette category brand image is everything. The brand of cigarettes a person smokes is their identity. Cigarettes tell others who they are as a person’. <sup>33</sup>
-                            </i>
-                        </p>
-                        <br>&nbsp;<br>
-
-                        <img class="img-responsive center-block" width="450px" src="<?php echo $base_url; ?>img/ref-i/original_416315_Nx5du0LJXT2nrVDTCVL1Cv64R.jpg"/>
-                        <div class="graph-img">
-                            <img width="300px" height="320" src="<?php echo $base_url; ?>img/ref-i/B&H slide 1.jpg"/>
-                            <img width="300px" height="320" src="<?php echo $base_url; ?>img/ref-i/B&H slide 3.jpg"/>
-                            <img width="300px" height="320" src="<?php echo $base_url; ?>img/ref-i/B&H slide 2.jpg"/>
-                            <p class="description">
-                                JTI’s Glamour super slims cigarettes and B&H slide packs from Austria 2012-2014 demonstrate the use of brand imagery on packs to sell social status
-                            </p>
-                        </div>
-                        <br>&nbsp;<br>
-
-                        <p>
-                            As tobacco is a relatively homogeneous market with little functional difference between cigarette products, branding is strategically important as the predominant means of product differentiation.  Pack designs are created to facilitate the adding of value to brands, primarily through the use of imagery and association.  Things like pack opening, size, shape and graphic design are aimed at communicating to the market the type of customer you imagine would smoke a certain brand. <sup>34</sup>
-                            Brand choice has little to do with the actual cigarette, but with linking the cigarette to the aspirations of the smoker or potential smoker.<sup>35</sup>
-                        </p>
-
-                        <p>
-                            Quantitative research from Australia has recently confirmed that reducing strong brand identity can lead to reduced smoking behaviours. A study of 178  Australian smokers rated their sense of identification with fellow smokers of their brand, positive brand stereotypes, quitting behaviours and intentions, and smoking intensity, both before and seven months after the implementation of plain packaging. Analyses showed that smokers, especially those who initially identified strongly with their brand, experienced a significant decrease in their brand identity following the introduction of plain packaging and this was associated with lower smoking behaviours and increased intentions to quit. The findings provide the first quantitative evidence that brand identities may help maintain smoking behaviour.<sup>36</sup>
-                        </p>
-                    </div>
-                    
-                    <div class="content-desc-cont col-lg-10 col-lg-offset-1">
-                        <div class="section-secondary-title fc-ref-mat-3">7.  Branding on tobacco packaging is intended to mislead consumers</div>
-                        <p>
-                            Tobacco companies have made extensive use of tobacco packaging to convey misleading information about the relative harms of different brands. The use of descriptors such as ‘light’, ‘mild’ and ‘low tar’and how this misleads consumers have been reviewed and extensively documented. <sup>37</sup>
-                            Equally well known is that ‘lower tar’ cigarettes are not actually lower in tar but cause the same harms as regular cigarettes. These health reassurance brands have the psychological effect of convincing smokers that they are less harmful leading to them swopping brand instead of making quit attempts.  The FCTC Article 11.1(a) requires parties to ensure that packaging does not mislead or create erroneous impressions and recommends banning those terms – to date at least 79 countries have prohibited descriptors such as ‘light’,‘mild’ and ‘low tar’. <sup>38</sup>
-                        </p>
-
-                        <p>
-                            However, research in Australia and the UK, where these terms have been prohibited, suggests only modest benefits in reducing false beliefs about the risks of different cigarette brands. <sup>39</sup>
-                            This marginal impact is likely due to greater colour segmentation and the substitution of other misleading terms such as ‘smooth’.
-                        </p>
-
-                        <img class="img-responsive center-block"  src="<?php echo $base_url; ?>img/ref-i/marlboro lights.png"/>
-                        
-                        <br>&nbsp;<br>
-                        <p>
-                            It is also well documented that when countries have banned misleading descriptors such as ‘light’ and ‘mild’ these brand variants were replaced with color descriptors such as ‘gold’ and ‘silver’ with the pack colors and branding remaining identical
-                        </p>
-                        
-                        <img class="img-responsive center-block" width="400" src="<?php echo $base_url; ?>img/ref-i/JTI descriptors booklet.png"/>
-                        <br>&nbsp;<br>
-                        
-                        <p class="italic">
-                             “It’s very difficult for people to discriminate blind-tested. Put it in a package and put a name on it, then it has a lot of product characteristics.” <sup>11</sup>
-                        </p>
-
-                        <p>
-                            A booklet distributed by Philip Morris’ Canadian subsidiary, JTI Macdonald, similarlydescribes the replacement descriptors following the ban in Canada. The page shown here described how the banned term “Lights” on the Camel and Winston brands would be replaced by“Blue” with no other change to the overall branding.
-                        </p>
-
-                        <h3 class="fc-ref-mat-3 sub-title">
-                            Pack color is used to mislead consumers about the harms of tobacco.
-                        </h3>
-                        <p>
-                            Industry documents describe the specific importance of pack colour in shaping consumer perceptions of risk.For example, BAT’s Research & Development group summarized principles for effective pack design and noted that:
-                        </p>
-
-                        <p class="indented italic">
-                            “Lower delivery products tend to be featured in blue packs. Indeed, as one moves down the delivery sector then the closer to white a pack tends to become. This is because white is generally held to convey a clean, healthy association.” <sup>41</sup>
-                        </p>
-
-                        <p>
-                            Different shades of the same colour and the proportion of ‘white space’ on the package are commonly used to manipulate perceptions of a product’s relative strength and potential risk. 
-                        </p>
-
-                        <p>
-                            Industry research demonstrates that the color and design of the package are so effective that they even influence sensory perceptions from smoking a cigarette. For example, when consumers smoke cigarettes placed in lighter-coloured packs, they perceive these cigarettes to taste “lighter” and less harsh than the same cigarettes presented in darker-coloured packs. <sup>42</sup>
-                        </p>
-
-                        <h3 class="fc-ref-mat-3 sub-title">
-                            Anchor Brands
-                        </h3>
-
-                        <p>
-                            Extensive research on ‘anchoring’ shows that the presence of an anchor brand againstwhich brand variants can be compared (either physically or in people’s minds) leads todistortions in perception and judgment <sup>43</sup>.
-                            For instance thepresence of fried cheese bites as an anchor leads people to judge a cheeseburger as a morehealthy option because it benefits from a contrast effect. Brand variants such asMarlboro “Blue” and “Gold” are contrasted against the parent brand/anchor Marlboro “Red” andare incorrectly seen as lower risk products. Therefore, the presence of a full flavor/higher tar parent brand together with itsbrand variants (positioned to be at lower risk on a health continuum) strongly promotesincreased, and false, health reassurance due to contrast-based distortions in perception andjudgment.
-                        </p>
-
-                        <img class="img-responsive center-block" width="400" src="<?php echo $base_url; ?>img/ref-i/marlboro family.jpg"/>
-                    </div>
-                    
-
-                    <div class="content-desc-cont col-lg-10 col-lg-offset-1">
-                        <div class="section-secondary-title fc-ref-mat-3">8.  Does tobacco packaging encourage smoking? The tobacco industry’s view</div>
-                        <p>
-                            The tobacco industries’ position on whether packaging encourages smoking is set out in detail in 
-                            <b>
-                                Reference Section J: Opposing Arguments (at 4.10). 
-                            </b>
-                            That section draws ontobacco company submissions to government consultations and their court pleadings in legal challenges to plain packaging in the UK.
-                            <b>Reference Section J</b>
-                            also contains the counter arguments to the tobacco industry position. 
-                        </p>
-
-                        <p>
-                            In brief, the tobacco industry claims not to target children or non-smokers with their advertising and promotion. The tobacco companies also state that packaging has no role in advertising and promotion. 
-                        </p>
-
-                        <p>
-                            They seek to blur or ignore the overwhelming view of marketing theory and evidence that advertising and marketing affects overall consumption of a product.  The tobacco companies take this view publicly despite all the disclosed internal tobacco industry documents that demonstrates a contrary view is held within the companies (see part 9 below).
-                        </p>
-
-                        <p>
-                            Tobacco companies argue that branding on packaging only promotes <i>brand switching</i> 
-                            by current smokers and has no effect on overall primary demand.They state that branded packaging does not cause people to start or continue smoking
-                        </p>
-
-                        <p>
-                            The tobacco industry claims that there is evidence that factors other than branded packaging are the real drivers of smoking initiation.
-                        </p>
-
-                        <p>
-                            The tobacco companies’ position on branding has been rejected by courts in many countries. Most recently in the UK by the High Court judge hearing the legal challenge to plain packaging regulations. He stated:
-                        </p>
-
-                        <p class="indented italic">
-                            <b>
-                                “This argument is unsustainable.
-                            </b>
-
-                            is not possible to design a product to appeal to adults (over 18s) without appealing, even inadvertently, to children. A number of the tobacco companies have strenuously denied that they target their product on children or even that they are interested in the impact of tobacco on children. But the Government medical advisers all say that, targeted or not, the lure to children remains strong and this is plain and obvious to the manufacturers.” <sup>44</sup>
-                        </p>
-                        
-                        <div class="graph-img">
-                            <img class="img-responsive center-block" width="500" src="<?php echo $base_url; ?>img/ref-i/20160508_065630.jpg"/>
-                            <p class="description">
-                                Displays of attractive tobacco packaging act as advertisements and are regularly and deliberately positioned adjacent to confectionary and toys in retail outlets and airport duty free stores. 
-                            </p>
+                        <div class="section-margin-top-25 section-title fc-ref-mat-3">Branding on tobacco packaging and
+                            its impacts on smoking behaviour
                         </div>
                     </div>
-                    
-                    <div class="content-desc-cont col-lg-10 col-lg-offset-1">
-                        <div class="section-secondary-title fc-ref-mat-3">9. Tobacco Industry documents: the importance of packaging in promotingtobacco</div>
-                    
-                        <h3 class="fc-ref-mat-3 sub-title">
-                            Internal tobacco company documents provide consistent, unambiguous evidence that packaging is an effective tool to recruit new smokers:
-                        </h3>
 
-                        <p>
-                            Millions of these “internal” documents have been released through court disclosure requirements in various legal proceedingsover the past 20 years. Most documents span the period from the 1950’s through 2009, and represent an important source of information on business practices, marketing strategies, and internal research and development activities. These documents provide evidence that packaging is an effective promotional tool for communicating brand imagery and are intended to be part of the mix of promotional activity designed to recruit new smokers.
-                        </p>
-
-                        <p>
-                            Extensive research has been undertaken by academics into the evidence from the tobacco industry. A published review by Cummings et al of such documents concluded: 
-                        </p>
-
-                        <p class="indented italic">
-                            Industry documents show that the cigarette manufacturers carefully monitored the smoking habits of teenagers over the past several decades. Candid quotes from industry executives refer to youth as a source of sales and as fundamental to the survival of the tobacco industry. The documents reveal that the features of cigarette brands (that is, use of filters, low tar, bland taste, etc) packaging (that is, size, colour and design), and advertising (that is, media placements and themes and imagery) were developed specifically to appeal to new smokers (that is, teenagers). Evidence also indicates that relevant youth oriented marketing documents may have been destroyed and that the language used in some of the more recent documents may have been sanitised to cover up efforts to market to youth. <sup>43</sup>
-                        </p>
-                        
-                        <h3 class="fc-ref-mat-3 sub-title">
-                            9.1 Professor Hammond’s review of tobacco industry evidence
-                        </h3>
-
-                        <p>
-                            Professor Hammond of the University of Waterloo produced a report commissioned by the Irish Department of Health
-                            <i>
-                                Standardized packaging of tobacco products: Evidence review
-                            </i>
-                            (March 2014), which includes the results of research into these industry documents. This research highlights that the tobacco industry knew that packaging was a highly effective marketing tool to attract new smokers, especially young people.
-                        </p>
-
-                        <p>
-                            The following is an extract from Professor Hammond’s review (emphasis added in bold). The full report is available here: 
-                        </p>
-
-                        <p>
-                            <a href="http://health.gov.ie/wp-content/uploads/2014/06/2014-Ireland-Plain-Pack-Main-Report-Final-Report-July-26.pdf">http://health.gov.ie/wp-content/uploads/2014/06/2014-Ireland-Plain-Pack-Main-Report-Final-Report-July-26.pdf</a>
-                        </p>
-
-                        <p class="indented">
-                            Packaging is an important component of the overall marketing strategy for consumer goods. <sup>i</sup>
-                            Packaging is particularly important for consumer products with a high degree of social visibility, such as cigarettes. Unlike many other consumer products, cigarettes are contained in packages that are displayed each time the product is used and are often left in public view between uses. <sup>ii</sup>
-                        </p>
-
-                        <p>
-                            <b>
-                                Tobacco industry research and marketing documents unequivocally demonstrate the importance of tobacco packaging as a marketing tool. <sup>iii</sup>
-                                 For example, a recent presentation to global investors identified packaging and limited edition packs as a key component of industry innovation and growth. <sup>iv</sup>
-                                 A variety of documents also discuss packaging within the context of recruiting new smokers. <sup>v</sup>
-                                 For example, a summary of consumer product testing prepared by Philip Morris stated:
-                                 <b>
-                                     “Advertising, packaging, price can get people to try a product…” <sup>vi</sup>
-                                 </b>
-                                 A review of marketing for <i>Marlboro Red and Marlboro Lights</i>
-                                 highlights the role of packaging in brand communication, as well as how
-                                 <b>packaging strategies can help address challenges in recruiting more “starters”</b> <sup>vii</sup>
-                            </b>
-                        </p>
-
-                        <p>
-                            Corporate documents indicate that the importance of packaging increases in jurisdictions with comprehensive advertising and marketing restrictions, such as [Australia, Ireland, France or the UK]. <sup>viii</sup>
-                            As a BAT marketing executive put it, “Our finalcommunication vehicle with our smoker is the pack itself.” <sup>ix</sup>
-                        </p>
-
-                        <p>
-                            A BAT internal review of trends in cigarette packaging in the 1990’s predicted that: 
-                            <b>
-                                “Advertising and promotion bans and restrictions will rapidly increase. The pack will increasingly become the main communicator.”
-                            </b> <sup>x</sup>
-                            An earlier BAT document from 1979 on new opportunities in marketing elaborated:
-                        </p>
-
-                        <p class="indented italic">
-                            Under conditions of total ban, pack designs and the brand house and company 'livery' have enormous importance in reminding and reassuring the smokers. Therefore the most effective symbols, designs, colour schemes, graphics and other brand identifiers should be carefully researched so as to find out which best convey the elements of goodwill and image. Where necessary, new designs must be created and tested so as to enhance and complement the identifiers. An objective should be to enable packs, by themselves, to convey the total product message. <sup>xi</sup>
-                        </p>
-
-                        <p>
-                            A 1987 summary of Philip Morris’ “International Social Acceptability Research” program also highlights the growing importance of packaging as a promotional tool:
-                        </p>
-
-                        <p class="indented italic">
-                            The following key elements are of prime importance in the enhancement of the smoker’s self-perceptions: the package, including brand name, logo, colour, design, crest, box, soft pack, etc….
-                            <b>
-                                As media restrictions continue to increase in many major world markets, our packaging becomes increasingly important as: a vehicle for communication, a statement about the smoker’s personality and lifestyle, an expression of social acceptability. <sup>xii</sup>
-                            </b>
-                        </p>
-
-                        <p>
-                            [Tobacco packaging plays a fundamental role in communicating brand imagery]. For example, a confidential document from BAT’s Group Research & Development Centre, describes the central role of the pack in conveying brand imagery:
-                        </p>
-
-                        <p class="indented italic">
-                            Historically, <b>cigarette pack design has assumed a great deal of importance in the marketing process. This is because brand imagery is salient in the mind of the consumer</b>
-                            …. Much of the imagery has traditionally been developed through advertising. However, it has been understood that this imagery must be carried right through to the brand… The main focus of attention, therefore, has been on the pack which carries the product. <sup>xiii</sup>
-                        </p>
-
-                        <p>
-                            <b>
-                                Brand imagery is particularly important in targeting youth and young adults.
-                            </b>
-                            . In many cases, initial brand preferences are based less on the sensory properties of using the product than on perceptions of the package and brand: 
-                        </p>
-
-                        <p class="indented italic">
-                            …one of every two smokers is not able to distinguish in blind (masked) tests between similar cigarettes.…for most smokers and for the decisive group of new, younger smokers, the consumer’s choice is dictated more by psychological, image factors than by relatively minor differences in smoking characteristics.(p.5) <sup>xiv</sup>
-                        </p>
-
-                        <p>
-                            Tobacco company research indicates that brand imagery is critical to segmenting brands and targeting sub-groups, such as young women. <sup>xv</sup>
-                        </p>
-
-                        <p class="indented italic">
-                            As in previous studies, the pack generated a very positive response from respondents. They praised it for its delicate prettiness and its classy femininity. And they were attracted to its “simple” and “clean” design…. The slim size of the pack was generally seen as clear benefit: it fits a woman’s hand better and takes up less room in her purse…. User Imagery: After viewing the pack and carton, respondents tended to develop the same general user imagery that has been found in previous studies. They see Capri as a cigarette that is unambiguously for women….But when asked for specific imagery, they tend to imagine the typical Capri smokers as… tasteful and fashion-conscious,…confident and independent. <sup>xvi</sup>
-                        </p>
-
-                        <p>
-                            Colour is among the most important packaging attributes for establishing brand imagery. Tobacco companies conduct extensive market research on the effect of colours. For exam¬ple, silver and gold colours can be used to convey status and prestige, particularly for “premium” brands. <sup>xvii</sup>
-                            Red packages and logos can convey excitement, strength, wealth, and power, whereas pastel colours are associated with freshness, innocence, and relaxation, and are more common among brands that appeal to females. <sup>xviii</sup>
-                        </p>
-                    </div>
-                    
-                    <div class="content-desc-cont col-lg-10 col-lg-offset-1">
-                        <div class="section-secondary-title fc-ref-mat-3">10. Conclusions and further resources</div>
-                        <p>
-                            A useful and comprehensive study (by Cancer Council Victoria) of tobacco packaging in Australia before plain packaging was introduced explores the concept of packaging as a promotional tool and describes trends in the packaging of cigarettes and other tobacco products.
-                        </p>
-
-                        <p>
-                            <b>
-                                Packaging as promotion. In Tobacco in Australia: Facts and issues.
-                            </b> <sup>64</sup> Available from:
-
-                            <a href="http://www.tobaccoinaustralia.org.au/chapter-11-advertising/11-10-tobacco-display-as-advertising1">http://www.tobaccoinaustralia.org.au/chapter-11-advertising/11-10-tobacco-display-as-advertising1</a>
-                        </p>
-
-                        <p>
-                            There is sound evidence from wider marketing literature regarding the role of packaging in the promotion strategy for any consumer good. Evidence suggests that packaging and branding work hand in hand.  Marketing theory explains how brands function by linking aspirations, attributes and values to products and services, which consumers buy as much for their symbolic value as for their utility.
-                        </p>
-
-                        <p>
-                            Tobacco packaging is different to packaging for other consumer goods.  Tobacco packs are carried around by smokers and are on regular display.  This makes the pack both a mobile advertisement as well as making a statement about the person that carries and shows it.
-                        </p>
-
-                        <p>
-                            For tobacco, packaging is now a vital way for tobacco companies to promote their products as legislation in many countries prohibiting tobacco advertising and promotion has closed down other promotional avenues.  Tobacco companies have introduced many more brands variants once tobacco advertising bans are in place and it is said that they have invested a great deal in bringing innovative and attractive packaging to the market.  Tobacco companies contest this view, however, arguing that this is a known feature of consumer goods where the market is 
-                            <i>
-                                ‘mature, saturated and declining.’
-                            </i>
-                            Tobacco companies also strongly argue that the branding on packaging is aimed at encouraging existing smokers to switch brands and that there is no evidence that it has any effect on initial take up.
-                        </p>
-
-                        <p>
-                            Despite the vast sums of money invested in brands and packaging, the tobacco industry will continue to deny that packaging and branding has any effect on overall smoking rates; claim that the only purpose of branding is to identify and distinguish a product; andbranding only has an impact on market share. 
-                        </p>
-                    </div>
                 </div>
             </section>
 
@@ -7466,9 +8853,8 @@ function nav_content($menu,$var = null)
             break;
 
         // k legal issues
-        case 'legal-issues': 
-            if ($var == 'og_desc')
-            {
+        case 'legal-issues':
+            if ($var == 'og_desc') {
                 $og_desc = 'This Toolkit is intended to provide governments and civil society organizations with the resources to ensure that tobacco product plain packaging legislation is robust and can stand against any legal challenge from the tobacco industry. Following the recommended steps outlined in this Toolkit should lead to a strong, defendable law. Nevertheless, government officials need to be aware of the legal arguments that the industry use to challenge the laws and be prepared for the risks of a legal challenge.';
                 return $og_desc;
             }
@@ -7500,51 +8886,79 @@ function nav_content($menu,$var = null)
                         <div>
                             <div class="section-secondary-title fc-ref-mat-4">1. Introduction</div>
                             <p>
-                                <b>The tobacco industry legal challenges to plain packaging have all so far been defeated</b>. Despite this, the tobacco companies continue to assert aggressively that plain packaging is unlawful in every country that considers the policy.
+                                <b>The tobacco industry legal challenges to plain packaging have all so far been
+                                    defeated</b>. Despite this, the tobacco companies continue to assert aggressively
+                                that plain packaging is unlawful in every country that considers the policy.
                             </p>
                             <p>
-                                This Toolkit is intended to provide governments and civil society organizations with the resources to ensure that tobacco product plain packaging legislation is robust and can stand against any legal challenge from the tobacco industry. Following the recommended steps outlined in this Toolkit should lead to a strong, defendable law. Nevertheless, government officials need to be aware of the legal arguments that the industry use to challenge the laws and be prepared for the risks of a legal challenge.
+                                This Toolkit is intended to provide governments and civil society organizations with the
+                                resources to ensure that tobacco product plain packaging legislation is robust and can
+                                stand against any legal challenge from the tobacco industry. Following the recommended
+                                steps outlined in this Toolkit should lead to a strong, defendable law. Nevertheless,
+                                government officials need to be aware of the legal arguments that the industry use to
+                                challenge the laws and be prepared for the risks of a legal challenge.
                             </p>
-        
-                            <ul class="no-list-style">
-                                <li>
-                                    <p>
-                                        <b>National courts</b>: Legal challenges have been commenced, and dismissed, in the domestic courts of most of the countries that have adopted plain packaging laws including Australia, the UK, Ireland and France. 
-                                    </p>
-                                </li>
-                                <li>
-                                    <p>
-                                        <b>Regional courts</b>: A legal challenge to the European Union’s Tobacco Products Directive (TPD), dismissed in May 2016, included a claim against the provision in the TPD that permitted Member States to adopt plain packaging if they choose to. 
-                                    </p>
-                                </li>
-                                <li>
-                                    <p>
-                                        <b>International courts</b>: An international investment arbitration claim brought by Philip Morris against Australia was dismissed by the Tribunal in December 2015. A World Trade Organization complaint brought by 4 countries against Australia is awaiting the panel’s ruling. 
-                                    </p>
-                                </li>
-                            </ul>
-                            
-                            <p>Despite these very clear court rulings upholding plain packaging legislation around the world, the tobacco companies continue to argue that the legislation is unlawful:</p>
 
                             <ul class="no-list-style">
                                 <li>
                                     <p>
-                                        <b>British American Tobacco’</b>s website states that plain packaging is “Legislation that we believe is ineffective and unlawful”<sup>1</sup>. 
+                                        <b>National courts</b>: Legal challenges have been commenced, and dismissed, in
+                                        the domestic courts of most of the countries that have adopted plain packaging
+                                        laws including Australia, the UK, Ireland and France.
                                     </p>
                                 </li>
                                 <li>
                                     <p>
-                                        <b>Japan Tobacco International’</b>s website states that “plain packaging would infringe JTI's fundamental legal rights to property, expression and trade – without justification. These rights are protected by Constitutions, international trade treaties, intellectual property laws, bilateral investment treaties, and national laws.”<sup>2</sup>.
+                                        <b>Regional courts</b>: A legal challenge to the European Union’s Tobacco
+                                        Products Directive (TPD), dismissed in May 2016, included a claim against the
+                                        provision in the TPD that permitted Member States to adopt plain packaging if
+                                        they choose to.
                                     </p>
                                 </li>
                                 <li>
                                     <p>
-                                        <b>Philip Morris International</b>, in response to the tribunal’s ruling dismissing the investment arbitration claim, stated: “There is nothing in today’s outcome that addresses, let alone validates, plain packaging in Australia or anywhere else”<sup>3</sup>
+                                        <b>International courts</b>: An international investment arbitration claim
+                                        brought by Philip Morris against Australia was dismissed by the Tribunal in
+                                        December 2015. A World Trade Organization complaint brought by 4 countries
+                                        against Australia is awaiting the panel’s ruling.
                                     </p>
                                 </li>
                             </ul>
 
-                            <p>For policy or health officials, these issues can appear to be complex and daunting at first glance. These pages try to set them out in readily comprehensible terms. However, assistance is also available from the CTFK International Legal Consortium to help state officials understand these issues or respond to tobacco industry threats and allegations.</p>
+                            <p>Despite these very clear court rulings upholding plain packaging legislation around the
+                                world, the tobacco companies continue to argue that the legislation is unlawful:</p>
+
+                            <ul class="no-list-style">
+                                <li>
+                                    <p>
+                                        <b>British American Tobacco’</b>s website states that plain packaging is
+                                        “Legislation that we believe is ineffective and unlawful”<sup>1</sup>.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        <b>Japan Tobacco International’</b>s website states that “plain packaging would
+                                        infringe JTI's fundamental legal rights to property, expression and trade –
+                                        without justification. These rights are protected by Constitutions,
+                                        international trade treaties, intellectual property laws, bilateral investment
+                                        treaties, and national laws.”<sup>2</sup>.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        <b>Philip Morris International</b>, in response to the tribunal’s ruling
+                                        dismissing the investment arbitration claim, stated: “There is nothing in
+                                        today’s outcome that addresses, let alone validates, plain packaging in
+                                        Australia or anywhere else”<sup>3</sup>
+                                    </p>
+                                </li>
+                            </ul>
+
+                            <p>For policy or health officials, these issues can appear to be complex and daunting at
+                                first glance. These pages try to set them out in readily comprehensible terms. However,
+                                assistance is also available from the CTFK International Legal Consortium to help state
+                                officials understand these issues or respond to tobacco industry threats and
+                                allegations.</p>
                         </div>
                         <div class="sidebar-anchor-item" id="item1"></div>
                         <div>
@@ -7552,26 +8966,51 @@ function nav_content($menu,$var = null)
                                 1.1 The “right to use” a trademark
                             </div>
 
-                            <p>The tobacco industry claims that plain packaging interferes with itstrademark rights in a way that conflicts with domestic, regional, and international intellectual property laws and obligations. Most of itsarguments rely— in some way— on the contention that registered trademarksafford the owner a <i>positive right to use</i> that trademark. They argue that this principle is found in international law, under the World Trade Organization (WTO) Agreement on Trade-Related Aspects of Intellectual Property Rights (TRIPS)as well as being recognized under national trademark laws as either an implicit or explicit right.</p>
+                            <p>The tobacco industry claims that plain packaging interferes with itstrademark rights in a
+                                way that conflicts with domestic, regional, and international intellectual property laws
+                                and obligations. Most of itsarguments rely— in some way— on the contention that
+                                registered trademarksafford the owner a <i>positive right to use</i> that trademark.
+                                They argue that this principle is found in international law, under the World Trade
+                                Organization (WTO) Agreement on Trade-Related Aspects of Intellectual Property Rights
+                                (TRIPS)as well as being recognized under national trademark laws as either an implicit
+                                or explicit right.</p>
 
-                            <p><span class="fc-ref-mat-4"><b>Internal documents from the tobacco companies</b></span> also show that they received advice from their own lawyers, and from the director of the World Intellectual Property Organization, dating as far back as 1994, that plain packaging would not breach international intellectual property law.<sup>4</sup></p>
+                            <p><span class="fc-ref-mat-4"><b>Internal documents from the tobacco companies</b></span>
+                                also show that they received advice from their own lawyers, and from the director of the
+                                World Intellectual Property Organization, dating as far back as 1994, that plain
+                                packaging would not breach international intellectual property law.<sup>4</sup></p>
 
-                            <p>In recent decisions, courts and tribunals havealso rejected this argument. Instead, these bodies have adopted a traditional view thattrademark rights allow the owner to prevent other people from using the trademark. This “right to exclude”does not include an absoluteright to use the trademark in any and all situations but is limited, particularly where a government is regulating and limiting the use inthe public interest.<sup>5</sup></p>
+                            <p>In recent decisions, courts and tribunals havealso rejected this argument. Instead, these
+                                bodies have adopted a traditional view thattrademark rights allow the owner to prevent
+                                other people from using the trademark. This “right to exclude”does not include an
+                                absoluteright to use the trademark in any and all situations but is limited,
+                                particularly where a government is regulating and limiting the use inthe public
+                                interest.<sup>5</sup></p>
 
                             <ul class="no-list-style">
                                 <li>
                                     <p>
-                                        <span class="fc-ref-mat-4"><b>In the UK</b></span>, in the judgment of the High Court in relation to the UK plain packaging regulations, the judge ruled:
+                                        <span class="fc-ref-mat-4"><b>In the UK</b></span>, in the judgment of the High
+                                        Court in relation to the UK plain packaging regulations, the judge ruled:
                                     </p>
                                 </li>
                                 <li>
-                                    <p><i>“It is no part of international, EU or domestic common law on intellectual property that the legitimate function of a trade mark (i.e. its essence or substance) should be defined to include a right to use the mark to harm public health.”</i><sup>6</sup>  [¶40]. </p>
+                                    <p><i>“It is no part of international, EU or domestic common law on intellectual
+                                            property that the legitimate function of a trade mark (i.e. its essence or
+                                            substance) should be defined to include a right to use the mark to harm
+                                            public health.”</i><sup>6</sup> [¶40]. </p>
                                 </li>
                                 <li>
-                                    <p><span class="fc-ref-mat-4"><b>In the PMI v Uruguay</b></span> investment arbitration claim the tribunal stated:</p>
+                                    <p><span class="fc-ref-mat-4"><b>In the PMI v Uruguay</b></span> investment
+                                        arbitration claim the tribunal stated:</p>
                                 </li>
                                 <li>
-                                    <p><i>“It is a right of use that exists vis-à-vis other persons, an exclusive right, but a relative one. It is not an absolute right to use that can be asserted against the State”<sup>7</sup></i> [¶267] <i>“The Tribunal concludes that under <u>Uruguayan law or international conventions</u>. . . the trademark holder does not enjoy an absolute right of use, free of regulation.”</i> [¶271]</p>
+                                    <p><i>“It is a right of use that exists vis-à-vis other persons, an exclusive right,
+                                            but a relative one. It is not an absolute right to use that can be asserted
+                                            against the State”<sup>7</sup></i> [¶267] <i>“The Tribunal concludes that
+                                            under <u>Uruguayan law or international conventions</u>. . . the trademark
+                                            holder does not enjoy an absolute right of use, free of regulation.”</i>
+                                        [¶271]</p>
                                 </li>
                                 <li>
                                     <p>
@@ -7580,18 +9019,28 @@ function nav_content($menu,$var = null)
                                 </li>
                                 <li>
                                     <p>
-                                        <i>“These principles reflect the fact that the [WTO TRIPs Agreement] does not generally provide for the grant of positive rights to exploit or use certain subject matter, but rather provides for the grant of negative rights to prevent certain acts. <u>This fundamental feature of intellectual property protection inherently grants Members freedom to pursue public policy objectives. . . .</u>”<sup>8</sup></i>
+                                        <i>“These principles reflect the fact that the [WTO TRIPs Agreement] does not
+                                            generally provide for the grant of positive rights to exploit or use certain
+                                            subject matter, but rather provides for the grant of negative rights to
+                                            prevent certain acts. <u>This fundamental feature of intellectual property
+                                                protection inherently grants Members freedom to pursue public policy
+                                                objectives. . . .</u>”<sup>8</sup></i>
                                     </p>
                                 </li>
                             </ul>
 
-                            <p>Legal academics have also affirmed the position of plain packaging under international and intellectual property law in a number of published papers.<sup>9</sup></p>
+                            <p>Legal academics have also affirmed the position of plain packaging under international
+                                and intellectual property law in a number of published papers.<sup>9</sup></p>
                         </div>
                         <div>
                             <h3 class="fc-ref-mat-4 sub-title">
                                 The “exclusive right to use” in national trademark acts.
                             </h3>
-                            <p>In most countries, national trademark legislation clearly sets out the nature of the right conferred on a trademark owner as being a right to exclude or prevent others from using the trademark for the product or service for which it is registered.<sup>10</sup>  However, in some countries, the trademark legislation is drafted to afford the owner an “exclusive right to use” the trademark.</p>
+                            <p>In most countries, national trademark legislation clearly sets out the nature of the
+                                right conferred on a trademark owner as being a right to exclude or prevent others from
+                                using the trademark for the product or service for which it is registered.<sup>10</sup>
+                                However, in some countries, the trademark legislation is drafted to afford the owner an
+                                “exclusive right to use” the trademark.</p>
 
                             <p>One example is the Australian Trade Marks Act 1995 <sup>11</sup>:</p>
 
@@ -7603,60 +9052,123 @@ function nav_content($menu,$var = null)
                                 </li>
                                 <li>
                                     <p>
-                                        (1) If a trademark is registered, the registered owner of the trademark has, subject to this Part, the exclusive rights:<br><span class="padding-left-25">(a)</span> to use the trademark; and<br>
-                                        <span class="padding-left-25">(b)</span> to authorise other persons to use the trademark;
+                                        (1) If a trademark is registered, the registered owner of the trademark has,
+                                        subject to this Part, the exclusive rights:<br><span
+                                                class="padding-left-25">(a)</span> to use the trademark; and<br>
+                                        <span class="padding-left-25">(b)</span> to authorise other persons to use the
+                                        trademark;
                                     </p>
                                 </li>
                                 <li>
-                                    <p>in relation to the goods and/or services in respect of which the trademark is registered.</p>
+                                    <p>in relation to the goods and/or services in respect of which the trademark is
+                                        registered.</p>
                                 </li>
                             </ul>
 
-                            <p>The tobacco companies’ constitutional legal claim against plain packaging in Australia led to a decision on the nature of the trademark right under the Australian Constitution. The Australian High Court ruled that the right conferred by trademarks was exclusive in nature and could only be asserted to stop others from using the mark. The right could not be used to prevent government regulations that restricted the companies’ use of their trademarks. The Court said:</p>
+                            <p>The tobacco companies’ constitutional legal claim against plain packaging in Australia
+                                led to a decision on the nature of the trademark right under the Australian
+                                Constitution. The Australian High Court ruled that the right conferred by trademarks was
+                                exclusive in nature and could only be asserted to stop others from using the mark. The
+                                right could not be used to prevent government regulations that restricted the companies’
+                                use of their trademarks. The Court said:</p>
 
                             <ul class="no-list-style">
                                 <li>
-                                    <p>“Strictly speaking, the right subsisting in the owner of a trademark is a negative and not a positive right. It is to be understood as a right to exclude others from using the mark and cannot be viewed as separate from the trade in connection with which it is used.” [para 348]</p>
+                                    <p>“Strictly speaking, the right subsisting in the owner of a trademark is a
+                                        negative and not a positive right. It is to be understood as a right to exclude
+                                        others from using the mark and cannot be viewed as separate from the trade in
+                                        connection with which it is used.” [para 348]</p>
                                 </li>
                             </ul>
 
-                            <p>While the decisions on the nature of trademarks have held in favor of an “exclusive right,” intellectual property law issues are complex. Plain packaging policies do place strict restrictions and controls on the use of trademarks on product packaging. Given these restrictions it is important that separate legal consideration is given to the way in which plain packaging laws would interact with domestic or national intellectual property laws.</p>
+                            <p>While the decisions on the nature of trademarks have held in favor of an “exclusive
+                                right,” intellectual property law issues are complex. Plain packaging policies do place
+                                strict restrictions and controls on the use of trademarks on product packaging. Given
+                                these restrictions it is important that separate legal consideration is given to the way
+                                in which plain packaging laws would interact with domestic or national intellectual
+                                property laws.</p>
                         </div>
                         <div>
                             <h3 class="fc-ref-mat-4">Trademark-saving provision</h3>
                             <p>
-                                It is always important to include a trademark-saving provision in the plain packaging legislation (see <a href="<?php echo $base_url; ?>crafting-the-legislation/draft-the-law"><b>GUIDE 3.2 Draft the Law</b></a> and the <a href="<?php echo $base_url; ?>resources/drafting-the-legislation-in-detail"><b>EACH CLAUSE EXPLAINED</b></a> page of the Tools and Resources) possibly an explicit exemption will need to be included.
+                                It is always important to include a trademark-saving provision in the plain packaging
+                                legislation (see <a
+                                        href="<?php echo $base_url; ?>crafting-the-legislation/draft-the-law"><b>GUIDE
+                                        3.2 Draft the Law</b></a> and the <a
+                                        href="<?php echo $base_url; ?>resources/drafting-the-legislation-in-detail"><b>EACH
+                                        CLAUSE EXPLAINED</b></a> page of the Tools and Resources) possibly an explicit
+                                exemption will need to be included.
                             </p>
                         </div>
                         <div>
-                            <div class="section-secondary-title fc-ref-mat-4">1.2  Compatibility with national trademarks laws / design acts</div>
-                            <p>As indicated above in section 2.1, the main concern as to compatibility with national intellectual property laws is the argument that registration provides an explicit or implicit right to use the trademark or design, which is breached by the restrictions in plain packaging laws. The tobacco companies raise some other issues.</p>
-                            <p>While there may be some complexity to these legal arguments, they are basically a different way of arguing for a “right to use” the tobacco trademarks. As shown in 2.1 above, these arguments have been rejected by the Courts.</p>
-                            <p><span class="fc-ref-mat-4"><b>Plain packaging deprives the trademarks of their essential functions.</b></span> The tobacco companies state that trademarks have a number of essential functions including:</p>
+                            <div class="section-secondary-title fc-ref-mat-4">1.2 Compatibility with national trademarks
+                                laws / design acts
+                            </div>
+                            <p>As indicated above in section 2.1, the main concern as to compatibility with national
+                                intellectual property laws is the argument that registration provides an explicit or
+                                implicit right to use the trademark or design, which is breached by the restrictions in
+                                plain packaging laws. The tobacco companies raise some other issues.</p>
+                            <p>While there may be some complexity to these legal arguments, they are basically a
+                                different way of arguing for a “right to use” the tobacco trademarks. As shown in 2.1
+                                above, these arguments have been rejected by the Courts.</p>
+                            <p><span class="fc-ref-mat-4"><b>Plain packaging deprives the trademarks of their essential functions.</b></span>
+                                The tobacco companies state that trademarks have a number of essential functions
+                                including:</p>
 
                             <ul class="custom">
-                                <li>to distinguish the product in question as originating from a particular undertaking or producer</li>
+                                <li>to distinguish the product in question as originating from a particular undertaking
+                                    or producer
+                                </li>
                                 <li>to prevent confusion for the consumer</li>
-                                <li>to guarantee the identity of the origin of the product to the consumer </li>
+                                <li>to guarantee the identity of the origin of the product to the consumer</li>
                                 <li>to guarantee quality</li>
                             </ul>
 
-                            <p>The companies argue that where tobacco advertising bans exist, packaging is the only remaining place that word and figurative trademarks for tobacco products is still permitted and so can perform these essential functions. The tobacco companies argue that courts have upheld the fundamental importance of these essential functions of trademarks.</p>
+                            <p>The companies argue that where tobacco advertising bans exist, packaging is the only
+                                remaining place that word and figurative trademarks for tobacco products is still
+                                permitted and so can perform these essential functions. The tobacco companies argue that
+                                courts have upheld the fundamental importance of these essential functions of
+                                trademarks.</p>
 
                             <p>
-                                <span class="fc-ref-mat-4"><b>Trademarks with a high reputation</b></span> Some national trademark acts provide increased protections for trademarks that have acquired a higher reputation. The tobacco companies argue that because plain packaging means they cannot use their trademarks, the reputation of those marks will be reduced, and thus they will lose protections that were previously guaranteed under national law. 
+                                <span class="fc-ref-mat-4"><b>Trademarks with a high reputation</b></span> Some national
+                                trademark acts provide increased protections for trademarks that have acquired a higher
+                                reputation. The tobacco companies argue that because plain packaging means they cannot
+                                use their trademarks, the reputation of those marks will be reduced, and thus they will
+                                lose protections that were previously guaranteed under national law.
                             </p>
 
                             <p>
-                                <span class="fc-ref-mat-4"><b>Revocation of a trademark for non-use:</b></span> Many national trademark acts have a provision that allows an application for revocation of a trademark’s registration where it has not been used for five years or more and there is no good reason for its non-use. The tobacco companies argue that plain packaging will inevitably mean they do not use their trademarks, which could lead to applications for revocation. This could lead to them being deprived of their marks. This argument can be addressed effectively with a trademark-saving provision as outlined in <a href="<?php echo $base_Url; ?>crafting-the-legislation/draft-the-law"><b>Guide 3.2</b></a>
+                                <span class="fc-ref-mat-4"><b>Revocation of a trademark for non-use:</b></span> Many
+                                national trademark acts have a provision that allows an application for revocation of a
+                                trademark’s registration where it has not been used for five years or more and there is
+                                no good reason for its non-use. The tobacco companies argue that plain packaging will
+                                inevitably mean they do not use their trademarks, which could lead to applications for
+                                revocation. This could lead to them being deprived of their marks. This argument can be
+                                addressed effectively with a trademark-saving provision as outlined in <a
+                                        href="<?php echo $base_Url; ?>crafting-the-legislation/draft-the-law"><b>Guide
+                                        3.2</b></a>
                             </p>
                         </div>
 
                         <div>
-                            <h3 class="fc-ref-mat-4 sub-title">1.3 Unlawful acquisition or deprivation of the property rights in trademarks</h3>
-                            <p>The tobacco companies claim that restricting or controlling the use of trademarks on the packaging of tobacco products through plain packaging laws, has the effect of “taking” or “appropriating” their property rights in those trademarks.</p>
-                            <p>It is generally accepted that trademarks are a form of property, and so there is the potential for the trademarks rights to be taken or acquired by others. The issue is then whether plain packaging laws result in a regulatory or indirect “taking” for which tobacco companies should receive compensation.</p>
-                            <p>Property rights, or the freedom to peaceful enjoyment of property, are protected in many countries’ constitutions, as well as in regional Human Rights treaties. In addition, foreign investors are given protections under international investment treaties to prevent the unlawful “expropriation” of their investments by states. Different jurisdictions use different terminology for this taking, such as “expropriation,”“acquisition,” or “deprivation” and varying legal tests are applied.  These claims that plain packaging amounts to expropriation of these rights have been rejected by courts across all jurisdictions:</p>
+                            <h3 class="fc-ref-mat-4 sub-title">1.3 Unlawful acquisition or deprivation of the property
+                                rights in trademarks</h3>
+                            <p>The tobacco companies claim that restricting or controlling the use of trademarks on the
+                                packaging of tobacco products through plain packaging laws, has the effect of “taking”
+                                or “appropriating” their property rights in those trademarks.</p>
+                            <p>It is generally accepted that trademarks are a form of property, and so there is the
+                                potential for the trademarks rights to be taken or acquired by others. The issue is then
+                                whether plain packaging laws result in a regulatory or indirect “taking” for which
+                                tobacco companies should receive compensation.</p>
+                            <p>Property rights, or the freedom to peaceful enjoyment of property, are protected in many
+                                countries’ constitutions, as well as in regional Human Rights treaties. In addition,
+                                foreign investors are given protections under international investment treaties to
+                                prevent the unlawful “expropriation” of their investments by states. Different
+                                jurisdictions use different terminology for this taking, such as
+                                “expropriation,”“acquisition,” or “deprivation” and varying legal tests are applied.
+                                These claims that plain packaging amounts to expropriation of these rights have been
+                                rejected by courts across all jurisdictions:</p>
                             <ul class="no-list-style">
                                 <li>
                                     <p>
@@ -7679,138 +9191,312 @@ function nav_content($menu,$var = null)
                                 </li>
                             </ul>
 
-                            <p>See the <a href="<?php echo $base_url; ?>resources/case-summaries">Case Summaries</a> page for more details on these cases.</p>
+                            <p>See the <a href="<?php echo $base_url; ?>resources/case-summaries">Case Summaries</a>
+                                page for more details on these cases.</p>
                         </div>
                         <div>
                             <h3 class="fc-ref-mat-4 sub-title">
                                 1.4 Freedom of expression and freedom to conduct a business or trade
                             </h3>
-                            <p>Many national constitutions, as well as regional human rights treaties, provide for the right to freedom of expression and the right to conduct a business or trade. The tobacco industry has claimed that plain packaging laws violate these rights. </p>
-                            <p>In any system of rights, there is a balance to be struck between competing rights and freedoms. The freedoms relied upon by the tobacco industry are never expressed in absolute terms and are always subject to laws enacted for the public interest. In many legal systems, the freedom of <i>commercial</i> expression is given a lower priority than other forms of expression, such as political or journalistic freedom of expression. In the case of plain packaging laws, freedom of expression must be balanced against the right to life or health, or simply the inherent right of the state to regulate for the public good.</p>
+                            <p>Many national constitutions, as well as regional human rights treaties, provide for the
+                                right to freedom of expression and the right to conduct a business or trade. The tobacco
+                                industry has claimed that plain packaging laws violate these rights. </p>
+                            <p>In any system of rights, there is a balance to be struck between competing rights and
+                                freedoms. The freedoms relied upon by the tobacco industry are never expressed in
+                                absolute terms and are always subject to laws enacted for the public interest. In many
+                                legal systems, the freedom of <i>commercial</i> expression is given a lower priority
+                                than other forms of expression, such as political or journalistic freedom of expression.
+                                In the case of plain packaging laws, freedom of expression must be balanced against the
+                                right to life or health, or simply the inherent right of the state to regulate for the
+                                public good.</p>
                             <ul class="no-list-style">
                                 <li>
                                     <p>
-                                        <span class="fc-ref-mat-4"><b>In the UK,</b></span> the High Court (confirmed by the Court of Appeal) found that any interference by plain packaging laws with the right to freedom of commercial expression (under the European Convention on Human Rights or the EU Fundamental Charter)  would be justified by the overriding public health interests.<sup>12</sup>
+                                        <span class="fc-ref-mat-4"><b>In the UK,</b></span> the High Court (confirmed by
+                                        the Court of Appeal) found that any interference by plain packaging laws with
+                                        the right to freedom of commercial expression (under the European Convention on
+                                        Human Rights or the EU Fundamental Charter) would be justified by the overriding
+                                        public health interests.<sup>12</sup>
                                     </p>
                                 </li>
                                 <li>
                                     <p>
-                                        <span class="fc-ref-mat-4"><b>In France,</b></span> the Conseil Constitutionel took a similar approach in respect of Article 2 of the 1789 Declaration (right to free enterprise), holding that, by enacting plain packaging laws, the Parliament intended to deprive tobacco products of a form of advertising likely to encourage consumption. The laws did not prohibit production distribution or sale of tobacco and there was therefore no disproportionate interference with the rights to property or free enterprise.<sup>13</sup>
+                                        <span class="fc-ref-mat-4"><b>In France,</b></span> the Conseil Constitutionel
+                                        took a similar approach in respect of Article 2 of the 1789 Declaration (right
+                                        to free enterprise), holding that, by enacting plain packaging laws, the
+                                        Parliament intended to deprive tobacco products of a form of advertising likely
+                                        to encourage consumption. The laws did not prohibit production distribution or
+                                        sale of tobacco and there was therefore no disproportionate interference with
+                                        the rights to property or free enterprise.<sup>13</sup>
                                     </p>
                                 </li>
                                 <li>
                                     <p>
-                                        <span class="fc-ref-mat-4"><b>In the European Union,</b></span> in the tobacco companies’ challenge to the Tobacco Products Directive, the opinion of the Advocate General to the Court was that the right to conduct a business may be subject to a broad range of interventions on the part of public authorities, which may limit the exercise of economic activity in the public interest. Moreover, the Union legislature has a broad discretion in an area that involves political, economic, and social choices and in which it is called upon to undertake complex assessments and evaluations.<sup>14</sup>
+                                        <span class="fc-ref-mat-4"><b>In the European Union,</b></span> in the tobacco
+                                        companies’ challenge to the Tobacco Products Directive, the opinion of the
+                                        Advocate General to the Court was that the right to conduct a business may be
+                                        subject to a broad range of interventions on the part of public authorities,
+                                        which may limit the exercise of economic activity in the public interest.
+                                        Moreover, the Union legislature has a broad discretion in an area that involves
+                                        political, economic, and social choices and in which it is called upon to
+                                        undertake complex assessments and evaluations.<sup>14</sup>
                                     </p>
                                 </li>
                             </ul>
-                            <p>See the <a href="<?php echo $base_url; ?>resources/case-summaries">Case Summaries</a> page for more details on these cases.</p>
-                            <p>However, in some jurisdictions these freedoms are given greater priority. For instance, in the USA, the priority given to the right to commercial freedom of expression would make it more difficult for plain packaging to get past constitutional objections. In Sweden, a public inquiry into a review of the Tobacco Control Act stated that plain packaging of tobacco would be compliant with the European Convention Human Rights and all European Union law but would not be compatible with the current provisions of the Freedom of the Press Act; and should only be introduced if an exception making such a requirement is introduced in the Constitution.<sup>15</sup></p>
-                            <p>An assessment of these issues needs to be undertaken for each country. However, all the courts that have considered the legislation thus far have found that plain packaging regulation is no different to regulations for warnings or labeling imposed on other products, especially potentially dangerous consumer products. For plain packaging, the balance has always been found to be in favor of the government’s right to regulate to protect public health rather than commercial interests.</p>
+                            <p>See the <a href="<?php echo $base_url; ?>resources/case-summaries">Case Summaries</a>
+                                page for more details on these cases.</p>
+                            <p>However, in some jurisdictions these freedoms are given greater priority. For instance,
+                                in the USA, the priority given to the right to commercial freedom of expression would
+                                make it more difficult for plain packaging to get past constitutional objections. In
+                                Sweden, a public inquiry into a review of the Tobacco Control Act stated that plain
+                                packaging of tobacco would be compliant with the European Convention Human Rights and
+                                all European Union law but would not be compatible with the current provisions of the
+                                Freedom of the Press Act; and should only be introduced if an exception making such a
+                                requirement is introduced in the Constitution.<sup>15</sup></p>
+                            <p>An assessment of these issues needs to be undertaken for each country. However, all the
+                                courts that have considered the legislation thus far have found that plain packaging
+                                regulation is no different to regulations for warnings or labeling imposed on other
+                                products, especially potentially dangerous consumer products. For plain packaging, the
+                                balance has always been found to be in favor of the government’s right to regulate to
+                                protect public health rather than commercial interests.</p>
                         </div>
                         <div>
                             <h3 class="fc-ref-mat-4 sub-title">
                                 1.5 Not justified or supported by the evidence
                             </h3>
-                            <p>The issue of whether there is sufficient evidence or not that the policy will contribute to or achieve its objectives goes to the heart of many legal tests. These legal tests vary between jurisdictions but, as is stated throughout this Toolkit, the tobacco companies have consistently claimed that there is no evidence to demonstrate plain packaging will work to reduce smoking rates. The companies have commissioned numerous reports that criticise the supporting evidence, either as individual studies or as a whole. Full details are provided on the <a href="<?php echo $base_url; ?>resources/opposing-arguments-and-how-to-counter-them"><b>Opposing Arguments (and how to counter them)</b></a> page of the Tools and Resources.</p>
-                            <p>However, this Toolkit also clearly establishes the volumes of evidence that show plain packaging will be an effective component of a comprehensive tobacco-control strategy. See the evidence pages of the <b>Tools and Resources.</b></p>
+                            <p>The issue of whether there is sufficient evidence or not that the policy will contribute
+                                to or achieve its objectives goes to the heart of many legal tests. These legal tests
+                                vary between jurisdictions but, as is stated throughout this Toolkit, the tobacco
+                                companies have consistently claimed that there is no evidence to demonstrate plain
+                                packaging will work to reduce smoking rates. The companies have commissioned numerous
+                                reports that criticise the supporting evidence, either as individual studies or as a
+                                whole. Full details are provided on the <a
+                                        href="<?php echo $base_url; ?>resources/opposing-arguments-and-how-to-counter-them"><b>Opposing
+                                        Arguments (and how to counter them)</b></a> page of the Tools and Resources.</p>
+                            <p>However, this Toolkit also clearly establishes the volumes of evidence that show plain
+                                packaging will be an effective component of a comprehensive tobacco-control strategy.
+                                See the evidence pages of the <b>Tools and Resources.</b></p>
                             <ul class="no-list-style">
                                 <li>
                                     <p>
-                                        <span class="fc-ref-mat-4"><b>The High Court challenge against the UK Regulations was the first (and as yet only) legal challenge that addressed the evidence on both sides in detail.</b></span> The 400-page judgment of Mr Justice Green goes to considerable length to assess this evidence.
+                                        <span class="fc-ref-mat-4"><b>The High Court challenge against the UK Regulations was the first (and as yet only) legal challenge that addressed the evidence on both sides in detail.</b></span>
+                                        The 400-page judgment of Mr Justice Green goes to considerable length to assess
+                                        this evidence.
                                     </p>
                                 </li>
                                 <li>
-                                    <p>The judge’s conclusion was that the <i>“qualitative evidence relied upon by the [Government] is cogent, substantial and overwhelmingly one-directional in its conclusion.”</i>[para 492]</p>
+                                    <p>The judge’s conclusion was that the <i>“qualitative evidence relied upon by the
+                                            [Government] is cogent, substantial and overwhelmingly one-directional in
+                                            its conclusion.”</i>[para 492]</p>
                                 </li>
                                 <li>
-                                    <p>He was then scathing in his criticism of the evidence put forward by the tobacco companies because it was not peer reviewed, either ignored or airily dismissed the worldwide research and literature base,and was frequently unverifiable. He made detailed critiques of each of the expert reports put forward by the tobacco companies and concluded that this <i>“body of expert evidence does not accord with internationally recognised best practice.”</i> [para 374]</p>
+                                    <p>He was then scathing in his criticism of the evidence put forward by the tobacco
+                                        companies because it was not peer reviewed, either ignored or airily dismissed
+                                        the worldwide research and literature base,and was frequently unverifiable. He
+                                        made detailed critiques of each of the expert reports put forward by the tobacco
+                                        companies and concluded that this <i>“body of expert evidence does not accord
+                                            with internationally recognised best practice.”</i> [para 374]</p>
                                 </li>
                                 <li>
-                                    <p>Mr Justice Green made particular critical note of the fact that the tobacco companies refused to provide access to any internal research or documentation on plain packaging, even to their own instructed experts. More detail on this is given below in the case summary.</p>
+                                    <p>Mr Justice Green made particular critical note of the fact that the tobacco
+                                        companies refused to provide access to any internal research or documentation on
+                                        plain packaging, even to their own instructed experts. More detail on this is
+                                        given below in the case summary.</p>
                                 </li>
                             </ul>
-                            <p>See the <a href="<?php echo $base_url; ?>resources/case-summaries">Case Summaries</a> page for more details on these UK challenge.</p>
+                            <p>See the <a href="<?php echo $base_url; ?>resources/case-summaries">Case Summaries</a>
+                                page for more details on these UK challenge.</p>
                         </div>
                         <div>
                             <h3 class="fc-ref-mat-4 sub-title">
                                 1.6 An unreasonable, disproportionate, or unnecessary measure
                             </h3>
-                            <p>These arguments concern the justification for the measure considering the benefit of the public interest relative to the burden it places on the applicant. Similar principles are applied across many legal jurisdictions, both national and international, and consider whether or not the measure has a legitimate objective and if the measure is both suitable and necessary to achieve its objectives.</p>
-                            <p>There is often a balancing of the importance of the objective, the extent to which the measure is capable of achieving the objective, and the degree of interference with an applicant’s interests. <a href="<?php echo $base_url; ?>getting-prepared/set-policy-objectives">Guide 1.1 Set policy objectives</a>, describes the importance of setting clear and measurable objectives for plain packaging.  Without clear objectives, courts are faced with a more difficult task in determining this balance. </p>
-                            <p>Courts are generally willing to accept that tobacco control measures have a legitimate public health objective. The tobacco industry seeks to argue that there is no evidence to support the contention that plain packaging will be effective to reduce smoking rates (and so it is unsuitable to meet its objectives) and that there are alternative more effective measures at reducing smoking rates (and so plain packaging is <i>unnecessary</i>).</p>
-                            <p>A court or tribunal must therefore undertake an analysis of the evidence in support of the measure to see if it is justified.  The intensity of that analysis, the margin of appreciation, or how much deference is given to the government in taking decisions about public health will vary between jurisdictions.</p>
-                            <p>For instance, in their challenge to the UK Regulations, the tobacco companies claimed that the government:</p>
+                            <p>These arguments concern the justification for the measure considering the benefit of the
+                                public interest relative to the burden it places on the applicant. Similar principles
+                                are applied across many legal jurisdictions, both national and international, and
+                                consider whether or not the measure has a legitimate objective and if the measure is
+                                both suitable and necessary to achieve its objectives.</p>
+                            <p>There is often a balancing of the importance of the objective, the extent to which the
+                                measure is capable of achieving the objective, and the degree of interference with an
+                                applicant’s interests. <a
+                                        href="<?php echo $base_url; ?>getting-prepared/set-policy-objectives">Guide 1.1
+                                    Set policy objectives</a>, describes the importance of setting clear and measurable
+                                objectives for plain packaging. Without clear objectives, courts are faced with a more
+                                difficult task in determining this balance. </p>
+                            <p>Courts are generally willing to accept that tobacco control measures have a legitimate
+                                public health objective. The tobacco industry seeks to argue that there is no evidence
+                                to support the contention that plain packaging will be effective to reduce smoking rates
+                                (and so it is unsuitable to meet its objectives) and that there are alternative more
+                                effective measures at reducing smoking rates (and so plain packaging is
+                                <i>unnecessary</i>).</p>
+                            <p>A court or tribunal must therefore undertake an analysis of the evidence in support of
+                                the measure to see if it is justified. The intensity of that analysis, the margin of
+                                appreciation, or how much deference is given to the government in taking decisions about
+                                public health will vary between jurisdictions.</p>
+                            <p>For instance, in their challenge to the UK Regulations, the tobacco companies claimed
+                                that the government:</p>
                             <ul class="no-list-style">
                                 <ul class="no-list-style">
                                     <li>
-                                        <p>“failed to discharge the burden [it] bears of proving that the Regulations are proportionate. In particular:</p>
+                                        <p>“failed to discharge the burden [it] bears of proving that the Regulations
+                                            are proportionate. In particular:</p>
                                     </li>
                                     <li>
-                                        <p>(a) The objective of the Regulations is ‘improving public health by reducing smoking’. The Defendant has failed to demonstrate that the Regulations are suitable or appropriate to meet this objective because it has failed to establish that the Regulations will cause a material decrease in smoking rather than an increase.”<sup>16</sup></p>
+                                        <p>(a) The objective of the Regulations is ‘improving public health by reducing
+                                            smoking’. The Defendant has failed to demonstrate that the Regulations are
+                                            suitable or appropriate to meet this objective because it has failed to
+                                            establish that the Regulations will cause a material decrease in smoking
+                                            rather than an increase.”<sup>16</sup></p>
                                     </li>
                                     <li>
-                                        <p>And “the evidence does not show that there are no equally effective but less restrictive alternatives.”<sup>17</sup></p>
+                                        <p>And “the evidence does not show that there are no equally effective but less
+                                            restrictive alternatives.”<sup>17</sup></p>
                                     </li>
                                 </ul>
                                 <li>
-                                    <p><span class="fc-ref-mat-4"><b>In both the UK and France,</b></span> the courts found that plain packaging was a reasonable, proportionate and necessary measure having regard to its objectives and the great harms caused by tobacco. </p>
+                                    <p><span class="fc-ref-mat-4"><b>In both the UK and France,</b></span> the courts
+                                        found that plain packaging was a reasonable, proportionate and necessary measure
+                                        having regard to its objectives and the great harms caused by tobacco. </p>
                                 </li>
                                 <li>
-                                    <p><span class="fc-ref-mat-4"><b>The French Conseild'État</b></span> found that plain packaging regulations must be regarded as unable to do anything other than reduce the consumption of tobacco products over time and, consequently, are a proportionate means to ensure the accomplishment of the objective of protecting public health. </p>
+                                    <p><span class="fc-ref-mat-4"><b>The French Conseild'État</b></span> found that
+                                        plain packaging regulations must be regarded as unable to do anything other than
+                                        reduce the consumption of tobacco products over time and, consequently, are a
+                                        proportionate means to ensure the accomplishment of the objective of protecting
+                                        public health. </p>
                                 </li>
                                 <li>
-                                    <p><span class="fc-ref-mat-4"><b>In the UK High Court,</b></span> the tobacco companies argued that the UK could have introduced less restrictive measures such as an increase in tobacco taxes, increasing the minimum age for buying tobacco and educational campaigns. The judge stated that, in respect of all these submissions, no <i>supporting evidence was adduced</i> and that “The Claimants’ argument amounts to mere assertion.” [para 668]</p>
+                                    <p><span class="fc-ref-mat-4"><b>In the UK High Court,</b></span> the tobacco
+                                        companies argued that the UK could have introduced less restrictive measures
+                                        such as an increase in tobacco taxes, increasing the minimum age for buying
+                                        tobacco and educational campaigns. The judge stated that, in respect of all
+                                        these submissions, no <i>supporting evidence was adduced</i> and that “The
+                                        Claimants’ argument amounts to mere assertion.” [para 668]</p>
                                 </li>
                                 <li>
-                                    <p><span class="fc-ref-mat-4"><b>In the UK Court of Appeal,</b></span> the court confirmed that <i>“none of the claimed alternatives, including increased taxation, <u>would achieve all of the objectives pursued by the Regulations</u> and that they should be regarded instead as complementary measures forming part of a comprehensive tobacco control strategy, an approach supported by the FCTC.”</i> [para 243]</p>
+                                    <p><span class="fc-ref-mat-4"><b>In the UK Court of Appeal,</b></span> the court
+                                        confirmed that <i>“none of the claimed alternatives, including increased
+                                            taxation, <u>would achieve all of the objectives pursued by the
+                                                Regulations</u> and that they should be regarded instead as
+                                            complementary measures forming part of a comprehensive tobacco control
+                                            strategy, an approach supported by the FCTC.”</i> [para 243]</p>
                                 </li>
                             </ul>
-                            <p>This finding by the UK Court of Appeal reinforces the importance of setting out all the objectives of the legislation (including reducing the appeal of packaging, enhancing the health warnings, and reducing the misleading effect of packaging) in official documents and not to just rely on plain packaging being a policy to reduce smoking. It is also important to consider the various alternatives put forward in the course of consultation or stakeholder input (see <a href="<?php echo $base_url; ?>collecting-the-evidence/evidence-review">Guide 2.1 Evidence Review</a> and <a href="<?php echo $base_url; ?>collecting-the-evidence/stakeholder-input-public-consultation">Guide 2.3 Stakeholder Input / Consultation</a>).</p>
-                            <p>See the <a href="<?php echo $base_url; ?>resources/case-summaries">Case Summaries</a> page for more details on cases mentioned above.</p>
+                            <p>This finding by the UK Court of Appeal reinforces the importance of setting out all the
+                                objectives of the legislation (including reducing the appeal of packaging, enhancing the
+                                health warnings, and reducing the misleading effect of packaging) in official documents
+                                and not to just rely on plain packaging being a policy to reduce smoking. It is also
+                                important to consider the various alternatives put forward in the course of consultation
+                                or stakeholder input (see <a
+                                        href="<?php echo $base_url; ?>collecting-the-evidence/evidence-review">Guide 2.1
+                                    Evidence Review</a> and <a
+                                        href="<?php echo $base_url; ?>collecting-the-evidence/stakeholder-input-public-consultation">Guide
+                                    2.3 Stakeholder Input / Consultation</a>).</p>
+                            <p>See the <a href="<?php echo $base_url; ?>resources/case-summaries">Case Summaries</a>
+                                page for more details on cases mentioned above.</p>
                         </div>
                         <div>
                             <h3 class="fc-ref-mat-4 sub-title">
                                 1.7 Introduced without proper due process
                             </h3>
                             <p>
-                                This issue concerns the way in which a government conducted the policy development and legislative process. The tobacco industry will often argue that tobacco control measures were adopted:
+                                This issue concerns the way in which a government conducted the policy development and
+                                legislative process. The tobacco industry will often argue that tobacco control measures
+                                were adopted:
                             </p>
                             <ul class="custom">
-                                <li>without the government giving proper consideration to all the evidence and issues;</li>
-                                <li>without proper consultation with, or input from,affected stakeholders, such as the companies; </li>
-                                <li>without using fair and transparent procedures; or </li>
-                                <li>using procedures that are not in accordance with a country’s constitutional and administrative rules. </li>
-                            </ul>
-                            <p>The steps set out in this Toolkit, adapted for compliance with national administrative processes, should provide a sound procedural basis for adopting plain packaging.</p>
-                            <ul class="no-list-style">
-                                <li>
-                                    <span class="fc-ref-mat-4"><b>In the legal claims in the UK and France,</b></span> the tobacco companies made different technical due-process claims. These were rejected by the courts in both cases, but these are fact specific issues that concern the procedures used by each government. 
+                                <li>without the government giving proper consideration to all the evidence and issues;
+                                </li>
+                                <li>without proper consultation with, or input from,affected stakeholders, such as the
+                                    companies;
+                                </li>
+                                <li>without using fair and transparent procedures; or</li>
+                                <li>using procedures that are not in accordance with a country’s constitutional and
+                                    administrative rules.
                                 </li>
                             </ul>
-                            <p>The dissenting opinion of one of the arbitrators in the <i>PMI v. Uruguay</i> case held that there was no documentary record that the Ministry of Health had given any proper consideration to the single presentation requirement before it was adopted, and that arbitrator found Uruguay in breach of its duty to provide “fair and equitable treatment.”While the majority of the tribunal did not agree, this acts as a cautionary reminder that to protect against tobacco industry legal challenges, officials should ensure both proper consideration of the evidence and issues, and make careful records of the policy development and decision making process (see <a href="<?php echo $base_url; ?>establish-document-development-retention">Guide 1.2: Establish a document record</a>).</p>
+                            <p>The steps set out in this Toolkit, adapted for compliance with national administrative
+                                processes, should provide a sound procedural basis for adopting plain packaging.</p>
+                            <ul class="no-list-style">
+                                <li>
+                                    <span class="fc-ref-mat-4"><b>In the legal claims in the UK and France,</b></span>
+                                    the tobacco companies made different technical due-process claims. These were
+                                    rejected by the courts in both cases, but these are fact specific issues that
+                                    concern the procedures used by each government.
+                                </li>
+                            </ul>
+                            <p>The dissenting opinion of one of the arbitrators in the <i>PMI v. Uruguay</i> case held
+                                that there was no documentary record that the Ministry of Health had given any proper
+                                consideration to the single presentation requirement before it was adopted, and that
+                                arbitrator found Uruguay in breach of its duty to provide “fair and equitable
+                                treatment.”While the majority of the tribunal did not agree, this acts as a cautionary
+                                reminder that to protect against tobacco industry legal challenges, officials should
+                                ensure both proper consideration of the evidence and issues, and make careful records of
+                                the policy development and decision making process (see <a
+                                        href="<?php echo $base_url; ?>establish-document-development-retention">Guide
+                                    1.2: Establish a document record</a>).</p>
                         </div>
                         <div>
                             <h3 class="fc-ref-mat-4 sub-title">
                                 1.8 Violates the World Trade Organization agreements
                             </h3>
-                            <p>World Trade Organization (WTO) law limits the way in which WTO Members may restrict or regulate international trade in goods and services, and also imposes obligations on the protection of intellectual property rights. The law is enforced through a system of dispute settlement between its Members. This means only the governments of other WTO Member States may bring a complaint that may then be referred to a dispute panel. A panel ruling may be appealed to the Appellate Body.</p>
-                            <p>The tobacco companies regularly allege in letters and submissions to governments that effective tobacco packaging and labeling laws, including large health warnings and plain packaging, breach the WTO agreements. Ministry of Health officials need to be robust in responding to or dealing with these allegations.</p>
-                            <p>At the time of writing, a WTO panel is determining complaints against Australia’s plain packaging laws brought by Cuba, the Dominican Republic, Honduras, and Indonesia. The ruling is expected in July 2017. More details about this case are given in the <a href="<?php echo $base_url; ?>resources/case-summaries">Case Summaries</a> page. The main claims made by the complainant countries are that plain packaging:</p>
+                            <p>World Trade Organization (WTO) law limits the way in which WTO Members may restrict or
+                                regulate international trade in goods and services, and also imposes obligations on the
+                                protection of intellectual property rights. The law is enforced through a system of
+                                dispute settlement between its Members. This means only the governments of other WTO
+                                Member States may bring a complaint that may then be referred to a dispute panel. A
+                                panel ruling may be appealed to the Appellate Body.</p>
+                            <p>The tobacco companies regularly allege in letters and submissions to governments that
+                                effective tobacco packaging and labeling laws, including large health warnings and plain
+                                packaging, breach the WTO agreements. Ministry of Health officials need to be robust in
+                                responding to or dealing with these allegations.</p>
+                            <p>At the time of writing, a WTO panel is determining complaints against Australia’s plain
+                                packaging laws brought by Cuba, the Dominican Republic, Honduras, and Indonesia. The
+                                ruling is expected in July 2017. More details about this case are given in the <a
+                                        href="<?php echo $base_url; ?>resources/case-summaries">Case Summaries</a> page.
+                                The main claims made by the complainant countries are that plain packaging:</p>
                             <ul class="no-list-style">
-                                <li><p>1.   breaches the WTO’s Agreement on Trade-Related Aspects of Intellectual Property Rights (TRIPS Agreement) by failing to provide protection of trademark rights as required under that agreement, including by unjustifiably encumbering the use of trademarks in the course of trade.</p></li>
-                                <li><p>2.   breaches the WTO’s Agreement on Technical Barriers to Trade because it constitutes a “technical regulation” that is “more trade-restrictive than necessary to fulfil a legitimate objective.”</p></li>
-                                <li><p>3.   breaches the WTO’s General Agreement on Tariffs and Trade (GATT 1994), the Agreement on Technical Barriers to Trade, and the TRIPS Agreement because the measure discriminates between like imported and domestic products, as well as discriminating between like imported products.</p></li>
+                                <li><p>1. breaches the WTO’s Agreement on Trade-Related Aspects of Intellectual Property
+                                        Rights (TRIPS Agreement) by failing to provide protection of trademark rights as
+                                        required under that agreement, including by unjustifiably encumbering the use of
+                                        trademarks in the course of trade.</p></li>
+                                <li><p>2. breaches the WTO’s Agreement on Technical Barriers to Trade because it
+                                        constitutes a “technical regulation” that is “more trade-restrictive than
+                                        necessary to fulfil a legitimate objective.”</p></li>
+                                <li><p>3. breaches the WTO’s General Agreement on Tariffs and Trade (GATT 1994), the
+                                        Agreement on Technical Barriers to Trade, and the TRIPS Agreement because the
+                                        measure discriminates between like imported and domestic products, as well as
+                                        discriminating between like imported products.</p></li>
                             </ul>
                             <p>
-                                The Australian Government has published an executive summary of its legal arguments refuting these claims, available here:<br><a href="http://dfat.gov.au/international-relations/international-organisations/wto/wto-dispute-settlement/Pages/wto-disputes-tobacco-plain-packaging.aspx">http://dfat.gov.au/international-relations/international-organisations/wto/wto-dispute-settlement/Pages/wto-disputes-tobacco-plain-packaging.aspx</a>
+                                The Australian Government has published an executive summary of its legal arguments
+                                refuting these claims, available here:<br><a
+                                        href="http://dfat.gov.au/international-relations/international-organisations/wto/wto-dispute-settlement/Pages/wto-disputes-tobacco-plain-packaging.aspx">http://dfat.gov.au/international-relations/international-organisations/wto/wto-dispute-settlement/Pages/wto-disputes-tobacco-plain-packaging.aspx</a>
                             </p>
-                            <p><span class="fc-ref-mat-4"><b>The World Health Organization (WHO) publication on plain packaging of tobacco products,</b></span> in section 3.2.1, contains a useful summary of the main elements of WTO law relevant to tobacco plain packaging. The document highlights that there are well-established principles (regularly ignored by the tobacco industry) that demonstrate the flexibility WTO Members have to regulate in the public interest and that protection of human health is accorded the highest importance in WTO dispute settlement. The full publication is available here:<br><a href="http://www.who.int/tobacco/publications/industry/plain-packaging-tobacco-products/en/">http://www.who.int/tobacco/publications/industry/plain-packaging-tobacco-products/en/</a></p>
-                            <p>The WTO dispute panel determining the complaints against Australia (and ultimately the appellate body if the ruling is appealed) will be the final arbiter of these issues.However, it is useful to note that a number of national courts and international tribunals have also considered whether plain packaging or other tobacco packaging measures breach the WTO rulings.</p>
+                            <p><span class="fc-ref-mat-4"><b>The World Health Organization (WHO) publication on plain packaging of tobacco products,</b></span>
+                                in section 3.2.1, contains a useful summary of the main elements of WTO law relevant to
+                                tobacco plain packaging. The document highlights that there are well-established
+                                principles (regularly ignored by the tobacco industry) that demonstrate the flexibility
+                                WTO Members have to regulate in the public interest and that protection of human health
+                                is accorded the highest importance in WTO dispute settlement. The full publication is
+                                available here:<br><a
+                                        href="http://www.who.int/tobacco/publications/industry/plain-packaging-tobacco-products/en/">http://www.who.int/tobacco/publications/industry/plain-packaging-tobacco-products/en/</a>
+                            </p>
+                            <p>The WTO dispute panel determining the complaints against Australia (and ultimately the
+                                appellate body if the ruling is appealed) will be the final arbiter of these
+                                issues.However, it is useful to note that a number of national courts and international
+                                tribunals have also considered whether plain packaging or other tobacco packaging
+                                measures breach the WTO rulings.</p>
                             <ul class="no-list-style">
                                 <li>
-                                    <p><span class="fc-ref-mat-4"><b>In both the UK and France</b></span> the tobacco companies’ legal challenges before the national courts included claims that the governments were in breach of their international obligations because plain packaging laws violated the WTO agreements, in particular the TRIPS agreement. The courts in both countries rejected these claims. </p>
-                                    <p><span class="fc-ref-mat-4"><b>In the PMI v Uruguay arbitration claim,</b></span> the tribunal held that Uruguay’s packaging requirements did not violate Uruguay’s international obligations in particular under the WTO agreements. </p>
+                                    <p><span class="fc-ref-mat-4"><b>In both the UK and France</b></span> the tobacco
+                                        companies’ legal challenges before the national courts included claims that the
+                                        governments were in breach of their international obligations because plain
+                                        packaging laws violated the WTO agreements, in particular the TRIPS agreement.
+                                        The courts in both countries rejected these claims. </p>
+                                    <p><span class="fc-ref-mat-4"><b>In the PMI v Uruguay arbitration claim,</b></span>
+                                        the tribunal held that Uruguay’s packaging requirements did not violate
+                                        Uruguay’s international obligations in particular under the WTO agreements. </p>
                                 </li>
                             </ul>
                         </div>
@@ -7818,132 +9504,302 @@ function nav_content($menu,$var = null)
                             <h3 class="fc-ref-mat-4 sub-title">
                                 1.9 Breaches international investment treaties
                             </h3>
-                            <p>International Investment Treaties (IITs) are agreements between two or more countries. These agreements give investors located in one party to the IIT protections and legal security for their direct investments into the other party or parties to the IIT. The purpose of IITs is to encourage more direct foreign investment. Almost all nations across the globe have signed up to these agreements and the protections they afford to foreign investors.</p>
-                            <p>Most IITs include what is known as Investor-State Dispute Settlement (ISDS) provisions. These provisions provide a system for foreign investors to commence an arbitration claim if the investor believes the government of the host nation has breached their obligations under the IIT. The measures that are challenged can sometimes be genuine, public-interest policies or decisions to protect the environment or public health but which in some way affect the use of the investment or its value.</p>
-                            <p><span class="fc-ref-mat-4"><b>These claims can be for millions, sometimes billions of dollars in compensation, and the arbitration lawsuits typically take many years to resolve and involve huge legal bills.</b></span> However, one of the primary aims of the tobacco industry in bringing these claims is to create “regulatory chilling effect” and deter other governments from enacting effective tobacco-control regulation. </p>
-                            <p><span class="fc-ref-mat-4"><b>Philip Morris has brought two international arbitration claims against tobacco-control</b></span> under Bilateral Investment Treaties — the first against Uruguay’s 80% health warnings and its Single Presentation Requirement; the second against Australia’s plain packaging laws. <span class="fc-ref-mat-4"><b>Both claims were dismissed.</b></span> The tribunal in the claim against Australia’s plain packaging declined jurisdiction on the basis that the claim was an “abuse of rights,” so the merits were not determined. A short summary of these cases and the awards is given below. </p>
-                            <p><span class="fc-ref-mat-4"><b>Although the case against Uruguay did not concern plain packaging legislation, the ruling has significant relevance to the legality of the policy as it concerns many of the broad themes set out above. In particular, the tribunal found that the tobacco-control measures were not an expropriation of property, that there was no “right to use” a trademark, and that the measures were compatible with the WTO agreements.</b></span></p>
+                            <p>International Investment Treaties (IITs) are agreements between two or more countries.
+                                These agreements give investors located in one party to the IIT protections and legal
+                                security for their direct investments into the other party or parties to the IIT. The
+                                purpose of IITs is to encourage more direct foreign investment. Almost all nations
+                                across the globe have signed up to these agreements and the protections they afford to
+                                foreign investors.</p>
+                            <p>Most IITs include what is known as Investor-State Dispute Settlement (ISDS) provisions.
+                                These provisions provide a system for foreign investors to commence an arbitration claim
+                                if the investor believes the government of the host nation has breached their
+                                obligations under the IIT. The measures that are challenged can sometimes be genuine,
+                                public-interest policies or decisions to protect the environment or public health but
+                                which in some way affect the use of the investment or its value.</p>
+                            <p><span class="fc-ref-mat-4"><b>These claims can be for millions, sometimes billions of dollars in compensation, and the arbitration lawsuits typically take many years to resolve and involve huge legal bills.</b></span>
+                                However, one of the primary aims of the tobacco industry in bringing these claims is to
+                                create “regulatory chilling effect” and deter other governments from enacting effective
+                                tobacco-control regulation. </p>
+                            <p><span class="fc-ref-mat-4"><b>Philip Morris has brought two international arbitration claims against tobacco-control</b></span>
+                                under Bilateral Investment Treaties — the first against Uruguay’s 80% health warnings
+                                and its Single Presentation Requirement; the second against Australia’s plain packaging
+                                laws. <span class="fc-ref-mat-4"><b>Both claims were dismissed.</b></span> The tribunal
+                                in the claim against Australia’s plain packaging declined jurisdiction on the basis that
+                                the claim was an “abuse of rights,” so the merits were not determined. A short summary
+                                of these cases and the awards is given below. </p>
+                            <p><span class="fc-ref-mat-4"><b>Although the case against Uruguay did not concern plain packaging legislation, the ruling has significant relevance to the legality of the policy as it concerns many of the broad themes set out above. In particular, the tribunal found that the tobacco-control measures were not an expropriation of property, that there was no “right to use” a trademark, and that the measures were compatible with the WTO agreements.</b></span>
+                            </p>
                             <p></p>
                         </div>
                         <div>
-                            <div class="section-secondary-title fc-ref-mat-4">2 COURT RULINGS ON THE KEY LEGAL ISSUES</div>
-                            <p>The legal claims against plain packaging have broad similarities across jurisdictions. The table below sets out the typical legal claims made by the tobacco companies in their challenges and what the courts and tribunals have ruled on those claims. The rulings and judgments used are from the cases detailed in part 4 of this Tools and Resources section. Relevant paragraph numbers from the rulings are given in square brackets [¶].</p>
+                            <div class="section-secondary-title fc-ref-mat-4">2 COURT RULINGS ON THE KEY LEGAL ISSUES
+                            </div>
+                            <p>The legal claims against plain packaging have broad similarities across jurisdictions.
+                                The table below sets out the typical legal claims made by the tobacco companies in their
+                                challenges and what the courts and tribunals have ruled on those claims. The rulings and
+                                judgments used are from the cases detailed in part 4 of this Tools and Resources
+                                section. Relevant paragraph numbers from the rulings are given in square brackets
+                                [¶].</p>
                             <table class="table table-inner table-condensed table-responsive">
                                 <thead class="bg-brown">
-                                    <tr>
-                                        <th class="col-lg-5">
-                                            What the Tobacco companies claim
+                                <tr>
+                                    <th class="col-lg-5">
+                                        What the Tobacco companies claim
 
-                                        </th>
-                                        <th class="col-lg-7">
-                                            What the Courts have said when dismissing the claims
-                                        </th>
-                                    </tr>
+                                    </th>
+                                    <th class="col-lg-7">
+                                        What the Courts have said when dismissing the claims
+                                    </th>
+                                </tr>
                                 </thead>
                                 <tbody>
-                                    <tr class="table-bg-light-blue">
-                                        <td valign="middle">
-                                            <b>The policy is not “justified,”“necessary,” or “proportionate”</b>
-                                        </td>
-                                        <td>
-                                            <p><b>UK:</b> “The Secretary of State has adduced ample evidence to support the suitability and appropriateness of the Regulations.”[¶35]</p>
-                                            <p>The Regulations are “about saving children from a lifetime of addiction, and children and adults from premature death and related suffering and disease. I therefore reject the Claimants’ case that the Regulations are disproportionate.” [¶36]</p>
-                                            <p><b>UK Appeal Court:</b> “None of the claimed alternatives, including increased taxation, would achieve all of the objectives pursued by the Regulations and. . . they should be regarded instead as complementary measures forming part of a comprehensive tobacco control strategy.” [¶243]</p>
-                                            <p><b>Australia High Court:</b> plain packaging requirements “are no different in kind from any legislation that requires labels that warn against the use or misuse of a product.” [¶181]</p>
-                                            <p><b>EU:</b> “The requirements contained in the Directive relating to the shape, size and minimum content of cigarette packets make a particular contribution to increasing the visibility of health warnings and maximising their efficacy”. . . “the purely economic interest in the greatest possible inter-product and inter-brand competition must be secondary to the protection of human health.” [¶190&193 AG opinion]</p>
-                                            <p><b>France Conseild’État:</b> “Neither the legislature nor the regulatory authorities have. . . disregarded a fair balance between the requirements of the public interest and the protection of the right of property.” [¶29 translated]</p>
-                                        </td>
-                                    </tr>
-                                    <tr class="table-bg-light-brown">
-                                        <td valign="middle">
-                                            <b>The evidence does not show that plain packaging will work to reduce smoking rates</b>
-                                        </td>
-                                        <td>
-                                            <p><b>UK:</b> “In my judgment the qualitative evidence relied upon by the [Government] is cogent, substantial and overwhelmingly one-directional in its conclusion” that plain packaging will be effective.[¶592] </p>
-                                            <p><b>France Conseild’État:</b> “It is nevertheless clear from other studies and expert reports cited by the Minister of Health, that plain packaging may reduce the attractiveness of tobacco products and to change the perception of consumers. If the effects. . . are difficult to quantify a priori, such regulations must nevertheless be regarded as being able only to help reduce future consumption tobacco products.”[¶28] </p>
-                                        </td>
-                                    </tr>
-                                    <tr class="table-bg-light-blue">
-                                        <td valign="middle">
-                                            <b>Plain packaging is an “expropriation,”“deprivation,” or “acquisition” of the property rights in their trademarks</b>
-                                        </td>
-                                        <td>
-                                            <p><b>UK:</b> “title to the rights in issue remains in the hands of the tobacco companies; the Regulations curtail the use that can be made of those [trademark] rights but they are not expropriated.”[¶38]</p>
-                                            <p>“There are no cases where compensation has been paid for the curtailment of an activity which is unequivocally contrary to the public interest. In my judgment the facts of the case are exceptional such that even if this were a case of absolute expropriation no compensation would be payable.”[¶811]</p>
-                                            <p><b>Australia High Court:</b> “Neither the Commonwealth nor any other person acquired any property.” [Official court summary]</p>
-                                            <p><b>FranceConseilConstitutionnel:</b> “The provisions do not prevent use of brand names allowing consumers to identify the product; the use of the trademark is just strictly regulated; the right to exclude others remains; and therefore there is no deprivation of property.” [¶20 translated]</p>
-                                        </td>
-                                    </tr>
-                                    <tr class="table-bg-light-brown">
-                                        <td valign="middle">
-                                            <b>Plain packaging is incompatible with intellectual property laws and the “right to use” a trademark</b>
-                                        </td>
-                                        <td>
-                                            <p><b>UK:</b> “It is no part of international, EU or domestic common law on intellectual property that the legitimate function of a trademark (i.e. its essence or substance) should be defined to include a right to use the mark to harm public health.” [¶40]</p>
-                                            <p><b>Uruguay:</b> “under Uruguayan law or international conventions to which Uruguay is a party the trademark holder does not enjoy an absolute right of use, free of regulation, but only an exclusive right to exclude third parties . . . subject to the State’s regulatory power.”[¶271]</p>
-                                            <p><b>WTO ruling <sup>18</sup>:</b> “The [WTO TRIPs Agreement] does not generally provide for the grant of positive rights to exploit or use certain subject matter, but rather provides for the grant of negative rights to prevent certain acts. This fundamental feature of intellectual property protection inherently grants Members freedom to pursue public policy objectives. . . .”[¶7.246]</p>
-                                            <p><b>Australia High Court</b>: “The right subsisting in the owner of a trademark is a negative and not a positive right. It is to be understood as a right to exclude others from using the mark.”[¶348]</p>
-                                        </td>
-                                    </tr>
-                                    <tr class="table-bg-light-brown">
-                                        <td valign="middle">
-                                            <b>Plain packaging breaches World Trade Organization (WTO) rules and investment treaties</b>
-                                        </td>
-                                        <td>
-                                            <p><b>UK:</b>  “The [tobacco companies] submit that WTO TRIPS agreement takes precedence over the FCTC. In my view they must be read consistently one with the other and this is done by rejecting the Claimants’ construction which otherwise effectively emasculates the FCTC.” [¶916] </p>
-                                            <p><b>Uruguay:</b> A case brought by Philip Morris under an investment treaty against Uruguay’s 80% Health warnings and Single Brand variant requirement failed. The tribunal also stated that: “nowhere does the WTO TRIPS Agreement, assuming its applicability, provide for a right to use.”[¶262]</p>
-                                            <p><b>FranceConseild’État:</b> The provisions in the WTO TRIPS and the Paris Convection “do not in any event prohibit States parties to exercise the option, which is always open to them to adopt measures necessary to protect public health, which can be applied, where appropriate depending on the objective, to certain categories of products.” [¶22 translated]</p>
-                                        </td>
-                                    </tr>
-                                    <tr class="table-bg-light-brown">
-                                        <td valign="middle">
-                                            <b>The laws were adopted without fairness or proper due process</b>
-                                        </td>
-                                        <td>
-                                            <p><b>UK:</b> “I can detect not a hint of unfairness in the procedure adopted towards BAT. Their arguments were summarised fairly and squarely and the short point is that Parliament made up its own mind aware of the full range of arguments on all sides of the debate.” [¶42]</p>
-                                        </td>
-                                    </tr>
-                                    <tr class="table-bg-light-brown">
-                                        <td valign="middle">
-                                            <b>Plain packaging is a breach of freedom of expression or the right to conduct a business</b>
-                                        </td>
-                                        <td>
-                                            <p><b>FranceConseilConstitutionnel:</b>  “The legislature intended to deprive these products a form of advertising likely to encourage consumption. . . the impugned provisions do not prohibit either production or distribution, or sale of tobacco or tobacco products; there is no manifestly disproportionate interference with the right to property or free enterprise.” [¶21 translated]</p>
-                                            <p><b>UK High Court:</b> The claim includes “a challenge to the right to conduct business under Article 16 of the Fundamental Charter which it is said the Regulations violate. As to this it is clear from case law that this is (for obvious reasons) a highly circumscribed right and all manner of different laws and regulatory measures (tax, environmental, health and safety, etc.) limit the freedom that business otherwise enjoys to do as it pleases. . . .This ground adds nothing new to the other legal challenges.” [¶41]</p>
-                                        </td>
-                                    </tr>
+                                <tr class="table-bg-light-blue">
+                                    <td valign="middle">
+                                        <b>The policy is not “justified,”“necessary,” or “proportionate”</b>
+                                    </td>
+                                    <td>
+                                        <p><b>UK:</b> “The Secretary of State has adduced ample evidence to support the
+                                            suitability and appropriateness of the Regulations.”[¶35]</p>
+                                        <p>The Regulations are “about saving children from a lifetime of addiction, and
+                                            children and adults from premature death and related suffering and disease.
+                                            I therefore reject the Claimants’ case that the Regulations are
+                                            disproportionate.” [¶36]</p>
+                                        <p><b>UK Appeal Court:</b> “None of the claimed alternatives, including
+                                            increased taxation, would achieve all of the objectives pursued by the
+                                            Regulations and. . . they should be regarded instead as complementary
+                                            measures forming part of a comprehensive tobacco control strategy.” [¶243]
+                                        </p>
+                                        <p><b>Australia High Court:</b> plain packaging requirements “are no different
+                                            in kind from any legislation that requires labels that warn against the use
+                                            or misuse of a product.” [¶181]</p>
+                                        <p><b>EU:</b> “The requirements contained in the Directive relating to the
+                                            shape, size and minimum content of cigarette packets make a particular
+                                            contribution to increasing the visibility of health warnings and maximising
+                                            their efficacy”. . . “the purely economic interest in the greatest possible
+                                            inter-product and inter-brand competition must be secondary to the
+                                            protection of human health.” [¶190&193 AG opinion]</p>
+                                        <p><b>France Conseild’État:</b> “Neither the legislature nor the regulatory
+                                            authorities have. . . disregarded a fair balance between the requirements of
+                                            the public interest and the protection of the right of property.” [¶29
+                                            translated]</p>
+                                    </td>
+                                </tr>
+                                <tr class="table-bg-light-brown">
+                                    <td valign="middle">
+                                        <b>The evidence does not show that plain packaging will work to reduce smoking
+                                            rates</b>
+                                    </td>
+                                    <td>
+                                        <p><b>UK:</b> “In my judgment the qualitative evidence relied upon by the
+                                            [Government] is cogent, substantial and overwhelmingly one-directional in
+                                            its conclusion” that plain packaging will be effective.[¶592] </p>
+                                        <p><b>France Conseild’État:</b> “It is nevertheless clear from other studies and
+                                            expert reports cited by the Minister of Health, that plain packaging may
+                                            reduce the attractiveness of tobacco products and to change the perception
+                                            of consumers. If the effects. . . are difficult to quantify a priori, such
+                                            regulations must nevertheless be regarded as being able only to help reduce
+                                            future consumption tobacco products.”[¶28] </p>
+                                    </td>
+                                </tr>
+                                <tr class="table-bg-light-blue">
+                                    <td valign="middle">
+                                        <b>Plain packaging is an “expropriation,”“deprivation,” or “acquisition” of the
+                                            property rights in their trademarks</b>
+                                    </td>
+                                    <td>
+                                        <p><b>UK:</b> “title to the rights in issue remains in the hands of the tobacco
+                                            companies; the Regulations curtail the use that can be made of those
+                                            [trademark] rights but they are not expropriated.”[¶38]</p>
+                                        <p>“There are no cases where compensation has been paid for the curtailment of
+                                            an activity which is unequivocally contrary to the public interest. In my
+                                            judgment the facts of the case are exceptional such that even if this were a
+                                            case of absolute expropriation no compensation would be payable.”[¶811]</p>
+                                        <p><b>Australia High Court:</b> “Neither the Commonwealth nor any other person
+                                            acquired any property.” [Official court summary]</p>
+                                        <p><b>FranceConseilConstitutionnel:</b> “The provisions do not prevent use of
+                                            brand names allowing consumers to identify the product; the use of the
+                                            trademark is just strictly regulated; the right to exclude others remains;
+                                            and therefore there is no deprivation of property.” [¶20 translated]</p>
+                                    </td>
+                                </tr>
+                                <tr class="table-bg-light-brown">
+                                    <td valign="middle">
+                                        <b>Plain packaging is incompatible with intellectual property laws and the
+                                            “right to use” a trademark</b>
+                                    </td>
+                                    <td>
+                                        <p><b>UK:</b> “It is no part of international, EU or domestic common law on
+                                            intellectual property that the legitimate function of a trademark (i.e. its
+                                            essence or substance) should be defined to include a right to use the mark
+                                            to harm public health.” [¶40]</p>
+                                        <p><b>Uruguay:</b> “under Uruguayan law or international conventions to which
+                                            Uruguay is a party the trademark holder does not enjoy an absolute right of
+                                            use, free of regulation, but only an exclusive right to exclude third
+                                            parties . . . subject to the State’s regulatory power.”[¶271]</p>
+                                        <p><b>WTO ruling <sup>18</sup>:</b> “The [WTO TRIPs Agreement] does not
+                                            generally provide for the grant of positive rights to exploit or use certain
+                                            subject matter, but rather provides for the grant of negative rights to
+                                            prevent certain acts. This fundamental feature of intellectual property
+                                            protection inherently grants Members freedom to pursue public policy
+                                            objectives. . . .”[¶7.246]</p>
+                                        <p><b>Australia High Court</b>: “The right subsisting in the owner of a
+                                            trademark is a negative and not a positive right. It is to be understood as
+                                            a right to exclude others from using the mark.”[¶348]</p>
+                                    </td>
+                                </tr>
+                                <tr class="table-bg-light-brown">
+                                    <td valign="middle">
+                                        <b>Plain packaging breaches World Trade Organization (WTO) rules and investment
+                                            treaties</b>
+                                    </td>
+                                    <td>
+                                        <p><b>UK:</b> “The [tobacco companies] submit that WTO TRIPS agreement takes
+                                            precedence over the FCTC. In my view they must be read consistently one with
+                                            the other and this is done by rejecting the Claimants’ construction which
+                                            otherwise effectively emasculates the FCTC.” [¶916] </p>
+                                        <p><b>Uruguay:</b> A case brought by Philip Morris under an investment treaty
+                                            against Uruguay’s 80% Health warnings and Single Brand variant requirement
+                                            failed. The tribunal also stated that: “nowhere does the WTO TRIPS
+                                            Agreement, assuming its applicability, provide for a right to use.”[¶262]
+                                        </p>
+                                        <p><b>FranceConseild’État:</b> The provisions in the WTO TRIPS and the Paris
+                                            Convection “do not in any event prohibit States parties to exercise the
+                                            option, which is always open to them to adopt measures necessary to protect
+                                            public health, which can be applied, where appropriate depending on the
+                                            objective, to certain categories of products.” [¶22 translated]</p>
+                                    </td>
+                                </tr>
+                                <tr class="table-bg-light-brown">
+                                    <td valign="middle">
+                                        <b>The laws were adopted without fairness or proper due process</b>
+                                    </td>
+                                    <td>
+                                        <p><b>UK:</b> “I can detect not a hint of unfairness in the procedure adopted
+                                            towards BAT. Their arguments were summarised fairly and squarely and the
+                                            short point is that Parliament made up its own mind aware of the full range
+                                            of arguments on all sides of the debate.” [¶42]</p>
+                                    </td>
+                                </tr>
+                                <tr class="table-bg-light-brown">
+                                    <td valign="middle">
+                                        <b>Plain packaging is a breach of freedom of expression or the right to conduct
+                                            a business</b>
+                                    </td>
+                                    <td>
+                                        <p><b>FranceConseilConstitutionnel:</b> “The legislature intended to deprive
+                                            these products a form of advertising likely to encourage consumption. . .
+                                            the impugned provisions do not prohibit either production or distribution,
+                                            or sale of tobacco or tobacco products; there is no manifestly
+                                            disproportionate interference with the right to property or free
+                                            enterprise.” [¶21 translated]</p>
+                                        <p><b>UK High Court:</b> The claim includes “a challenge to the right to conduct
+                                            business under Article 16 of the Fundamental Charter which it is said the
+                                            Regulations violate. As to this it is clear from case law that this is (for
+                                            obvious reasons) a highly circumscribed right and all manner of different
+                                            laws and regulatory measures (tax, environmental, health and safety, etc.)
+                                            limit the freedom that business otherwise enjoys to do as it pleases. . .
+                                            .This ground adds nothing new to the other legal challenges.” [¶41]</p>
+                                    </td>
+                                </tr>
                                 </tbody>
                             </table>
                         </div>
                         <div>
                             <div class="section-secondary-title fc-ref-mat-4">3 FURTHER INFORMATION AND RESOURCES</div>
-                            <p>The McCabe Centre for Law and Cancer serves as a WHO FCTC Knowledge Hub on legal challenges to tobacco control laws. It has information on domestic legal challenges to WHO FCTC implementation, including the challenges to plain packaging laws. There is also more information about trade and investment law challenges.</p>
-                            <p><a href="http://www.mccabecentre.org/knowledge-hub/">http://www.mccabecentre.org/knowledge-hub/</a></p>
-                            <p>The CTFK website has pages on trade and investment law which include useful summaries of key legal decisions including the UK High Court case and the PMI v Uruguay decision.</p>
-                            <p><a href="http://global.tobaccofreekids.org/en">http://global.tobaccofreekids.org/en</a></p>
-                            <p>The O’Neil Institute has produced a litigation guide for Latin America that considers the legal arguments raised by the tobacco industry in the region and includes similar issues to those discussed in this Toolkit but in a region-specific context.</p>
-                            <p><a href="http://www.law.georgetown.edu/oneillinstitute/documents/2012_OneillTobaccoLitGuide_ENG.PDF">http://www.law.georgetown.edu/oneillinstitute/documents/2012_OneillTobaccoLitGuide_ENG.PDF</a></p>
+                            <p>The McCabe Centre for Law and Cancer serves as a WHO FCTC Knowledge Hub on legal
+                                challenges to tobacco control laws. It has information on domestic legal challenges to
+                                WHO FCTC implementation, including the challenges to plain packaging laws. There is also
+                                more information about trade and investment law challenges.</p>
+                            <p><a href="http://www.mccabecentre.org/knowledge-hub/">http://www.mccabecentre.org/knowledge-hub/</a>
+                            </p>
+                            <p>The CTFK website has pages on trade and investment law which include useful summaries of
+                                key legal decisions including the UK High Court case and the PMI v Uruguay decision.</p>
+                            <p><a href="http://global.tobaccofreekids.org/en">http://global.tobaccofreekids.org/en</a>
+                            </p>
+                            <p>The O’Neil Institute has produced a litigation guide for Latin America that considers the
+                                legal arguments raised by the tobacco industry in the region and includes similar issues
+                                to those discussed in this Toolkit but in a region-specific context.</p>
+                            <p>
+                                <a href="http://www.law.georgetown.edu/oneillinstitute/documents/2012_OneillTobaccoLitGuide_ENG.PDF">http://www.law.georgetown.edu/oneillinstitute/documents/2012_OneillTobaccoLitGuide_ENG.PDF</a>
+                            </p>
                         </div>
                         <div class="content-end-notes">
                             <div class="section-secondary-title fc-ref-mat-4">End Notes</div>
-                            <p><sup>1</sup>BRITISH AMERICAN TOBACCO, Plain Packaging, accessed at <a href="http://www.bat.com/plainpackaging">http://www.bat.com/plainpackaging</a> (last visited on January 10, 2017)</p>
-                            <p><sup>2</sup>JTI,Plain Packaging, accessed at <a href="http://www.jti.com/about-tobacco/product-regulation/plain-packaging/">http://www.jti.com/about-tobacco/product-regulation/plain-packaging/</a>  (last visited on January 10, 2017).</p>
-                            <p><sup>3</sup>The Guardian, Australia wins international legal battle with Philip Morris over plain packaging, accessed at <a href="https://www.theguardian.com/australia-news/2015/dec/18/australia-wins-international-legal-battle-with-philip-morris-over-plain-packaging">https://www.theguardian.com/australia-news/2015/dec/18/australia-wins-international-legal-battle-with-philip-morris-over-plain-packaging</a> (Dec. 17, 2015).</p>
-                            <p><sup>4</sup>E. Crosbie and S. A. Glantz. Tobacco Industry Argues Domestic Trademark Laws and International Treaties Preclude Cigarette Health Warning Labels, Despite Consistent Legal Advice That the Argument is Invalid. Tobacco Control23.  Tobacco Control 7 (2014). Available from: <a href="http://tobaccocontrol.bmj.com/content/23/3/e7.full ">http://tobaccocontrol.bmj.com/content/23/3/e7.full</a>; See also, Physicians for a Smoke-Free Canada, The Plot Against Plain Packaging, available from:  <a href="http://www.smoke-free.ca/pdf_1/plotagainstplainpackaging-apr1'.pdf ">http://www.smoke-free.ca/pdf_1/plotagainstplainpackaging-apr1'.pdf</a> (last accessed Feb. 22, 2017); see alsothe tobaccotactics website: <a href="http://www.tobaccotactics.org/index.php/Countering_Industry_Arguments_Against_Plain_Packaging:_It_Breaches_Intellectual_Property_Rights#cite_note-10">http://www.tobaccotactics.org/index.php/Countering_Industry_Arguments_Against_Plain_Packaging:_It_Breaches_Intellectual_Property_Rights#cite_note-10</a>.</p>
-                            <p><sup>5</sup>This principle has been confirmed in UK High Court challenge:  R (British American Tobacco &Ors) v. Secretary of State for Health[2016] EWHC 1169 (Admin) paragraph 40; the Australian constitutional challenge:  JT International SA v. Commonwealth of Australia[2012] HCA 43 (October 5, 2012) paragraph 267; the investment arbitration case PMI v. Uruguay Philip Morris Brand Sàrl (Switzerland), Philip Morris Products S.A. (Switzerland) and AbalHermanos S.A. (Uruguay) v. Oriental Republic of Uruguay (ICSID Case No. ARB/10/7); and in the WTO dispute panel decision DS174 European Communities — Protection of Trademarks and Geographical Indications for Agricultural Products and Foodstuffs,paragraph 7.210.</p>
-                            <p><sup>6</sup>R (British American Tobacco &Ors) v. Secretary of State for Health [2016] EWHC 1169 (Admin) paragraph 40.</p>
-                            <p><sup>7</sup>PMI v. Uruguay Philip Morris Brand Sàrl (Switzerland), Philip Morris Products S.A. (Switzerland) and AbalHermanos S.A. (Uruguay) v. Oriental Republic of Uruguay (ICSID Case No. ARB/10/7).</p>
-                            <p><sup>8</sup>European Communities, Protection of Trademarks and Geographical Indications for Agricultural Products and Foodstuffs. WT/DS290/R 15 (March 2005) paragraph 7.246.</p>
-                            <p><sup>9</sup>Mark Davidson, Plain Packaging of Tobacco and the "Right" Use of a Trade Mark. 8 European Intellectual Property Review 498-501 (2012). Available from:  <a href="http://papers.ssrn.com/sol3/papers.cfm?abstract_id=2137455">http://papers.ssrn.com/sol3/papers.cfm?abstract_id=2137455</a>;  T., S. L. Voon and A. D. Mitchell, “Implications of WTO Law for Plain Packaging of Tobacco Products” in Public Health And Plain Packaging Of Cigarettes: Legal Issues, A.D. Mitchell, T. S. L.  Voon, and J. Liberman, eds., A.D. Mitchell, T. Voon and J. Liberman, eds., UK, 2012; University of Melbourne Legal Studies Research Paper No. 554. Available from SSRN: <a href="https://ssrn.com/abstract=1874593">https://ssrn.com/abstract=1874593</a>.</p>
-                            <p><sup>10</sup>See, for example, The UK’s Trade Marks Act 1994 Section 9 (1): “The proprietor of a registered trade mark has exclusive rights in the trade mark which are infringed by use of the trade mark in the United Kingdom without his consent.”  See also Ireland’s Trade Marks Act 1996 Section 13 (1): “The proprietor of a registered trade mark shall have exclusive rights in the trade mark and such rights shall be infringed by the use of that trade mark in the State without the proprietor's consent.”</p>
-                            <p><sup>11</sup>Australia, Trade Marks Act 1995. Available from: <a href="https://www.legislation.gov.au/Details/C2013C00143">https://www.legislation.gov.au/Details/C2013C00143</a>.</p>
-                            <p><sup>12</sup>R (British American Tobacco &Ors) v. Secretary of State for Health [2016] EWHC 1169 (Admin) paragraph 41.</p>
-                            <p><sup>13</sup>ConseilConstitutionnel, Decision No. 2015–727 DC of January 21, 2015 paragraph 21. </p>
-                            <p><sup>14</sup>AG’s Opinion on Case C 547/14 Philip Morris Brands SARL and Others (Request for a preliminary ruling from the High Court of Justice (England and Wales), Queen’s Bench Division (Administrative Court), United Kingdom). See Paragraphs 148 to 151. Available from: <a href="http://curia.europa.eu/juris/liste.jsf?num=C-547/14">http://curia.europa.eu/juris/liste.jsf?num=C-547/14</a>.</p>
-                            <p><sup>15</sup>A review of the Tobacco Act “New Steps Towards a Reduction in Tobacco Use” (SOU 2016:14). Available from: <a href="http://tobaksfakta.se/wp-content/uploads/2016/03/Summary1.pdf">http://tobaksfakta.se/wp-content/uploads/2016/03/Summary1.pdf</a>.</p>
-                            <p><sup>16</sup>R (British American Tobacco &Ors) v. Secretary of State for Health [2016] EWHC 1169 (Admin) paragraph 406.</p>
+                            <p><sup>1</sup>BRITISH AMERICAN TOBACCO, Plain Packaging, accessed at <a
+                                        href="http://www.bat.com/plainpackaging">http://www.bat.com/plainpackaging</a>
+                                (last visited on January 10, 2017)</p>
+                            <p><sup>2</sup>JTI,Plain Packaging, accessed at <a
+                                        href="http://www.jti.com/about-tobacco/product-regulation/plain-packaging/">http://www.jti.com/about-tobacco/product-regulation/plain-packaging/</a>
+                                (last visited on January 10, 2017).</p>
+                            <p><sup>3</sup>The Guardian, Australia wins international legal battle with Philip Morris
+                                over plain packaging, accessed at <a
+                                        href="https://www.theguardian.com/australia-news/2015/dec/18/australia-wins-international-legal-battle-with-philip-morris-over-plain-packaging">https://www.theguardian.com/australia-news/2015/dec/18/australia-wins-international-legal-battle-with-philip-morris-over-plain-packaging</a>
+                                (Dec. 17, 2015).</p>
+                            <p><sup>4</sup>E. Crosbie and S. A. Glantz. Tobacco Industry Argues Domestic Trademark Laws
+                                and International Treaties Preclude Cigarette Health Warning Labels, Despite Consistent
+                                Legal Advice That the Argument is Invalid. Tobacco Control23. Tobacco Control 7 (2014).
+                                Available from: <a href="http://tobaccocontrol.bmj.com/content/23/3/e7.full ">http://tobaccocontrol.bmj.com/content/23/3/e7.full</a>;
+                                See also, Physicians for a Smoke-Free Canada, The Plot Against Plain Packaging,
+                                available from: <a
+                                        href="http://www.smoke-free.ca/pdf_1/plotagainstplainpackaging-apr1'.pdf ">http://www.smoke-free.ca/pdf_1/plotagainstplainpackaging-apr1'.pdf</a>
+                                (last accessed Feb. 22, 2017); see alsothe tobaccotactics website: <a
+                                        href="http://www.tobaccotactics.org/index.php/Countering_Industry_Arguments_Against_Plain_Packaging:_It_Breaches_Intellectual_Property_Rights#cite_note-10">http://www.tobaccotactics.org/index.php/Countering_Industry_Arguments_Against_Plain_Packaging:_It_Breaches_Intellectual_Property_Rights#cite_note-10</a>.
+                            </p>
+                            <p><sup>5</sup>This principle has been confirmed in UK High Court challenge: R (British
+                                American Tobacco &Ors) v. Secretary of State for Health[2016] EWHC 1169 (Admin)
+                                paragraph 40; the Australian constitutional challenge: JT International SA v.
+                                Commonwealth of Australia[2012] HCA 43 (October 5, 2012) paragraph 267; the investment
+                                arbitration case PMI v. Uruguay Philip Morris Brand Sàrl (Switzerland), Philip Morris
+                                Products S.A. (Switzerland) and AbalHermanos S.A. (Uruguay) v. Oriental Republic of
+                                Uruguay (ICSID Case No. ARB/10/7); and in the WTO dispute panel decision DS174 European
+                                Communities — Protection of Trademarks and Geographical Indications for Agricultural
+                                Products and Foodstuffs,paragraph 7.210.</p>
+                            <p><sup>6</sup>R (British American Tobacco &Ors) v. Secretary of State for Health [2016]
+                                EWHC 1169 (Admin) paragraph 40.</p>
+                            <p><sup>7</sup>PMI v. Uruguay Philip Morris Brand Sàrl (Switzerland), Philip Morris Products
+                                S.A. (Switzerland) and AbalHermanos S.A. (Uruguay) v. Oriental Republic of Uruguay
+                                (ICSID Case No. ARB/10/7).</p>
+                            <p><sup>8</sup>European Communities, Protection of Trademarks and Geographical Indications
+                                for Agricultural Products and Foodstuffs. WT/DS290/R 15 (March 2005) paragraph 7.246.
+                            </p>
+                            <p><sup>9</sup>Mark Davidson, Plain Packaging of Tobacco and the "Right" Use of a Trade
+                                Mark. 8 European Intellectual Property Review 498-501 (2012). Available from: <a
+                                        href="http://papers.ssrn.com/sol3/papers.cfm?abstract_id=2137455">http://papers.ssrn.com/sol3/papers.cfm?abstract_id=2137455</a>;
+                                T., S. L. Voon and A. D. Mitchell, “Implications of WTO Law for Plain Packaging of
+                                Tobacco Products” in Public Health And Plain Packaging Of Cigarettes: Legal Issues, A.D.
+                                Mitchell, T. S. L. Voon, and J. Liberman, eds., A.D. Mitchell, T. Voon and J. Liberman,
+                                eds., UK, 2012; University of Melbourne Legal Studies Research Paper No. 554. Available
+                                from SSRN: <a
+                                        href="https://ssrn.com/abstract=1874593">https://ssrn.com/abstract=1874593</a>.
+                            </p>
+                            <p><sup>10</sup>See, for example, The UK’s Trade Marks Act 1994 Section 9 (1): “The
+                                proprietor of a registered trade mark has exclusive rights in the trade mark which are
+                                infringed by use of the trade mark in the United Kingdom without his consent.” See also
+                                Ireland’s Trade Marks Act 1996 Section 13 (1): “The proprietor of a registered trade
+                                mark shall have exclusive rights in the trade mark and such rights shall be infringed by
+                                the use of that trade mark in the State without the proprietor's consent.”</p>
+                            <p><sup>11</sup>Australia, Trade Marks Act 1995. Available from: <a
+                                        href="https://www.legislation.gov.au/Details/C2013C00143">https://www.legislation.gov.au/Details/C2013C00143</a>.
+                            </p>
+                            <p><sup>12</sup>R (British American Tobacco &Ors) v. Secretary of State for Health [2016]
+                                EWHC 1169 (Admin) paragraph 41.</p>
+                            <p><sup>13</sup>ConseilConstitutionnel, Decision No. 2015–727 DC of January 21, 2015
+                                paragraph 21. </p>
+                            <p><sup>14</sup>AG’s Opinion on Case C 547/14 Philip Morris Brands SARL and Others (Request
+                                for a preliminary ruling from the High Court of Justice (England and Wales), Queen’s
+                                Bench Division (Administrative Court), United Kingdom). See Paragraphs 148 to 151.
+                                Available from: <a href="http://curia.europa.eu/juris/liste.jsf?num=C-547/14">http://curia.europa.eu/juris/liste.jsf?num=C-547/14</a>.
+                            </p>
+                            <p><sup>15</sup>A review of the Tobacco Act “New Steps Towards a Reduction in Tobacco Use”
+                                (SOU 2016:14). Available from: <a
+                                        href="http://tobaksfakta.se/wp-content/uploads/2016/03/Summary1.pdf">http://tobaksfakta.se/wp-content/uploads/2016/03/Summary1.pdf</a>.
+                            </p>
+                            <p><sup>16</sup>R (British American Tobacco &Ors) v. Secretary of State for Health [2016]
+                                EWHC 1169 (Admin) paragraph 406.</p>
                             <p><sup>17</sup>See note 16 above at paragraph 651.</p>
-                            <p><sup>18</sup>A previous WTO panel ruling that did not concern tobacco:European Communities,Protection of Trademarks and GI for foodstuffsWT/DS290/R 15 (March 2005) at paragraph 7.246. </p>
+                            <p><sup>18</sup>A previous WTO panel ruling that did not concern tobacco:European
+                                Communities,Protection of Trademarks and GI for foodstuffsWT/DS290/R 15 (March 2005) at
+                                paragraph 7.246. </p>
                         </div>
                     </div>
                     <!-- /content -->
@@ -7998,9 +9854,8 @@ function nav_content($menu,$var = null)
             break;
 
         // k case-summaries
-        case 'case-summaries': 
-            if ($var == 'og_desc')
-            {
+        case 'case-summaries':
+            if ($var == 'og_desc') {
                 $og_desc = 'This Toolkit is intended to provide governments and civil society organizations with the resources to ensure that tobacco product plain packaging legislation is robust and can stand against any legal challenge from the tobacco industry. Following the recommended steps outlined in this Toolkit should lead to a strong, defendable law. Nevertheless, government officials need to be aware of the legal arguments that the industry use to challenge the laws and be prepared for the risks of a legal challenge.';
                 return $og_desc;
             }
@@ -8019,10 +9874,14 @@ function nav_content($menu,$var = null)
                             <ul class="sidebar-nav">
                                 <div class="sidebar-nav-header">LINKED<br>TOOLS AND RESOURCES</div>
                                 <li>
-                                    <a href="<?php echo $base_url; ?>resources/legal-issues"><img src="<?php echo $base_url; ?>img/icons/linked-tools-and-resources/legal-issues.PNG" style="padding:0 10px;"> Legal Issues</a>
+                                    <a href="<?php echo $base_url; ?>resources/legal-issues"><img
+                                                src="<?php echo $base_url; ?>img/icons/linked-tools-and-resources/legal-issues.PNG"
+                                                style="padding:0 10px;"> Legal Issues</a>
                                 </li>
                                 <li>
-                                    <a href="<?php echo $base_url; ?>resources/policy-briefs"><img src="<?php echo $base_url; ?>img/icons/linked-tools-and-resources/policy-brief-is-it-lawful.PNG" style="padding:0 5px;">Policy Brief: Is it Lawful?</a>
+                                    <a href="<?php echo $base_url; ?>resources/policy-briefs"><img
+                                                src="<?php echo $base_url; ?>img/icons/linked-tools-and-resources/policy-brief-is-it-lawful.PNG"
+                                                style="padding:0 5px;">Policy Brief: Is it Lawful?</a>
                                 </li>
                             </ul>
                         </div>
@@ -8031,112 +9890,326 @@ function nav_content($menu,$var = null)
                     <div class="content-desc-cont col-lg-8 col-lg-offset-1 ref -g1">
                         <div class="sidebar-anchor-item" id="item1"></div>
                         <div>
-                            <div class="section-secondary-title fc-ref-mat-4">1 Australia <img style="padding-left:30px;" src="<?php echo $base_url; ?>img/img-case-summaries/australia.PNG"></div>
-                            <p>Details and analysis on the three Australian cases is available from the <a href="http://www.mccabecentre.org/focus-areas/tobacco/domestic-challenge-to-plain-packaging">McCabe Centre for Law & Cancer website.</a></p>
+                            <div class="section-secondary-title fc-ref-mat-4">1 Australia <img
+                                        style="padding-left:30px;"
+                                        src="<?php echo $base_url; ?>img/img-case-summaries/australia.PNG"></div>
+                            <p>Details and analysis on the three Australian cases is available from the <a
+                                        href="http://www.mccabecentre.org/focus-areas/tobacco/domestic-challenge-to-plain-packaging">McCabe
+                                    Centre for Law & Cancer website.</a></p>
                         </div>
                         <div>
                             <h3 class="fc-ref-mat-4 sub-title">
                                 1.1 Constitutional challenge in the High Court of Australia — dismissed in August 2012
                             </h3>
-                            <p><a href="http://www.austlii.edu.au/au/cases/cth/HCA/2012/43.html">JTInternational SA v. Commonwealth of Australia [2012] HCA 43 (5 October, 2012)</a></p>
-                            <p>The four major tobacco companies challenged the Tobacco Plain Packaging Act 2011 based on section 51(xxxi) of the Constitution, which deals with the acquisition of property by the state. </p>
-                            <p>The two principle arguments were that plain-packaging laws were a breach of the constitution because they amounted to an acquisition of the tobacco companies’ intellectual property rights including trademarks‘and that the government’s use of or control over the packaging itself amounted to an acquisition of property.</p>
+                            <p><a href="http://www.austlii.edu.au/au/cases/cth/HCA/2012/43.html">JTInternational SA v.
+                                    Commonwealth of Australia [2012] HCA 43 (5 October, 2012)</a></p>
+                            <p>The four major tobacco companies challenged the Tobacco Plain Packaging Act 2011 based on
+                                section 51(xxxi) of the Constitution, which deals with the acquisition of property by
+                                the state. </p>
+                            <p>The two principle arguments were that plain-packaging laws were a breach of the
+                                constitution because they amounted to an acquisition of the tobacco companies’
+                                intellectual property rights including trademarks‘and that the government’s use of or
+                                control over the packaging itself amounted to an acquisition of property.</p>
                             <p>The High Court ruled in the Government’s favor by 6 to 1.</p>
-                            <p>One judge observed that the tobacco companies’ most strenuous objection was the taking <i>“of the advertising or promotional functions of their registered trademarks.”</i></p>
-                            <p>The High Court held that, to be an acquisition, the Government must obtain a benefit or interest of a “proprietary nature.” One judge stated that <i>“on no view can it be said that the Commonwealth. . . has acquired any benefit of a proprietary character”</i>; and another that the requirements of the Act <i>“are no different in kind from any legislation that requires labels that warn against the use or misuse of a product.”</i>Moreover,that <i>“[m]any kinds of products have been subjected to regulation in order to prevent or reduce the likelihood of harm, including medicines, poisonous substances and foods.”</i></p>
-                            <p>The transcripts of the hearings<sup>1</sup> show that counsel for Japan Tobacco International (JTI) and Imperial Tobacco compare the cigarette packet to advertising billboards by saying that Australia <i>“is acquiring our billboard, your Honour”</i>; and <i>“I own this packet and I will determine what message goes on it”</i>. . . it is our <i>“bonsai billboard.”</i></p>
+                            <p>One judge observed that the tobacco companies’ most strenuous objection was the taking
+                                <i>“of the advertising or promotional functions of their registered trademarks.”</i></p>
+                            <p>The High Court held that, to be an acquisition, the Government must obtain a benefit or
+                                interest of a “proprietary nature.” One judge stated that <i>“on no view can it be said
+                                    that the Commonwealth. . . has acquired any benefit of a proprietary character”</i>;
+                                and another that the requirements of the Act <i>“are no different in kind from any
+                                    legislation that requires labels that warn against the use or misuse of a
+                                    product.”</i>Moreover,that <i>“[m]any kinds of products have been subjected to
+                                    regulation in order to prevent or reduce the likelihood of harm, including
+                                    medicines, poisonous substances and foods.”</i></p>
+                            <p>The transcripts of the hearings<sup>1</sup> show that counsel for Japan Tobacco
+                                International (JTI) and Imperial Tobacco compare the cigarette packet to advertising
+                                billboards by saying that Australia <i>“is acquiring our billboard, your Honour”</i>;
+                                and <i>“I own this packet and I will determine what message goes on it”</i>. . . it is
+                                our <i>“bonsai billboard.”</i></p>
                         </div>
                         <div>
                             <h3 class="fc-ref-mat-4 sub-title">
                                 1.2 International investment arbitration claim — dismissed in December 2015
                             </h3>
-                            <p><b><i>Philip Morris Asia Limited v. Commonwealth of Australia PCA</i></b><a href="https://pcacases.com/web/view/5">Case 2012–02</a></p>
-                            <p>Philip Morris Asia brought a claim under a bilateral investment treaty between Australia and Hong Kong to obtain compensation for losses it claimed were due to the plain-packaging laws. The two main arguments of Philip Morris were: that plain packaging had the equivalent effect of “expropriating” the property rights in its trademarks that could no longer be used on packaging; and that the measure was “arbitrary” and “unreasonable” on the basis that there was no evidence it would work. </p>
-                            <p>However, in order to bring the claim, Philip Morris International restructured, so that ownership of 100% of its shares in Philip Morris Australia were transferred from PMI (based in Switzerland) to Philip Morris Asia (based in Hong Kong) <i>after</i> the Australian government had announced its intention to adopt plain packaging of tobacco products. The arbitration tribunal found that this was done for the sole purpose of bringing a claim under the investment treaty between Hong Kong and Australia and the claim was therefore <i>“an abuse of rights.”</i> The tribunal therefore declined jurisdiction, and the merits of the claim were not considered. </p>
+                            <p><b><i>Philip Morris Asia Limited v. Commonwealth of Australia PCA</i></b><a
+                                        href="https://pcacases.com/web/view/5">Case 2012–02</a></p>
+                            <p>Philip Morris Asia brought a claim under a bilateral investment treaty between Australia
+                                and Hong Kong to obtain compensation for losses it claimed were due to the
+                                plain-packaging laws. The two main arguments of Philip Morris were: that plain packaging
+                                had the equivalent effect of “expropriating” the property rights in its trademarks that
+                                could no longer be used on packaging; and that the measure was “arbitrary” and
+                                “unreasonable” on the basis that there was no evidence it would work. </p>
+                            <p>However, in order to bring the claim, Philip Morris International restructured, so that
+                                ownership of 100% of its shares in Philip Morris Australia were transferred from PMI
+                                (based in Switzerland) to Philip Morris Asia (based in Hong Kong) <i>after</i> the
+                                Australian government had announced its intention to adopt plain packaging of tobacco
+                                products. The arbitration tribunal found that this was done for the sole purpose of
+                                bringing a claim under the investment treaty between Hong Kong and Australia and the
+                                claim was therefore <i>“an abuse of rights.”</i> The tribunal therefore declined
+                                jurisdiction, and the merits of the claim were not considered. </p>
                         </div>
                         <div>
                             <h3 class="fc-ref-mat-4 sub-title">
                                 1.3 World Trade Organization dispute — ruling due July 2017.
                             </h3>
-                            <p><b><i>Australia — Certain Measures Concerning Trademarks and Other Plain Packaging Requirements Applicable to Tobacco Products and Packaging.Dispute numbers</i></b> <a href="https://www.wto.org/english/tratop_e/dispu_e/cases_e/ds435_e.htm">DS435</a>, <a href="https://www.wto.org/english/tratop_e/dispu_e/cases_e/ds441_e.htm">DS441</a>, <a href="https://www.wto.org/english/tratop_e/dispu_e/cases_e/ds458_e.htm">DS458</a>, <b><i>and</i></b> <a href="https://www.wto.org/english/tratop_e/dispu_e/cases_e/ds467_e.htm">DS467</a></p>
-                            <p>The dispute arose out of complaints by Cuba, the Dominican Republic, Honduras, Indonesia, and Ukraine that the plain-packaging laws breach various articles of the WTO agreements, and a dispute settlement panel was composed in May 2014. The final oral hearing took place in October 2015, and final summary written submissions were made in December 2015. The On May 28, 2015, Ukraine suspended their dispute in order to negotiate a mutually agreed solution with Australia. The panel has stated that its ruling will be given not before May 2017. It is possible for parties to appeal to the WTO's Appellate Body.</p>
+                            <p><b><i>Australia — Certain Measures Concerning Trademarks and Other Plain Packaging
+                                        Requirements Applicable to Tobacco Products and Packaging.Dispute
+                                        numbers</i></b> <a
+                                        href="https://www.wto.org/english/tratop_e/dispu_e/cases_e/ds435_e.htm">DS435</a>,
+                                <a href="https://www.wto.org/english/tratop_e/dispu_e/cases_e/ds441_e.htm">DS441</a>, <a
+                                        href="https://www.wto.org/english/tratop_e/dispu_e/cases_e/ds458_e.htm">DS458</a>,
+                                <b><i>and</i></b> <a
+                                        href="https://www.wto.org/english/tratop_e/dispu_e/cases_e/ds467_e.htm">DS467</a>
+                            </p>
+                            <p>The dispute arose out of complaints by Cuba, the Dominican Republic, Honduras, Indonesia,
+                                and Ukraine that the plain-packaging laws breach various articles of the WTO agreements,
+                                and a dispute settlement panel was composed in May 2014. The final oral hearing took
+                                place in October 2015, and final summary written submissions were made in December 2015.
+                                The On May 28, 2015, Ukraine suspended their dispute in order to negotiate a mutually
+                                agreed solution with Australia. The panel has stated that its ruling will be given not
+                                before May 2017. It is possible for parties to appeal to the WTO's Appellate Body.</p>
                             <p>The complaining countries argue that Australia’s law breaches:</p>
                             <ul class="custom">
-                                <li>the Agreement on Trade-Related Aspects of Intellectual Property Rights (TRIPS Agreement) by failing to provide required protections to trademarks rights and because it is an unjustifiable encumbrance on the use of tobacco trademarks; </li>
-                                <li>the Agreement on Technical Barriers to Trade (TBT Agreement) because it is more trade-restrictive than necessary to fulfill a legitimate objective; and</li>
-                                <li>the General Agreement on Tariffs and Trade (GATT) because it provides imported tobacco products less favorable treatment than like products of national origin. </li>
+                                <li>the Agreement on Trade-Related Aspects of Intellectual Property Rights (TRIPS
+                                    Agreement) by failing to provide required protections to trademarks rights and
+                                    because it is an unjustifiable encumbrance on the use of tobacco trademarks;
+                                </li>
+                                <li>the Agreement on Technical Barriers to Trade (TBT Agreement) because it is more
+                                    trade-restrictive than necessary to fulfill a legitimate objective; and
+                                </li>
+                                <li>the General Agreement on Tariffs and Trade (GATT) because it provides imported
+                                    tobacco products less favorable treatment than like products of national origin.
+                                </li>
                             </ul>
-                            <p>The ruling is highly anticipated and has significant wider relevance that is clear from the fact that there are more third-party WTO member states that have made written and oral submissions to the panel than for any previous WTO dispute — some 34 countries plus the EU. It has been reported that Philip Morris and British American Tobacco are providing legal and financial support to the Dominican Republic and Honduras. </p>
-                            <p>Australia has published an executive summary of its submissions to the panel.<sup>2</sup></p>
+                            <p>The ruling is highly anticipated and has significant wider relevance that is clear from
+                                the fact that there are more third-party WTO member states that have made written and
+                                oral submissions to the panel than for any previous WTO dispute — some 34 countries plus
+                                the EU. It has been reported that Philip Morris and British American Tobacco are
+                                providing legal and financial support to the Dominican Republic and Honduras. </p>
+                            <p>Australia has published an executive summary of its submissions to the panel.<sup>2</sup>
+                            </p>
                         </div>
                         <div class="sidebar-anchor-item" id="item2"></div>
                         <div>
-                            <div class="section-secondary-title fc-ref-mat-4">2 United Kingdom <img style="padding-left:30px;" src="<?php echo $base_url; ?>img/img-case-summaries/united-kingdom.PNG"></div>
+                            <div class="section-secondary-title fc-ref-mat-4">2 United Kingdom <img
+                                        style="padding-left:30px;"
+                                        src="<?php echo $base_url; ?>img/img-case-summaries/united-kingdom.PNG"></div>
                             <h3 class="fc-ref-mat-4 sub-title">
-                                Claim in the High Court — dismissed in May 2016 [ruling upheld by Court of Appeal in November 2016]
+                                Claim in the High Court — dismissed in May 2016 [ruling upheld by Court of Appeal in
+                                November 2016]
                             </h3>
-                            <p><b><i>R (British American Tobacco & Ors) v. Secretary of State for Health</i></b><a href="https://www.judiciary.gov.uk/wp-content/uploads/2016/05/bat-v-doh.judgment.pdf">[2016] EWHC 1169 (Admin); [2016] EWCA Civ 1182 (Appeal)</a><sup>3</sup></p>
-                            <p>Claims were commenced by the four big international tobacco companies — British American Tobacco, Philip Morris, Imperial Tobacco, and Japan Tobacco International — together with a German manufacturer of cigarette tipping paper (TANN). The 17 grounds of claim were under domestic administrative law, European Union Law, and the European Convention of Human Rights. </p>
-                            <p>This is an important judgment that has wider international significance. The ruling dealt with the merits of most of the key legal issues set out above in section 2. The judge gave particular attention to issues of international relevance including —the importance of the WHO Framework Convention on Tobacco Control (FCTC); the public health justification for plain-packaging laws; the issue of whether or not there is a right to use trademarks; and a detailed analysis of the evidence that supported the policy and the tobacco companies’ evidence submitted to oppose the policy. </p>
-                            <p><b class="fc-ref-mat-4">The judge’s analysis of the evidence from both sides of the dispute</b> is particularly significant because the same evidence should be considered by any government taking forward plain packaging. This is the first judgment that provides a careful scrutiny of that evidence, confirming that it meets relevant legal tests.</p>
-                            <p>On the tobacco industry’s evidence, the judge said that, <i>“On the basis of my own review of the methodologies adopted by the Claimants’ experts . . .  I conclude that that body of expert evidence does not accord with internationally recognised best practice.”</i> And was heavily critical of <i>“what has the appearance of being an industry wide practice not to adduce internal documents or to allow their experts to see and review and then rely upon internal documents.”</i></p>
-                            <p><b>A more detailed summary of this useful judgment is available on the CTFK website</b> <a href="http://tobaccocontrollaws.org/files/live/litigation/2508/GB_BAT%20v.%20UK%20Department%20of%20Health_1.pdf">here</a>.<sup>4</sup></p>
+                            <p><b><i>R (British American Tobacco & Ors) v. Secretary of State for Health</i></b><a
+                                        href="https://www.judiciary.gov.uk/wp-content/uploads/2016/05/bat-v-doh.judgment.pdf">[2016]
+                                    EWHC 1169 (Admin); [2016] EWCA Civ 1182 (Appeal)</a><sup>3</sup></p>
+                            <p>Claims were commenced by the four big international tobacco companies — British American
+                                Tobacco, Philip Morris, Imperial Tobacco, and Japan Tobacco International — together
+                                with a German manufacturer of cigarette tipping paper (TANN). The 17 grounds of claim
+                                were under domestic administrative law, European Union Law, and the European Convention
+                                of Human Rights. </p>
+                            <p>This is an important judgment that has wider international significance. The ruling dealt
+                                with the merits of most of the key legal issues set out above in section 2. The judge
+                                gave particular attention to issues of international relevance including —the importance
+                                of the WHO Framework Convention on Tobacco Control (FCTC); the public health
+                                justification for plain-packaging laws; the issue of whether or not there is a right to
+                                use trademarks; and a detailed analysis of the evidence that supported the policy and
+                                the tobacco companies’ evidence submitted to oppose the policy. </p>
+                            <p><b class="fc-ref-mat-4">The judge’s analysis of the evidence from both sides of the
+                                    dispute</b> is particularly significant because the same evidence should be
+                                considered by any government taking forward plain packaging. This is the first judgment
+                                that provides a careful scrutiny of that evidence, confirming that it meets relevant
+                                legal tests.</p>
+                            <p>On the tobacco industry’s evidence, the judge said that, <i>“On the basis of my own
+                                    review of the methodologies adopted by the Claimants’ experts . . . I conclude that
+                                    that body of expert evidence does not accord with internationally recognised best
+                                    practice.”</i> And was heavily critical of <i>“what has the appearance of being an
+                                    industry wide practice not to adduce internal documents or to allow their experts to
+                                    see and review and then rely upon internal documents.”</i></p>
+                            <p><b>A more detailed summary of this useful judgment is available on the CTFK website</b>
+                                <a href="http://tobaccocontrollaws.org/files/live/litigation/2508/GB_BAT%20v.%20UK%20Department%20of%20Health_1.pdf">here</a>.<sup>4</sup>
+                            </p>
                         </div>
                         <div class="sidebar-anchor-item" id="item3"></div>
                         <div>
-                            <div class="section-secondary-title fc-ref-mat-4">3 European Union <img style="padding-left:30px;" src="<?php echo $base_url; ?>img/img-case-summaries/european-union.PNG"></div>
-                            <h3 class="fc-ref-mat-4 sub-title">Challenge to the Tobacco Products Directive in the Court of Justice— dismissed in May 2016</h3>
-                            <p><i><a href="http://curia.europa.eu/juris/liste.jsf?num=C-547/14">R (Philip Morris Brands Sarl & Others) v. Secretary of State for Health C–547</a></i></p>
-                            <p>The aim of the EU Tobacco Products Directive (TPD) is to provide a harmonized regulatory environment for tobacco products across the EU (including on emissions, health warnings, labeling, and reporting requirements) to assist the free movement of those goods. In doing so, the Directive takes a high standard of public health. Some provisions of the TPD introduce elements of a plain-packaging policy, such as the requirement for cuboid cigarette packs with flip top lids, and a minimum of 20 cigarettes per pack. The TPD also includes, inArticle 24(2), a provision that member states may adopt further measures in relation to the standardization of tobacco packaging. </p>
-                            <p>The four major international tobacco companies commenced a legal claim in the UK courts, challenging the government’s intention to implement the TPD on the basis that the Directive was not validly made. The High Court referred questions of interpretation of EU law to the Court of Justice of the European Union (CJEU). The legal challenge sought to overturn the whole Directive on a number of different grounds and also challenged the validity of separate parts of the TPD, including Article 24(2).</p>
-                            <p>All grounds of challenge were dismissed and the validity of the Directive upheld. The importance of the FCTC was highlighted by the CJEU, which emphasized that its guidelines could have “decisive influence” on the interpretation of EU laws on tobacco control. But the key aspect of the judgment relevant to plain packaging, is that the Court of Justice confirmed that the Tobacco Products Directive permits EU Member States to introduce measures to standardize the packaging of tobacco products. </p>
-                            <p>The opinion of the Advocate General (adopted by the Court) confirmed that measures to standardize packs contribute to increasing the visibility of health warnings and that these measures are proportionate because purely economic interests in the functioning of the tobacco market are secondary to the protection of human health.</p>
+                            <div class="section-secondary-title fc-ref-mat-4">3 European Union <img
+                                        style="padding-left:30px;"
+                                        src="<?php echo $base_url; ?>img/img-case-summaries/european-union.PNG"></div>
+                            <h3 class="fc-ref-mat-4 sub-title">Challenge to the Tobacco Products Directive in the Court
+                                of Justice— dismissed in May 2016</h3>
+                            <p><i><a href="http://curia.europa.eu/juris/liste.jsf?num=C-547/14">R (Philip Morris Brands
+                                        Sarl & Others) v. Secretary of State for Health C–547</a></i></p>
+                            <p>The aim of the EU Tobacco Products Directive (TPD) is to provide a harmonized regulatory
+                                environment for tobacco products across the EU (including on emissions, health warnings,
+                                labeling, and reporting requirements) to assist the free movement of those goods. In
+                                doing so, the Directive takes a high standard of public health. Some provisions of the
+                                TPD introduce elements of a plain-packaging policy, such as the requirement for cuboid
+                                cigarette packs with flip top lids, and a minimum of 20 cigarettes per pack. The TPD
+                                also includes, inArticle 24(2), a provision that member states may adopt further
+                                measures in relation to the standardization of tobacco packaging. </p>
+                            <p>The four major international tobacco companies commenced a legal claim in the UK courts,
+                                challenging the government’s intention to implement the TPD on the basis that the
+                                Directive was not validly made. The High Court referred questions of interpretation of
+                                EU law to the Court of Justice of the European Union (CJEU). The legal challenge sought
+                                to overturn the whole Directive on a number of different grounds and also challenged the
+                                validity of separate parts of the TPD, including Article 24(2).</p>
+                            <p>All grounds of challenge were dismissed and the validity of the Directive upheld. The
+                                importance of the FCTC was highlighted by the CJEU, which emphasized that its guidelines
+                                could have “decisive influence” on the interpretation of EU laws on tobacco control. But
+                                the key aspect of the judgment relevant to plain packaging, is that the Court of Justice
+                                confirmed that the Tobacco Products Directive permits EU Member States to introduce
+                                measures to standardize the packaging of tobacco products. </p>
+                            <p>The opinion of the Advocate General (adopted by the Court) confirmed that measures to
+                                standardize packs contribute to increasing the visibility of health warnings and that
+                                these measures are proportionate because purely economic interests in the functioning of
+                                the tobacco market are secondary to the protection of human health.</p>
                         </div>
                         <div class="sidebar-anchor-item" id="item4"></div>
                         <div>
-                            <div class="section-secondary-title fc-ref-mat-4">4 France <img style="padding-left:30px;" src="<?php echo $base_url; ?>img/img-case-summaries/france.PNG"></div>
-                            <h3 class="fc-ref-mat-4 sub-title">4.1  Challenge in the theConseil Constitutionnel — dismissed in January 21, 2016</h3>
-                            <p><i><a href="http://www.conseil-constitutionnel.fr/conseil-constitutionnel/francais/les-decisions/acces-par-date/decisions-depuis-1959/2016/2015-727-dc/decision-n-2015-727-dc-du-21-janvier-2016.146887.html">Décision n° 2015–727 DC du 21 Janvier 2016</a></i></p>
-                            <p>Legislation providing powers to introduce plain packaging was adopted by the Assemblée Nationale as part of Law n°2016–41 on the Modernization of the Health System and came into force on January 26, 2016. The constitutional appeal was filed by members of parliament and concerned the entirety of the law (of which plain-packaging provisions were just one part). The plain-packaging measures were challenged on the basis of the legislative process, the constitutional rights to property and free enterprise, and on the proportionality of the measures.</p>
-                            <p>The Constitutional Council noted that the brand name can still be applied to packages allowing for clear identification of the product. It held that the rights of the trademark owner to exclude the use by others are still respected through this. It also held that there was no expropriation of property but a limitation on the property rights justified by the objective of protecting public health, because the plain-packaging measure made it possible to prevent the pack from becoming a piece of advertising. The Court noted the measure does not prohibit the production, distribution, or otherwise the sale of tobacco products. Accordingly, the measure was held to be a proportionate infringement of the rights of commerce and free enterprise. </p>
+                            <div class="section-secondary-title fc-ref-mat-4">4 France <img style="padding-left:30px;"
+                                                                                            src="<?php echo $base_url; ?>img/img-case-summaries/france.PNG">
+                            </div>
+                            <h3 class="fc-ref-mat-4 sub-title">4.1 Challenge in the theConseil Constitutionnel —
+                                dismissed in January 21, 2016</h3>
+                            <p>
+                                <i><a href="http://www.conseil-constitutionnel.fr/conseil-constitutionnel/francais/les-decisions/acces-par-date/decisions-depuis-1959/2016/2015-727-dc/decision-n-2015-727-dc-du-21-janvier-2016.146887.html">Décision
+                                        n° 2015–727 DC du 21 Janvier 2016</a></i></p>
+                            <p>Legislation providing powers to introduce plain packaging was adopted by the Assemblée
+                                Nationale as part of Law n°2016–41 on the Modernization of the Health System and came
+                                into force on January 26, 2016. The constitutional appeal was filed by members of
+                                parliament and concerned the entirety of the law (of which plain-packaging provisions
+                                were just one part). The plain-packaging measures were challenged on the basis of the
+                                legislative process, the constitutional rights to property and free enterprise, and on
+                                the proportionality of the measures.</p>
+                            <p>The Constitutional Council noted that the brand name can still be applied to packages
+                                allowing for clear identification of the product. It held that the rights of the
+                                trademark owner to exclude the use by others are still respected through this. It also
+                                held that there was no expropriation of property but a limitation on the property rights
+                                justified by the objective of protecting public health, because the plain-packaging
+                                measure made it possible to prevent the pack from becoming a piece of advertising. The
+                                Court noted the measure does not prohibit the production, distribution, or otherwise the
+                                sale of tobacco products. Accordingly, the measure was held to be a proportionate
+                                infringement of the rights of commerce and free enterprise. </p>
                         </div>
                         <div>
-                            <h3 class="fc-ref-mat-4 sub-title">4.2  Challenge in the Conseil d’État — dismissed December 23, 2016</h3>
-                            <p><b><i><a href="http://www.tobaccocontrollaws.org/litigation/decisions/fr-20161223-japan-tobacco-international-an">CE, 23 décembre 2016, société JT International SA, Société d'exploitation industrielle des tabacs et des allumettes, société Philip Morris France SA et autres</a></i></b></p>
-                            <p>The detailed Decree and Ministerial Order to implement plain packaging were published on March 22, 2016, and came into force May 20, 2016.</p>
-                            <p>JTI launched an action on April 29, 2016, at the level of the Conseil d’État (the highest administrative court) alleging that the laws are in breach of the French constitution. Similar actions were launched by Imperial Tobacco, Philip Morris, and British American Tobacco; by the Confédération Nationale des Buralistes de France (the National Organization for Tobacco Retailers in France); and by République Technologie (a cigarette-paper manufacturer) in May 2016.</p>
-                            <p>The petitioners contended that the measures constituted an infringement of fundamental rights relating to property; that they disregarded the principle of free enterprise; that they infringed the constitutional principle of clarity and intelligibility of the law; that they violated the provisions of trademark rights and intellectual property; that they constitute an assault on France’s international commitments under the European Convention of Human Rights, on the free circulation of products within the European Union, on the Convention of Paris, and the WTO agreement on issues of trade-related aspects of intellectual property rights (TRIPS).</p>
+                            <h3 class="fc-ref-mat-4 sub-title">4.2 Challenge in the Conseil d’État — dismissed December
+                                23, 2016</h3>
+                            <p>
+                                <b><i><a href="http://www.tobaccocontrollaws.org/litigation/decisions/fr-20161223-japan-tobacco-international-an">CE,
+                                            23 décembre 2016, société JT International SA, Société d'exploitation
+                                            industrielle des tabacs et des allumettes, société Philip Morris France SA
+                                            et autres</a></i></b></p>
+                            <p>The detailed Decree and Ministerial Order to implement plain packaging were published on
+                                March 22, 2016, and came into force May 20, 2016.</p>
+                            <p>JTI launched an action on April 29, 2016, at the level of the Conseil d’État (the highest
+                                administrative court) alleging that the laws are in breach of the French constitution.
+                                Similar actions were launched by Imperial Tobacco, Philip Morris, and British American
+                                Tobacco; by the Confédération Nationale des Buralistes de France (the National
+                                Organization for Tobacco Retailers in France); and by République Technologie (a
+                                cigarette-paper manufacturer) in May 2016.</p>
+                            <p>The petitioners contended that the measures constituted an infringement of fundamental
+                                rights relating to property; that they disregarded the principle of free enterprise;
+                                that they infringed the constitutional principle of clarity and intelligibility of the
+                                law; that they violated the provisions of trademark rights and intellectual property;
+                                that they constitute an assault on France’s international commitments under the European
+                                Convention of Human Rights, on the free circulation of products within the European
+                                Union, on the Convention of Paris, and the WTO agreement on issues of trade-related
+                                aspects of intellectual property rights (TRIPS).</p>
                         </div>
                         <div class="sidebar-anchor-item" id="item5"></div>
                         <div>
-                            <div class="section-secondary-title fc-ref-mat-4">5 Ireland <img style="padding-left:30px;" src="<?php echo $base_url; ?>img/img-case-summaries/ireland.PNG"></div>
-                            <h3 class="fc-ref-mat-4 sub-title">Challenge in Ireland’s Commercial Court — struck out November 2016</h3>
-                            <p><b><i>JTI v. Minister for Health, Ireland, and the Attorney General 2015/2530P</i></b></p>
-                            <p>Legislation for plain packaging on all tobacco products was adopted on March 10, 2015, and was due to come into force on May 20, 2016.However, some amendments were required to the law, and the likely coming into force date is now in 2017.  JTI issued legal proceedings in 2015 challenging the Irish legislation. Following an initial hearing, JTI confirmed that its claim was based solely on the ground that the law is incompatible with the EU Tobacco Production Directive (TPD). The proceedings were stayed pending the outcome of the Court of Justice of the European Union ruling on the tobacco companies’ challenge to the TPD (see above 3.1).  In addition, JTI explicitly stated that it reserves its position in relation to all other potential grounds pending the outcome of the UK High Court ruling (see above 2.1). Once the EU and UK cases were dismissed, JTI’s claim was then struck out. Ireland has a constitution that protects property rights with no limitation period; therefore, a constitutional challenge may be brought at some stage whatever the outcomes of the other cases, and it is understood that JTI formally reserved its position on this issue.</p>
+                            <div class="section-secondary-title fc-ref-mat-4">5 Ireland <img style="padding-left:30px;"
+                                                                                             src="<?php echo $base_url; ?>img/img-case-summaries/ireland.PNG">
+                            </div>
+                            <h3 class="fc-ref-mat-4 sub-title">Challenge in Ireland’s Commercial Court — struck out
+                                November 2016</h3>
+                            <p><b><i>JTI v. Minister for Health, Ireland, and the Attorney General 2015/2530P</i></b>
+                            </p>
+                            <p>Legislation for plain packaging on all tobacco products was adopted on March 10, 2015,
+                                and was due to come into force on May 20, 2016.However, some amendments were required to
+                                the law, and the likely coming into force date is now in 2017. JTI issued legal
+                                proceedings in 2015 challenging the Irish legislation. Following an initial hearing, JTI
+                                confirmed that its claim was based solely on the ground that the law is incompatible
+                                with the EU Tobacco Production Directive (TPD). The proceedings were stayed pending the
+                                outcome of the Court of Justice of the European Union ruling on the tobacco companies’
+                                challenge to the TPD (see above 3.1). In addition, JTI explicitly stated that it
+                                reserves its position in relation to all other potential grounds pending the outcome of
+                                the UK High Court ruling (see above 2.1). Once the EU and UK cases were dismissed, JTI’s
+                                claim was then struck out. Ireland has a constitution that protects property rights with
+                                no limitation period; therefore, a constitutional challenge may be brought at some stage
+                                whatever the outcomes of the other cases, and it is understood that JTI formally
+                                reserved its position on this issue.</p>
                         </div>
                         <div class="sidebar-anchor-item" id="item6"></div>
                         <div>
-                            <div class="section-secondary-title fc-ref-mat-4">6 Uruguay <img style="padding-left:30px;" src="<?php echo $base_url; ?>img/img-case-summaries/uruguay.PNG"></div>
-                            <h3 class="fc-ref-mat-4 sub-title">International investment arbitration dispute — dismissed in July 2016</h3>
-                            <p><b><i>Morris Brand Sàrl (Switzerland) & Others v. Oriental Republic of Uruguay</i></b> <a href="https://www.italaw.com/cases/460">(ICSID Case No. ARB/10/7)</a></p>
-                            <p>This case was not a challenge to plain packaging but rather two other packaging laws introduced in Uruguay in 2008 and 2009, stipulating:</p>
+                            <div class="section-secondary-title fc-ref-mat-4">6 Uruguay <img style="padding-left:30px;"
+                                                                                             src="<?php echo $base_url; ?>img/img-case-summaries/uruguay.PNG">
+                            </div>
+                            <h3 class="fc-ref-mat-4 sub-title">International investment arbitration dispute — dismissed
+                                in July 2016</h3>
+                            <p><b><i>Morris Brand Sàrl (Switzerland) & Others v. Oriental Republic of Uruguay</i></b> <a
+                                        href="https://www.italaw.com/cases/460">(ICSID Case No. ARB/10/7)</a></p>
+                            <p>This case was not a challenge to plain packaging but rather two other packaging laws
+                                introduced in Uruguay in 2008 and 2009, stipulating:</p>
                             <ul class="no-list-style">
-                                <li>1.  that large graphic health warnings should cover 80% of the front and back of cigarette packets.</li>
-                                <li>2.  that each cigarette brand be limited to just a single variant or brand type (eliminating brand families to address evidence that some variants can mislead consumers and falsely imply some cigarettes are less harmful than others) — known as the Single Presentation Requirement (SPR).</li>
+                                <li>1. that large graphic health warnings should cover 80% of the front and back of
+                                    cigarette packets.
+                                </li>
+                                <li>2. that each cigarette brand be limited to just a single variant or brand type
+                                    (eliminating brand families to address evidence that some variants can mislead
+                                    consumers and falsely imply some cigarettes are less harmful than others) — known as
+                                    the Single Presentation Requirement (SPR).
+                                </li>
                             </ul>
-                            <p>However, the arguments put forward by Philip Morris in this investment arbitration claim are very similar to those used in the investment arbitration case against Australia’s plain packaging. Consequently, the ruling is highly relevant to the legality of plain packaging under international investment law. The Australian claim was dismissed on jurisdiction grounds, whereas the tribunal in this case determined the merits of the legal arguments and dismissed all grounds ofclaim.PMI alleged that the two measures violated a Bilateral Investment Treaty (BIT) with Switzerland<sup>5</sup>  and brought the claim after legal challenges in Uruguay’s domestic courts by the Philip Morris subsidiaries had failed. It sought an order for the repeal of the Challenged Measures and for compensation in the region of $25 million. </p>
-                            <p>The landmark ruling highlighted the importance of the WHO Framework Convention on Tobacco Control (FCTC) in setting tobacco-control objectives and establishing the evidence base for measures. The ruling confirmed that states need not recreate local evidence to justify tobacco-control measures.  It addressed the wide “margin of appreciation” and deference provided to sovereign states in adopting measures or decisions concerning public health. </p>
-                            <p>The ruling sets an extremely high bar for any foreign investor seeking to bring an investment arbitration challenge against a non-discriminatory public health measure that has a legitimate objective and that has been taken in good faith.</p>
-                            <p>The arbitrator appointed by PMI, Gary Born, agreed with the ruling on most aspects but gave a <b>dissenting opinion</b> on two issues. One of these was that the SPR had been adopted in an arbitrary manner and therefore breached the obligation of <i>fair and equitable treatment</i>. Part of his reasoning was that there was, in his view, no record of any proper consideration of the evidence and issues by Uruguay before adopting the measure (See <a href="<?php echo $base_url; ?>getting-prepared/establish-document-development-retention">GUIDE 1.2: Establish a document record</a>).</p>
-                            <p><b>A more detailed summary of the parts of this important case that have wider relevance, in particular to plain packaging is available from the CTFK website</b> <a href="http://www.tobaccofreekids.org/content/press_office/2016/2016_07_12_uruguay_factsheet.pdf">here</a>.</p>
+                            <p>However, the arguments put forward by Philip Morris in this investment arbitration claim
+                                are very similar to those used in the investment arbitration case against Australia’s
+                                plain packaging. Consequently, the ruling is highly relevant to the legality of plain
+                                packaging under international investment law. The Australian claim was dismissed on
+                                jurisdiction grounds, whereas the tribunal in this case determined the merits of the
+                                legal arguments and dismissed all grounds ofclaim.PMI alleged that the two measures
+                                violated a Bilateral Investment Treaty (BIT) with Switzerland<sup>5</sup> and brought
+                                the claim after legal challenges in Uruguay’s domestic courts by the Philip Morris
+                                subsidiaries had failed. It sought an order for the repeal of the Challenged Measures
+                                and for compensation in the region of $25 million. </p>
+                            <p>The landmark ruling highlighted the importance of the WHO Framework Convention on Tobacco
+                                Control (FCTC) in setting tobacco-control objectives and establishing the evidence base
+                                for measures. The ruling confirmed that states need not recreate local evidence to
+                                justify tobacco-control measures. It addressed the wide “margin of appreciation” and
+                                deference provided to sovereign states in adopting measures or decisions concerning
+                                public health. </p>
+                            <p>The ruling sets an extremely high bar for any foreign investor seeking to bring an
+                                investment arbitration challenge against a non-discriminatory public health measure that
+                                has a legitimate objective and that has been taken in good faith.</p>
+                            <p>The arbitrator appointed by PMI, Gary Born, agreed with the ruling on most aspects but
+                                gave a <b>dissenting opinion</b> on two issues. One of these was that the SPR had been
+                                adopted in an arbitrary manner and therefore breached the obligation of <i>fair and
+                                    equitable treatment</i>. Part of his reasoning was that there was, in his view, no
+                                record of any proper consideration of the evidence and issues by Uruguay before adopting
+                                the measure (See <a
+                                        href="<?php echo $base_url; ?>getting-prepared/establish-document-development-retention">GUIDE
+                                    1.2: Establish a document record</a>).</p>
+                            <p><b>A more detailed summary of the parts of this important case that have wider relevance,
+                                    in particular to plain packaging is available from the CTFK website</b> <a
+                                        href="http://www.tobaccofreekids.org/content/press_office/2016/2016_07_12_uruguay_factsheet.pdf">here</a>.
+                            </p>
                         </div>
                         <div>
                             <div class="section-secondary-title fc-ref-mat-4">Section notes</div>
-                            <p><sup>1</sup>See <a href="http://archive.tobacco.org/news/338721.html">http://archive.tobacco.org/news/338721.html</a>.</p>
-                            <p><sup>2</sup>Available to download from the Australia DFAT website: <a href="http://dfat.gov.au/international-relations/international-organisations/wto/wto-dispute-settlement/Pages/wto-disputes-tobacco-plain-packaging.aspx">http://dfat.gov.au/international-relations/international-organisations/wto/wto-dispute-settlement/Pages/wto-disputes-tobacco-plain-packaging.aspx</a>.</p>
-                            <p><sup>3</sup> High Court Ruling is available from: <a href="https://www.judiciary.gov.uk/wp-content/uploads/2016/05/bat-v-doh.judgment.pdf">https://www.judiciary.gov.uk/wp-content/uploads/2016/05/bat-v-doh.judgment.pdf</a>.<br>Court of Appeal Ruling is available from: <a href="http://www.bailii.org/ew/cases/EWCA/Civ/2016/1182.html">http://www.bailii.org/ew/cases/EWCA/Civ/2016/1182.html</a>.</p>
-                            <p><sup>4</sup>See <a href="http://tobaccocontrollaws.org/files/live/litigation/2508/GB_BAT%20v.%20UK%20Department%20of%20Health_1.pdf">http://tobaccocontrollaws.org/files/live/litigation/2508/GB_BAT%20v.<br>%20UK%20Department%20of%20Health_1.pdf</a>.</p>
-                            <p><sup>5</sup>The 1991 Switzerland – Uruguay Bilateral Agreement on the Promotion and Protection of Foreign Investments. A copy is available here: <a href="http://investmentpolicyhub.unctad.org/Download/TreatyFile/3121">http://investmentpolicyhub.unctad.org/Download/TreatyFile/3121</a>.</p>
+                            <p><sup>1</sup>See <a href="http://archive.tobacco.org/news/338721.html">http://archive.tobacco.org/news/338721.html</a>.
+                            </p>
+                            <p><sup>2</sup>Available to download from the Australia DFAT website: <a
+                                        href="http://dfat.gov.au/international-relations/international-organisations/wto/wto-dispute-settlement/Pages/wto-disputes-tobacco-plain-packaging.aspx">http://dfat.gov.au/international-relations/international-organisations/wto/wto-dispute-settlement/Pages/wto-disputes-tobacco-plain-packaging.aspx</a>.
+                            </p>
+                            <p><sup>3</sup> High Court Ruling is available from: <a
+                                        href="https://www.judiciary.gov.uk/wp-content/uploads/2016/05/bat-v-doh.judgment.pdf">https://www.judiciary.gov.uk/wp-content/uploads/2016/05/bat-v-doh.judgment.pdf</a>.<br>Court
+                                of Appeal Ruling is available from: <a
+                                        href="http://www.bailii.org/ew/cases/EWCA/Civ/2016/1182.html">http://www.bailii.org/ew/cases/EWCA/Civ/2016/1182.html</a>.
+                            </p>
+                            <p><sup>4</sup>See <a
+                                        href="http://tobaccocontrollaws.org/files/live/litigation/2508/GB_BAT%20v.%20UK%20Department%20of%20Health_1.pdf">http://tobaccocontrollaws.org/files/live/litigation/2508/GB_BAT%20v.<br>%20UK%20Department%20of%20Health_1.pdf</a>.
+                            </p>
+                            <p><sup>5</sup>The 1991 Switzerland – Uruguay Bilateral Agreement on the Promotion and
+                                Protection of Foreign Investments. A copy is available here: <a
+                                        href="http://investmentpolicyhub.unctad.org/Download/TreatyFile/3121">http://investmentpolicyhub.unctad.org/Download/TreatyFile/3121</a>.
+                            </p>
                         </div>
                     </div>
                     <!-- /content -->
@@ -8146,22 +10219,28 @@ function nav_content($menu,$var = null)
                         <div class="sidebar-wrapper col-xs-12 sidebar-2">
                             <ul class="sidebar-nav">
                                 <li>
-                                    <a href="#item1">1 Australia <img style="padding-left:60px;" height="40" src="<?php echo $base_url; ?>img/img-case-summaries/australia.PNG"></a>
+                                    <a href="#item1">1 Australia <img style="padding-left:60px;" height="40"
+                                                                      src="<?php echo $base_url; ?>img/img-case-summaries/australia.PNG"></a>
                                 </li>
                                 <li>
-                                    <a href="#item2">2 United Kingdom <img style="padding-left:20px;" height="40" src="<?php echo $base_url; ?>img/img-case-summaries/united-kingdom.PNG"></a>
+                                    <a href="#item2">2 United Kingdom <img style="padding-left:20px;" height="40"
+                                                                           src="<?php echo $base_url; ?>img/img-case-summaries/united-kingdom.PNG"></a>
                                 </li>
                                 <li>
-                                    <a href="#item3">3 European Union <img style="padding-left:20px;" height="40" src="<?php echo $base_url; ?>img/img-case-summaries/european-union.PNG"></a>
+                                    <a href="#item3">3 European Union <img style="padding-left:20px;" height="40"
+                                                                           src="<?php echo $base_url; ?>img/img-case-summaries/european-union.PNG"></a>
                                 </li>
                                 <li>
-                                    <a href="#item4">4 France <img style="padding-left:75px;" height="40" src="<?php echo $base_url; ?>img/img-case-summaries/france.PNG"></a>
+                                    <a href="#item4">4 France <img style="padding-left:75px;" height="40"
+                                                                   src="<?php echo $base_url; ?>img/img-case-summaries/france.PNG"></a>
                                 </li>
                                 <li>
-                                    <a href="#item5">5 Ireland <img style="padding-left:75px;" height="40" src="<?php echo $base_url; ?>img/img-case-summaries/ireland.PNG"></a>
+                                    <a href="#item5">5 Ireland <img style="padding-left:75px;" height="40"
+                                                                    src="<?php echo $base_url; ?>img/img-case-summaries/ireland.PNG"></a>
                                 </li>
                                 <li>
-                                    <a href="#item6">6 Uruguay <img style="padding-left:65px;" height="40" src="<?php echo $base_url; ?>img/img-case-summaries/uruguay.PNG"></a>
+                                    <a href="#item6">6 Uruguay <img style="padding-left:65px;" height="40"
+                                                                    src="<?php echo $base_url; ?>img/img-case-summaries/uruguay.PNG"></a>
                                 </li>
                             </ul>
                         </div>
@@ -8170,7 +10249,9 @@ function nav_content($menu,$var = null)
                             <ul class="sidebar-nav">
                                 <div class="sidebar-nav-header">FURTHER INFORMATION AND WEB LINKS</div>
                                 <li>
-                                    <a href="<?php echo $base_url; ?>resources/legal-issues"><img src="<?php echo $base_url; ?>img/icons/on-legal-issues.PNG" style="padding:0 5px;">On the legal issues</a>
+                                    <a href="<?php echo $base_url; ?>resources/legal-issues"><img
+                                                src="<?php echo $base_url; ?>img/icons/on-legal-issues.PNG"
+                                                style="padding:0 5px;">On the legal issues</a>
                                 </li>
                             </ul>
                         </div>
@@ -8536,8 +10617,7 @@ function nav_content($menu,$var = null)
 
         // faqs
         case 'faqs':
-            if ($var == 'og_desc')
-            {
+            if ($var == 'og_desc') {
                 $og_desc = 'Dis aliquet aliquam in sit ridiculus dolor tortor ridiculus, augue. Tincidunt. Lectus ac nec, risus! Pid, nisi purus nisi? Augue augue nisi penatibus. Purus, sagittis amet velit! Dapibus magna rhoncus, scelerisque, nec ac odio velit lacus et mid urna natoque integer porta mattis, nisi, aliquet nunc porttitor, a eu nec odio, adipiscing, quis dictumst eros urna est egestas parturient.';
                 return $og_desc;
             }
@@ -8549,9 +10629,22 @@ function nav_content($menu,$var = null)
                         <div class="section-title fc-dark-brown">FAQs</div>
                     </div>
                     <div class="content-desc-cont col-lg-10 col-lg-offset-1">
-                        <div class="section-secondary-title fc-dark-brown">Dis aliquet aliquam in sit ridiculus dolor tortor ridiculus, augue. Tincidunt. Lectus ac nec, risus! Pid, nisi purus nisi? Augue augue nisi penatibus. Purus, sagittis amet velit! Dapibus magna rhoncus, scelerisque, nec ac odio velit lacus et mid urna natoque integer porta mattis, nisi, aliquet nunc porttitor, a eu nec odio, adipiscing, quis dictumst eros urna est egestas parturient.</div>
-                        <p>Nec lacus aliquet aliquet elit massa, velit, aliquam ac quis in rhoncus in, turpis! Rhoncus ridiculus proin, vel duis elementum risus adipiscing sed dapibus! Placerat nunc, urna. Et proin. Lacus mattis! Ridiculus porta scelerisque auctor tempor magna auctor! Ut, porttitor enim lundium elementum cras, pulvinar dis magna, porttitor urna! Nec? Nascetur lorem in et phasellus odio aenean porta lorem.</p>
-                        <p>Et porttitor porta porta dignissim lacus? Urna urna natoque tincidunt scelerisque! Nisi. Dolor? Cum nascetur! Nisi penatibus porta a. Vel et aenean, dignissim. Nunc turpis, sagittis, placerat proin? Mid? Ridiculus scelerisque integer, auctor turpis nunc? Tincidunt rhoncus enim cras tincidunt adipiscing? Et vel magna, est, vel nunc? Ultricies ac nisi, ac proin parturient ultricies et tempor tincidunt magna odio.</p>
+                        <div class="section-secondary-title fc-dark-brown">Dis aliquet aliquam in sit ridiculus dolor
+                            tortor ridiculus, augue. Tincidunt. Lectus ac nec, risus! Pid, nisi purus nisi? Augue augue
+                            nisi penatibus. Purus, sagittis amet velit! Dapibus magna rhoncus, scelerisque, nec ac odio
+                            velit lacus et mid urna natoque integer porta mattis, nisi, aliquet nunc porttitor, a eu nec
+                            odio, adipiscing, quis dictumst eros urna est egestas parturient.
+                        </div>
+                        <p>Nec lacus aliquet aliquet elit massa, velit, aliquam ac quis in rhoncus in, turpis! Rhoncus
+                            ridiculus proin, vel duis elementum risus adipiscing sed dapibus! Placerat nunc, urna. Et
+                            proin. Lacus mattis! Ridiculus porta scelerisque auctor tempor magna auctor! Ut, porttitor
+                            enim lundium elementum cras, pulvinar dis magna, porttitor urna! Nec? Nascetur lorem in et
+                            phasellus odio aenean porta lorem.</p>
+                        <p>Et porttitor porta porta dignissim lacus? Urna urna natoque tincidunt scelerisque! Nisi.
+                            Dolor? Cum nascetur! Nisi penatibus porta a. Vel et aenean, dignissim. Nunc turpis,
+                            sagittis, placerat proin? Mid? Ridiculus scelerisque integer, auctor turpis nunc? Tincidunt
+                            rhoncus enim cras tincidunt adipiscing? Et vel magna, est, vel nunc? Ultricies ac nisi, ac
+                            proin parturient ultricies et tempor tincidunt magna odio.</p>
                     </div>
                 </div>
             </section>
@@ -8560,8 +10653,7 @@ function nav_content($menu,$var = null)
 
         // about and contact
         case 'about-and-contact':
-            if ($var == 'og_desc')
-            {
+            if ($var == 'og_desc') {
                 $og_desc = 'Dis aliquet aliquam in sit ridiculus dolor tortor ridiculus, augue. Tincidunt. Lectus ac nec, risus! Pid, nisi purus nisi? Augue augue nisi penatibus. Purus, sagittis amet velit! Dapibus magna rhoncus, scelerisque, nec ac odio velit lacus et mid urna natoque integer porta mattis, nisi, aliquet nunc porttitor, a eu nec odio, adipiscing, quis dictumst eros urna est egestas parturient.';
                 return $og_desc;
             }
@@ -8573,9 +10665,22 @@ function nav_content($menu,$var = null)
                         <div class="section-title fc-dark-brown">About and Contact</div>
                     </div>
                     <div class="content-desc-cont col-lg-10 col-lg-offset-1">
-                        <div class="section-secondary-title fc-dark-brown">Dis aliquet aliquam in sit ridiculus dolor tortor ridiculus, augue. Tincidunt. Lectus ac nec, risus! Pid, nisi purus nisi? Augue augue nisi penatibus. Purus, sagittis amet velit! Dapibus magna rhoncus, scelerisque, nec ac odio velit lacus et mid urna natoque integer porta mattis, nisi, aliquet nunc porttitor, a eu nec odio, adipiscing, quis dictumst eros urna est egestas parturient.</div>
-                        <p>Nec lacus aliquet aliquet elit massa, velit, aliquam ac quis in rhoncus in, turpis! Rhoncus ridiculus proin, vel duis elementum risus adipiscing sed dapibus! Placerat nunc, urna. Et proin. Lacus mattis! Ridiculus porta scelerisque auctor tempor magna auctor! Ut, porttitor enim lundium elementum cras, pulvinar dis magna, porttitor urna! Nec? Nascetur lorem in et phasellus odio aenean porta lorem.</p>
-                        <p>Et porttitor porta porta dignissim lacus? Urna urna natoque tincidunt scelerisque! Nisi. Dolor? Cum nascetur! Nisi penatibus porta a. Vel et aenean, dignissim. Nunc turpis, sagittis, placerat proin? Mid? Ridiculus scelerisque integer, auctor turpis nunc? Tincidunt rhoncus enim cras tincidunt adipiscing? Et vel magna, est, vel nunc? Ultricies ac nisi, ac proin parturient ultricies et tempor tincidunt magna odio.</p>
+                        <div class="section-secondary-title fc-dark-brown">Dis aliquet aliquam in sit ridiculus dolor
+                            tortor ridiculus, augue. Tincidunt. Lectus ac nec, risus! Pid, nisi purus nisi? Augue augue
+                            nisi penatibus. Purus, sagittis amet velit! Dapibus magna rhoncus, scelerisque, nec ac odio
+                            velit lacus et mid urna natoque integer porta mattis, nisi, aliquet nunc porttitor, a eu nec
+                            odio, adipiscing, quis dictumst eros urna est egestas parturient.
+                        </div>
+                        <p>Nec lacus aliquet aliquet elit massa, velit, aliquam ac quis in rhoncus in, turpis! Rhoncus
+                            ridiculus proin, vel duis elementum risus adipiscing sed dapibus! Placerat nunc, urna. Et
+                            proin. Lacus mattis! Ridiculus porta scelerisque auctor tempor magna auctor! Ut, porttitor
+                            enim lundium elementum cras, pulvinar dis magna, porttitor urna! Nec? Nascetur lorem in et
+                            phasellus odio aenean porta lorem.</p>
+                        <p>Et porttitor porta porta dignissim lacus? Urna urna natoque tincidunt scelerisque! Nisi.
+                            Dolor? Cum nascetur! Nisi penatibus porta a. Vel et aenean, dignissim. Nunc turpis,
+                            sagittis, placerat proin? Mid? Ridiculus scelerisque integer, auctor turpis nunc? Tincidunt
+                            rhoncus enim cras tincidunt adipiscing? Et vel magna, est, vel nunc? Ultricies ac nisi, ac
+                            proin parturient ultricies et tempor tincidunt magna odio.</p>
                     </div>
                 </div>
             </section>
@@ -9756,8 +11861,7 @@ function nav_content($menu,$var = null)
 
         // explore the guides
         case 'explore-the-guides':
-            if ($var == 'og_desc')
-            {
+            if ($var == 'og_desc') {
                 $og_desc = 'Dis aliquet aliquam in sit ridiculus dolor tortor ridiculus, augue. Tincidunt. Lectus ac nec, risus! Pid, nisi purus nisi? Augue augue nisi penatibus. Purus, sagittis amet velit! Dapibus magna rhoncus, scelerisque, nec ac odio velit lacus et mid urna natoque integer porta mattis, nisi, aliquet nunc porttitor, a eu nec odio, adipiscing, quis dictumst eros urna est egestas parturient.';
                 return $og_desc;
             }
@@ -9769,9 +11873,22 @@ function nav_content($menu,$var = null)
                         <div class="section-title fc-dark-brown">Explore the Guides</div>
                     </div>
                     <div class="content-desc-cont col-lg-10 col-lg-offset-1">
-                        <div class="section-secondary-title fc-dark-brown">Dis aliquet aliquam in sit ridiculus dolor tortor ridiculus, augue. Tincidunt. Lectus ac nec, risus! Pid, nisi purus nisi? Augue augue nisi penatibus. Purus, sagittis amet velit! Dapibus magna rhoncus, scelerisque, nec ac odio velit lacus et mid urna natoque integer porta mattis, nisi, aliquet nunc porttitor, a eu nec odio, adipiscing, quis dictumst eros urna est egestas parturient.</div>
-                        <p>Nec lacus aliquet aliquet elit massa, velit, aliquam ac quis in rhoncus in, turpis! Rhoncus ridiculus proin, vel duis elementum risus adipiscing sed dapibus! Placerat nunc, urna. Et proin. Lacus mattis! Ridiculus porta scelerisque auctor tempor magna auctor! Ut, porttitor enim lundium elementum cras, pulvinar dis magna, porttitor urna! Nec? Nascetur lorem in et phasellus odio aenean porta lorem.</p>
-                        <p>Et porttitor porta porta dignissim lacus? Urna urna natoque tincidunt scelerisque! Nisi. Dolor? Cum nascetur! Nisi penatibus porta a. Vel et aenean, dignissim. Nunc turpis, sagittis, placerat proin? Mid? Ridiculus scelerisque integer, auctor turpis nunc? Tincidunt rhoncus enim cras tincidunt adipiscing? Et vel magna, est, vel nunc? Ultricies ac nisi, ac proin parturient ultricies et tempor tincidunt magna odio.</p>
+                        <div class="section-secondary-title fc-dark-brown">Dis aliquet aliquam in sit ridiculus dolor
+                            tortor ridiculus, augue. Tincidunt. Lectus ac nec, risus! Pid, nisi purus nisi? Augue augue
+                            nisi penatibus. Purus, sagittis amet velit! Dapibus magna rhoncus, scelerisque, nec ac odio
+                            velit lacus et mid urna natoque integer porta mattis, nisi, aliquet nunc porttitor, a eu nec
+                            odio, adipiscing, quis dictumst eros urna est egestas parturient.
+                        </div>
+                        <p>Nec lacus aliquet aliquet elit massa, velit, aliquam ac quis in rhoncus in, turpis! Rhoncus
+                            ridiculus proin, vel duis elementum risus adipiscing sed dapibus! Placerat nunc, urna. Et
+                            proin. Lacus mattis! Ridiculus porta scelerisque auctor tempor magna auctor! Ut, porttitor
+                            enim lundium elementum cras, pulvinar dis magna, porttitor urna! Nec? Nascetur lorem in et
+                            phasellus odio aenean porta lorem.</p>
+                        <p>Et porttitor porta porta dignissim lacus? Urna urna natoque tincidunt scelerisque! Nisi.
+                            Dolor? Cum nascetur! Nisi penatibus porta a. Vel et aenean, dignissim. Nunc turpis,
+                            sagittis, placerat proin? Mid? Ridiculus scelerisque integer, auctor turpis nunc? Tincidunt
+                            rhoncus enim cras tincidunt adipiscing? Et vel magna, est, vel nunc? Ultricies ac nisi, ac
+                            proin parturient ultricies et tempor tincidunt magna odio.</p>
                     </div>
                 </div>
             </section>
@@ -9780,8 +11897,7 @@ function nav_content($menu,$var = null)
 
         // explore the tools and resources
         case 'tools-and-resources':
-            if ($var == 'og_desc')
-            {
+            if ($var == 'og_desc') {
                 $og_desc = 'Dis aliquet aliquam in sit ridiculus dolor tortor ridiculus, augue. Tincidunt. Lectus ac nec, risus! Pid, nisi purus nisi? Augue augue nisi penatibus. Purus, sagittis amet velit! Dapibus magna rhoncus, scelerisque, nec ac odio velit lacus et mid urna natoque integer porta mattis, nisi, aliquet nunc porttitor, a eu nec odio, adipiscing, quis dictumst eros urna est egestas parturient.';
                 return $og_desc;
             }
@@ -9793,19 +11909,31 @@ function nav_content($menu,$var = null)
                         <div class="section-title fc-dark-brown">Explore the Tools and Resources</div>
                     </div>
                     <div class="content-desc-cont col-lg-10 col-lg-offset-1">
-                        <div class="section-secondary-title fc-dark-brown">Dis aliquet aliquam in sit ridiculus dolor tortor ridiculus, augue. Tincidunt. Lectus ac nec, risus! Pid, nisi purus nisi? Augue augue nisi penatibus. Purus, sagittis amet velit! Dapibus magna rhoncus, scelerisque, nec ac odio velit lacus et mid urna natoque integer porta mattis, nisi, aliquet nunc porttitor, a eu nec odio, adipiscing, quis dictumst eros urna est egestas parturient.</div>
-                        <p>Nec lacus aliquet aliquet elit massa, velit, aliquam ac quis in rhoncus in, turpis! Rhoncus ridiculus proin, vel duis elementum risus adipiscing sed dapibus! Placerat nunc, urna. Et proin. Lacus mattis! Ridiculus porta scelerisque auctor tempor magna auctor! Ut, porttitor enim lundium elementum cras, pulvinar dis magna, porttitor urna! Nec? Nascetur lorem in et phasellus odio aenean porta lorem.</p>
-                        <p>Et porttitor porta porta dignissim lacus? Urna urna natoque tincidunt scelerisque! Nisi. Dolor? Cum nascetur! Nisi penatibus porta a. Vel et aenean, dignissim. Nunc turpis, sagittis, placerat proin? Mid? Ridiculus scelerisque integer, auctor turpis nunc? Tincidunt rhoncus enim cras tincidunt adipiscing? Et vel magna, est, vel nunc? Ultricies ac nisi, ac proin parturient ultricies et tempor tincidunt magna odio.</p>
+                        <div class="section-secondary-title fc-dark-brown">Dis aliquet aliquam in sit ridiculus dolor
+                            tortor ridiculus, augue. Tincidunt. Lectus ac nec, risus! Pid, nisi purus nisi? Augue augue
+                            nisi penatibus. Purus, sagittis amet velit! Dapibus magna rhoncus, scelerisque, nec ac odio
+                            velit lacus et mid urna natoque integer porta mattis, nisi, aliquet nunc porttitor, a eu nec
+                            odio, adipiscing, quis dictumst eros urna est egestas parturient.
+                        </div>
+                        <p>Nec lacus aliquet aliquet elit massa, velit, aliquam ac quis in rhoncus in, turpis! Rhoncus
+                            ridiculus proin, vel duis elementum risus adipiscing sed dapibus! Placerat nunc, urna. Et
+                            proin. Lacus mattis! Ridiculus porta scelerisque auctor tempor magna auctor! Ut, porttitor
+                            enim lundium elementum cras, pulvinar dis magna, porttitor urna! Nec? Nascetur lorem in et
+                            phasellus odio aenean porta lorem.</p>
+                        <p>Et porttitor porta porta dignissim lacus? Urna urna natoque tincidunt scelerisque! Nisi.
+                            Dolor? Cum nascetur! Nisi penatibus porta a. Vel et aenean, dignissim. Nunc turpis,
+                            sagittis, placerat proin? Mid? Ridiculus scelerisque integer, auctor turpis nunc? Tincidunt
+                            rhoncus enim cras tincidunt adipiscing? Et vel magna, est, vel nunc? Ultricies ac nisi, ac
+                            proin parturient ultricies et tempor tincidunt magna odio.</p>
                     </div>
                 </div>
             </section>
             <?php
             break;
 
-        // compare images 
+        // compare images
         case 'compare-images':
-            if ($var == 'og_desc')
-            {
+            if ($var == 'og_desc') {
                 $og_desc = 'Dis aliquet aliquam in sit ridiculus dolor tortor ridiculus, augue. Tincidunt. Lectus ac nec, risus! Pid, nisi purus nisi? Augue augue nisi penatibus. Purus, sagittis amet velit! Dapibus magna rhoncus, scelerisque, nec ac odio velit lacus et mid urna natoque integer porta mattis, nisi, aliquet nunc porttitor, a eu nec odio, adipiscing, quis dictumst eros urna est egestas parturient.';
                 return $og_desc;
             }
@@ -9817,9 +11945,22 @@ function nav_content($menu,$var = null)
                         <div class="section-title fc-dark-brown">Compare images of branded and plain packs</div>
                     </div>
                     <div class="content-desc-cont col-lg-10 col-lg-offset-1">
-                        <div class="section-secondary-title fc-dark-brown">Dis aliquet aliquam in sit ridiculus dolor tortor ridiculus, augue. Tincidunt. Lectus ac nec, risus! Pid, nisi purus nisi? Augue augue nisi penatibus. Purus, sagittis amet velit! Dapibus magna rhoncus, scelerisque, nec ac odio velit lacus et mid urna natoque integer porta mattis, nisi, aliquet nunc porttitor, a eu nec odio, adipiscing, quis dictumst eros urna est egestas parturient.</div>
-                        <p>Nec lacus aliquet aliquet elit massa, velit, aliquam ac quis in rhoncus in, turpis! Rhoncus ridiculus proin, vel duis elementum risus adipiscing sed dapibus! Placerat nunc, urna. Et proin. Lacus mattis! Ridiculus porta scelerisque auctor tempor magna auctor! Ut, porttitor enim lundium elementum cras, pulvinar dis magna, porttitor urna! Nec? Nascetur lorem in et phasellus odio aenean porta lorem.</p>
-                        <p>Et porttitor porta porta dignissim lacus? Urna urna natoque tincidunt scelerisque! Nisi. Dolor? Cum nascetur! Nisi penatibus porta a. Vel et aenean, dignissim. Nunc turpis, sagittis, placerat proin? Mid? Ridiculus scelerisque integer, auctor turpis nunc? Tincidunt rhoncus enim cras tincidunt adipiscing? Et vel magna, est, vel nunc? Ultricies ac nisi, ac proin parturient ultricies et tempor tincidunt magna odio.</p>
+                        <div class="section-secondary-title fc-dark-brown">Dis aliquet aliquam in sit ridiculus dolor
+                            tortor ridiculus, augue. Tincidunt. Lectus ac nec, risus! Pid, nisi purus nisi? Augue augue
+                            nisi penatibus. Purus, sagittis amet velit! Dapibus magna rhoncus, scelerisque, nec ac odio
+                            velit lacus et mid urna natoque integer porta mattis, nisi, aliquet nunc porttitor, a eu nec
+                            odio, adipiscing, quis dictumst eros urna est egestas parturient.
+                        </div>
+                        <p>Nec lacus aliquet aliquet elit massa, velit, aliquam ac quis in rhoncus in, turpis! Rhoncus
+                            ridiculus proin, vel duis elementum risus adipiscing sed dapibus! Placerat nunc, urna. Et
+                            proin. Lacus mattis! Ridiculus porta scelerisque auctor tempor magna auctor! Ut, porttitor
+                            enim lundium elementum cras, pulvinar dis magna, porttitor urna! Nec? Nascetur lorem in et
+                            phasellus odio aenean porta lorem.</p>
+                        <p>Et porttitor porta porta dignissim lacus? Urna urna natoque tincidunt scelerisque! Nisi.
+                            Dolor? Cum nascetur! Nisi penatibus porta a. Vel et aenean, dignissim. Nunc turpis,
+                            sagittis, placerat proin? Mid? Ridiculus scelerisque integer, auctor turpis nunc? Tincidunt
+                            rhoncus enim cras tincidunt adipiscing? Et vel magna, est, vel nunc? Ultricies ac nisi, ac
+                            proin parturient ultricies et tempor tincidunt magna odio.</p>
                     </div>
                 </div>
             </section>
@@ -9828,8 +11969,7 @@ function nav_content($menu,$var = null)
 
         // plain packaging who fctc
         case 'plain-packaging-and-the-who-fctc':
-            if ($var == 'og_desc')
-            {
+            if ($var == 'og_desc') {
                 $og_desc = 'The World Health Organization Framework Convention on Tobacco Control (WHO FCTC) is an evidence based, legally binding multilateral treaty with 180 parties, and one of the most widely ratified treaties in the UN system. ';
                 return $og_desc;
             }
@@ -9841,44 +11981,94 @@ function nav_content($menu,$var = null)
                         <div class="section-title fc-dark-brown">Plain packaging and the WHO FCTC</div>
                     </div>
                     <div class="content-desc-cont col-lg-10 col-lg-offset-1">
-                        <p>The World Health Organization Framework Convention on Tobacco Control (WHO FCTC) is an evidence based, legally binding multilateral treaty with 180 parties, and one of the most widely ratified treaties in the UN system. Its purpose is to ‘protect present and future generations from the devastating health, social, environmental and economic consequences of tobacco use and exposure from tobacco smoke’ (WHO FCTC Article 3).</p>
-                        <p>The purposes or <a href="<?php echo $base_Url; ?>getting-prepared/set-policy-objectives">objectives of plain packaging</a> are drawn from the evidence base that supports the policy and the context of the policy recommendations in the WHO FCTC.</p>
+                        <p>The World Health Organization Framework Convention on Tobacco Control (WHO FCTC) is an
+                            evidence based, legally binding multilateral treaty with 180 parties, and one of the most
+                            widely ratified treaties in the UN system. Its purpose is to ‘protect present and future
+                            generations from the devastating health, social, environmental and economic consequences of
+                            tobacco use and exposure from tobacco smoke’ (WHO FCTC Article 3).</p>
+                        <p>The purposes or <a href="<?php echo $base_Url; ?>getting-prepared/set-policy-objectives">objectives
+                                of plain packaging</a> are drawn from the evidence base that supports the policy and the
+                            context of the policy recommendations in the WHO FCTC.</p>
                     </div>
                     <div class="col-lg-10 col-lg-offset-1">
-                        <div class="section-secondary-title fc-dark-brown">Article 11 Packaging and Labelling of Tobacco Products</div>
-                        <p>Article 11 <u>obliges</u> Parties to implement <u>effective measures</u> to ensure that tobaccopackaging and labelling do not promote tobacco products by means that are false,misleading or deceptive (Article 11.1(a)) and to ensure that tobacco packaging carries health warnings describing the harmful effects of tobacco use (Article 11.1(b)).</p>
-                        <p>The <a href="<?php echo $base_url; ?>evidence/research-evidence">evidence</a> clearly demonstrates that plain packaging:</p>
+                        <div class="section-secondary-title fc-dark-brown">Article 11 Packaging and Labelling of Tobacco
+                            Products
+                        </div>
+                        <p>Article 11 <u>obliges</u> Parties to implement <u>effective measures</u> to ensure that
+                            tobaccopackaging and labelling do not promote tobacco products by means that are
+                            false,misleading or deceptive (Article 11.1(a)) and to ensure that tobacco packaging carries
+                            health warnings describing the harmful effects of tobacco use (Article 11.1(b)).</p>
+                        <p>The <a href="<?php echo $base_url; ?>evidence/research-evidence">evidence</a> clearly
+                            demonstrates that plain packaging:</p>
                         <ul class="custom">
                             <li>Is an <u>effective measure</u> to address misleading and deceptive packaging.</li>
-                            <li>Increases the noticeability and <u>effectiveness</u> of health warnings. </li>
+                            <li>Increases the noticeability and <u>effectiveness</u> of health warnings.</li>
                         </ul>
                         <p>Paragraph 46 of the Guidelines for the implementation of Article 11 states:</p>
                         <div class="p-states">
                             <p>
-                                Parties should consider adopting measures to restrict or prohibit the use of logos, colors, brand images or promotional information on packaging other than brand names and product names displayed in a standard colour and font style (<u>plain packaging</u>). This may increase the noticeability and effectiveness of health warnings and messages, prevent the package from detracting attention from them, and address industry package design techniques that may suggest that some products are less harmful than others.
+                                Parties should consider adopting measures to restrict or prohibit the use of logos,
+                                colors, brand images or promotional information on packaging other than brand names and
+                                product names displayed in a standard colour and font style (<u>plain packaging</u>).
+                                This may increase the noticeability and effectiveness of health warnings and messages,
+                                prevent the package from detracting attention from them, and address industry package
+                                design techniques that may suggest that some products are less harmful than others.
                             </p>
                         </div>
-                        <p>This passage is set out in a broader context of other packaging and labelling measures, which reinforces the recommendation that plain packaging is adopted in addition to (not as an alternative to) other measures including large pictorial health warnings.</p>
+                        <p>This passage is set out in a broader context of other packaging and labelling measures, which
+                            reinforces the recommendation that plain packaging is adopted in addition to (not as an
+                            alternative to) other measures including large pictorial health warnings.</p>
                     </div>
                     <div class="col-lg-10 col-lg-offset-1">
-                        <div class="section-secondary-title fc-dark-brown">Article 13 Tobacco Advertising, Promotion and Sponsorship</div>
-                        <p>Article 13 <u>obliges</u> Parties to undertake a <u>comprehensive ban</u> on tobacco advertising, promotion and sponsorship. The phrase “tobacco advertising and promotion” is defined in Article 1(c) as “any form of commercial communication, recommendation or action with the aim, effect or likely effect of promoting a tobacco product or tobacco use either directly or indirectly.”</p>
-                        <p><a href="<?php echo $base_url; ?>evidence/tobacco-product-branding">Evidence</a> demonstrates that branding on tobacco packaging acts as a form of advertising and promotion. The research evidence is also clear that plain packaging will act to:</p>
+                        <div class="section-secondary-title fc-dark-brown">Article 13 Tobacco Advertising, Promotion and
+                            Sponsorship
+                        </div>
+                        <p>Article 13 <u>obliges</u> Parties to undertake a <u>comprehensive ban</u> on tobacco
+                            advertising, promotion and sponsorship. The phrase “tobacco advertising and promotion” is
+                            defined in Article 1(c) as “any form of commercial communication, recommendation or action
+                            with the aim, effect or likely effect of promoting a tobacco product or tobacco use either
+                            directly or indirectly.”</p>
+                        <p><a href="<?php echo $base_url; ?>evidence/tobacco-product-branding">Evidence</a> demonstrates
+                            that branding on tobacco packaging acts as a form of advertising and promotion. The research
+                            evidence is also clear that plain packaging will act to:</p>
                         <ul class="custom">
                             <li>Eliminate the effects of tobacco packaging as a form of advertising and promotion</li>
-                            <li>Reduce the attractiveness of tobacco products. </li>
+                            <li>Reduce the attractiveness of tobacco products.</li>
                         </ul>
-                        <p>The Guidelines for Implementation of Article 13recommend that Parties consider implementing plain packaging. Paragraph 15, 16 and 17 state</p>
+                        <p>The Guidelines for Implementation of Article 13recommend that Parties consider implementing
+                            plain packaging. Paragraph 15, 16 and 17 state</p>
                         <div class="p-states">
-                            <p>15. <u>Packaging is an important element of advertising and promotion.</u> Tobacco pack or product features are used in various ways to attract consumers, to promote products and to cultivate and promote brand identity, for example by using logos, colours,fonts, pictures, shapes and materials on or in packs or on individual cigarettes or other tobacco products.</p>
-                            <p>16. <u>The effect of advertising or promotion on packaging can be eliminated by requiring plain packaging:</u> black and white or two other contrasting colours, as prescribed by national authorities; nothing other than a brand name, a product name and/or manufacturer’s name, contact details and the quantity of product in the packaging,without any logos or other features apart from health warnings, tax stamps and other government-mandated information or markings; prescribed font style and size; and standardized shape, size and materials. There should be no advertising or promotion inside or attached to the package or on individual cigarettes or other tobacco products.</p>
-                            <p>17. <u>Packaging and product design are important elements of advertising and promotion. Parties should consider adopting plain packaging requirements to eliminate the effects of advertising or promotion on packaging</u>. Packaging, individual cigarettes or other tobacco products should carry no advertising or promotion, including design features that make products attractive.</p>
+                            <p>15. <u>Packaging is an important element of advertising and promotion.</u> Tobacco pack
+                                or product features are used in various ways to attract consumers, to promote products
+                                and to cultivate and promote brand identity, for example by using logos, colours,fonts,
+                                pictures, shapes and materials on or in packs or on individual cigarettes or other
+                                tobacco products.</p>
+                            <p>16. <u>The effect of advertising or promotion on packaging can be eliminated by requiring
+                                    plain packaging:</u> black and white or two other contrasting colours, as prescribed
+                                by national authorities; nothing other than a brand name, a product name and/or
+                                manufacturer’s name, contact details and the quantity of product in the
+                                packaging,without any logos or other features apart from health warnings, tax stamps and
+                                other government-mandated information or markings; prescribed font style and size; and
+                                standardized shape, size and materials. There should be no advertising or promotion
+                                inside or attached to the package or on individual cigarettes or other tobacco products.
+                            </p>
+                            <p>17. <u>Packaging and product design are important elements of advertising and promotion.
+                                    Parties should consider adopting plain packaging requirements to eliminate the
+                                    effects of advertising or promotion on packaging</u>. Packaging, individual
+                                cigarettes or other tobacco products should carry no advertising or promotion, including
+                                design features that make products attractive.</p>
                         </div>
                     </div>
                     <div class="col-lg-10 col-lg-offset-1">
-                        <div class="section-secondary-title fc-dark-brown">The status and legal weight of the WHO FCTC</div>
-                        <p>The tobacco companies argue that as a framework convention, the WHO FCTC limits itself to the formulation of broad principle objectives and leaves the elaboration of more detailed substantive rules to later steps at international and domestic levels.</p>
-                        <p>The <a href="http://untobaccocontrol.org/kh/legal-challenges/role-of-the-who-fctc/">FCTC knowledge hub</a> contains important information about the status of the WHO FCTC and how it has assisted countries defend their tobacco control laws in the courts, which can assist in countering these tobacco industry arguments.</p>
+                        <div class="section-secondary-title fc-dark-brown">The status and legal weight of the WHO FCTC
+                        </div>
+                        <p>The tobacco companies argue that as a framework convention, the WHO FCTC limits itself to the
+                            formulation of broad principle objectives and leaves the elaboration of more detailed
+                            substantive rules to later steps at international and domestic levels.</p>
+                        <p>The <a href="http://untobaccocontrol.org/kh/legal-challenges/role-of-the-who-fctc/">FCTC
+                                knowledge hub</a> contains important information about the status of the WHO FCTC and
+                            how it has assisted countries defend their tobacco control laws in the courts, which can
+                            assist in countering these tobacco industry arguments.</p>
                     </div>
                 </div>
             </section>
@@ -9887,8 +12077,7 @@ function nav_content($menu,$var = null)
 
         // more help from ctfk
         case 'more-help-from-ctfk':
-            if ($var == 'og_desc')
-            {
+            if ($var == 'og_desc') {
                 $og_desc = 'The Campaign for Tobacco Free Kids (CTFK) works directly with governments and civil society organisations to promote and strengthen tobacco control laws.';
                 return $og_desc;
             }
@@ -9900,8 +12089,14 @@ function nav_content($menu,$var = null)
                         <div class="section-title fc-dark-brown">Further assistance from CTFK</div>
                     </div>
                     <div class="content-desc-cont col-lg-10 col-lg-offset-1">
-                        <p>The Campaign for Tobacco Free Kids (CTFK) works directly with governments and civil society organisations to promote and strengthen tobacco control laws. The International legal consortium at CTFK has a team of experienced lawyers that can assist with drafting legislation as well as obtaining research reports, identifying the latest evidence, combatting industry interference and media campaigns, or drafting briefing papers.</p>
-                        <p>For further advice or assistance with any of the policy steps, an assessment of legal risks or with drafting plain packaging legislation contact:<br>Robert Eckford <a href="mailto:reckford@tobaccofreekids.org">reckford@tobaccofreekids.org</a></p>
+                        <p>The Campaign for Tobacco Free Kids (CTFK) works directly with governments and civil society
+                            organisations to promote and strengthen tobacco control laws. The International legal
+                            consortium at CTFK has a team of experienced lawyers that can assist with drafting
+                            legislation as well as obtaining research reports, identifying the latest evidence,
+                            combatting industry interference and media campaigns, or drafting briefing papers.</p>
+                        <p>For further advice or assistance with any of the policy steps, an assessment of legal risks
+                            or with drafting plain packaging legislation contact:<br>Robert Eckford <a
+                                    href="mailto:reckford@tobaccofreekids.org">reckford@tobaccofreekids.org</a></p>
                     </div>
                 </div>
             </section>
