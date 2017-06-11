@@ -81,7 +81,7 @@ if(isset($request))
 			case 'comparison-table-of-existing-plain-packaging-laws':
 			case 'template-draft-model-law':
 			case 'research-evidence':
-			case 'austalia-post-implementation-evidence':
+			case 'australia-post-implementation-evidence':
 			case 'tobacco-product-branding':
 			case 'opposing-arguments-and-how-to-counter-them':
 			case 'legal-issues-and-case-summaries':
