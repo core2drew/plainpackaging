@@ -7,11 +7,11 @@ if ($var == 'og_desc') {
 ?>
 <section id="about-state" class="container content-st-section">
     <div class="row abs-st-r">
-        <div class="col-lg-10 col-lg-offset-1"><?php echo breadcrumbs(' / ', 'Home'); ?></div>
-        <div class="col-lg-10 col-lg-offset-1">
+        <div class="col-lg-12"><?php echo breadcrumbs(' / ', 'Home'); ?></div>
+        <div class="col-lg-12">
             <div class="section-margin-top-25 section-title fc-ref-mat-2">Comparison of Existing Laws</div>
         </div>
-        <div class="content-desc-cont col-lg-10 col-lg-offset-1">
+        <div class="content-desc-cont col-lg-12">
             <p>
                 This table provides a comparison of the key features in plain packaging legislation from different
                 countries. It is intended to provide examples but is not fully comprehensive for all features in each
@@ -19,7 +19,7 @@ if ($var == 'og_desc') {
                 recommended that officials refer to the specific legislation for these.
             </p>
         </div>
-        <div class="content-desc-cont col-lg-10 col-lg-offset-1">
+        <div class="content-desc-cont col-lg-12">
             <table class="table table-bordered ref-e">
                 <thead>
                 <tr>
@@ -140,8 +140,8 @@ if ($var == 'og_desc') {
                         <p>Brand name, variant name. </p>
                         <p><span class="h4-color">TPPA 20(1-3) and 21(1)</span></p>
                         <p>
-                            Producers’ name and address, fire risk statement, locally made product
-                            statement, origin mark.
+                            Producers’ name and address, fire-risk statement, locally made product statement, origin
+                            mark.
                         </p>
                         <p><span class="h4-color">TPPR 2.3.1(1)</span></p>
                     </td>
