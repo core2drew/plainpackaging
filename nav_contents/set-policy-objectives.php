@@ -15,11 +15,12 @@ if ($var == 'og_desc') {
         <div class="content-desc-cont">
             <div class="col-lg-10 col-lg-offset-1">
                 <div class="section-secondary-title fc-violet">1. Establish the aims and objectives</div>
-                <p>It is critical to establish clear aims and objectives for an effective policy development
-                    process of a tobacco control policy. Many domestic and international courts and
-                    tribunals apply legal tests to establish whether a measure is roportionate or justified
-                    in relation to its intended objectives. Where a government fails to formally establish
-                    those objectives, a legal challenge may be more difficult to defend.</p>
+                <p>It is critical to establish clear aims and objectives for an effective policy development process
+                    of a
+                    tobacco control policy. Many domestic and international courts and tribunals apply legal tests to
+                    establish whether or not a measure is proportionate or justified in relation to its intended
+                    objectives.Where a government fails to formally establish those objectives,a legal challenge may be
+                    more difficult to defend</p>
                 <p>
                     Plain packaging serves multiple objectives within the broader context of tobacco demand
                     reduction strategies. The broad objectives for plain packaging are to improve public
@@ -42,7 +43,7 @@ if ($var == 'og_desc') {
                         <li><b><i>reducing</i></b> the appeal and attractiveness of tobacco products to
                             consumers,
                         </li>
-                        <li><b><i>increasing</i></b> the noticeability and effectiveness of health warnings
+                        <li><b><i>increasing</i></b> the notice ability and effectiveness of health warnings
                             on the packaging of tobacco products,
                         </li>
                         <li><b><i>reducing</i></b> the ability of the packaging of tobacco products to
@@ -53,22 +54,21 @@ if ($var == 'og_desc') {
                             promote tobacco consumption,
                         </li>
                         <li><b><i>having a positive</i></b> effect on smoking-related attitudes, beliefs,
-                            intentions and behaviours or assisting with the denormalisation of tobacco
+                            intentions and behaviors or assisting with the denormalization of tobacco
                             products.
                         </li>
                     </ul>
                 </div>
             </div>
             <div class="col-lg-10 col-lg-offset-1">
-                <p>This list is drawn from the objectives as expressed in the who fctc guidelines for
+                <p>This list is drawn from the objectives as expressed in the WHO FCTC guidelines for
                     Articles 11 and 13, Australia’s Tobacco Plain Packaging Act 2011, Ireland’s Public
-                    Health (Standardised Packaging of Tobacco) Act 2014 and the public consultation
+                    Health (Standardised Packaging of Tobacco) Act 2014, and the public consultation
                     documents from the UK. Governments proposing plain packaging should consider which
-                    objectives are relevant for them but it is recommended that governments take a broad
+                    objectives are relevant for them, but it is recommended that governments take a broad
                     inclusive approach to the aims they wish to achieve and the means by which they should
                     be achieved through the implementation of plain packaging.</p>
-                <p>An important point is that these objectives are evidence-based and capable of being
-                    monitored and evaluated.</p>
+                <p>These objectives are evidence-based and capable of being monitored and evaluated.</p>
             </div>
             <div class="col-lg-10 col-lg-offset-1">
                 <div class="section-secondary-title fc-violet">2. Set out the objectives in official
@@ -82,25 +82,23 @@ if ($var == 'og_desc') {
                     given below.</p>
             </div>
             <div class="col-lg-10 col-lg-offset-1">
-                <div class="section-secondary-title fc-violet">3. Establish that Plain Packaging is in
+                <div class="section-secondary-title fc-violet">3. Establish that plain packaging is in
                     furtherance of the WHO FCTC
                 </div>
                 <p>It is also important that a government formally recognises that plain packaging is a
                     policy recommended in the implementing guidelines for Articles 11 and 13 of the who
                     fctc. The fact that a country is adopting a policy in furtherance of its international
                     legal obligations can be a significant factor for courts or tribunals asked to consider
-                    that policy. Giving effect to obligations in the who fctc is stated as an objective of
+                    that policy. Giving effect to obligations in the WHO FCTC is stated as an objective of
                     both Australia and New Zealand’s legislation, and is detailed in the UK consultation
                     document.</p>
             </div>
             <div class="col-lg-10 col-lg-offset-1">
-                <div class="section-secondary-title fc-violet">4. Plain Packaging objectives work as part of
+                <div class="section-secondary-title fc-violet">4. Plain packaging objectives work as part of
                     a wider tobacco control policy
                 </div>
-                <p>It is critical for policy and legal reasons that plain packaging is part of a wider
-                    tobacco control strategy that includes a comprehensive tobacco advertising, promotion
-                    and sponsorship ( TA P S) ban, including a ban on point of sale advertising, and
-                    effective graphic health warnings in line with WHO F C T C recommendations.</p>
+                <p>It is critical for policy and legal reasons that plain packaging is part of a wider tobacco control
+                    strategy that includes:</p>
                 <p>
                     It is critical for policy and legal reasons that plain packaging is part of a wider
                     tobacco control strategy that includes:
@@ -108,7 +106,7 @@ if ($var == 'og_desc') {
                     <li>a comprehensive tobacco advertising, promotion and sponsorship (TAPS) ban, including
                         a ban on point of sale advertising, and
                     </li>
-                    <li>effective graphic health warnings in line with WHO FC TC recommendations.</li>
+                    <li>effective graphic health warnings in line with WHO FCTC recommendations.</li>
                 </ul>
                 </p>
                 <p>The reasons for this are:</p>
@@ -119,12 +117,12 @@ if ($var == 'og_desc') {
                         packets but still allow advertising or promotion of tobacco products in other ways.
                     </li>
                     <li>One of the key aims of plain packaging is that it increases the noticeability and
-                        effectiveness of the Graphic Health Warnings, therefore a country should either have
+                        effectiveness of the graphic health warnings. Therefore, a country should either have
                         in place, or be introducing concurrently with plain packaging, health warnings that
                         are in line with the recommendations of WHO F C T C Article 11 guidelines – at least
                         50% front and back with graphic pictures.
                     </li>
-                    <li>In both Australia and in the EU countries that have introduced plain packaging,
+                    <li>In Australia and in the EU countries that have introduced plain packaging,
                         health warnings increased in size at the same time plain packaging was introduced.
                     </li>
                 </ul>
@@ -145,9 +143,9 @@ if ($var == 'og_desc') {
                         undermined by other forms of advertising.
                     </li>
                     <li>There is significant research evidence that shows plain packaging is effective at
-                        increasing the noticeability of health warnings. But without regulations requiring
+                        increasing the notice ability of health warnings. But without regulations requiring
                         effective health warnings that are in accordance with F C T C recommendations, it
-                        would be difficult to use that to support the defence of plain packaging in a legal
+                        would be difficult to use that to support the defense of plain packaging in a legal
                         challenge.
                     </li>
                 </ul>
@@ -158,20 +156,20 @@ if ($var == 'og_desc') {
                     <div class="section-tertiary-title fc-brown">Key resources</div>
                     <ul class="custom">
                         <li>WHO publication Plain Packaging of Tobacco Products – Evidence, Design and
-                            Implementation: <a class="fc-black"
+                            Implementation: <a class="fc-blue"
                                                href="www.who.int/tobacco/publications/industry/plain-packaging-tobaccoproducts/en/"
                                                target="_blank"><b><i>www.who.int/tobacco/publications/industry/plain-packaging-tobaccoproducts/en/</i></b></a>
                         </li>
                         <li>Australian legislation that sets out the objectives of the law <a
-                                class="fc-black" target="_blank"
-                                href="www.comlaw.gov.au/Details/C2013C00190"><b><i>www.comlaw.gov.au/Details/C2013C00190</i></b></a>
+                                    class="fc-blue" target="_blank"
+                                    href="www.comlaw.gov.au/Details/C2013C00190"><b><i>www.comlaw.gov.au/Details/C2013C00190</i></b></a>
                         </li>
-                        <li>UK 2012 consultation that describes the aims and objectives of the proposed
-                            policy: <a class="fc-black" target="_blank"
+                        <li>The UK's 2012 consultation that describes the aims and objectives of the proposed
+                            policy: <a class="fc-blue" target="_blank"
                                        href="www.gov.uk/government/uploads/system/uploads/attachment_data/file/170568/dh_133575.pdf"><b><i>www.gov.uk/government/uploads/system/uploads/attachment_data/file/170568/dh_133575.pdf</i></b></a>
                         </li>
-                        <li>New Zealand’s Regulatory Impact Assessment from 2012 sets out the objectives for
-                            the proposal: <a class="fc-black" target="_blank"
+                        <li>New Zealand’s Regulatory Impact Assessment from 2012 that sets out the objectives for
+                            the proposal: <a class="fc-blue" target="_blank"
                                              href="www.health.govt.nz/about-ministry/legislation-and-regulation/regulatory-impact-statements/plain-packaging-tobacco-productsregulatory-impact-statement-consultation-phase"><b><i>www.health.govt.nz/about-ministry/legislation-and-regulation/regulatory-impact-statements/plain-packaging-tobacco-productsregulatory-impact-statement-consultation-phase</i></b></a>
                         </li>
                     </ul>
@@ -203,8 +201,8 @@ if ($var == 'og_desc') {
         <div class="col-xs-12 pagination-url-forward">
             <a href="<?php echo $base_url; ?>getting-prepared/establish-document-development-retention">
                 Guide 1.2 Establish Document Development and Retention<br><img
-                    class="pagination-url-forward-img"
-                    src="<?php echo $base_url; ?>img/scroll-page.png"> </a>
+                        class="pagination-url-forward-img"
+                        src="<?php echo $base_url; ?>img/scroll-page.png"> </a>
         </div>
     </div>
 </div>
