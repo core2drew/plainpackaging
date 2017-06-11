@@ -1253,6 +1253,10 @@ table.dropdown-reference tr, table.dropdown-more tr{
   font-style: italic;
 }
 
+.font10 {
+  font-size:10px;
+}
+
 .bg-nav-gd-1-1{
   background-color:rgb(77,41,97);
 }
