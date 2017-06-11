@@ -12,28 +12,52 @@ if ($var == 'og_desc') {
         </div>
         <div class="content-desc-cont col-lg-10 col-lg-offset-1">
             <div class="row text-center">
-                <p class="col-lg-3">Plain Packaging</p>
                 <p class="col-lg-3">Branded Packaging</p>
+                <p class="col-lg-3">Plain Packaging</p>
             </div>
             <div class="row">
-                <img src="<?php echo $base_url; ?>img/compare-image/plains/Chesterfield plain.jpg" class="col-lg-3">
+                <img src="<?php echo $base_url; ?>img/compare-image/brands/2012vs2014_BondStreet3.jpg" class="col-lg-3">
+                <img src="<?php echo $base_url; ?>img/compare-image/plains/455f6644f995fdd21932341d1c0e7a88.jpg"
+                     class="col-lg-3">
+            </div>
+            <div class="row">
+                <img src="<?php echo $base_url; ?>img/compare-image/brands/bensonhedgessmoothgold.jpg" class="col-lg-3">
+                <img src="<?php echo $base_url; ?>img/compare-image/plains/B and H Aus plain.png" class="col-lg-3">
+            </div>
+            <div class="row">
+                <img src="<?php echo $base_url; ?>img/compare-image/brands/bmjopen-2016-January-6-1--F1.jpg"
+                     class="col-lg-3">
+                <img src="<?php echo $base_url; ?>img/compare-image/plains/bmjopen-2014-February-4-2--F1.large.jpg"
+                     class="col-lg-3">
+            </div>
+            <div class="row">
+                <img src="<?php echo $base_url; ?>img/compare-image/brands/Branded cigs.png" class="col-lg-3">
+                <img src="<?php echo $base_url; ?>img/compare-image/plains/Plain_packs3.jpg" class="col-lg-3">
+            </div>
+            <div class="row">
                 <img src="<?php echo $base_url; ?>img/compare-image/brands/Chesterfield brand.jpg" class="col-lg-3">
+                <img src="<?php echo $base_url; ?>img/compare-image/plains/Chesterfield plain.jpg" class="col-lg-3">
             </div>
             <div class="row">
-                <img src="<?php echo $base_url; ?>img/compare-image/plains/dunhill plain.jpg" class="col-lg-3">
                 <img src="<?php echo $base_url; ?>img/compare-image/brands/Dunhill brand.jpg" class="col-lg-3">
+                <img src="<?php echo $base_url; ?>img/compare-image/plains/dunhill plain.jpg" class="col-lg-3">
             </div>
             <div class="row">
-                <img src="<?php echo $base_url; ?>img/compare-image/plains/gauloises plain.jpg" class="col-lg-3">
                 <img src="<?php echo $base_url; ?>img/compare-image/brands/gauloises branded.jpg" class="col-lg-3">
+                <img src="<?php echo $base_url; ?>img/compare-image/plains/gauloises plain.jpg" class="col-lg-3">
             </div>
             <div class="row">
+                <img src="<?php echo $base_url; ?>img/compare-image/brands/Lmbert and butler banded.jpg"
+                     class="col-lg-3">
                 <img src="<?php echo $base_url; ?>img/compare-image/plains/lambert and butler plain.jpg" class="col-lg-3">
-                <img src="<?php echo $base_url; ?>img/compare-image/brands/Lmbert and butler banded.jpg" class="col-lg-3">
             </div>
             <div class="row">
-                <img src="<?php echo $base_url; ?>img/compare-image/plains/marlboro plain.png" class="col-lg-3">
                 <img src="<?php echo $base_url; ?>img/compare-image/brands/marlboro branded.png" class="col-lg-3">
+                <img src="<?php echo $base_url; ?>img/compare-image/plains/marlboro plain.png" class="col-lg-3">
+            </div>
+            <div class="row">
+                <img src="<?php echo $base_url; ?>img/compare-image/brands/pall mall brand.jpg" class="col-lg-3">
+                <img src="<?php echo $base_url; ?>img/compare-image/plains/Pall mall plain.jpg" class="col-lg-3">
             </div>
         </div>
     </div>
