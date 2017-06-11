@@ -18,15 +18,15 @@ return $og_desc;
                 <ul class="sidebar-nav">
                     <div class="sidebar-nav-header">LINKED<br>TOOLS AND RESOURCES</div>
                     <li>
-                        <a class="flex" href="http://localhost/projects/plainpackaging/resources/legal-issues
+                        <a class="flex" href="<?php echo $base_url; ?>resources/legal-issues
                                     "><img
-                                src="http://localhost/projects/plainpackaging/img/icons/linked-tools-and-resources/legal-issues.PNG"
+                                src="<?php echo $base_url; ?>img/icons/linked-tools-and-resources/legal-issues.PNG"
                                 style="padding:0 10px;">Branding on tobacco packaging </a>
                     </li>
                     <li>
-                        <a class="flex" href="http://localhost/projects/plainpackaging/resources/policy-briefs
+                        <a class="flex" href="<?php echo $base_url; ?>resources/policy-briefs
 "><img
-                                src="http://localhost/projects/plainpackaging/img/icons/linked-tools-and-resources/policy-brief-is-it-lawful.PNG"
+                                src="<?php echo $base_url; ?>img/icons/linked-tools-and-resources/policy-brief-is-it-lawful.PNG"
                                 style="padding:0 5px;">Opposing arguments (and how to counter them)</a>
                     </li>
                 </ul>
