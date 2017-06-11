@@ -1,8 +1,8 @@
 <?php
 if ($var == 'og_desc') {
-$og_desc = 'This section summarises the empirical research evidence that supports the implementation of plain packaging.';
+    $og_desc = 'This section summarises the empirical research evidence that supports the implementation of plain packaging.';
 
-return $og_desc;
+    return $og_desc;
 }
 ?>
 <section id="about-state" class="container content-st-section">
@@ -17,15 +17,16 @@ return $og_desc;
                     <div class="sidebar-nav-header">LINKED<br>TOOLS AND RESOURCES</div>
                     <li>
                         <a class="flex"
-                           href="http://localhost/projects/plainpackaging/resources/legal-issues&#10;                                    "><img
-                                src="http://localhost/projects/plainpackaging/img/icons/linked-tools-and-resources/legal-issues.PNG"
-                                style="padding:0 10px;">Branding on tobacco packaging </a>
+                           href="<?php echo $base_url; ?>resources/legal-issues"><img
+                                    src="<?php echo $base_url; ?>img/icons/linked-tools-and-resources/books.PNG"
+                                    style="padding:0 10px;">Branding on tobacco packaging </a>
                     </li>
                     <li>
                         <a class="flex"
-                           href="http://localhost/projects/plainpackaging/resources/policy-briefs&#10;"><img
-                                src="http://localhost/projects/plainpackaging/img/icons/linked-tools-and-resources/policy-brief-is-it-lawful.PNG"
-                                style="padding:0 5px;">Opposing arguments (and how to counter them)</a>
+                           href="<?php echo $base_url; ?>resources/policy-briefs&#10;"><img
+                                    src="<?php echo $base_url; ?>img/icons/linked-tools-and-resources
+                                /books.PNG"
+                                    style="padding:0 5px;">Opposing arguments (and how to counter them)</a>
                     </li>
                 </ul>
             </div>
@@ -158,14 +159,14 @@ return $og_desc;
                     variants to mislead consumers about the relative harms of different products.
                     <sup>17</sup></p>
 
-                <div id="item2"  class="section-secondary-title fc-ref-mat-3">Expert reviews of the
+                <div id="item2" class="section-secondary-title fc-ref-mat-3">Expert reviews of the
                     research evidence
                 </div>
                 <p>Australia, the UK, and Ireland, when considering plain packaging, commissioned
                     independent reviews of the research
                     evidence to ensure that there is a clear, complete, and balanced picture. More recently,
                     <a
-                        href="http://www.cochrane.org/about-us">Cochrane</a>, a global
+                            href="http://www.cochrane.org/about-us">Cochrane</a>, a global
                     independent non-profit organization, undertook a review of the research studies that
                     evaluated plain or standardised
                     packaging.</p>
@@ -210,8 +211,9 @@ return $og_desc;
                     that
                     have taken place since the latest evidence review (see below). </p>
 
-                <div id="item3"  class="section-secondary-title fc-ref-mat-3">1. Cancer Council
-                    Victoria</div>
+                <div id="item3" class="section-secondary-title fc-ref-mat-3">1. Cancer Council
+                    Victoria
+                </div>
                 <p>In 2011, Cancer Council Victoria in Australia produced a paper to present the findings of
                     research over two decades
                     and across five countries on the topic of plain packaging. It includes the results of
@@ -228,7 +230,7 @@ return $og_desc;
                     ones. To avoid repetition, these
                     pages focuses on the outcomes of more recent reviews. </p>
 
-                <div id="item4"  class="section-secondary-title fc-ref-mat-3">2. The Stirling Review</div>
+                <div id="item4" class="section-secondary-title fc-ref-mat-3">2. The Stirling Review</div>
 
                 <h3 class="fc-ref-mat-4 sub-title">Background</h3>
                 <p>In 2012,the UK Department of Health commissioned a systematic review of the evidence on
@@ -373,7 +375,7 @@ return $og_desc;
                     provides further support for
                     the proposed benefits of plain packaging.”</p>
 
-                <div id="item5"  class="section-secondary-title fc-ref-mat-3">3. The Chantler Review</div>
+                <div id="item5" class="section-secondary-title fc-ref-mat-3">3. The Chantler Review</div>
 
                 <h3 class="fc-ref-mat-4 sub-title">Background</h3>
                 <p>In November 2013, the UK Department of Health commissioned Sir Cyril Chantler to
@@ -405,7 +407,7 @@ return $og_desc;
                     were undertaken by academics at
                     Southampton University and Kings College London, respectively.</p>
                 <p>The report of the Chantler Review was published in April 2014 and is available here: <a
-                        href="http://www.kcl.ac.uk/health/10035-TSO-2901853-Chantler-Review-ACCESSIBLE.PDF">http://www.kcl.ac.uk/health/10035-TSO-2901853-Chantler-Review-ACCESSIBLE.PDF</a>
+                            href="http://www.kcl.ac.uk/health/10035-TSO-2901853-Chantler-Review-ACCESSIBLE.PDF">http://www.kcl.ac.uk/health/10035-TSO-2901853-Chantler-Review-ACCESSIBLE.PDF</a>
                 </p>
                 <p>A full record of the meetings, evidence, and written submissions from the review is
                     available here:
@@ -690,7 +692,7 @@ return $og_desc;
                     interventions and publishes them in <a href="http://www.cochranelibrary.com/">The
                         Cochrane Library</a>.</p>
                 <p>Cochrane <a
-                        href="http://onlinelibrary.wiley.com/doi/10.1002/14651858.CD011244.pub2/full">published
+                            href="http://onlinelibrary.wiley.com/doi/10.1002/14651858.CD011244.pub2/full">published
                         a review in April
                         2017</a> which looked at the peer-reviewed published evidence assessing the effect
                     of plain packaging on tobacco use, uptake, cessation, and reduction.</p>
@@ -980,7 +982,7 @@ return $og_desc;
                     The Impact of Cigarette Plain Packaging on Health Warning Salience and Perceptions:
                     Implications for Public Health
                     Policy.Asia Pac J Public Health. 2015 Nov; <a
-                        href="http://journals.sagepub.com/doi/10.1177/101053951560208">http://journals.sagepub.com/doi/10.1177/101053951560208</a>
+                            href="http://journals.sagepub.com/doi/10.1177/101053951560208">http://journals.sagepub.com/doi/10.1177/101053951560208</a>
                 </p>
                 <p><sup>25</sup> Karine Gallopel-Morvan, Janet Hoek, Sophie Rieunier. Do plain packaging and
                     pictorial warnings affect
@@ -992,7 +994,7 @@ return $og_desc;
                     Cigarette Packaging Design Among Young Females in Canada: Findings From a Discrete
                     Choice Experiment.
                     Nicotine and Tobacco Research (2016) 18 (5): 1348-1356. DOI: <a
-                        href="https://doi.org/10.1093/ntr/ntv114">https://doi.org/10.1093/ntr/ntv114</a>
+                            href="https://doi.org/10.1093/ntr/ntv114">https://doi.org/10.1093/ntr/ntv114</a>
                 </p>
             </div>
         </div>

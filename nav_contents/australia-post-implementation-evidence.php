@@ -20,13 +20,13 @@ return $og_desc;
                     <li>
                         <a class="flex" href="<?php echo $base_url; ?>resources/legal-issues
                                     "><img
-                                src="<?php echo $base_url; ?>img/icons/linked-tools-and-resources/legal-issues.PNG"
+                                src="<?php echo $base_url; ?>img/icons/linked-tools-and-resources/books.PNG"
                                 style="padding:0 10px;">Branding on tobacco packaging </a>
                     </li>
                     <li>
                         <a class="flex" href="<?php echo $base_url; ?>resources/policy-briefs
 "><img
-                                src="<?php echo $base_url; ?>img/icons/linked-tools-and-resources/policy-brief-is-it-lawful.PNG"
+                                src="<?php echo $base_url; ?>img/icons/linked-tools-and-resources/legal-issues.PNG"
                                 style="padding:0 5px;">Opposing arguments (and how to counter them)</a>
                     </li>
                 </ul>

@@ -1588,7 +1588,11 @@ h3 {
 }
 
 .flex {
-  display:flex !important;
+  display: flex !important;
+  display: -webkit-box !important;
+  /*display: -moz-box !important*/
+  display: -ms-flexbox !important;
+  display: -webkit-flex !important;
 }
 
 /*End*/

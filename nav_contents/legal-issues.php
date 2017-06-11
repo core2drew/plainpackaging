@@ -18,10 +18,14 @@ return $og_desc;
                 <ul class="sidebar-nav">
                     <div class="sidebar-nav-header">LINKED<br>TOOLS AND RESOURCES</div>
                     <li>
-                        <a href="#item1">Case Summaries</a>
+                        <a href="#item1"><img
+                                    src="<?php echo $base_url; ?>img/icons/linked-tools-and-resources/legal-issues.PNG"
+                                    style="padding:0 10px;">Case Summaries</a>
                     </li>
                     <li>
-                        <a href="#item2">Policy Brief: Is it Lawful?</a>
+                        <a href="#item2"><img
+                                    src="<?php echo $base_url; ?>img/icons/linked-tools-and-resources/legal-issues.PNG"
+                                    style="padding:0 10px;">Policy Brief: Is it Lawful?</a>
                     </li>
                 </ul>
             </div>
