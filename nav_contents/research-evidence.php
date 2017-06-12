@@ -9,7 +9,7 @@ if ($var == 'og_desc') {
     <div class="row abt-st-r">
         <div class="col-lg-8 col-lg-offset-1"><?php echo breadcrumbs(' / ', 'Home'); ?></div>
         <div class="col-lg-8 col-lg-offset-1">
-            <div class="section-margin-top-25 section-title fc-ref-mat-3">Research Evidence</div>
+            <div class="section-margin-top-25 section-title fc-brown-home">Research Evidence</div>
         </div>
         <div class="col-lg-3">
             <div class="sidebar-wrapper header-sidebar col-xs-12 sidebar-1">
@@ -17,16 +17,16 @@ if ($var == 'og_desc') {
                     <div class="sidebar-nav-header">LINKED<br>TOOLS AND RESOURCES</div>
                     <li>
                         <a class="flex"
-                           href="<?php echo $base_url; ?>resources/legal-issues"><img
+                           href="<?php echo $base_url; ?>evidence/australia-post-implementation-evidence"><img
                                     src="<?php echo $base_url; ?>img/icons/linked-tools-and-resources/books.PNG"
-                                    style="padding:0 10px;">Branding on tobacco packaging </a>
+                                    style="padding:0 10px;">Australia's post implementation evidence</a>
                     </li>
                     <li>
                         <a class="flex"
-                           href="<?php echo $base_url; ?>resources/policy-briefs&#10;"><img
+                           href="<?php echo $base_url; ?>evidence/tobacco-product-branding"><img
                                     src="<?php echo $base_url; ?>img/icons/linked-tools-and-resources
                                 /books.PNG"
-                                    style="padding:0 5px;">Opposing arguments (and how to counter them)</a>
+                                    style="padding:0 10px;">Branding on tobacco packaging</a>
                     </li>
                 </ul>
             </div>
@@ -34,7 +34,7 @@ if ($var == 'og_desc') {
 
         <div class="content-desc-cont col-lg-8 col-lg-offset-1 ref -g1">
             <div>
-                <div class="section-secondary-title fc-ref-mat-3">Introduction</div>
+                <div class="section-secondary-title fc-brown-home">Introduction</div>
                 <p>These pages summarise the empirical research evidence that supports the implementation of
                     plain packaging. </p>
                 <p>Over the course of 20-30 years there have been many <b>peer reviewed scientific research
@@ -99,8 +99,8 @@ if ($var == 'og_desc') {
                         plain
                         packaging</b>.</p>
 
-                <div id="item1" class="section-secondary-title fc-ref-mat-3">Outcomes of the research</div>
-                <h3 class="fc-ref-mat-4 sub-title">Attractiveness of tobacco products and packaging as
+                <div id="item1" class="section-secondary-title fc-brown-home">Outcomes of the research</div>
+                <h3 class="fc-brown-home sub-title">Attractiveness of tobacco products and packaging as
                     advertising</h3>
                 <p><b>A substantial number of studies that examine plain packaging support the conclusions
                         that the measure reduces the
@@ -122,7 +122,7 @@ if ($var == 'og_desc') {
                     targeted at youth by the
                     tobacco companies. <sup>12</sup></p>
 
-                <h3 class="fc-ref-mat-4 sub-title">The effectiveness of health warnings</h3>
+                <h3 class="fc-brown-home sub-title">The effectiveness of health warnings</h3>
                 <p><b>Studies show that colorful and attractive branding on packaging detracts and distracts
                         from health warnings,
                         thereby reducing their effectiveness.</b></p>
@@ -134,7 +134,7 @@ if ($var == 'og_desc') {
                     health
                     warnings without plain packaging <sup>14</sup>. </p>
 
-                <h3 class="fc-ref-mat-4 sub-title">Misleading tobacco packaging</h3>
+                <h3 class="fc-brown-home sub-title">Misleading tobacco packaging</h3>
                 <p><b>Studies have demonstrated there is a strong association between pack design and false
                         consumer perceptions of
                         risk. <sup>15</sup> </b></p>
@@ -159,7 +159,7 @@ if ($var == 'og_desc') {
                     variants to mislead consumers about the relative harms of different products.
                     <sup>17</sup></p>
 
-                <div id="item2" class="section-secondary-title fc-ref-mat-3">Expert reviews of the
+                <div id="item2" class="section-secondary-title fc-brown-home">Expert reviews of the
                     research evidence
                 </div>
                 <p>Australia, the UK, and Ireland, when considering plain packaging, commissioned
@@ -201,7 +201,7 @@ if ($var == 'og_desc') {
                         academic
                         or medical journals</u>. </p>
 
-                <h3 class="fc-ref-mat-4 sub-title">Obtain full copies of the reviews</h3>
+                <h3 class="fc-brown-home sub-title">Obtain full copies of the reviews</h3>
                 <p>For Ministry of Health officials considering taking plain packaging forward, it is
                     recommended that full copies of
                     these reviews are obtained and considered, and records kept of when the copies were
@@ -211,7 +211,7 @@ if ($var == 'og_desc') {
                     that
                     have taken place since the latest evidence review (see below). </p>
 
-                <div id="item3" class="section-secondary-title fc-ref-mat-3">1. Cancer Council
+                <div id="item3" class="section-secondary-title fc-brown-home">1. Cancer Council
                     Victoria
                 </div>
                 <p>In 2011, Cancer Council Victoria in Australia produced a paper to present the findings of
@@ -230,9 +230,9 @@ if ($var == 'og_desc') {
                     ones. To avoid repetition, these
                     pages focuses on the outcomes of more recent reviews. </p>
 
-                <div id="item4" class="section-secondary-title fc-ref-mat-3">2. The Stirling Review</div>
+                <div id="item4" class="section-secondary-title fc-brown-home">2. The Stirling Review</div>
 
-                <h3 class="fc-ref-mat-4 sub-title">Background</h3>
+                <h3 class="fc-brown-home sub-title">Background</h3>
                 <p>In 2012,the UK Department of Health commissioned a systematic review of the evidence on
                     plain tobacco packaging. The
                     review was supported through the Public Health Research Consortium (PHRC), a network of
@@ -261,7 +261,7 @@ if ($var == 'og_desc') {
                     warnings and messages and it would reduce the use of design techniques that may mislead
                     consumers about the
                     harmfulness of tobacco products.”</p>
-                <h3 class="fc-ref-mat-4 sub-title">Methodology</h3>
+                <h3 class="fc-brown-home sub-title">Methodology</h3>
 
                 <p>The review aimed to examine all available current evidence on the effects of plain
                     packaging in the areas of pack
@@ -275,7 +275,7 @@ if ($var == 'og_desc') {
                     review were conducted in
                     Australasia, North America, or Western Europe.</p>
 
-                <h3 class="fc-ref-mat-4 sub-title">Findings</h3>
+                <h3 class="fc-brown-home sub-title">Findings</h3>
 
                 <p>Appeal of cigarettes, packs and brands: </p>
                 <p>All studies reported that plain packs were rated as less attractive than branded
@@ -289,7 +289,7 @@ if ($var == 'og_desc') {
                 <p>Non-smokers and younger people responded more negatively to plain packs than smokers and
                     older people. </p>
 
-                <h3 class="fc-ref-mat-4 sub-title">Effectiveness of health warnings</h3>
+                <h3 class="fc-brown-home sub-title">Effectiveness of health warnings</h3>
                 <p>Overall, the studies suggest that plain packaging tends to increase the recall of health
                     warnings, the attention
                     paid to them, and their perceived seriousness and believability. </p>
@@ -299,7 +299,7 @@ if ($var == 'og_desc') {
                     smokers may pay more
                     attention to warnings on plain packs than daily smokers. </p>
 
-                <h3 class="fc-ref-mat-4 sub-title">Perceptions of product harm and strength:</h3>
+                <h3 class="fc-brown-home sub-title">Perceptions of product harm and strength:</h3>
                 <p>Plain packaging can reduce misperceptions about the relative harmfulness of different
                     brands.</p>
                 <p>Colors of packs affect perceptions of product harm and strength. In general, plain packs
@@ -316,7 +316,7 @@ if ($var == 'og_desc') {
                     packs, both branded and plain,
                     than non-smokers. </p>
 
-                <h3 class="fc-ref-mat-4 sub-title">Smoking-related attitudes, beliefs, intentions, and
+                <h3 class="fc-brown-home sub-title">Smoking-related attitudes, beliefs, intentions, and
                     behavior:</h3>
                 <p>Plain packs appear to increase negative feelings about smoking. </p>
                 <p>Plain packs are generally perceived as likely to have a deterrent effect on the onset of
@@ -328,7 +328,7 @@ if ($var == 'og_desc') {
                     packs would discourage or
                     reduce smoking. </p>
 
-                <h3 class="fc-ref-mat-4 sub-title">Conclusions</h3>
+                <h3 class="fc-brown-home sub-title">Conclusions</h3>
                 <p>Plain packaging has been shown to:</p>
                 <p>reduce pack and product appeal by making packs appear less attractive and of lower
                     quality, and by weakening the
@@ -356,7 +356,7 @@ if ($var == 'og_desc') {
                     confidence about the observed
                     potential effects of plain packaging.</p>
 
-                <h3 class="fc-ref-mat-4 sub-title">Update</h3>
+                <h3 class="fc-brown-home sub-title">Update</h3>
                 <p>The authors provided an update to this review, summarizing subsequent evidence, in 2013
                     <sup>18</sup>. The findings
                     were
@@ -375,9 +375,9 @@ if ($var == 'og_desc') {
                     provides further support for
                     the proposed benefits of plain packaging.”</p>
 
-                <div id="item5" class="section-secondary-title fc-ref-mat-3">3. The Chantler Review</div>
+                <div id="item5" class="section-secondary-title fc-brown-home">3. The Chantler Review</div>
 
-                <h3 class="fc-ref-mat-4 sub-title">Background</h3>
+                <h3 class="fc-brown-home sub-title">Background</h3>
                 <p>In November 2013, the UK Department of Health commissioned Sir Cyril Chantler to
                     undertake an independent review of
                     whether or not the introduction of standardized packaging of tobacco was likely to have
@@ -387,7 +387,7 @@ if ($var == 'og_desc') {
                     evidence on the impact in
                     Australia as well as industry arguments and possible unintended consequences.</p>
 
-                <h3 class="fc-ref-mat-4 sub-title">Methodology</h3>
+                <h3 class="fc-brown-home sub-title">Methodology</h3>
                 <p>The Chantler Review considered all the evidence relevant to whether or not the
                     introduction of standardized packaging
                     would be beneficial to public health. The validity of the Stirling systematic review was
@@ -414,7 +414,7 @@ if ($var == 'og_desc') {
                     <a href="http://webarchive.nationalarchives.gov.uk/20140911094224/http://www.kcl.ac.uk/health/packaging-docs.aspx">http://webarchive.nationalarchives.gov.uk/20140911094224/http://www.kcl.ac.uk/health/packaging-docs.aspx</a>
                 </p>
 
-                <h3 class="fc-ref-mat-4 sub-title">Findings</h3>
+                <h3 class="fc-brown-home sub-title">Findings</h3>
 
                 <p>Sir Cyril Chantler’s overall conclusion was that it is “<b>highly likely that
                         standardised packaging would serve to
@@ -530,8 +530,8 @@ if ($var == 'og_desc') {
                     illicit sales, arguing that illicit suppliers benefit from not having to follow the same
                     restrictions.” </p>
 
-                <div id="item6" class="section-secondary-title fc-ref-mat-3">4. The Hammond Review</div>
-                <h3 class="fc-ref-mat-4 sub-title">Background</h3>
+                <div id="item6" class="section-secondary-title fc-brown-home">4. The Hammond Review</div>
+                <h3 class="fc-brown-home sub-title">Background</h3>
                 <p>In March 2014, Professor David Hammond, an associate Professor of health behaviour and
                     health policy at the
                     University of Waterloo, Canada, published an evidence review on standardized packaging,
@@ -554,7 +554,7 @@ if ($var == 'og_desc') {
                     is dealt with in detail on
                     the <b>Tobacco Branding</b> page of the Tools and Resources.</p>
 
-                <h3 class="fc-ref-mat-4 sub-title">Methodology</h3>
+                <h3 class="fc-brown-home sub-title">Methodology</h3>
                 <p class="p-states">“A total of 69 original empirical articles were reviewed as part of this
                     report, in addition to
                     evidence contained in corporate documents from the tobacco industry and the broader
@@ -569,7 +569,7 @@ if ($var == 'og_desc') {
                     commentaries were excluded from
                     this review.”</p>
 
-                <h3 class="fc-ref-mat-4 sub-title">Findings</h3>
+                <h3 class="fc-brown-home sub-title">Findings</h3>
 
                 <p>Professor Hammond summarizes the academic literature with respect to six primary
                     outcomes: health warnings,
@@ -643,7 +643,7 @@ if ($var == 'og_desc') {
                     harmful than others, using a
                     darker colour may reduce the overall appeal of all packages.”</p>
 
-                <h3 class="fc-ref-mat-4 sub-title">Conclusions</h3>
+                <h3 class="fc-brown-home sub-title">Conclusions</h3>
                 <p>The report draws some strong conclusions, which are in line with the conclusions of the
                     Chantler Review:</p>
 
@@ -683,7 +683,7 @@ if ($var == 'og_desc') {
                     <li>Plain packaging will help to denormalize tobacco use”</li>
                 </ol>
 
-                <div id="item7" class="section-secondary-title fc-ref-mat-3">5. The Cochrane Review</div>
+                <div id="item7" class="section-secondary-title fc-brown-home">5. The Cochrane Review</div>
                 <p><a href="http://www.cochrane.org/uk/about-us">Cochrane</a> is a non-profit,
                     non-governmental organization formed to
                     organize medical research findings to facilitate
@@ -697,7 +697,7 @@ if ($var == 'og_desc') {
                         2017</a> which looked at the peer-reviewed published evidence assessing the effect
                     of plain packaging on tobacco use, uptake, cessation, and reduction.</p>
 
-                <h3 class="fc-ref-mat-4 sub-title">Methodology</h3>
+                <h3 class="fc-brown-home sub-title">Methodology</h3>
                 <p>The review searched nine databases for articles evaluating standardised packaging that
                     had been already reviewed by
                     academics and published before January 2016. We also checked references in those papers
@@ -706,7 +706,7 @@ if ($var == 'og_desc') {
                     approximately 800,000
                     participants.</p>
 
-                <h3 class="fc-ref-mat-4 sub-title">Primary Outcomes</h3>
+                <h3 class="fc-brown-home sub-title">Primary Outcomes</h3>
                 <p>The primary outcome measured by the review was changes in tobacco use prevalence
                     including uptake, cessation and
                     reduction in overall consumption. </p>
@@ -731,7 +731,7 @@ if ($var == 'og_desc') {
                     that calls to quit lines
                     increased by 78%. </p>
 
-                <h3 class="fc-ref-mat-4 sub-title">Secondary Outcomes</h3>
+                <h3 class="fc-brown-home sub-title">Secondary Outcomes</h3>
                 <p>The review anticipated very few studies on the primary outcome at this stage of
                     implementation. The review therefore
                     also reviewed studies on secondary outcomes including:</p>
@@ -747,7 +747,7 @@ if ($var == 'og_desc') {
                     cravings. Studies also indicated that plain packs were less likely to motivate
                     initiation among youth.</p>
 
-                <h3 class="fc-ref-mat-4 sub-title">Conclusion</h3>
+                <h3 class="fc-brown-home sub-title">Conclusion</h3>
                 <p>The review concluded that the evidence suggests that standardised packaging may reduce
                     smoking prevalence. The review
                     noted the limitations on the currently available data on prevalence but concludes that a
@@ -761,7 +761,7 @@ if ($var == 'og_desc') {
                 <p>The review did not find any evidence suggesting standardized packaging may increase
                     tobacco use. <sup>19</sup></p>
 
-                <div id="item8" class="section-secondary-title fc-ref-mat-3">Further research evidence</div>
+                <div id="item8" class="section-secondary-title fc-brown-home">Further research evidence</div>
 
                 <p>Further research into likely impacts of tobacco plain packaging has continued to be
                     undertaken around the world since
@@ -818,7 +818,7 @@ if ($var == 'og_desc') {
                     which is set out on the <b>AUSTRALIA’S POST-IMPLEMENTATION EVIDENCE</b> PAGE OF THE
                     TOOLS AND RESOURCES. </p>
 
-                <div id="item9" class="section-secondary-title fc-ref-mat-3">4.1 Post-implementation
+                <div id="item9" class="section-secondary-title fc-brown-home">4.1 Post-implementation
                     research
                     planned
                     in the UK and France
@@ -857,7 +857,7 @@ if ($var == 'og_desc') {
                     available on the plain
                     packaging pages of the CTFK website as it is published. </p>
 
-                <div class="section-secondary-title fc-ref-mat-3">End Notes</div>
+                <div class="section-secondary-title fc-brown-home">End Notes</div>
                 <p><sup>1</sup>Wakefield M, Germain D, Durkin S, Hammond D, Goldberg M, Borland R. Do larger
                     pictorial health warnings
                     diminish the need for plain packaging of cigarettes? Addiction, 2012; 107:1159–1167</p>
@@ -1004,7 +1004,7 @@ if ($var == 'og_desc') {
                 <div class="sidebar-nav-header">ON THIS PAGE</div>
                 <ul class="sidebar-nav">
                     <li>
-                        <a href="#item1">Overview of the outcomes from the</a>
+                        <a href="#item1">Overview of the outcomes from the research</a>
                     </li>
                     <li>
                         <a href="#item2">Overview of expert systematic reviews</a>

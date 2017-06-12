@@ -9,7 +9,7 @@ return $og_desc;
     <div class="row abt-st-r">
         <div class="col-lg-10 col-lg-offset-1"><?php echo breadcrumbs(' / ', 'Home'); ?></div>
         <div class="col-lg-10 col-lg-offset-1">
-            <div class="section-margin-top-25 section-title fc-ref-mat-2">Template Draft Model Law</div>
+            <div class="section-margin-top-25 section-title fc-blue-home">Template Model Law</div>
         </div>
         <div class="content-desc-cont col-lg-10 col-lg-offset-1">
             <p>To assist with the drafting of detailed regulations we have produced a template model law.
@@ -21,8 +21,7 @@ return $og_desc;
                 here provides language that can be adapted but for further assistance including a review of
                 any draft legislation please contact the ILC directly.</p>
             <ol class="custom list-style-none">
-                <li><a href="<?php echo $base_url ?>files/template-model-law.docx" target="_blank">Template
-                        Draft Model Law</a></li>
+                <li><a href="<?php echo $base_url ?>files/template-model-law.docx" target="_blank">Template Model Law</a></li>
             </ol>
         </div>
     </div>

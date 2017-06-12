@@ -51,6 +51,11 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^(.*)$ parseUrl.php?q=$1&x=$2 [L,QSA]
 
+RewriteCond $1 ^the-arguments
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ parseUrl.php?q=$1&x=$2 [L,QSA]
+
 RewriteCond $1 ^evidence
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d

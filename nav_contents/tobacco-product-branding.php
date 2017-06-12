@@ -8,7 +8,7 @@ if ($var == 'og_desc') {
     <div class="row abt-st-r" id="Ref-I">
         <div class="col-lg-8 col-lg-offset-1"><?php echo breadcrumbs(' / ', 'Home'); ?></div>
         <div class="col-lg-8 col-lg-offset-1">
-            <div class="section-margin-top-25 section-title fc-ref-mat-3">Branding on tobacco packaging and
+            <div class="section-margin-top-25 section-title fc-brown-home">Branding on tobacco packaging and
                 its impacts on smoking behaviour
             </div>
         </div>
@@ -18,16 +18,16 @@ if ($var == 'og_desc') {
                 <ul class="sidebar-nav">
                     <div class="sidebar-nav-header">LINKED<br>TOOLS AND RESOURCES</div>
                     <li>
-                        <a class="flex" href="http://localhost/projects/plainpackaging/resources/legal-issues
+                        <a class="flex" href="<?php echo $base_url; ?>evidence/australia-post-implementation-evidence
                                     "><img
-                                    src="http://localhost/projects/plainpackaging/img/icons/linked-tools-and-resources/legal-issues.PNG"
-                                    style="padding:0 10px;">Branding on tobacco packaging </a>
+                                    src="<?php echo $base_url; ?>img/icons/linked-tools-and-resources/books.png"
+                                    style="padding:0 10px;">Australia’s post implementation evidence </a>
                     </li>
                     <li>
-                        <a class="flex" href="http://localhost/projects/plainpackaging/resources/policy-briefs
+                        <a class="flex" href="<?php echo $base_url; ?>resources/opposing-arguments-and-how-to-counter-them
 "><img
-                                    src="http://localhost/projects/plainpackaging/img/icons/linked-tools-and-resources/policy-brief-is-it-lawful.PNG"
-                                    style="padding:0 5px;">Opposing arguments (and how to counter them)</a>
+                                    src="<?php echo $base_url; ?>img/icons/linked-tools-and-resources/legal-issues.PNG"
+                                    style="padding:0 10px;">Opposing arguments (and how to counter them)</a>
                     </li>
                 </ul>
             </div>
@@ -35,7 +35,7 @@ if ($var == 'og_desc') {
 
         <div class="content-desc-cont col-lg-8 col-lg-offset-1 ref -g1">
             <div>
-                <div class="section-secondary-title fc-ref-mat-3">Introduction</div>
+                <div class="section-secondary-title fc-brown-home">Introduction</div>
                 <p>Packaging is used for marketing and advertising of most consumer products, including
                     tobacco. If tobacco advertising
                     and promotion tobacco are banned in all other areas, it is simply common sense to ban
@@ -69,11 +69,11 @@ if ($var == 'og_desc') {
                     industry
                     position.</p>
 
-                <div id="item1" class="section-secondary-title fc-ref-mat-3">Marketing theory and the
+                <div id="item1" class="section-secondary-title fc-brown-home">Marketing theory and the
                     role of
                     packaging
                 </div>
-                <h3 class="fc-ref-mat-4 sub-title">Tobacco packaging has a number of functions:</h3>
+                <h3 class="fc-brown-home sub-title">Tobacco packaging has a number of functions:</h3>
                 <p>In addition to containing and protecting a product, packaging assists consumers in
                     identifying brands and
                     distinguishing between competing brands; encourages consumers to switch brands; launches
@@ -87,7 +87,7 @@ if ($var == 'og_desc') {
                         Tobacco</i> in
                     the UK, said:</p>
 
-                <p class="indented">“In the UK’s system of undistorted competition, businesses must be in a
+                <p class="p-states">“In the UK’s system of undistorted competition, businesses must be in a
                     position to communicate to
                     their
                     customers.
@@ -105,7 +105,9 @@ if ($var == 'og_desc') {
                     product (i.e., tobacco) to make
                     an informed decision about which brand to buy. </p>
 
-                <h3 class="fc-ref-mat-4 sub-title">The advertising function of packaging: </h3>
+                <p><img class="text-center img-responsive" style="height:300px;" src="<?php echo $base_url; ?>img/reference-materials/marketing-slide.jpg"></p>
+
+                <h3 class="fc-brown-home sub-title">The advertising function of packaging: </h3>
 
                 <p>In addition to the practical functions, research indicates that packaging is an important
                     component of overall
@@ -116,7 +118,7 @@ if ($var == 'og_desc') {
                         product using the same
                         strategies employed by manufacturers of other consumer goods</b>. </p>
 
-                <h3 class="fc-ref-mat-4 sub-title">The importance of packaging as part of the overall
+                <h3 class="fc-brown-home sub-title">The importance of packaging as part of the overall
                     promotional mix is recognized in
                     marketing literature: </h3>
                 <p>Many of the standard marketing textbooks explain the importance of packaging as a key
@@ -140,11 +142,13 @@ if ($var == 'og_desc') {
 
                 <p>In the textbook Strategic Brand Management Keller writes:</p>
 
-                <p class="indented">“Structural packaging innovations can create a point-of-difference that
+                <p class="p-states">“Structural packaging innovations can create a point-of-difference that
                     permits a higher margin. New
                     packages can also expand a market and capture new market segments. Packaging changes can
                     have immediate impact on
                     customer shopping behavior and sales. . . ” <sup>6</sup></p>
+
+                <p><img class="img-responsive text-center" style="height:300px;" src="<?php echo $base_url; ?>img/reference-materials/KotlerandKelly.jpg"></p>
 
                 <p>It is noteworthy that Professor Keller was used as an expert by PMI in its legal
                     challenge to the UK plain packaging
@@ -169,24 +173,24 @@ if ($var == 'og_desc') {
                     standalone marketing mix element, the fifth “p,” for British American Tobacco.
                     <sup>10</sup></p>
 
-                <h3 class="fc-ref-mat-4 sub-title">When tobacco advertising is prohibited, packaging becomes
+                <h3 class="fc-brown-home sub-title">When tobacco advertising is prohibited, packaging becomes
                     the primary means of
                     marketing: </h3>
                 <p>As a BAT marketing executive put it:</p>
 
-                <p class="indented">“Our final communication vehicle with our smoker is the pack itself.In
+                <p class="p-states">“Our final communication vehicle with our smoker is the pack itself.In
                     the absence of any other
                     marketing messages, our packaging . . . is the sole communicator of our brand essence.
                     Put another way — when you
                     don’t have anything else — our packaging is our marketing.” </p>
 
-                <div id="item2" class="section-secondary-title fc-ref-mat-3">Why tobacco packaging is
+                <div id="item2" class="section-secondary-title fc-brown-home">Why tobacco packaging is
                     different to
                     packaging for other consumer
                     goods
                 </div>
 
-                <h3 class="fc-ref-mat-4 sub-title">Tobacco packaging is defined as a “badge” product in
+                <h3 class="fc-brown-home sub-title">Tobacco packaging is defined as a “badge” product in
                     tobacco industry marketing
                     documents <sup>12</sup>: </h3>
 
@@ -208,7 +212,7 @@ if ($var == 'og_desc') {
                     during his evidence review. He
                     stated that: </p>
 
-                <p>“Public health experts argue that packaging of tobacco products is especially able to
+                <p class="p-states">“Public health experts argue that packaging of tobacco products is especially able to
                     play a promotional role because
                     unlike many other products, they are <b>constantly being taken out and opened, as well
                         as being left on public
@@ -216,22 +220,24 @@ if ($var == 'og_desc') {
                         during use [and] in this way cigarette packaging can act as an
                         advertisement</b>.”<sup>15</sup></p>
 
+                <p><img style="height:300px;" class="img-responsive text-center" src="<?php echo $base_url; ?>img/reference-materials/A57TPH.jpg"></p>
+
                 <p>In addition to public health experts, the tobacco industry has said a lot about the
                     importance of tobacco packaging.
                     An employee of Brown and Williamson was quoted in 1985 as saying,</p>
 
-                <p class="indented">“. . . if you smoke, a cigarette pack is one of the few things you use
+                <p class="p-states">“. . . if you smoke, a cigarette pack is one of the few things you use
                     regularly that makes a
                     statement about you. A cigarette pack is the only thing you take out of your pocket 20
                     times a day and lay out for
                     everyone to see. That’s a lot different than buying your soap powder in generic
                     packaging.” </p>
 
-                <h3 class="fc-ref-mat-4 sub-title">Tobacco packaging serves as an integral component of
+                <h3 class="fc-brown-home sub-title">Tobacco packaging serves as an integral component of
                     tobacco marketing: </h3>
                 <p>According to Professor Hammond:</p>
 
-                <p class="indented">“. . . the pack provides a direct link be¬tween consumers and
+                <p class="p-states">“. . . the pack provides a direct link be¬tween consumers and
                     manufacturers, and is particularly
                     important for consumer products such as cigarettes, which have a high degree of social
                     visibility. Unlike many other
@@ -241,19 +247,17 @@ if ($var == 'og_desc') {
                     exposure to tobacco packaging . .
                     . .” <sup>17</sup> [emphasis added]</p>
 
-                <div id="item3" class="section-secondary-title fc-ref-mat-3">Tobacco packaging serves as an
-                    integral
-                    component of tobacco
-                    marketing:
+                <div id="item3" class="section-secondary-title fc-brown-home">The relationship between branded packaging and tobacco consumption in young people
                 </div>
-
-                <p>Take a look at this video , where children are discussing tobacco packaging. These
+                <p class="text-center"><iframe width="700" height="393" src="https://www.youtube.com/embed/dmmYHYuNRy0" frameborder="0" allowfullscreen></iframe></p>
+                <p>&nbsp;</p>
+                <p>Take a look at this <a href="https://youtu.be/dmmYHYuNRy0">video</a>, where children are discussing tobacco packaging. These
                     children are primary school age,
                     and tobacco branding on cars had already been banned for seven years by the time this
                     video was filmed, yet they
                     still associated Marlboro with Ferrari.</p>
 
-                <h3 class="fc-ref-mat-4 sub-title">Evidence strongly indicates that tobacco advertising,
+                <h3 class="fc-brown-home sub-title">Evidence strongly indicates that tobacco advertising,
                     marketing, and promotion
                     <sup>18</sup>
                     influences youth smoking: </h3>
@@ -291,7 +295,7 @@ if ($var == 'og_desc') {
                 <p>His conclusion was that packaging does act as one of the factors encouraging young people
                     to take up smoking:</p>
 
-                <p class="indented">“In my opinion, <b>the balance of evidence suggests that the appeal of
+                <p class="p-states">“In my opinion, <b>the balance of evidence suggests that the appeal of
                         branded packaging acts as
                         one of
                         the factors encouraging children and young adults to experiment with tobacco and to
@@ -320,7 +324,7 @@ if ($var == 'og_desc') {
                     the population, including young adults, and considers that a “spillover” effect is
                     likely:</p>
 
-                <p class="indented">“I have seen considerable evidence of tobacco companies carrying out
+                <p class="p-states">“I have seen considerable evidence of tobacco companies carrying out
                     market research on all aspects
                     of packaging (e.g. colour, size, shape and opening) to make it appeal to various target
                     groups of young adults. In
@@ -344,12 +348,13 @@ if ($var == 'og_desc') {
                     Young girl with a packet of chewing gum and a packet of cigarettes.
                     Which is which? The spillover effect is clear.
                 </p>
+                <p>&nbsp;</p>
 
                 <p>The involvement of tobacco companies in orientating marketing activities towards young
                     people in the United States
                     was described by Kaufman et al: </p>
 
-                <p class="indented">“The tobacco industry states that its purpose in tobacco marketing is to
+                <p class="p-states">“The tobacco industry states that its purpose in tobacco marketing is to
                     maintain brand loyalty and
                     not to encourage adolescent smoking, arguing that susceptibility to cigarette use is
                     chiefly the result of influence
@@ -373,7 +378,7 @@ if ($var == 'og_desc') {
                 <p>Chantler believed that the evidence shows that, more specifically, branding can influence
                     consumption of goods:</p>
 
-                <p class="indented">“I find it significant that in other consumer goods markets, where
+                <p class="p-states">“I find it significant that in other consumer goods markets, where
                     children can safely be allowed to
                     participate in experiments, it has been proven that appealing branding does influence
                     consumption. . . . Clearly,
@@ -395,7 +400,7 @@ if ($var == 'og_desc') {
                     people
                     and found that:</p>
 
-                <p class="indented">“Although, the tobacco industry vehemently denies targeting young
+                <p class="p-states">“Although, the tobacco industry vehemently denies targeting young
                     people, internal tobacco industry
                     documents from the United Kingdom, United States and Taiwan reveal that it does, and
                     indeed that tobacco companies
@@ -412,7 +417,7 @@ if ($var == 'og_desc') {
                     is therefore used by the tobacco industry to communicate information to consumers.
                     According to Chantler:</p>
 
-                <p class="indented">“Branded packaging is seen by the industry as an important way to
+                <p class="p-states">“Branded packaging is seen by the industry as an important way to
                     communicate the quality and
                     product characteristics to consumers, to encourage smokers to maintain their
                     identification with their chosen brand.
@@ -426,7 +431,7 @@ if ($var == 'og_desc') {
                 <p>The evidence review prepared for the Irish Department of Health by Professor Hammond also
                     concluded that:</p>
 
-                <p class="indented"><b>“Packaging has a powerful influence in establishing brand imagery and
+                <p class="p-states"><b>“Packaging has a powerful influence in establishing brand imagery and
                         promoting appeal among
                         youth
                         and young adults — the critical period when the vast majority of smoking initiation
@@ -442,18 +447,18 @@ if ($var == 'og_desc') {
                     less desirable product
                     associations.”</p>
 
-                <div id="item4" class="section-secondary-title fc-ref-mat-3">Plain packaging “denormalizes”
+                <div id="item4" class="section-secondary-title fc-brown-home">Plain packaging “denormalizes”
                     smoking
                 </div>
 
-                <p>If smoking is seen by young people as a normal part of everyday life, they are much more
+                <p class="fc-brown-home">If smoking is seen by young people as a normal part of everyday life, they are much more
                     likely to become smokers
                     themselves. </p>
 
                 <p>In its 2008 Board of Science Report Forever Cool, the British Medical Association
                     suggested that:</p>
 
-                <p class="indented">“The way tobacco is perceived and how this integrates with self image is
+                <p class="p-states">“The way tobacco is perceived and how this integrates with self image is
                     a crucial determinant of
                     youth
                     smoking. With
@@ -467,7 +472,7 @@ if ($var == 'og_desc') {
                     influencing smoking by young
                     people:</p>
 
-                <p class="indented">“Peer influences; imagery and messages that por¬tray tobacco use as a
+                <p class="p-states">“Peer influences; imagery and messages that por¬tray tobacco use as a
                     desirable activity; and
                     environmental cues, including those in both traditional and emerging media platforms,
                     all encourage young people to
@@ -488,7 +493,7 @@ if ($var == 'og_desc') {
                     an element of such a
                     strategy:</p>
 
-                <p class="indented">“. . . tobacco “denormalisation”, exposes tobacco as a toxic product
+                <p class="p-states">“. . . tobacco “denormalisation”, exposes tobacco as a toxic product
                     peddled by an unscrupulous
                     industry and undermines the social cachet of smoking. Denormalisation reframes smoking
                     as socially unacceptable and
@@ -498,7 +503,7 @@ if ($var == 'og_desc') {
                     the value tobacco brands
                     deliver to smokers and reduces tobacco consumption.</p>
 
-                <p class="indented">“Plain packaging extends this approach by moving beyond smokefree social
+                <p class="p-states">“Plain packaging extends this approach by moving beyond smokefree social
                     marketing campaigns to
                     focus directly on tobacco packages, which represent a tangible symbol the emotional
                     benefits smokers derive from
@@ -509,12 +514,12 @@ if ($var == 'og_desc') {
                     packaging as a promotion as traditional mass media becomes more restricted.”
                     <sup>30</sup></p>
 
-                <div id="item5" class="section-secondary-title fc-ref-mat-3">Packaging and smokers’ identity
+                <div id="item5" class="section-secondary-title fc-brown-home">Packaging and smokers’ identity
                 </div>
 
-                <p><b>Branding enables tobacco manufacturers to sell status, social acceptance, and glamour,
+                <p class="fc-brown-home">Branding enables tobacco manufacturers to sell status, social acceptance, and glamour,
                         rather than use a mere
-                        nicotine delivery device</b>:</p>
+                        nicotine delivery device:</p>
 
                 <p>Marketing and retail academics and packaging experts have shown how packaging can
                     heighten product appeal, create
@@ -544,22 +549,22 @@ if ($var == 'og_desc') {
                     person smokes is their identity. Cigarettes tell others who they are as a person.” <sup>33</sup>
                 </p>
 
-                <img class="img-responsive center-block" width="250px"
+                <img class="img-responsive text-center" style="height:250px"
                      src="<?php echo $base_url; ?>img/tobacco branding/image-2.png">
                 <div class="col-lg-12">
-                    <img class="img-responsive col-lg-4" width="250px"
+                    <img class="img-responsive text-center col-lg-4" style="height:250px"
                          src="<?php echo $base_url; ?>img/tobacco branding/image-3.png">
 
-                    <img class="img-responsive col-lg-4" width="250px"
+                    <img class="img-responsive text-center col-lg-4" style="height:250px"
                          src="<?php echo $base_url; ?>img/tobacco branding/image-4.png">
 
-                    <img class="img-responsive col-lg-4" width="250px"
+                    <img class="img-responsive text-center col-lg-4" style="height:250px"
                          src="<?php echo $base_url; ?>img/tobacco branding/image-5.png">
                 </div>
                 <p class="small text-center">JTI’s Glamour super slims cigarettes and B&H slide packs from
                     Austria 2012-2014 demonstrate the use of brand imagery on packs to sell social
                     status</p>
-
+                <p>&nbsp;</p>
                 <p>As tobacco is a relatively homogeneous market with little functional difference between
                     cigarette products, branding
                     is strategically important as the predominant means of product differentiation. Pack
@@ -590,7 +595,7 @@ if ($var == 'og_desc') {
                     help maintain smoking
                     behavior. <sup>36</sup></p>
 
-                <div id="item6" class="section-secondary-title fc-ref-mat-3">Branding on tobacco packaging
+                <div id="item6" class="section-secondary-title fc-brown-home">Branding on tobacco packaging
                     is
                     intended
                     to mislead consumers
@@ -629,12 +634,13 @@ if ($var == 'og_desc') {
                     the pack colors and branding
                     remaining identical. </p>
 
-                <img class="center-block img-responsive" width="450px"
+                <img class="text-center img-responsive" style="height:250px;"
                      src="<?php echo $base_url; ?>img/tobacco branding/image-6.png">
 
                 <p class="small text-center">“It’s very difficult for people to discriminate blind-tested.
                     Put it in a package and put a
                     name on it, then it has a lot of product characteristics.” </p>
+                <p>&nbsp;</p>
 
                 <p>A booklet distributed by Philip Morris’s Canadian subsidiary, JTI Macdonald, similarly
                     describes the replacement
@@ -643,11 +649,11 @@ if ($var == 'og_desc') {
                     Winston brands would be replaced by “Blue” with no other change to the overall
                     branding.</p>
 
-                <img class="center-block img-responsive" width="350px"
+                <img class="center-block img-responsive" style="height:250px"
                      src="<?php echo $base_url; ?>img/tobacco branding/image-7.png">
 
-
-                <div id="item7" class="section-secondary-title fc-ref-mat-3">Pack color is used to mislead
+                <p>&nbsp;</p>
+                <div id="item7" class="section-secondary-title fc-brown-home">Pack color is used to mislead
                     consumers
                     about the harms of tobacco.
                 </div>
@@ -658,7 +664,7 @@ if ($var == 'og_desc') {
                     for effective pack design and
                     noted that: </p>
 
-                <p class="indented">“Lower delivery products tend to be featured in blue packs. Indeed, as
+                <p class="p-states">“Lower delivery products tend to be featured in blue packs. Indeed, as
                     one moves down the delivery
                     sector then the closer to white a pack tends to become. This is because white is
                     generally held to convey a clean,
@@ -676,7 +682,7 @@ if ($var == 'og_desc') {
                     cigarettes presented in
                     darker-colored packs. <sup>42</sup></p>
 
-                <div class="section-secondary-title fc-ref-mat-3">Anchor brands
+                <div class="section-secondary-title fc-brown-home">Anchor brands
                 </div>
 
                 <p>Extensive research on “anchoring” shows that the presence of an anchor brand against
@@ -695,10 +701,11 @@ if ($var == 'og_desc') {
                     contrast-based distortions in
                     perception and judgment.</p>
 
-                <img class="center-block img-responsive" width="450px"
+                <img class="text-center img-responsive" style="height:250px;;"
                      src="<?php echo $base_url; ?>img/tobacco branding/image-8.png">
 
-                <div class="section-secondary-title fc-ref-mat-3">Does tobacco packaging encourage smoking?
+                <p>&nbsp;</p>
+                <div class="section-secondary-title fc-brown-home">Does tobacco packaging encourage smoking?
                     The tobacco industry’s view
                 </div>
 
@@ -735,7 +742,7 @@ if ($var == 'og_desc') {
                     the High Court judge hearing the legal challenge to plain packaging regulations. He
                     stated: </p>
 
-                <p class="indented">“This argument is unsustainable. It is not possible to design a product
+                <p class="p-states">“This argument is unsustainable. It is not possible to design a product
                     to appeal to adults (over
                     18s) without appealing, even inadvertently, to children. A number of the tobacco
                     companies have strenuously denied
@@ -745,15 +752,16 @@ if ($var == 'og_desc') {
                     remains strong and this is
                     plain and obvious to the manufacturers.” <sup>44</sup></p>
 
-                <img class="center-block img-responsive" width="450px"
+                <img class="text-center img-responsive" style="height:250px;"
                      src="<?php echo $base_url; ?>img/tobacco branding/image-9.png">
 
                 <p class="small text-center">Displays of attractive tobacco packaging act as advertisements
                     and are regularly and
                     deliberately positioned adjacent to confectionary and toys in retail outlets and airport
                     duty free stores. </p>
+                <p>&nbsp;</p>
 
-                <div id="item8" class="section-secondary-title fc-ref-mat-3">Tobacco industry documents:
+                <div id="item8" class="section-secondary-title fc-brown-home">Tobacco industry documents:
                     the
                     importance
                     of packaging in promoting
@@ -779,7 +787,7 @@ if ($var == 'og_desc') {
                     industry. A published review
                     by Cummings et al. of such documents concluded: </p>
 
-                <p class="indented">“Industry documents show that the cigarette manufacturers carefully
+                <p class="p-states">“Industry documents show that the cigarette manufacturers carefully
                     monitored the smoking habits of
                     teenagers over the past several decades … <b>The documents reveal that the features of
                         cigarette brands (that is,
@@ -792,7 +800,7 @@ if ($var == 'og_desc') {
                     <sup>45</sup>
                 </p>
 
-                <div class="section-secondary-title fc-ref-mat-3">Professor Hammond’s review of tobacco
+                <div class="section-secondary-title fc-brown-home">Professor Hammond’s review of tobacco
                     industry evidence
                 </div>
 
@@ -813,7 +821,7 @@ if ($var == 'og_desc') {
                             href="http://health.gov.ie/wp-content/uploads/2014/06/2014-Ireland-Plain-Pack-Main-Report-Final-Report-July-26.pdf">here</a>:
                 </p>
 
-                <p class="indented">
+                <p class="p-states">
                     Packaging is an important component of the overall marketing strategy for consumer
                     goods. Packaging
                     is particularly important for consumer products with a high degree of social visibility,
@@ -897,7 +905,7 @@ if ($var == 'og_desc') {
                 </p>
 
 
-                <div class="section-secondary-title fc-ref-mat-3">Conclusions and further resources
+                <div class="section-secondary-title fc-brown-home">Conclusions and further resources
                 </div>
                 <p>A useful and comprehensive study by Cancer Council Victoria of tobacco packaging in
                     Australia before plain packaging
@@ -946,7 +954,7 @@ if ($var == 'og_desc') {
                         identify and distinguish a product; and argue that branding only has an impact on
                         market share</b></p>
 
-                <div class="section-secondary-title fc-ref-mat-3">End Notes
+                <div class="section-secondary-title fc-brown-home">End Notes
                 </div>
 
                 <p><sup>1</sup>“The Faber Report, The Role of Trademarks and the Brand They Represent –
@@ -1132,28 +1140,28 @@ if ($var == 'og_desc') {
             <div class="sidebar-wrapper col-xs-12 sidebar-2">
                 <div class="sidebar-nav-header">ON THIS PAGE</div>
                 <ul class="sidebar-nav">
-                    <li class="text-center">
+                    <li>
                         <a href="#item1">Marketing theory and the role of packaging</a>
                     </li>
-                    <li class="text-center">
+                    <li>
                         <a href="#item2">Why tobacco packaging is different</a>
                     </li>
-                    <li class="text-center">
+                    <li>
                         <a href="#item3">Branded packaging and youth smoking</a>
                     </li>
-                    <li class="text-center">
+                    <li>
                         <a href="#item4">Plain packaging de-normalises tobacco</a>
                     </li>
-                    <li class="text-center">
+                    <li>
                         <a href="#item5">Packaging and smokers’ identity</a>
                     </li>
-                    <li class="text-center">
+                    <li>
                         <a href="#item6">Tobacco packaging is intended to mislead consumers</a>
                     </li>
-                    <li class="text-center">
+                    <li>
                         <a href="#item7">The tobacco industry’s public position</a>
                     </li>
-                    <li class="text-center">
+                    <li>
                         <a href="#item8">Internal industry documents on the use of branding on tobacco
                             packaging</a>
                     </li>

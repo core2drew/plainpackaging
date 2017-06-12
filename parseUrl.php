@@ -88,6 +88,18 @@ if(isset($request))
 			case 'legal-issues':
 			case 'case-summaries':
 			case 'international-developments':
+			// ilc
+			case 'no-reliable-evidence':
+			case 'tobacco-company-submissions-to-governments':
+			case 'increases-illicit-tobacco':
+			case 'leads-to-lower-tobacco-prices':
+			case 'unlawful-and-breaches-international-treaties':
+			case 'negative-impacts-on-small-retailers':
+			case 'will-lead-to-plain-packaging-of-other-products':
+			case 'job-losses-in-local-tobacco-industry':
+			case 'violates-intellectual-property':
+			case 'less-restrictive-alternative-measures':
+			case 'branding-on-packs-does-not-make-people-start-smoking':
 			// home
 			case 'what-is-it-and-why-is-it-needed':
 			case 'where-in-the-world':

@@ -9,7 +9,7 @@ return $og_desc;
     <div class="row abt-st-r">
         <div class="col-lg-10 col-lg-offset-1"><?php echo breadcrumbs(' / ', 'Home'); ?></div>
         <div class="col-lg-10 col-lg-offset-1">
-            <div class="section-margin-top-25 section-title fc-ref-mat-1">Regulatory Impact Analysis</div>
+            <div class="section-margin-top-25 section-title fc-brown-home">Regulatory Impact Analysis</div>
         </div>
         <div class="content-desc-cont col-lg-10 col-lg-offset-1">
             <p>To assist with the process of a regulatory impact assessment for plain packaging, we have

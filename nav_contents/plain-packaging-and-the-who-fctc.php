@@ -8,7 +8,7 @@ return $og_desc;
     <div class="row abt-st-r">
         <div class="col-lg-10 col-lg-offset-1 breadcrumbs"><?php echo breadcrumbs(' / ', 'Home'); ?></div>
         <div class="col-lg-10 col-lg-offset-1">
-            <div class="section-title fc-dark-brown">Plain packaging and the WHO FCTC</div>
+            <div class="section-title fc-brown-home">Plain packaging and the WHO FCTC</div>
         </div>
         <div class="content-desc-cont col-lg-10 col-lg-offset-1">
             <p>The World Health Organization Framework Convention on Tobacco Control (WHO FCTC) is an
@@ -21,7 +21,7 @@ return $og_desc;
                 context of the policy recommendations in the WHO FCTC.</p>
         </div>
         <div class="col-lg-10 col-lg-offset-1">
-            <div class="section-secondary-title fc-dark-brown">Article 11 Packaging and Labelling of Tobacco
+            <div class="section-secondary-title fc-brown-home">Article 11 Packaging and Labelling of Tobacco
                 Products
             </div>
             <p>Article 11 <u>obliges</u> Parties to implement <u>effective measures</u> to ensure that
@@ -50,7 +50,7 @@ return $og_desc;
                 alternative to) other measures including large pictorial health warnings.</p>
         </div>
         <div class="col-lg-10 col-lg-offset-1">
-            <div class="section-secondary-title fc-dark-brown">Article 13 Tobacco Advertising, Promotion and
+            <div class="section-secondary-title fc-brown-home">Article 13 Tobacco Advertising, Promotion and
                 Sponsorship
             </div>
             <p>Article 13 <u>obliges</u> Parties to undertake a <u>comprehensive ban</u> on tobacco
@@ -90,7 +90,7 @@ return $og_desc;
             </div>
         </div>
         <div class="col-lg-10 col-lg-offset-1">
-            <div class="section-secondary-title fc-dark-brown">The status and legal weight of the WHO FCTC
+            <div class="section-secondary-title fc-brown-home">The status and legal weight of the WHO FCTC
             </div>
             <p>The tobacco companies argue that as a framework convention, the WHO FCTC limits itself to the
                 formulation of broad principle objectives and leaves the elaboration of more detailed

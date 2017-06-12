@@ -218,10 +218,10 @@
                                     <td class="bg-nav-r-4"><a href="<?php echo $base_url; ?>more/download-toolkit">Download the Toolkit</a></td>
                                 </tr>
                                 <tr>
-                                    <td class="bg-nav-r-4"><a href="<?php echo $base_url; ?>more/faqs">FAQs</a></td>
+                                    <td class="bg-nav-r-4"><a href="<?php echo $base_url; ?>#">FAQs</a></td>
                                 </tr>
                                 <tr>
-                                    <td class="bg-nav-r-4"><a href="<?php echo $base_url; ?>more/about-and-contact">About and Contact</a></td>
+                                    <td class="bg-nav-r-4"><a href="<?php echo $base_url; ?>nav/more-help-from-ctfk">About and Contact</a></td>
                                 </tr>
                                 <tr>
                                     <td class="bg-nav-r-4"><a href="<?php echo $base_url; ?>#">Extenal link to ILC landing page</a></td>
@@ -406,8 +406,8 @@
                 <!-- more -->
                 <li class="nav-static-menu">More</li>
                 <li><a href="<?php echo $base_url; ?>nav/download-toolkit">Download the Toolkit</a></li>
-                <li><a href="<?php echo $base_url; ?>more/faqs">FAQs</a></li>
-                <li><a href="<?php echo $base_url; ?>more/about-and-contact">About and Contact</a></li>
+                <li><a href="<?php echo $base_url; ?>#">FAQs</a></li>
+                <li><a href="<?php echo $base_url; ?>nav/more-help-from-ctfk">About and Contact</a></li>
                 <li><a href="<?php echo $base_url; ?>#">External link to ILC landing page</a></li>
             </ul>
         </div><!--/.nav-collapse -->

@@ -222,6 +222,44 @@ function nav_content($menu, $var = null)
         case 'more-help-from-ctfk':
             include('nav_contents/more-help-from-ctfk.php');
             break;
+
+
+
+        // ilc opposing arguments
+        case 'tobacco-company-submissions-to-governments':
+            include('nav_contents/tobacco-company-submissions-to-governments.php');
+            break;
+        case 'no-reliable-evidence':
+            include('nav_contents/no-reliable-evidence.php');
+            break;
+        case 'increases-illicit-tobacco':
+            include('nav_contents/increases-illicit-tobacco.php');
+            break;
+        case 'leads-to-lower-tobacco-prices':
+            include('nav_contents/leads-to-lower-tobacco-prices.php');
+            break;
+        case 'unlawful-and-breaches-international-treaties':
+            include('nav_contents/unlawful-and-breaches-international-treatie.php');
+            break;
+        case 'negative-impacts-on-small-retailers':
+            include('nav_contents/negative-impacts-on-small-retailers.php');
+            break;
+        case 'will-lead-to-plain-packaging-of-other-products':
+            include('nav_contents/will-lead-to-plain-packaging-of-other-products.php');
+            break;
+        case 'job-losses-in-local-tobacco-industry':
+            include('nav_contents/job-losses-in-local-tobacco-industry.php');
+            break;
+        case 'violates-intellectual-property':
+            include('nav_contents/violates-intellectual-property.php');
+            break;
+        case 'less-restrictive-alternative-measures':
+            include('nav_contents/less-restrictive-alternative-measures.php');
+            break;
+        case 'branding-on-packs-does-not-make-people-start-smoking':
+            include('nav_contents/branding-on-packs-does-not-make-people-start-smoking.php');
+            break;
+
         default:
             # code...
             break;

@@ -9,7 +9,7 @@ return $og_desc;
         <!-- main header -->
         <div class="col-lg-8 col-lg-offset-1">
             <div><?php echo breadcrumbs(' / ', 'Home'); ?></div>
-            <div class="section-margin-top-25 section-title fc-ref-mat-4">Case Summaries</div>
+            <div class="section-margin-top-25 section-title fc-blue-home">Case Summaries</div>
         </div>
         <!-- main header sidebar -->
         <div class="col-lg-3">
@@ -34,7 +34,7 @@ return $og_desc;
         <div class="content-desc-cont col-lg-8 col-lg-offset-1 ref -g1">
             <div class="sidebar-anchor-item" id="item1"></div>
             <div>
-                <div class="section-secondary-title fc-ref-mat-4">1 Australia <img
+                <div class="section-secondary-title fc-blue-home">1 Australia <img
                         style="padding-left:30px;"
                         src="<?php echo $base_url; ?>img/img-case-summaries/australia.PNG"></div>
                 <p>Details and analysis on the three Australian cases is available from the <a
@@ -42,7 +42,7 @@ return $og_desc;
                         Centre for Law & Cancer website.</a></p>
             </div>
             <div>
-                <h3 class="fc-ref-mat-4 sub-title">
+                <h3 class="fc-blue-home sub-title">
                     1.1 Constitutional challenge in the High Court of Australia — dismissed in August 2012
                 </h3>
                 <p><a href="http://www.austlii.edu.au/au/cases/cth/HCA/2012/43.html">JTInternational SA v.
@@ -72,7 +72,7 @@ return $og_desc;
                     our <i>“bonsai billboard.”</i></p>
             </div>
             <div>
-                <h3 class="fc-ref-mat-4 sub-title">
+                <h3 class="fc-blue-home sub-title">
                     1.2 International investment arbitration claim — dismissed in December 2015
                 </h3>
                 <p><b><i>Philip Morris Asia Limited v. Commonwealth of Australia PCA</i></b><a
@@ -93,7 +93,7 @@ return $og_desc;
                     jurisdiction, and the merits of the claim were not considered. </p>
             </div>
             <div>
-                <h3 class="fc-ref-mat-4 sub-title">
+                <h3 class="fc-blue-home sub-title">
                     1.3 World Trade Organization dispute — ruling due July 2017.
                 </h3>
                 <p><b><i>Australia — Certain Measures Concerning Trademarks and Other Plain Packaging
@@ -135,10 +135,10 @@ return $og_desc;
             </div>
             <div class="sidebar-anchor-item" id="item2"></div>
             <div>
-                <div class="section-secondary-title fc-ref-mat-4">2 United Kingdom <img
+                <div class="section-secondary-title fc-blue-home">2 United Kingdom <img
                         style="padding-left:30px;"
                         src="<?php echo $base_url; ?>img/img-case-summaries/united-kingdom.PNG"></div>
-                <h3 class="fc-ref-mat-4 sub-title">
+                <h3 class="fc-blue-home sub-title">
                     Claim in the High Court — dismissed in May 2016 [ruling upheld by Court of Appeal in
                     November 2016]
                 </h3>
@@ -157,7 +157,7 @@ return $og_desc;
                     justification for plain-packaging laws; the issue of whether or not there is a right to
                     use trademarks; and a detailed analysis of the evidence that supported the policy and
                     the tobacco companies’ evidence submitted to oppose the policy. </p>
-                <p><b class="fc-ref-mat-4">The judge’s analysis of the evidence from both sides of the
+                <p><b class="fc-blue-home">The judge’s analysis of the evidence from both sides of the
                         dispute</b> is particularly significant because the same evidence should be
                     considered by any government taking forward plain packaging. This is the first judgment
                     that provides a careful scrutiny of that evidence, confirming that it meets relevant
@@ -174,10 +174,10 @@ return $og_desc;
             </div>
             <div class="sidebar-anchor-item" id="item3"></div>
             <div>
-                <div class="section-secondary-title fc-ref-mat-4">3 European Union <img
+                <div class="section-secondary-title fc-blue-home">3 European Union <img
                         style="padding-left:30px;"
                         src="<?php echo $base_url; ?>img/img-case-summaries/european-union.PNG"></div>
-                <h3 class="fc-ref-mat-4 sub-title">Challenge to the Tobacco Products Directive in the Court
+                <h3 class="fc-blue-home sub-title">Challenge to the Tobacco Products Directive in the Court
                     of Justice— dismissed in May 2016</h3>
                 <p><i><a href="http://curia.europa.eu/juris/liste.jsf?num=C-547/14">R (Philip Morris Brands
                             Sarl & Others) v. Secretary of State for Health C–547</a></i></p>
@@ -208,10 +208,10 @@ return $og_desc;
             </div>
             <div class="sidebar-anchor-item" id="item4"></div>
             <div>
-                <div class="section-secondary-title fc-ref-mat-4">4 France <img style="padding-left:30px;"
+                <div class="section-secondary-title fc-blue-home">4 France <img style="padding-left:30px;"
                                                                                 src="<?php echo $base_url; ?>img/img-case-summaries/france.PNG">
                 </div>
-                <h3 class="fc-ref-mat-4 sub-title">4.1 Challenge in the theConseil Constitutionnel —
+                <h3 class="fc-blue-home sub-title">4.1 Challenge in the theConseil Constitutionnel —
                     dismissed in January 21, 2016</h3>
                 <p>
                     <i><a href="http://www.conseil-constitutionnel.fr/conseil-constitutionnel/francais/les-decisions/acces-par-date/decisions-depuis-1959/2016/2015-727-dc/decision-n-2015-727-dc-du-21-janvier-2016.146887.html">Décision
@@ -234,7 +234,7 @@ return $og_desc;
                     infringement of the rights of commerce and free enterprise. </p>
             </div>
             <div>
-                <h3 class="fc-ref-mat-4 sub-title">4.2 Challenge in the Conseil d’État — dismissed December
+                <h3 class="fc-blue-home sub-title">4.2 Challenge in the Conseil d’État — dismissed December
                     23, 2016</h3>
                 <p>
                     <b><i><a href="http://www.tobaccocontrollaws.org/litigation/decisions/fr-20161223-japan-tobacco-international-an">CE,
@@ -260,10 +260,10 @@ return $og_desc;
             </div>
             <div class="sidebar-anchor-item" id="item5"></div>
             <div>
-                <div class="section-secondary-title fc-ref-mat-4">5 Ireland <img style="padding-left:30px;"
+                <div class="section-secondary-title fc-blue-home">5 Ireland <img style="padding-left:30px;"
                                                                                  src="<?php echo $base_url; ?>img/img-case-summaries/ireland.PNG">
                 </div>
-                <h3 class="fc-ref-mat-4 sub-title">Challenge in Ireland’s Commercial Court — struck out
+                <h3 class="fc-blue-home sub-title">Challenge in Ireland’s Commercial Court — struck out
                     November 2016</h3>
                 <p><b><i>JTI v. Minister for Health, Ireland, and the Attorney General 2015/2530P</i></b>
                 </p>
@@ -284,10 +284,10 @@ return $og_desc;
             </div>
             <div class="sidebar-anchor-item" id="item6"></div>
             <div>
-                <div class="section-secondary-title fc-ref-mat-4">6 Uruguay <img style="padding-left:30px;"
+                <div class="section-secondary-title fc-blue-home">6 Uruguay <img style="padding-left:30px;"
                                                                                  src="<?php echo $base_url; ?>img/img-case-summaries/uruguay.PNG">
                 </div>
-                <h3 class="fc-ref-mat-4 sub-title">International investment arbitration dispute — dismissed
+                <h3 class="fc-blue-home sub-title">International investment arbitration dispute — dismissed
                     in July 2016</h3>
                 <p><b><i>Morris Brand Sàrl (Switzerland) & Others v. Oriental Republic of Uruguay</i></b> <a
                         href="https://www.italaw.com/cases/460">(ICSID Case No. ARB/10/7)</a></p>
@@ -336,7 +336,7 @@ return $og_desc;
                 </p>
             </div>
             <div>
-                <div class="section-secondary-title fc-ref-mat-4">Section notes</div>
+                <div class="section-secondary-title fc-blue-home">Section notes</div>
                 <p><sup>1</sup>See <a href="http://archive.tobacco.org/news/338721.html">http://archive.tobacco.org/news/338721.html</a>.
                 </p>
                 <p><sup>2</sup>Available to download from the Australia DFAT website: <a

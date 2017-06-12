@@ -8,10 +8,10 @@ return $og_desc;
     <div class="row abt-st-r">
         <div class="col-lg-10 col-lg-offset-1 breadcrumbs"><?php echo breadcrumbs(' / ', 'Home'); ?></div>
         <div class="col-lg-10 col-lg-offset-1">
-            <div class="section-title fc-dark-brown">Where in the world?</div>
+            <div class="section-title fc-ref-mat-4">Where in the world?</div>
         </div>
         <div class="content-desc-cont col-lg-10 col-lg-offset-1">
-            <div class="section-secondary-title fc-ref-mat-2">Laws adopted and in force</div>
+            <div class="section-secondary-title fc-ref-mat-4">Laws adopted and in force</div>
             <p>AUSTRALIA—</p>
             <ul>
                 <li>December 1, 2011Tobacco Plain Packaging Act adopted;</li>
@@ -26,7 +26,7 @@ return $og_desc;
                 </li>
             </ul>
 
-            <p>UNITEDKINGDOM—</p>
+            <p>UNITED KINGDOM—</p>
             <ul>
                 <li>March 2015Standardised Packaging of Tobacco Products Regulations adopted;</li>
                 <li>May 20, 2016 Regulations came into force <sup>6</sup> (applies to England, Wales,
@@ -60,7 +60,7 @@ return $og_desc;
                 </li>
             </ul>
 
-            <div class="section-secondary-title fc-ref-mat-2">Laws adopted but not yet implemented</div>
+            <div class="section-secondary-title fc-ref-mat-4">Laws adopted but not yet implemented</div>
 
             <p>HUNGARY—</p>
             <ul>
@@ -138,7 +138,7 @@ return $og_desc;
                 </li>
             </ul>
 
-            <div class="section-secondary-title fc-ref-mat-2">Legislation being considered by Parliament
+            <div class="section-secondary-title fc-ref-mat-4">Legislation being considered by Parliament
             </div>
             <p>BRAZIL— Five different plain packaging bills have been introduced in the Senate and House of
                 Representatives; the latest in May 2016 by Representative Rodrigues. <sup>23</sup></p>
@@ -158,7 +158,7 @@ return $og_desc;
                 TRIPS
                 agreement, and no further action has since taken place. </p>
 
-            <div class="section-secondary-title fc-ref-mat-2">Under formal government consideration
+            <div class="section-secondary-title fc-ref-mat-4">Under formal government consideration
             </div>
 
             <p>CANADA— The Liberal government had plain packaging as one of its manifesto commitments, and,
@@ -197,7 +197,7 @@ return $og_desc;
                 packaging would be introduced in 2017 and that the law was being developed.
                 <sup>33</sup></p>
 
-            <div class="section-secondary-title fc-ref-mat-2">Political commitments given
+            <div class="section-secondary-title fc-ref-mat-4">Political commitments given
             </div>
 
             <p>BELGIUM— On April 9, 2016,the Public Health Minister announced that Belgium would have plain
@@ -239,7 +239,7 @@ return $og_desc;
             <p>UNITED ARAB EMIRATES— In February 2014, the Ministry of Health announced that it intended to
                 introduce legislation, which would include plain packaging, by 2016.</p>
 
-            <div class="section-secondary-title fc-ref-mat-2">Other relevant laws
+            <div class="section-secondary-title fc-ref-mat-4">Other relevant laws
             </div>
 
             <p>EUROPEAN UNION— Revised Tobacco Products Directive (TPD) adopted April 3, 2014 and came into
@@ -247,7 +247,7 @@ return $og_desc;
                 provides (at Article 24(2)) that the 28 EU Member States have the option of adopting further
                 requirements to standardize tobacco packaging. <sup>34</sup></p>
 
-            <div class="section-secondary-title fc-ref-mat-2">Notes
+            <div class="section-secondary-title fc-ref-mat-4">Notes
             </div>
 
             <p><sup>1</sup> Tobacco Plain Packaging Act 2011, available

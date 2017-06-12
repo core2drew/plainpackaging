@@ -74,7 +74,7 @@
                             </a>
                         </div>
                         <div class="col-lg-6 image-links-cont bg-green">
-                            <a href="<?php echo $base_url; ?>nav/where-in-the-world">
+                            <a href="<?php echo $base_url; ?>resources/international-developments">
                                 <img class="img-responsive text-center" src="<?php echo $base_url; ?>img/home/world.jpg">
                                 <div class="image-links-desc-cont">
                                     <span class="image-links-title">Where in the world?</span><br>
@@ -161,7 +161,7 @@ is-it-lawful">
                 <div class="col-lg-10 col-lg-offset-1 padding-0">
                     <div class="col-lg-12 padding-0 image-links text-center">
                         <div class="col-lg-6 image-links-cont bg-red">
-                            <a href="<?php echo $base_url; ?>more/faqs">
+                            <a href="#">
                                 <img class="img-responsive text-center" src="<?php echo $base_url; ?>img/home/faq.jpg">
                                 <div class="image-links-desc-cont">
                                     <br>

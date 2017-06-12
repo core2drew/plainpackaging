@@ -8,7 +8,7 @@ return $og_desc;
     <div class="row abt-st-r">
         <div class="col-lg-8 col-lg-offset-1"><?php echo breadcrumbs(' / ', 'Home'); ?></div>
         <div class="col-lg-8 col-lg-offset-1">
-            <div class="section-margin-top-25 section-title fc-ref-mat-3">Post-implementation evidence from
+            <div class="section-margin-top-25 section-title fc-brown-home">Post-implementation evidence from
                 Australia
             </div>
         </div>
@@ -18,23 +18,23 @@ return $og_desc;
                 <ul class="sidebar-nav">
                     <div class="sidebar-nav-header">LINKED<br>TOOLS AND RESOURCES</div>
                     <li>
-                        <a class="flex" href="<?php echo $base_url; ?>resources/legal-issues
+                        <a class="flex" href="<?php echo $base_url; ?>evidence/tobacco-product-branding
                                     "><img
                                 src="<?php echo $base_url; ?>img/icons/linked-tools-and-resources/books.PNG"
                                 style="padding:0 10px;">Branding on tobacco packaging </a>
                     </li>
                     <li>
-                        <a class="flex" href="<?php echo $base_url; ?>resources/policy-briefs
+                        <a class="flex" href="<?php echo $base_url; ?>resources/opposing-arguments-and-how-to-counter-them
 "><img
                                 src="<?php echo $base_url; ?>img/icons/linked-tools-and-resources/legal-issues.PNG"
-                                style="padding:0 5px;">Opposing arguments (and how to counter them)</a>
+                                style="padding:0 10px;">Opposing arguments (and how to counter them)</a>
                     </li>
                 </ul>
             </div>
         </div>
         <div class="content-desc-cont col-lg-8 col-lg-offset-1 ref -g1">
             <div>
-                <div class="section-secondary-title fc-ref-mat-3">Introduction</div>
+                <div class="section-secondary-title fc-brown-home">Introduction</div>
                 <p class="p-states">“Plain packaging in Australia has been a casebook example of effective
                     tobacco control—a policy measure driven by evidence, carefully designed and implemented,
                     and now rigorously assessed. Further, it is set within the context of wider Australian
@@ -82,7 +82,7 @@ return $og_desc;
                     section of the <b>Opposing Arguments (and how to counter them)</b> pages in the Tools
                     and Resources)</p>
 
-                <div id="item1" class="section-secondary-title fc-ref-mat-3">Research into attitudes and
+                <div id="item1" class="section-secondary-title fc-brown-home">Research into attitudes and
                     behaviours
                 </div>
 
@@ -201,7 +201,7 @@ return $og_desc;
                     now stored
                     alphabetically. </p>
 
-                <div id="item2" class="section-secondary-title fc-ref-mat-3">Statistical data: smoking
+                <div id="item2" class="section-secondary-title fc-brown-home">Statistical data: smoking
                     prevalence
                     and
                     tobacco consumption rates
@@ -214,7 +214,7 @@ return $og_desc;
                 <p>The key statistics on smoking rates and tobacco consumption since implementation of plain
                     packaging are:</p>
 
-                <div class="section-secondary-title fc-ref-mat-3">Smoking prevalence rates decline:
+                <div class="section-secondary-title fc-brown-home">Smoking prevalence rates decline:
                 </div>
 
                 <p>Australian Institute of Health and Welfare (AIHW) has published the key findings of the
@@ -284,7 +284,7 @@ return $og_desc;
                     National Health Survey. <sup>19</sup>
                 </p>
 
-                <div class="section-secondary-title fc-ref-mat-3">Tobacco consumption declines:
+                <div class="section-secondary-title fc-brown-home">Tobacco consumption declines:
                 </div>
 
                 <p>
@@ -337,8 +337,9 @@ return $og_desc;
                     as bad as we might have
                     anticipated.”
                 </p>
+                <div class="sidebar-anchor-item" id="item3"></div>
 
-                <div class="section-secondary-title fc-ref-mat-3">The Post-Implementation Review (PIR)
+                <div class="section-secondary-title fc-brown-home">The Post-Implementation Review (PIR)
                 </div>
 
                 <p>The Australian government published its Post-Implementation Review (PIR) in February
@@ -479,7 +480,7 @@ return $og_desc;
                     reducing smoking and exposure to
                     tobacco smoke in Australia and it is expected to continue to do so into the future</p>
 
-                <div class="section-secondary-title fc-ref-mat-3">End Notes
+                <div class="section-secondary-title fc-brown-home">End Notes
                 </div>
 
                 <p><sup>1</sup>Gerard B Hastings and Crawford Moodie Death of a salesmanTob Control. 2015
@@ -649,14 +650,14 @@ return $og_desc;
             <div class="sidebar-wrapper col-xs-12 sidebar-2">
                 <div class="sidebar-nav-header">ON THIS PAGE</div>
                 <ul class="sidebar-nav">
-                    <li class="text-center">
+                    <li>
                         <a href="#item1">Research into attitudes and behaviours</a>
                     </li>
-                    <li class="text-center">
+                    <li>
                         <a href="#item2">Statistical data smoking prevalence and tobacco consumption</a>
                     </li>
-                    <li class="text-center">
-                        <a href="#item3">Branded packaging and youth smoking</a>
+                    <li>
+                        <a href="#item3">The Post-Implementation Review (PIR)</a>
                     </li>
                 </ul>
             </div>

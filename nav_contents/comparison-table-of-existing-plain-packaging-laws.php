@@ -9,7 +9,7 @@ if ($var == 'og_desc') {
     <div class="row abs-st-r">
         <div class="col-lg-12"><?php echo breadcrumbs(' / ', 'Home'); ?></div>
         <div class="col-lg-12">
-            <div class="section-margin-top-25 section-title fc-ref-mat-2">Comparison of Existing Laws</div>
+            <div class="section-margin-top-25 section-title fc-blue-home">Comparison of Existing Laws</div>
         </div>
         <div class="content-desc-cont col-lg-12">
             <p>
@@ -87,7 +87,7 @@ if ($var == 'og_desc') {
                 </thead>
                 <tbody>
                 <tr>
-                    <td>Pack Color</td>
+                    <td class="fs-14">Pack Color</td>
                     <td>
                         <p>Exterior: Pantone 448C, matte finish. <span class="h4-color">TPPR 2.2.1(2)</span>
                         </p>
@@ -112,7 +112,7 @@ if ($var == 'og_desc') {
                     </td>
                 </tr>
                 <tr>
-                    <td>Text Color</td>
+                    <td class="fs-14">Text Color</td>
                     <td>
                         <p>Pantone Cool Gray 2C, matte finish. <span class="h4-color">TPPR 2.4.2(2)</span>
                         </p>
@@ -135,7 +135,7 @@ if ($var == 'og_desc') {
                 </tr>
 
                 <tr>
-                    <td>Permitted text</td>
+                    <td class="fs-14">Permitted text</td>
                     <td>
                         <p>Brand name, variant name. </p>
                         <p><span class="h4-color">TPPA 20(1-3) and 21(1)</span></p>
@@ -176,7 +176,7 @@ if ($var == 'og_desc') {
                 </tr>
 
                 <tr>
-                    <td>Other text requirements</td>
+                    <td class="fs-14">Other text requirements</td>
                     <td>
                         <p>All text: Lucida Sans, normal weighted regular font.</p>
                         <p><span class="h4-color">Various</span></p>
@@ -220,7 +220,7 @@ if ($var == 'og_desc') {
                 </tr>
 
                 <tr>
-                    <td>Shape and type of packets for cigarettes</td>
+                    <td class="fs-14">Shape and type of packets for cigarettes</td>
                     <td>
                         <p>Rectangular, with 90 degree angles and specified dimensions for each surface.</p>
                         <p><span class="h4-color">TPPA18(2)(b) and TPPR 2.1.1(1)</span></p>
@@ -243,7 +243,7 @@ if ($var == 'og_desc') {
                     </td>
                 </tr>
                 <tr>
-                    <td>Type of opening for cigarettes</td>
+                    <td class="fs-14">Type of opening for cigarettes</td>
                     <td>
                         <p>Flip-top lid only.</p>
                         <p><span class="h4-color">TPPA 18(3)(b) and TPPR 2.1.1(3)</span></p>
@@ -266,7 +266,7 @@ if ($var == 'og_desc') {
                     </td>
                 </tr>
                 <tr>
-                    <td>Minimum Content</td>
+                    <td class="fs-14">Minimum Content</td>
                     <td>
                         <p>Cigarettes: 20.</p>
                         <p><span class="h4-color">Sale of Tobacco Act 2004 A 12</span></p>
@@ -303,7 +303,7 @@ if ($var == 'og_desc') {
                 </tr>
 
                 <tr>
-                    <td>Material for cigarette packs</td>
+                    <td class="fs-14">Material for cigarette packs</td>
                     <td>
                         <p>Rigid cardboard</p>
                         <p><span class="h4-color">TPPA 18(2)(a)</span></p>
@@ -326,7 +326,7 @@ if ($var == 'og_desc') {
                     </td>
                 </tr>
                 <tr>
-                    <td>Linings</td>
+                    <td class="fs-14">Linings</td>
                     <td>
                         <p>Cigarettes: Silver foil with white paper backing, regular embossed dots
                             permitted.</p>
@@ -357,7 +357,7 @@ if ($var == 'og_desc') {
                     </td>
                 </tr>
                 <tr>
-                    <td>Texture</td>
+                    <td class="fs-14">Texture</td>
                     <td>
                         <p>No embellishments permitted inside or out.</p>
                         <p><span class="h4-color">TPPA 18(1)(a)</span></p>
@@ -381,7 +381,7 @@ if ($var == 'og_desc') {
                     </td>
                 </tr>
                 <tr>
-                    <td>Wrappers</td>
+                    <td class="fs-14">Wrappers</td>
                     <td>
                         <p>Must be clear and transparent. Tear strip permitted. Single bar code
                             permitted.</p>
@@ -407,7 +407,7 @@ if ($var == 'og_desc') {
                     </td>
                 </tr>
                 <tr>
-                    <td>Sound and smell</td>
+                    <td class="fs-14">Sound and smell</td>
                     <td>
                         <p>Characteristic noises or scents prohibited.</p>
                         <p><span class="h4-color">TPPA 25</span></p>
@@ -430,7 +430,7 @@ if ($var == 'og_desc') {
                     </td>
                 </tr>
                 <tr>
-                    <td>Features designed to change after sale</td>
+                    <td class="fs-14">Features designed to change after sale</td>
                     <td>
                         <p>Prohibited.</p>
                         <p><span class="h4-color">TPPA 24</span></p>
@@ -454,7 +454,7 @@ if ($var == 'og_desc') {
                     </td>
                 </tr>
                 <tr>
-                    <td>Inserts, onserts and stickers</td>
+                    <td class="fs-14">Inserts, onserts and stickers</td>
                     <td>
                         <p>Prohibited.</p>
                         <p><span class="h4-color">TPPA 23</span></p>
@@ -479,7 +479,7 @@ if ($var == 'og_desc') {
                     </td>
                 </tr>
                 <tr>
-                    <td>Barcodes</td>
+                    <td class="fs-14">Barcodes</td>
                     <td>
                         <p>One permitted. Must be black and white and not form a picture.</p>
                         <p><span class="h4-color">TPPR 2.3.1(1)(d) and 2.3.5</span></p>
@@ -504,7 +504,7 @@ if ($var == 'og_desc') {
                     </td>
                 </tr>
                 <tr>
-                    <td>The appearance of individual products</td>
+                    <td class="fs-14">The appearance of individual products</td>
                     <td>
                         <p>Cigarettes: White casing with white or imitation cork tip. Standardised small
                             alphanumeric code permitted.</p>

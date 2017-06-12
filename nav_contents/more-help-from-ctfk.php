@@ -8,7 +8,7 @@ return $og_desc;
     <div class="row abt-st-r">
         <div class="col-lg-10 col-lg-offset-1 breadcrumbs"><?php echo breadcrumbs(' / ', 'Home'); ?></div>
         <div class="col-lg-10 col-lg-offset-1">
-            <div class="section-title fc-dark-brown">Further assistance from CTFK</div>
+            <div class="section-title fc-brown-home">Further assistance from CTFK</div>
         </div>
         <div class="content-desc-cont col-lg-10 col-lg-offset-1">
             <p>The Campaign for Tobacco Free Kids (CTFK) works directly with governments and civil society

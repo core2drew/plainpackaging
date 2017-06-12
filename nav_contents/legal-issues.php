@@ -9,7 +9,7 @@ return $og_desc;
         <!-- main header -->
         <div class="col-lg-8 col-lg-offset-1">
             <div><?php echo breadcrumbs(' / ', 'Home'); ?></div>
-            <div class="section-margin-top-25 section-title fc-ref-mat-4">Legal issues in detail</div>
+            <div class="section-margin-top-25 section-title fc-blue-home">Legal issues in detail</div>
         </div>
         <!-- main header sidebar -->
         <div class="col-lg-3">
@@ -33,7 +33,7 @@ return $og_desc;
         <!-- content -->
         <div class="content-desc-cont col-lg-8 col-lg-offset-1 ref -g1">
             <div>
-                <div class="section-secondary-title fc-ref-mat-4">1. Introduction</div>
+                <div class="section-secondary-title fc-blue-home">1. Introduction</div>
                 <p>
                     <b>The tobacco industry legal challenges to plain packaging have all so far been
                         defeated</b>. Despite this, the tobacco companies continue to assert aggressively
@@ -111,7 +111,7 @@ return $og_desc;
             </div>
             <div class="sidebar-anchor-item" id="item1"></div>
             <div>
-                <div class="section-secondary-title fc-ref-mat-4">
+                <div class="section-secondary-title fc-blue-home">
                     1.1 The “right to use” a trademark
                 </div>
 
@@ -124,7 +124,7 @@ return $og_desc;
                     (TRIPS)as well as being recognized under national trademark laws as either an implicit
                     or explicit right.</p>
 
-                <p><span class="fc-ref-mat-4"><b>Internal documents from the tobacco companies</b></span>
+                <p><span class="fc-blue-home"><b>Internal documents from the tobacco companies</b></span>
                     also show that they received advice from their own lawyers, and from the director of the
                     World Intellectual Property Organization, dating as far back as 1994, that plain
                     packaging would not breach international intellectual property law.<sup>4</sup></p>
@@ -139,7 +139,7 @@ return $og_desc;
                 <ul class="no-list-style">
                     <li>
                         <p>
-                            <span class="fc-ref-mat-4"><b>In the UK</b></span>, in the judgment of the High
+                            <span class="fc-blue-home"><b>In the UK</b></span>, in the judgment of the High
                             Court in relation to the UK plain packaging regulations, the judge ruled:
                         </p>
                     </li>
@@ -150,7 +150,7 @@ return $og_desc;
                                 public health.”</i><sup>6</sup> [¶40]. </p>
                     </li>
                     <li>
-                        <p><span class="fc-ref-mat-4"><b>In the PMI v Uruguay</b></span> investment
+                        <p><span class="fc-blue-home"><b>In the PMI v Uruguay</b></span> investment
                             arbitration claim the tribunal stated:</p>
                     </li>
                     <li>
@@ -163,7 +163,7 @@ return $og_desc;
                     </li>
                     <li>
                         <p>
-                            <span><b class="fc-ref-mat-4">A WTO dispute panel</b> (in relation to a case not concerning tobacco trademarks) has previously confirmed this view:</span>
+                            <span><b class="fc-blue-home">A WTO dispute panel</b> (in relation to a case not concerning tobacco trademarks) has previously confirmed this view:</span>
                         </p>
                     </li>
                     <li>
@@ -182,7 +182,7 @@ return $og_desc;
                     and intellectual property law in a number of published papers.<sup>9</sup></p>
             </div>
             <div>
-                <h3 class="fc-ref-mat-4 sub-title">
+                <h3 class="fc-blue-home sub-title">
                     The “exclusive right to use” in national trademark acts.
                 </h3>
                 <p>In most countries, national trademark legislation clearly sets out the nature of the
@@ -238,7 +238,7 @@ return $og_desc;
                     property laws.</p>
             </div>
             <div>
-                <h3 class="fc-ref-mat-4">Trademark-saving provision</h3>
+                <h3 class="fc-blue-home">Trademark-saving provision</h3>
                 <p>
                     It is always important to include a trademark-saving provision in the plain packaging
                     legislation (see <a
@@ -250,7 +250,8 @@ return $og_desc;
                 </p>
             </div>
             <div>
-                <div class="section-secondary-title fc-ref-mat-4">1.2 Compatibility with national trademarks
+                <div class="sidebar-anchor-item" id="item2"></div>
+                <div class="section-secondary-title fc-blue-home">1.2 Compatibility with national trademarks
                     laws / design acts
                 </div>
                 <p>As indicated above in section 2.1, the main concern as to compatibility with national
@@ -260,7 +261,7 @@ return $og_desc;
                 <p>While there may be some complexity to these legal arguments, they are basically a
                     different way of arguing for a “right to use” the tobacco trademarks. As shown in 2.1
                     above, these arguments have been rejected by the Courts.</p>
-                <p><span class="fc-ref-mat-4"><b>Plain packaging deprives the trademarks of their essential functions.</b></span>
+                <p><span class="fc-blue-home"><b>Plain packaging deprives the trademarks of their essential functions.</b></span>
                     The tobacco companies state that trademarks have a number of essential functions
                     including:</p>
 
@@ -280,7 +281,7 @@ return $og_desc;
                     trademarks.</p>
 
                 <p>
-                    <span class="fc-ref-mat-4"><b>Trademarks with a high reputation</b></span> Some national
+                    <span class="fc-blue-home"><b>Trademarks with a high reputation</b></span> Some national
                     trademark acts provide increased protections for trademarks that have acquired a higher
                     reputation. The tobacco companies argue that because plain packaging means they cannot
                     use their trademarks, the reputation of those marks will be reduced, and thus they will
@@ -288,7 +289,7 @@ return $og_desc;
                 </p>
 
                 <p>
-                    <span class="fc-ref-mat-4"><b>Revocation of a trademark for non-use:</b></span> Many
+                    <span class="fc-blue-home"><b>Revocation of a trademark for non-use:</b></span> Many
                     national trademark acts have a provision that allows an application for revocation of a
                     trademark’s registration where it has not been used for five years or more and there is
                     no good reason for its non-use. The tobacco companies argue that plain packaging will
@@ -301,7 +302,8 @@ return $og_desc;
             </div>
 
             <div>
-                <h3 class="fc-ref-mat-4 sub-title">1.3 Unlawful acquisition or deprivation of the property
+                <div class="sidebar-anchor-item" id="item3"></div>
+                <h3 class="fc-blue-home sub-title">1.3 Unlawful acquisition or deprivation of the property
                     rights in trademarks</h3>
                 <p>The tobacco companies claim that restricting or controlling the use of trademarks on the
                     packaging of tobacco products through plain packaging laws, has the effect of “taking”
@@ -321,21 +323,21 @@ return $og_desc;
                 <ul class="no-list-style">
                     <li>
                         <p>
-                            <span class="fc-ref-mat-4"><b>In Australia,</b> the High Court firmly rejected these arguments, stating that,although the Tobacco Plain Packaging Act regulated intellectual property rights and imposed controls on the packaging of tobacco products,it did not confer a proprietary benefit on the Commonwealth or any other person. As a result, no one acquired any property by registering a trademark. </span>
+                            <span class="fc-blue-home"><b>In Australia,</b> the High Court firmly rejected these arguments, stating that,although the Tobacco Plain Packaging Act regulated intellectual property rights and imposed controls on the packaging of tobacco products,it did not confer a proprietary benefit on the Commonwealth or any other person. As a result, no one acquired any property by registering a trademark. </span>
                         </p>
                     </li>
                     <li>
                         <p>
-                            <span class="fc-ref-mat-4"><b>In the UK,</b> the High Court determined that plain packaging is merely a legitimate control on the use of the trademarks. Consequently,no acquisition or deprivation results from plain packaging laws. The judgment on the UK regulations went on to say that, even if there had been a deprivation, it would be justified <i>without compensation</i> owing to the urgent need to protect against the harms of tobacco. This was confirmed by the Court of Appeal ruling. </span>
+                            <span class="fc-blue-home"><b>In the UK,</b> the High Court determined that plain packaging is merely a legitimate control on the use of the trademarks. Consequently,no acquisition or deprivation results from plain packaging laws. The judgment on the UK regulations went on to say that, even if there had been a deprivation, it would be justified <i>without compensation</i> owing to the urgent need to protect against the harms of tobacco. This was confirmed by the Court of Appeal ruling. </span>
                         </p>
                     </li>
                     <li>
                         <p>
-                            <span class="fc-ref-mat-4"><b>In France,</b> the Conseild'État found that the right not to be deprived of property poses no obstacle to the regulation of goods in the public interest provided the measure is proportionate. The Court held that while the effects of plain packaging are hard to quantify, <i>the regulations must be regarded as unable to do anything other than, reduce tobacco consumption over time</i> and, consequently, are a proportionate measure. </span>
+                            <span class="fc-blue-home"><b>In France,</b> the Conseild'État found that the right not to be deprived of property poses no obstacle to the regulation of goods in the public interest provided the measure is proportionate. The Court held that while the effects of plain packaging are hard to quantify, <i>the regulations must be regarded as unable to do anything other than, reduce tobacco consumption over time</i> and, consequently, are a proportionate measure. </span>
                     </li>
                     <li>
                         <p>
-                            <span class="fc-ref-mat-4"><b>In PMI v.Uruguay,</b> an international investment tribunal dismissed a claim by Philip Morris against Uruguay’s 80% health warnings and Single Presentation Requirement that prevented multiple brand variations. Part of the claim was that the measures had the effect of “expropriating” Philip Morris’s trademarks and brands, in breach of the Bilateral Investment Treaty — this claim was unanimously rejected by the panel. </span>
+                            <span class="fc-blue-home"><b>In PMI v.Uruguay,</b> an international investment tribunal dismissed a claim by Philip Morris against Uruguay’s 80% health warnings and Single Presentation Requirement that prevented multiple brand variations. Part of the claim was that the measures had the effect of “expropriating” Philip Morris’s trademarks and brands, in breach of the Bilateral Investment Treaty — this claim was unanimously rejected by the panel. </span>
                         </p>
                     </li>
                 </ul>
@@ -344,7 +346,8 @@ return $og_desc;
                     page for more details on these cases.</p>
             </div>
             <div>
-                <h3 class="fc-ref-mat-4 sub-title">
+                <div class="sidebar-anchor-item" id="item4"></div>
+                <h3 class="fc-blue-home sub-title">
                     1.4 Freedom of expression and freedom to conduct a business or trade
                 </h3>
                 <p>Many national constitutions, as well as regional human rights treaties, provide for the
@@ -361,7 +364,7 @@ return $og_desc;
                 <ul class="no-list-style">
                     <li>
                         <p>
-                            <span class="fc-ref-mat-4"><b>In the UK,</b></span> the High Court (confirmed by
+                            <span class="fc-blue-home"><b>In the UK,</b></span> the High Court (confirmed by
                             the Court of Appeal) found that any interference by plain packaging laws with
                             the right to freedom of commercial expression (under the European Convention on
                             Human Rights or the EU Fundamental Charter) would be justified by the overriding
@@ -370,7 +373,7 @@ return $og_desc;
                     </li>
                     <li>
                         <p>
-                            <span class="fc-ref-mat-4"><b>In France,</b></span> the Conseil Constitutionel
+                            <span class="fc-blue-home"><b>In France,</b></span> the Conseil Constitutionel
                             took a similar approach in respect of Article 2 of the 1789 Declaration (right
                             to free enterprise), holding that, by enacting plain packaging laws, the
                             Parliament intended to deprive tobacco products of a form of advertising likely
@@ -381,7 +384,7 @@ return $og_desc;
                     </li>
                     <li>
                         <p>
-                            <span class="fc-ref-mat-4"><b>In the European Union,</b></span> in the tobacco
+                            <span class="fc-blue-home"><b>In the European Union,</b></span> in the tobacco
                             companies’ challenge to the Tobacco Products Directive, the opinion of the
                             Advocate General to the Court was that the right to conduct a business may be
                             subject to a broad range of interventions on the part of public authorities,
@@ -410,7 +413,8 @@ return $og_desc;
                     protect public health rather than commercial interests.</p>
             </div>
             <div>
-                <h3 class="fc-ref-mat-4 sub-title">
+                <div class="sidebar-anchor-item" id="item5"></div>
+                <h3 class="fc-blue-home sub-title">
                     1.5 Not justified or supported by the evidence
                 </h3>
                 <p>The issue of whether there is sufficient evidence or not that the policy will contribute
@@ -428,7 +432,7 @@ return $og_desc;
                 <ul class="no-list-style">
                     <li>
                         <p>
-                            <span class="fc-ref-mat-4"><b>The High Court challenge against the UK Regulations was the first (and as yet only) legal challenge that addressed the evidence on both sides in detail.</b></span>
+                            <span class="fc-blue-home"><b>The High Court challenge against the UK Regulations was the first (and as yet only) legal challenge that addressed the evidence on both sides in detail.</b></span>
                             The 400-page judgment of Mr Justice Green goes to considerable length to assess
                             this evidence.
                         </p>
@@ -457,7 +461,8 @@ return $og_desc;
                     page for more details on these UK challenge.</p>
             </div>
             <div>
-                <h3 class="fc-ref-mat-4 sub-title">
+                <div class="sidebar-anchor-item" id="item6"></div>
+                <h3 class="fc-blue-home sub-title">
                     1.6 An unreasonable, disproportionate, or unnecessary measure
                 </h3>
                 <p>These arguments concern the justification for the measure considering the benefit of the
@@ -503,19 +508,19 @@ return $og_desc;
                         </li>
                     </ul>
                     <li>
-                        <p><span class="fc-ref-mat-4"><b>In both the UK and France,</b></span> the courts
+                        <p><span class="fc-blue-home"><b>In both the UK and France,</b></span> the courts
                             found that plain packaging was a reasonable, proportionate and necessary measure
                             having regard to its objectives and the great harms caused by tobacco. </p>
                     </li>
                     <li>
-                        <p><span class="fc-ref-mat-4"><b>The French Conseild'État</b></span> found that
+                        <p><span class="fc-blue-home"><b>The French Conseild'État</b></span> found that
                             plain packaging regulations must be regarded as unable to do anything other than
                             reduce the consumption of tobacco products over time and, consequently, are a
                             proportionate means to ensure the accomplishment of the objective of protecting
                             public health. </p>
                     </li>
                     <li>
-                        <p><span class="fc-ref-mat-4"><b>In the UK High Court,</b></span> the tobacco
+                        <p><span class="fc-blue-home"><b>In the UK High Court,</b></span> the tobacco
                             companies argued that the UK could have introduced less restrictive measures
                             such as an increase in tobacco taxes, increasing the minimum age for buying
                             tobacco and educational campaigns. The judge stated that, in respect of all
@@ -523,7 +528,7 @@ return $og_desc;
                             Claimants’ argument amounts to mere assertion.” [para 668]</p>
                     </li>
                     <li>
-                        <p><span class="fc-ref-mat-4"><b>In the UK Court of Appeal,</b></span> the court
+                        <p><span class="fc-blue-home"><b>In the UK Court of Appeal,</b></span> the court
                             confirmed that <i>“none of the claimed alternatives, including increased
                                 taxation, <u>would achieve all of the objectives pursued by the
                                     Regulations</u> and that they should be regarded instead as
@@ -545,7 +550,8 @@ return $og_desc;
                     page for more details on cases mentioned above.</p>
             </div>
             <div>
-                <h3 class="fc-ref-mat-4 sub-title">
+                <div class="sidebar-anchor-item" id="item7"></div>
+                <h3 class="fc-blue-home sub-title">
                     1.7 Introduced without proper due process
                 </h3>
                 <p>
@@ -568,7 +574,7 @@ return $og_desc;
                     processes, should provide a sound procedural basis for adopting plain packaging.</p>
                 <ul class="no-list-style">
                     <li>
-                        <span class="fc-ref-mat-4"><b>In the legal claims in the UK and France,</b></span>
+                        <span class="fc-blue-home"><b>In the legal claims in the UK and France,</b></span>
                         the tobacco companies made different technical due-process claims. These were
                         rejected by the courts in both cases, but these are fact specific issues that
                         concern the procedures used by each government.
@@ -586,7 +592,8 @@ return $og_desc;
                         1.2: Establish a document record</a>).</p>
             </div>
             <div>
-                <h3 class="fc-ref-mat-4 sub-title">
+                <div class="sidebar-anchor-item" id="item8"></div>
+                <h3 class="fc-blue-home sub-title">
                     1.8 Violates the World Trade Organization agreements
                 </h3>
                 <p>World Trade Organization (WTO) law limits the way in which WTO Members may restrict or
@@ -622,7 +629,7 @@ return $og_desc;
                     refuting these claims, available here:<br><a
                         href="http://dfat.gov.au/international-relations/international-organisations/wto/wto-dispute-settlement/Pages/wto-disputes-tobacco-plain-packaging.aspx">http://dfat.gov.au/international-relations/international-organisations/wto/wto-dispute-settlement/Pages/wto-disputes-tobacco-plain-packaging.aspx</a>
                 </p>
-                <p><span class="fc-ref-mat-4"><b>The World Health Organization (WHO) publication on plain packaging of tobacco products,</b></span>
+                <p><span class="fc-blue-home"><b>The World Health Organization (WHO) publication on plain packaging of tobacco products,</b></span>
                     in section 3.2.1, contains a useful summary of the main elements of WTO law relevant to
                     tobacco plain packaging. The document highlights that there are well-established
                     principles (regularly ignored by the tobacco industry) that demonstrate the flexibility
@@ -638,19 +645,20 @@ return $og_desc;
                     measures breach the WTO rulings.</p>
                 <ul class="no-list-style">
                     <li>
-                        <p><span class="fc-ref-mat-4"><b>In both the UK and France</b></span> the tobacco
+                        <p><span class="fc-blue-home"><b>In both the UK and France</b></span> the tobacco
                             companies’ legal challenges before the national courts included claims that the
                             governments were in breach of their international obligations because plain
                             packaging laws violated the WTO agreements, in particular the TRIPS agreement.
                             The courts in both countries rejected these claims. </p>
-                        <p><span class="fc-ref-mat-4"><b>In the PMI v Uruguay arbitration claim,</b></span>
+                        <p><span class="fc-blue-home"><b>In the PMI v Uruguay arbitration claim,</b></span>
                             the tribunal held that Uruguay’s packaging requirements did not violate
                             Uruguay’s international obligations in particular under the WTO agreements. </p>
                     </li>
                 </ul>
             </div>
             <div>
-                <h3 class="fc-ref-mat-4 sub-title">
+                <div class="sidebar-anchor-item" id="item9"></div>
+                <h3 class="fc-blue-home sub-title">
                     1.9 Breaches international investment treaties
                 </h3>
                 <p>International Investment Treaties (IITs) are agreements between two or more countries.
@@ -665,23 +673,23 @@ return $og_desc;
                     obligations under the IIT. The measures that are challenged can sometimes be genuine,
                     public-interest policies or decisions to protect the environment or public health but
                     which in some way affect the use of the investment or its value.</p>
-                <p><span class="fc-ref-mat-4"><b>These claims can be for millions, sometimes billions of dollars in compensation, and the arbitration lawsuits typically take many years to resolve and involve huge legal bills.</b></span>
+                <p><span class="fc-blue-home"><b>These claims can be for millions, sometimes billions of dollars in compensation, and the arbitration lawsuits typically take many years to resolve and involve huge legal bills.</b></span>
                     However, one of the primary aims of the tobacco industry in bringing these claims is to
                     create “regulatory chilling effect” and deter other governments from enacting effective
                     tobacco-control regulation. </p>
-                <p><span class="fc-ref-mat-4"><b>Philip Morris has brought two international arbitration claims against tobacco-control</b></span>
+                <p><span class="fc-blue-home"><b>Philip Morris has brought two international arbitration claims against tobacco-control</b></span>
                     under Bilateral Investment Treaties — the first against Uruguay’s 80% health warnings
                     and its Single Presentation Requirement; the second against Australia’s plain packaging
-                    laws. <span class="fc-ref-mat-4"><b>Both claims were dismissed.</b></span> The tribunal
+                    laws. <span class="fc-blue-home"><b>Both claims were dismissed.</b></span> The tribunal
                     in the claim against Australia’s plain packaging declined jurisdiction on the basis that
                     the claim was an “abuse of rights,” so the merits were not determined. A short summary
                     of these cases and the awards is given below. </p>
-                <p><span class="fc-ref-mat-4"><b>Although the case against Uruguay did not concern plain packaging legislation, the ruling has significant relevance to the legality of the policy as it concerns many of the broad themes set out above. In particular, the tribunal found that the tobacco-control measures were not an expropriation of property, that there was no “right to use” a trademark, and that the measures were compatible with the WTO agreements.</b></span>
+                <p><span class="fc-blue-home"><b>Although the case against Uruguay did not concern plain packaging legislation, the ruling has significant relevance to the legality of the policy as it concerns many of the broad themes set out above. In particular, the tribunal found that the tobacco-control measures were not an expropriation of property, that there was no “right to use” a trademark, and that the measures were compatible with the WTO agreements.</b></span>
                 </p>
                 <p></p>
             </div>
             <div>
-                <div class="section-secondary-title fc-ref-mat-4">2 COURT RULINGS ON THE KEY LEGAL ISSUES
+                <div class="section-secondary-title fc-blue-home">2 COURT RULINGS ON THE KEY LEGAL ISSUES
                 </div>
                 <p>The legal claims against plain packaging have broad similarities across jurisdictions.
                     The table below sets out the typical legal claims made by the tobacco companies in their
@@ -690,7 +698,7 @@ return $og_desc;
                     section. Relevant paragraph numbers from the rulings are given in square brackets
                     [¶].</p>
                 <table class="table table-inner table-condensed table-responsive">
-                    <thead class="bg-brown">
+                    <thead class="bg-dark-green">
                     <tr>
                         <th class="col-lg-5">
                             What the Tobacco companies claim
@@ -702,8 +710,8 @@ return $og_desc;
                     </tr>
                     </thead>
                     <tbody>
-                    <tr class="table-bg-light-blue">
-                        <td valign="middle">
+                    <tr class="table-bg-dark-green-td-1">
+                        <td valign="middle" class="fs-20" style="vertical-align:middle;" class="fs-20" style="vertical-align:middle;">
                             <b>The policy is not “justified,”“necessary,” or “proportionate”</b>
                         </td>
                         <td>
@@ -733,8 +741,8 @@ return $og_desc;
                                 translated]</p>
                         </td>
                     </tr>
-                    <tr class="table-bg-light-brown">
-                        <td valign="middle">
+                    <tr class="table-bg-dark-green-td-2">
+                        <td valign="middle" class="fs-20" style="vertical-align:middle;">
                             <b>The evidence does not show that plain packaging will work to reduce smoking
                                 rates</b>
                         </td>
@@ -750,8 +758,8 @@ return $og_desc;
                                 future consumption tobacco products.”[¶28] </p>
                         </td>
                     </tr>
-                    <tr class="table-bg-light-blue">
-                        <td valign="middle">
+                    <tr class="table-bg-dark-green-td-1">
+                        <td valign="middle" class="fs-20" style="vertical-align:middle;">
                             <b>Plain packaging is an “expropriation,”“deprivation,” or “acquisition” of the
                                 property rights in their trademarks</b>
                         </td>
@@ -771,8 +779,8 @@ return $og_desc;
                                 and therefore there is no deprivation of property.” [¶20 translated]</p>
                         </td>
                     </tr>
-                    <tr class="table-bg-light-brown">
-                        <td valign="middle">
+                    <tr class="table-bg-dark-green-td-2">
+                        <td valign="middle" class="fs-20" style="vertical-align:middle;">
                             <b>Plain packaging is incompatible with intellectual property laws and the
                                 “right to use” a trademark</b>
                         </td>
@@ -796,8 +804,8 @@ return $og_desc;
                                 a right to exclude others from using the mark.”[¶348]</p>
                         </td>
                     </tr>
-                    <tr class="table-bg-light-brown">
-                        <td valign="middle">
+                    <tr class="table-bg-dark-green-td-1">
+                        <td valign="middle" class="fs-20" style="vertical-align:middle;">
                             <b>Plain packaging breaches World Trade Organization (WTO) rules and investment
                                 treaties</b>
                         </td>
@@ -818,8 +826,8 @@ return $og_desc;
                                 objective, to certain categories of products.” [¶22 translated]</p>
                         </td>
                     </tr>
-                    <tr class="table-bg-light-brown">
-                        <td valign="middle">
+                    <tr class="table-bg-dark-green-td-2">
+                        <td valign="middle" class="fs-20" style="vertical-align:middle;">
                             <b>The laws were adopted without fairness or proper due process</b>
                         </td>
                         <td>
@@ -829,8 +837,8 @@ return $og_desc;
                                 of arguments on all sides of the debate.” [¶42]</p>
                         </td>
                     </tr>
-                    <tr class="table-bg-light-brown">
-                        <td valign="middle">
+                    <tr class="table-bg-dark-green-td-1">
+                        <td valign="middle" class="fs-20" style="vertical-align:middle;">
                             <b>Plain packaging is a breach of freedom of expression or the right to conduct
                                 a business</b>
                         </td>
@@ -854,7 +862,7 @@ return $og_desc;
                 </table>
             </div>
             <div>
-                <div class="section-secondary-title fc-ref-mat-4">3 FURTHER INFORMATION AND RESOURCES</div>
+                <div class="section-secondary-title fc-blue-home">3 FURTHER INFORMATION AND RESOURCES</div>
                 <p>The McCabe Centre for Law and Cancer serves as a WHO FCTC Knowledge Hub on legal
                     challenges to tobacco control laws. It has information on domestic legal challenges to
                     WHO FCTC implementation, including the challenges to plain packaging laws. There is also
@@ -873,7 +881,7 @@ return $og_desc;
                 </p>
             </div>
             <div class="content-end-notes">
-                <div class="section-secondary-title fc-ref-mat-4">End Notes</div>
+                <div class="section-secondary-title fc-blue-home">End Notes</div>
                 <p><sup>1</sup>BRITISH AMERICAN TOBACCO, Plain Packaging, accessed at <a
                         href="http://www.bat.com/plainpackaging">http://www.bat.com/plainpackaging</a>
                     (last visited on January 10, 2017)</p>
@@ -958,32 +966,36 @@ return $og_desc;
             <div class="sidebar-wrapper col-xs-12 sidebar-2">
                 <ul class="sidebar-nav">
                     <div class="sidebar-nav-header">KEY LEGAL ISSUES RAISED</div>
+                    <div class="sidebar-nav-sub-header">Intellectual Property</div>
                     <li>
                         <a href="#item1">The “right to use” a trademark</a>
                     </li>
                     <li>
                         <a href="#item2">Compatibility with national trademark laws</a>
                     </li>
+                    <div class="sidebar-nav-sub-header">Constitutional</div>
                     <li>
                         <a href="#item3">Unlawful acquisition or deprivation of property </a>
                     </li>
                     <li>
-                        <a href="#">Freedom of expression or right to conduct business</a>
+                        <a href="#item4">Freedom of expression or right to conduct business</a>
+                    </li>
+                    <div class="sidebar-nav-sub-header">Administrative / procedural</div>
+                    <li>
+                        <a href="#item5">Unjustified by the evidence</a>
                     </li>
                     <li>
-                        <a href="#">Unjustified by the evidence</a>
+                        <a href="#item6">Not reasonable, proportionate or necessary</a>
                     </li>
                     <li>
-                        <a href="#">Not reasonable, proportionate or necessary</a>
+                        <a href="#item7">Introduced without proper due process</a>
+                    </li>
+                    <div class="sidebar-nav-sub-header">International</div>
+                    <li>
+                        <a href="#item8">Violates World Trade Organization rules</a>
                     </li>
                     <li>
-                        <a href="#">Introduced without proper due process</a>
-                    </li>
-                    <li>
-                        <a href="#">Violates World Trade Organization rules</a>
-                    </li>
-                    <li>
-                        <a href="#">Breaches international investment treaties </a>
+                        <a href="#item9">Breaches international investment treaties </a>
                     </li>
                 </ul>
             </div>
