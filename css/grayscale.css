@@ -1209,6 +1209,10 @@ table.dropdown-sbs td{
   height:88px;
   /*height:100px;*/
   width: 190px;
+}
+table.dropdown-sbs td,
+table.dropdown-reference td,
+table.dropdown-more td {
   padding:0;
 }
 
