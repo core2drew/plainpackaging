@@ -37,7 +37,7 @@ $(document).ready(function(){
             'color':'#fff'
 		});
         content.show();
-        content.siblings().not('.nav-cont.navbar-right').hide();
+        content.parent().siblings().children().not('.page-scroll.nav').hide();
 	}
 
 	$('.sidebar-nav a').click(function(e){

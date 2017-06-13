@@ -1166,10 +1166,15 @@ table.nav-main tr{
 
 .dropdown-cont.dc-step-by-step{
   width:825px;
+  right: -100px;
 }
 
 .dropdown-cont.reference,table.dropdown-reference{
   width:980px;
+}
+
+.dropdown-cont.reference{
+  right: -100px;
 }
 
 .dropdown-cont.dc-more, table.dropdown-dc-more{
@@ -1211,9 +1216,10 @@ table.dropdown-sbs td{
   width: 190px;
   padding:0;
 }
-table.dropdown-sbs td,
-table.dropdown-reference td,
-table.dropdown-more td {}
+
+table.dropdown-reference td{
+  padding:0;
+}
 
 table.dropdown-sbs td > a,
 table.dropdown-reference td > a,
@@ -1233,9 +1239,15 @@ table.dropdown-more td > a{
   -moz-justify-content:center;
   -webkit-justify-content:center;
 
-  width: 100%;
-  height: 100%;
+  width: 100% !important;
+  height: 100% !important;
   padding: 15px;
+}
+
+table.dropdown-sbs td > a:hover,
+table.dropdown-reference td > a:hover,
+table.dropdown-more td > a:hover {
+  border:4px solid #fff;
 }
 
 table.dropdown-sbs tr,
@@ -1251,7 +1263,7 @@ table.dropdown-reference, table.dropdown-more {
   margin-bottom:0px;
 }
 
-table.dropdown-reference th,table.dropdown-reference td, table.dropdown-more td{
+table.dropdown-reference td,table.dropdown-reference td, table.dropdown-more td{
   font-weight:normal;
   line-height: 1.3;
 }

@@ -19,215 +19,216 @@
                         <ul class="nav navbar-nav">
                             <li class="dc-step-by-step-li">
                                 <a class="page-scroll nav dc-step-by-step">Short Step-By-Step Guides</a>
+
+                                <!-- step-by-step guides -->
+                                <div class="dropdown-cont dc-step-by-step dc-step-by-step-cont">
+                                    <table class="dropdown dropdown-sbs">
+                                        <tbody>
+                                        <tr>
+                                            <th class="col-lg-3">Getting Prepared</th>
+                                            <td class="col-lg-3 bg-nav-gd-1-1">
+                                                <a href="<?php echo $base_url ?>getting-prepared/set-policy-objectives">
+                                                    <div class="dropdown-note">Guide 1.1</div>
+                                                    Set Policy Objectives
+                                                </a>
+                                            </td>
+                                            <td class="col-lg-3 bg-nav-gd-1-2">
+                                                <a href="<?php echo $base_url ?>getting-prepared/establish-document-development-retention">
+                                                    <div class="dropdown-note">Guide 1.2</div>
+                                                    Establish a Document Record
+                                                </a>
+                                            </td>
+                                            <td class="col-lg-3 bg-nav-gd-1-3">
+                                                <a href="<?php echo $base_url ?>getting-prepared/prepare-tobacco-industry-interference">
+                                                    <div class="dropdown-note">Guide 1.3</div>
+                                                    Prepare for Industry Interference
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th class="col-lg-3">Collecting the Evidence</th>
+                                            <td class="col-lg-3 bg-nav-gd-2-1">
+                                                <a href="<?php echo $base_url ?>collecting-the-evidence/evidence-review">
+                                                    <div class="dropdown-note">Guide 2.1</div>
+                                                    Evidence Review
+                                                </a>
+                                            </td>
+                                            <td class="col-lg-3 bg-nav-gd-2-2">
+                                                <a href="<?php echo $base_url ?>collecting-the-evidence/regulatory-impact-analysis">
+                                                    <div class="dropdown-note">Guide 2.2</div>
+                                                    Regulatory Impact Analysis
+                                                </a>
+                                            </td>
+                                            <td class="col-lg-3 bg-nav-gd-2-3">
+                                                <a href="<?php echo $base_url ?>collecting-the-evidence/stakeholder-input-public-consultation">
+                                                    <div class="dropdown-note">Guide 2.3</div>
+                                                    Stakeholder Input / Consultation
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th class="col-lg-3">Crafting the Legislation</th>
+                                            <td class="col-lg-3 bg-nav-gd-3-1">
+                                                <a href="<?php echo $base_url ?>crafting-the-legislation/make-key-policy-decisions">
+                                                    <div class="dropdown-note">Guide 3.1</div>
+                                                    Make Key Policy Decisions
+                                                </a>
+                                            </td>
+                                            <td class="col-lg-3 bg-nav-gd-3-2">
+                                                <a href="<?php echo $base_url ?>crafting-the-legislation/draft-the-law">
+                                                    <div class="dropdown-note">Guide 3.2</div>
+                                                    Draft the Law
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th class="col-lg-3">Steps for a Secure Policy</th>
+                                            <td class="col-lg-3 bg-nav-gd-4-1">
+                                                <a href="<?php echo $base_url ?>procedural-steps-for-a-secure-policy/coordinate-across-government">
+                                                    <div class="dropdown-note">Guide 4.1</div>
+                                                    Coordinate Across Government
+                                                </a>
+                                            </td>
+                                            <td class="col-lg-3 bg-nav-gd-4-2">
+                                                <a href="<?php echo $base_url ?>procedural-steps-for-a-secure-policy/obtain-legal-advice">
+                                                    <div class="dropdown-note">Guide 4.2</div>
+                                                    Obtain Legal Advice
+                                                </a>
+                                            </td>
+                                            <td class="col-lg-3 bg-nav-gd-4-3">
+                                                <a href="<?php echo $base_url ?>procedural-steps-for-a-secure-policy/wto-notification">
+                                                    <div class="dropdown-note">Guide 4.3</div>
+                                                    WTO Notification
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
                             </li>
                             <li class="dc-reference-li">
                                 <a class="page-scroll nav dc-reference materials">Tools and Resources</a>
+                                <!-- reference materials -->
+                                <div class="dropdown-cont dc-reference dc-reference-cont">
+                                    <table class="dropdown dropdown-reference">
+                                        <tbody>
+                                        <tr>
+                                            <th></th>
+                                            <td class="nav-title" colspan="2">RESOURCES</td>
+                                            <td class="nav-title">TEMPLATES</td>
+                                            <td class="nav-title">EVIDENCE</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="nav-th nav-title" rowspan="2">Policy</th>
+                                            <td class="col-lg-3 bg-nav-r-1">
+                                                <a href="<?php echo $base_url; ?>resources/policy-briefs">
+                                                    Policy Briefs
+                                                </a>
+                                            </td>
+                                            <td class="col-lg-3 bg-nav-r-1">
+                                                <a href="<?php echo $base_url; ?>resources/opposing-arguments-and-how-to-counter-them">
+                                                    Opposing Arguments
+                                                </a>
+                                            </td>
+                                            <td class="col-lg-3 bg-nav-r-2">
+                                                <a href="<?php echo $base_url; ?>templates/regulatory-impact-analysis-ref">
+                                                    Template Regulatory Impact Analysis
+                                                </a>
+                                            </td>
+                                            <td class="col-lg-3 bg-nav-r-3">
+                                                <a href="<?php echo $base_url; ?>evidence/research-evidence">
+                                                    Research Evidence
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="col-lg-3 bg-nav-r-1">
+                                                <a href="<?php echo $base_url; ?>resources/international-developments">
+                                                    International Developments
+                                                </a>
+                                            </td>
+                                            <td class="col-lg-3">&nbsp;</td>
+                                            <td class="col-lg-3 bg-nav-r-2">
+                                                <a href="<?php echo $base_url; ?>templates/consultation-document-template">
+                                                    Template Consultation Document
+                                                </a>
+                                            </td>
+                                            <td class="col-lg-3 bg-nav-r-3">
+                                                <a href="<?php echo $base_url;
+                                                ?>evidence/australia-post-implementation-evidence">
+                                                    Australia's Post Implementation Evidence
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>
+                                            <td class="col-lg-3">&nbsp;</td>
+                                            <td class="col-lg-3">&nbsp;</td>
+                                            <td class="col-lg-3">&nbsp;</td>
+                                            <td class="col-lg-3 bg-nav-r-3">
+                                                <a href="<?php echo $base_url; ?>evidence/tobacco-product-branding">
+                                                    Tobacco Branding
+                                                </a>
+                                            </td>
+                                            </th>
+                                        </tr>
+                                        <tr>
+                                            <th class="nav-th nav-title" rowspan="2">Legal</th>
+                                            <td class="col-lg-3 bg-nav-r-1">
+                                                <a href="<?php echo $base_url; ?>resources/comparison-table-of-existing-plain-packaging-laws">
+                                                    Comparison of Existing Laws
+                                                </a>
+                                            </td>
+                                            <td class="col-lg-3 bg-nav-r-1">
+                                                <a href="<?php echo $base_url; ?>resources/drafting-the-legislation-in-detail">
+                                                    Each Clause Explained
+                                                </a>
+                                            </td>
+                                            <td class="col-lg-3 bg-nav-r-2">
+                                                <a href="<?php echo $base_url; ?>templates/template-draft-model-law">
+                                                    Template Model Law
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="col-lg-3 bg-nav-r-1">
+                                                <a href="<?php echo $base_url; ?>resources/legal-issues">
+                                                    Legal Issues
+                                                </a>
+                                            </td>
+                                            <td class="col-lg-3 bg-nav-r-1">
+                                                <a href="<?php echo $base_url; ?>resources/case-summaries">
+                                                    Case Summaries
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
                             </li>
                             <li class="dc-more-li">
                                 <a class="page-scroll nav dc-more">More</a>
+                                <!-- more -->
+                                <div class="dropdown-cont dc-more dc-more-cont">
+                                    <table class="dropdown dropdown-more">
+                                        <tbody>
+                                        <tr>
+                                            <td class="bg-nav-r-4"><a href="<?php echo $base_url; ?>more/download-toolkit">Download the Toolkit</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="bg-nav-r-4"><a href="<?php echo $base_url; ?>#">FAQs</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="bg-nav-r-4"><a href="<?php echo $base_url; ?>nav/more-help-from-ctfk">About and Contact</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="bg-nav-r-4"><a href="<?php echo $base_url; ?>#">Extenal link to ILC landing page</a></td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
                             </li>
                         </ul>
-                    </div>
-                    <!-- step-by-step guides -->
-                    <div class="dropdown-cont dc-step-by-step dc-step-by-step-cont">
-                        <table class="dropdown dropdown-sbs">
-                            <tbody>
-                                <tr>
-                                  <th class="col-lg-3">Getting Prepared</th>
-                                    <td class="col-lg-3 bg-nav-gd-1-1">
-                                        <a href="<?php echo $base_url ?>getting-prepared/set-policy-objectives">
-                                            <div class="dropdown-note">Guide 1.1</div>
-                                            Set Policy Objectives
-                                        </a>
-                                    </td>
-                                    <td class="col-lg-3 bg-nav-gd-1-2">
-                                        <a href="<?php echo $base_url ?>getting-prepared/establish-document-development-retention">
-                                            <div class="dropdown-note">Guide 1.2</div>
-                                            Establish a Document Record
-                                        </a>
-                                    </td>
-                                    <td class="col-lg-3 bg-nav-gd-1-3">
-                                        <a href="<?php echo $base_url ?>getting-prepared/prepare-tobacco-industry-interference">
-                                            <div class="dropdown-note">Guide 1.3</div>
-                                            Prepare for Industry Interference
-                                        </a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                  <th class="col-lg-3">Collecting the Evidence</th>
-                                    <td class="col-lg-3 bg-nav-gd-2-1">
-                                        <a href="<?php echo $base_url ?>collecting-the-evidence/evidence-review">
-                                            <div class="dropdown-note">Guide 2.1</div>
-                                            Evidence Review
-                                        </a>
-                                    </td>
-                                    <td class="col-lg-3 bg-nav-gd-2-2">
-                                        <a href="<?php echo $base_url ?>collecting-the-evidence/regulatory-impact-analysis">
-                                            <div class="dropdown-note">Guide 2.2</div>
-                                            Regulatory Impact Analysis
-                                        </a>
-                                    </td>
-                                    <td class="col-lg-3 bg-nav-gd-2-3">
-                                        <a href="<?php echo $base_url ?>collecting-the-evidence/stakeholder-input-public-consultation">
-                                            <div class="dropdown-note">Guide 2.3</div>
-                                            Stakeholder Input / Consultation
-                                        </a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                  <th class="col-lg-3">Crafting the Legislation</th>
-                                    <td class="col-lg-3 bg-nav-gd-3-1">
-                                        <a href="<?php echo $base_url ?>crafting-the-legislation/make-key-policy-decisions">
-                                            <div class="dropdown-note">Guide 3.1</div>
-                                            Make Key Policy Decisions
-                                        </a>
-                                    </td>
-                                    <td class="col-lg-3 bg-nav-gd-3-2">
-                                        <a href="<?php echo $base_url ?>crafting-the-legislation/draft-the-law">
-                                            <div class="dropdown-note">Guide 3.2</div>
-                                            Draft the Law
-                                        </a>
-                                    </td>
-                                </tr>
-                              <tr>
-                                  <th class="col-lg-3">Steps for a Secure Policy</th>
-                                    <td class="col-lg-3 bg-nav-gd-4-1">
-                                        <a href="<?php echo $base_url ?>procedural-steps-for-a-secure-policy/coordinate-across-government">
-                                            <div class="dropdown-note">Guide 4.1</div>
-                                            Coordinate Across Government
-                                        </a>
-                                    </td>
-                                    <td class="col-lg-3 bg-nav-gd-4-2">
-                                        <a href="<?php echo $base_url ?>procedural-steps-for-a-secure-policy/obtain-legal-advice">
-                                            <div class="dropdown-note">Guide 4.2</div>
-                                            Obtain Legal Advice
-                                        </a>
-                                    </td>
-                                    <td class="col-lg-3 bg-nav-gd-4-3">
-                                        <a href="<?php echo $base_url ?>procedural-steps-for-a-secure-policy/wto-notification">
-                                            <div class="dropdown-note">Guide 4.3</div>
-                                            WTO Notification
-                                        </a>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <!-- reference materials -->
-                    <div class="dropdown-cont dc-reference dc-reference-cont">
-                        <table class="dropdown dropdown-reference">
-                            <tbody>
-                                <tr>
-                                    <th></th>
-                                    <td class="nav-title" colspan="2">RESOURCES</td>
-                                    <td class="nav-title">TEMPLATES</td>
-                                    <td class="nav-title">EVIDENCE</td>
-                                </tr>
-                                <tr>
-                                  <th class="nav-th nav-title" rowspan="2">Policy</th>
-                                    <td class="col-lg-3 bg-nav-r-1">
-                                        <a href="<?php echo $base_url; ?>resources/policy-briefs">
-                                            Policy Briefs
-                                        </a>
-                                    </td>
-                                    <td class="col-lg-3 bg-nav-r-1">
-                                        <a href="<?php echo $base_url; ?>resources/opposing-arguments-and-how-to-counter-them">
-                                            Opposing Arguments
-                                        </a>
-                                    </td>
-                                    <td class="col-lg-3 bg-nav-r-2">
-                                        <a href="<?php echo $base_url; ?>templates/regulatory-impact-analysis-ref">
-                                            Template Regulatory Impact Analysis
-                                        </a>
-                                    </td>
-                                    <td class="col-lg-3 bg-nav-r-3">
-                                        <a href="<?php echo $base_url; ?>evidence/research-evidence">
-                                            Research Evidence
-                                        </a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="col-lg-3 bg-nav-r-1">
-                                        <a href="<?php echo $base_url; ?>resources/international-developments">
-                                            International Developments
-                                        </a>
-                                    </td>
-                                    <td class="col-lg-3">&nbsp;</td>
-                                    <td class="col-lg-3 bg-nav-r-2">
-                                        <a href="<?php echo $base_url; ?>templates/consultation-document-template">
-                                            Template Consultation Document
-                                        </a>
-                                    </td>
-                                    <td class="col-lg-3 bg-nav-r-3">
-                                        <a href="<?php echo $base_url;
-                                        ?>evidence/australia-post-implementation-evidence">
-                                            Australia's Post Implementation Evidence
-                                        </a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th>
-                                        <td class="col-lg-3">&nbsp;</td>
-                                        <td class="col-lg-3">&nbsp;</td>
-                                        <td class="col-lg-3">&nbsp;</td>
-                                        <td class="col-lg-3 bg-nav-r-3">
-                                            <a href="<?php echo $base_url; ?>evidence/tobacco-product-branding">
-                                                Tobacco Branding
-                                            </a>
-                                        </td>
-                                    </th>
-                                </tr>
-                                <tr>
-                                  <th class="nav-th nav-title" rowspan="2">Legal</th>
-                                    <td class="col-lg-3 bg-nav-r-1">
-                                        <a href="<?php echo $base_url; ?>resources/comparison-table-of-existing-plain-packaging-laws">
-                                            Comparison of Existing Laws
-                                        </a>
-                                    </td>
-                                    <td class="col-lg-3 bg-nav-r-1">
-                                        <a href="<?php echo $base_url; ?>resources/drafting-the-legislation-in-detail">
-                                            Each Clause Explained
-                                        </a>
-                                    </td>
-                                    <td class="col-lg-3 bg-nav-r-2">
-                                        <a href="<?php echo $base_url; ?>templates/template-draft-model-law">
-                                            Template Model Law
-                                        </a>
-                                    </td>
-                                </tr>
-                              <tr>
-                                    <td class="col-lg-3 bg-nav-r-1">
-                                        <a href="<?php echo $base_url; ?>resources/legal-issues">
-                                            Legal Issues
-                                        </a>
-                                    </td>
-                                    <td class="col-lg-3 bg-nav-r-1">
-                                        <a href="<?php echo $base_url; ?>resources/case-summaries">
-                                            Case Summaries
-                                        </a>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <!-- more -->
-                    <div class="dropdown-cont dc-more dc-more-cont">
-                        <table class="dropdown dropdown-more">
-                            <tbody>
-                                <tr>
-                                    <td class="bg-nav-r-4"><a href="<?php echo $base_url; ?>more/download-toolkit">Download the Toolkit</a></td>
-                                </tr>
-                                <tr>
-                                    <td class="bg-nav-r-4"><a href="<?php echo $base_url; ?>#">FAQs</a></td>
-                                </tr>
-                                <tr>
-                                    <td class="bg-nav-r-4"><a href="<?php echo $base_url; ?>nav/more-help-from-ctfk">About and Contact</a></td>
-                                </tr>
-                                <tr>
-                                    <td class="bg-nav-r-4"><a href="<?php echo $base_url; ?>#">Extenal link to ILC landing page</a></td>
-                                </tr>
-                            </tbody>
-                        </table>
                     </div>
                 </div>
             </div>
