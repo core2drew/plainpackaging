@@ -749,7 +749,7 @@ body {
 }
 
 .navbar-custom .nav li a:hover, .navbar-custom .nav li a:active {
-  color: #ffff00;
+  color: #fff;
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
@@ -1209,12 +1209,11 @@ table.dropdown-sbs td{
   height:88px;
   /*height:100px;*/
   width: 190px;
+  padding:0;
 }
 table.dropdown-sbs td,
 table.dropdown-reference td,
-table.dropdown-more td {
-  padding:0;
-}
+table.dropdown-more td {}
 
 table.dropdown-sbs td > a,
 table.dropdown-reference td > a,

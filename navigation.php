@@ -24,7 +24,7 @@
                                 <a class="page-scroll nav dc-reference materials">Tools and Resources</a>
                             </li>
                             <li class="dc-more-li">
-                                <a class="page-scroll nav dc-more" href="#">More</a>
+                                <a class="page-scroll nav dc-more">More</a>
                             </li>
                         </ul>
                     </div>
