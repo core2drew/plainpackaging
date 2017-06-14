@@ -59,7 +59,7 @@
 			"file": "index.php",
 			"settings":
 			{
-				"buffer_size": 13585,
+				"buffer_size": 13567,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -77,9 +77,9 @@
 			"file": "nav-main.php",
 			"settings":
 			{
-				"buffer_size": 986,
+				"buffer_size": 989,
 				"encoding": "UTF-8",
-				"line_ending": "Windows"
+				"line_ending": "Unix"
 			}
 		},
 		{
@@ -88,14 +88,6 @@
 			{
 				"buffer_size": 1266,
 				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"contents": "<?php include_once('library/base_url.php');?>\n\n<!-- Footer -->\n<footer>\n    <div class=\"container\">\n        <div class=\"row\">\n            <div class=\"col-lg-10 col-lg-offset-1\">\n                <p class=\"footer-lbl st-links-footer-title\">Broken Promises to Our Children</p>\n                <div class=\"footer-cont\">\n                    <p class=\"st-links-footer\">\n                        <a class=\"col-xs-12 fs-20\" href=\"<?php echo $base_url ?>pdf/StateReport_FY2017.pdf\" target=\"_blank\"><b>Full Report:</b> Broken Promises to Our Children\n                        </a>\n                    </p>\n                </div>\n            </div>\n        </div>\n        <div class=\"row footer-ls-section\">\n            <div class=\"col-lg-10 col-lg-offset-1\">\n                <p class=\"footer-lbl\">State Data</p>\n                <div class=\"footer-cont\">\n                    <div class=\"st-links-footer col-xs-3\">\n                        <?php href_states(0,13); ?>\n                    </div>\n                    <div class=\"st-links-footer col-xs-3\">\n                        <?php href_states(13,13); ?>\n                    </div>\n                    <div class=\"st-links-footer col-xs-3\">\n                        <?php href_states(26,13); ?>\n                    </div>\n                    <div class=\"st-links-footer col-xs-3\">\n                        <?php href_states(39,13); ?>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n</footer>\n\n<!-- jQuery -->\n<script src=\"<?php echo $base_url; ?>vendor/jquery/jquery.js\"></script>\n\n<!-- Bootstrap Core JavaScript -->\n<script src=\"<?php echo $base_url; ?>vendor/bootstrap/js/bootstrap.min.js\"></script>\n\n<!-- Plugin JavaScript -->\n<script src=\"https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js\"></script>\n\n<!-- Theme JavaScript -->\n<script src=\"<?php echo $base_url; ?>js/jquery.scrollUp.min.js\"></script>",
-			"settings":
-			{
-				"buffer_size": 1915,
 				"line_ending": "Windows"
 			}
 		},
@@ -109,79 +101,46 @@
 			}
 		},
 		{
-			"file": "/C/Users/dc/Desktop/Marvin/Desktop/Scrap/index.html",
-			"settings":
-			{
-				"buffer_size": 13549,
-				"line_ending": "Windows",
-				"name": "<div class=\"col-lg-12 navbar-mobile\">"
-			}
-		},
-		{
 			"file": "navigation.php",
 			"settings":
 			{
-				"buffer_size": 24746,
+				"buffer_size": 24705,
 				"encoding": "UTF-8",
-				"line_ending": "Windows"
+				"line_ending": "Unix"
 			}
 		},
 		{
 			"file": "css/grayscale.css",
 			"settings":
 			{
-				"buffer_size": 31981,
+				"buffer_size": 32985,
 				"encoding": "UTF-8",
-				"line_ending": "Windows"
+				"line_ending": "Unix"
 			}
 		},
 		{
 			"file": "js/script.js",
 			"settings":
 			{
-				"buffer_size": 2022,
+				"buffer_size": 2311,
 				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"contents": "<?php\ninclude_once ('library/base_url.php');\ninclude_once ('library/api.php');\n\n$request = explode('/',$_GET['q']);\n$menu =  $request[1];\nif ($request[1] == 'nav')\n{\n\t$menu2 = null;\n}\nelse\n{\n\t$menu2 = $request[2];\n}\n\nif(isset($request))\n{\n\tif ($menu == 'navigate-the-toolkit')\n\t{\n\t\tif (chk_nav($menu) == 'ver')\n\t\t{\n\t\t\tinclude('nav.php');\n\t\t\t// echo 'yes';\n\t\t}\n\t\telse\n\t\t{\n\t\t\theader( 'Location: '. $lost_url ) ;\n\t\t\t// echo 'no';\n\t\t}\n\t}\n\telse\n\t{\n\t\tswitch ($menu2) \n\t\t{\n\t\t\tcase 'set-policy-objectives':\n\t\t\tcase 'establish-document-development-retention':\n\t\t\tcase 'prepare-tobacco-industry-interference':\n\t\t\tcase 'evidence-review':\n\t\t\tcase 'regulatory-impact-analysis':\n\t\t\tcase 'stakeholder-input-public-consultation':\n\t\t\tcase 'make-key-policy-decisions':\n\t\t\tcase 'draft-the-law':\n\t\t\tcase 'coordinate-across-government':\n\t\t\tcase 'obtain-legal-advice':\n\t\t\tcase 'wto-notification':\n\t\t\tcase 'policy-briefs':\n\t\t\tcase 'what-is-plain-packaging-and-why-is-it-needed':\n\t\t\tcase 'countering-industry-arguments':\n\t\t\tcase 'is-plain-packaging-legal':\n\t\t\tcase 'regulatory-impact-analysis-ref':\n\t\t\tcase 'consultation-document-template':\n\t\t\tcase 'drafting-the-legislation-in-detail':\n\t\t\tcase 'comparison-table-of-existing-plain-packaging-laws':\n\t\t\tcase 'template-draft-model-law':\n\t\t\tcase 'research-evidence':\n\t\t\tcase 'austalia-post-implementation-evidence':\n\t\t\tcase 'tobacco-product-branding':\n\t\t\tcase 'opposing-arguments-and-how-to-counter-them':\n\t\t\tcase 'legal-issues-and-case-summaries':\n\t\t\tcase 'international-developments':\n\t\t\t\tif (chk_nav($menu2) == 'ver')\n\t\t\t\t{\n\t\t\t\t\tinclude('nav.php');\n\t\t\t\t\t// echo 'yes';\n\t\t\t\t}\n\t\t\t\telse\n\t\t\t\t{\n\t\t\t\t\theader( 'Location: '. $lost_url ) ;\n\t\t\t\t\t// echo 'no';\n\t\t\t\t}\n\t\t\t\tbreak;\n\t\t\tdefault:\n\t\t\t\theader( 'Location: '. $lost_url ) ;\n\t\t\t\tbreak;\n\t\t}\n\t}\n}\nelse\n{\n\t?>\n\t<script type=\"text/javascript\">\n\t\twindow.location.href = \"<?php echo $lost_url; ?>\";\n\t</script>\n\t<?php\n} // ./else\n?><?php\ninclude_once ('library/base_url.php');\ninclude_once ('library/api.php');\n\n$request = explode('/',$_GET['q']);\n$menu =  $request[1];\nif ($request[1] == 'nav')\n{\n\t$menu2 = null;\n}\nelse\n{\n\t$menu2 = $request[2];\n}\n\nif(isset($request))\n{\n\tif ($menu == 'navigate-the-toolkit')\n\t{\n\t\tif (chk_nav($menu) == 'ver')\n\t\t{\n\t\t\tinclude('nav.php');\n\t\t\t// echo 'yes';\n\t\t}\n\t\telse\n\t\t{\n\t\t\theader( 'Location: '. $lost_url ) ;\n\t\t\t// echo 'no';\n\t\t}\n\t}\n\telse\n\t{\n\t\tswitch ($menu2) \n\t\t{\n\t\t\tcase 'set-policy-objectives':\n\t\t\tcase 'establish-document-development-retention':\n\t\t\tcase 'prepare-tobacco-industry-interference':\n\t\t\tcase 'evidence-review':\n\t\t\tcase 'regulatory-impact-analysis':\n\t\t\tcase 'stakeholder-input-public-consultation':\n\t\t\tcase 'make-key-policy-decisions':\n\t\t\tcase 'draft-the-law':\n\t\t\tcase 'coordinate-across-government':\n\t\t\tcase 'obtain-legal-advice':\n\t\t\tcase 'wto-notification':\n\t\t\tcase 'policy-briefs':\n\t\t\tcase 'what-is-plain-packaging-and-why-is-it-needed':\n\t\t\tcase 'countering-industry-arguments':\n\t\t\tcase 'is-plain-packaging-legal':\n\t\t\tcase 'regulatory-impact-analysis-ref':\n\t\t\tcase 'consultation-document-template':\n\t\t\tcase 'drafting-the-legislation-in-detail':\n\t\t\tcase 'comparison-table-of-existing-plain-packaging-laws':\n\t\t\tcase 'template-draft-model-law':\n\t\t\tcase 'research-evidence':\n\t\t\tcase 'austalia-post-implementation-evidence':\n\t\t\tcase 'tobacco-product-branding':\n\t\t\tcase 'opposing-arguments-and-how-to-counter-them':\n\t\t\tcase 'legal-issues-and-case-summaries':\n\t\t\tcase 'international-developments':\n\t\t\t\tif (chk_nav($menu2) == 'ver')\n\t\t\t\t{\n\t\t\t\t\tinclude('nav.php');\n\t\t\t\t\t// echo 'yes';\n\t\t\t\t}\n\t\t\t\telse\n\t\t\t\t{\n\t\t\t\t\theader( 'Location: '. $lost_url ) ;\n\t\t\t\t\t// echo 'no';\n\t\t\t\t}\n\t\t\t\tbreak;\n\t\t\tdefault:\n\t\t\t\theader( 'Location: '. $lost_url ) ;\n\t\t\t\tbreak;\n\t\t}\n\t}\n}\nelse\n{\n\t?>\n\t<script type=\"text/javascript\">\n\t\twindow.location.href = \"<?php echo $lost_url; ?>\";\n\t</script>\n\t<?php\n} // ./else\n?>",
-			"settings":
-			{
-				"buffer_size": 3786,
-				"line_ending": "Windows"
+				"line_ending": "Unix"
 			}
 		},
 		{
 			"file": "parseUrl.php",
 			"settings":
 			{
-				"buffer_size": 2997,
+				"buffer_size": 3586,
 				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"contents": "<?php\ninclude_once ('library/base_url.php');\ninclude_once ('library/api.php');\n\n$request = explode('/',$_GET['q']);\n\n$menu =  $request[1];\nif ($request[1] == 'nav')\n{\n\t$menu2 = null;\n}\nelse\n{\n\t$menu2 = $request[2];\n}\n\nif(isset($request))\n{\n\tif ($menu == 'navigate-the-toolkit')\n\t{\n\t\tif (chk_nav($menu) == 'ver')\n\t\t{\n\t\t\tinclude('nav.php');\n\t\t\t// echo 'yes';\n\t\t}\n\t\telse\n\t\t{\n\t\t\theader( 'Location: '. $lost_url ) ;\n\t\t\t// echo 'no';\n\t\t}\n\t}\n\telseif ($menu == 'getting-prepared') \n\t{\n\t\t# code...\n\t\techo 'a';\n\t}\n\telseif ($menu == 'collecting-the-evidence') \n\t{\n\t\t# code...\n\t}\n\telseif ($menu == 'crafting-the-legislation') \n\t{\n\t\t# code...\n\t}\n\telseif ($menu == 'procedural-steps-for-a-secure-policy') \n\t{\n\t\t# code...\n\t} \n\t// reference materials\n\telseif ($menu == 'policy-tools') \n\t{\n\t\t# code...\n\t}\n\telseif ($menu == 'legislation-drafting-tools') \n\t{\n\t\t# code...\n\t}\n\telseif ($menu == 'evidence') \n\t{\n\t\t# code...\n\t}\n\telseif ($menu == 'legal-issues-and-international-developments') \n\t{\n\t\t# code...\n\t}\n\telse\n\t{\n\t\tswitch ($menu2) \n\t\t{\n\t\t\tcase 'set-policy-objectives':\n\t\t\tcase 'establish-document-development-retention':\n\t\t\tcase 'prepare-tobacco-industry-interference':\n\t\t\tcase 'evidence-review':\n\t\t\tcase 'regulatory-impact-analysis':\n\t\t\tcase 'stakeholder-input-public-consultation':\n\t\t\tcase 'make-key-policy-decisions':\n\t\t\tcase 'draft-the-law':\n\t\t\tcase 'coordinate-across-government':\n\t\t\tcase 'obtain-legal-advice':\n\t\t\tcase 'wto-notification':\n\t\t\tcase 'policy-briefs':\n\t\t\tcase 'what-is-plain-packaging-and-why-is-it-needed':\n\t\t\tcase 'countering-industry-arguments':\n\t\t\tcase 'is-plain-packaging-legal':\n\t\t\tcase 'regulatory-impact-analysis-ref':\n\t\t\tcase 'consultation-document-template':\n\t\t\tcase 'drafting-the-legislation-in-detail':\n\t\t\tcase 'comparison-table-of-existing-plain-packaging-laws':\n\t\t\tcase 'template-draft-model-law':\n\t\t\tcase 'research-evidence':\n\t\t\tcase 'austalia-post-implementation-evidence':\n\t\t\tcase 'tobacco-product-branding':\n\t\t\tcase 'opposing-arguments-and-how-to-counter-them':\n\t\t\tcase 'legal-issues-and-case-summaries':\n\t\t\tcase 'international-developments':\n\t\t\t\tif (chk_nav($menu2) == 'ver')\n\t\t\t\t{\n\t\t\t\t\tinclude('nav.php');\n\t\t\t\t\t// echo 'yes';\n\t\t\t\t}\n\t\t\t\telse\n\t\t\t\t{\n\t\t\t\t\theader( 'Location: '. $lost_url ) ;\n\t\t\t\t\t// echo 'no';\n\t\t\t\t}\n\t\t\t\tbreak;\n\t\t\tdefault:\n\t\t\t\theader( 'Location: '. $lost_url ) ;\n\t\t\t\tbreak;\n\t\t}\n\t}\n}\nelse\n{\n\t?>\n\t<script type=\"text/javascript\">\n\t\twindow.location.href = \"<?php echo $lost_url; ?>\";\n\t</script>\n\t<?php\n} // ./else\n?>",
-			"settings":
-			{
-				"buffer_size": 2447,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"contents": "<?php\ninclude_once ('library/base_url.php');\ninclude_once ('library/api.php');\n\n$request = explode('/',$_GET['q']);\n$menu =  $request[1];\nif ($request[1] == 'nav')\n{\n\t$menu2 = null;\n}\nelse\n{\n\t$menu2 = $request[2];\n}\n\nif(isset($request))\n{\n\tswitch ($menu) \n\t{\n\t\tcase 'navigate-the-toolkit':\n\t\t\t# code...\n\t\t\tif (chk_nav($menu) == 'ver')\n\t\t\t{\n\t\t\t\tinclude('nav.php');\n\t\t\t\t// echo 'yes';\n\t\t\t}\n\n\t\t\tbreak;\n\t}\n}\n\telse\n\t{\n\t\tswitch ($menu2) \n\t\t{\n\t\t\tcase 'set-policy-objectives':\n\t\t\tcase 'establish-document-development-retention':\n\t\t\tcase 'prepare-tobacco-industry-interference':\n\t\t\tcase 'evidence-review':\n\t\t\tcase 'regulatory-impact-analysis':\n\t\t\tcase 'stakeholder-input-public-consultation':\n\t\t\tcase 'make-key-policy-decisions':\n\t\t\tcase 'draft-the-law':\n\t\t\tcase 'coordinate-across-government':\n\t\t\tcase 'obtain-legal-advice':\n\t\t\tcase 'wto-notification':\n\t\t\tcase 'policy-briefs':\n\t\t\tcase 'what-is-plain-packaging-and-why-is-it-needed':\n\t\t\tcase 'countering-industry-arguments':\n\t\t\tcase 'is-plain-packaging-legal':\n\t\t\tcase 'regulatory-impact-analysis-ref':\n\t\t\tcase 'consultation-document-template':\n\t\t\tcase 'drafting-the-legislation-in-detail':\n\t\t\tcase 'comparison-table-of-existing-plain-packaging-laws':\n\t\t\tcase 'template-draft-model-law':\n\t\t\tcase 'research-evidence':\n\t\t\tcase 'austalia-post-implementation-evidence':\n\t\t\tcase 'tobacco-product-branding':\n\t\t\tcase 'opposing-arguments-and-how-to-counter-them':\n\t\t\tcase 'legal-issues-and-case-summaries':\n\t\t\tcase 'international-developments':\n\t\t\t\tif (chk_nav($menu2) == 'ver')\n\t\t\t\t{\n\t\t\t\t\tinclude('nav.php');\n\t\t\t\t\t// echo 'yes';\n\t\t\t\t}\n\t\t\t\telse\n\t\t\t\t{\n\t\t\t\t\theader( 'Location: '. $lost_url ) ;\n\t\t\t\t\t// echo 'no';\n\t\t\t\t}\n\t\t\t\tbreak;\n\t\t\tdefault:\n\t\t\t\theader( 'Location: '. $lost_url ) ;\n\t\t\t\tbreak;\n\t\t}\n\t}\n}\nelse\n{\n\t?>\n\t<script type=\"text/javascript\">\n\t\twindow.location.href = \"<?php echo $lost_url; ?>\";\n\t</script>\n\t<?php\n} // ./else\n?>",
-			"settings":
-			{
-				"buffer_size": 1863,
-				"line_ending": "Windows"
+				"line_ending": "Unix"
 			}
 		},
 		{
 			"file": ".htaccess",
 			"settings":
 			{
-				"buffer_size": 2698,
+				"buffer_size": 2851,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -190,44 +149,36 @@
 			"file": "library/base_url.php",
 			"settings":
 			{
-				"buffer_size": 125,
+				"buffer_size": 140,
 				"encoding": "UTF-8",
-				"line_ending": "Windows"
+				"line_ending": "Unix"
 			}
 		},
 		{
 			"file": "library/api.php",
 			"settings":
 			{
-				"buffer_size": 789446,
+				"buffer_size": 8437,
 				"encoding": "UTF-8",
-				"line_ending": "Windows"
+				"line_ending": "Unix"
 			}
 		},
 		{
-			"contents": "<section id=\"about-state\" class=\"container content-st-section\">\n                <div class=\"row abt-st-r\" id=\"Ref-K\">\n                    <!-- content -->\n                    <div class=\"content-desc-cont col-lg-8 col-lg-offset-1 ref -g1\">\n                        <!-- header -->\n                        <div><?php echo breadcrumbs(' / ', 'Home'); ?></div>\n                        <div class=\"section-margin-top-25 section-title fc-ref-mat-4\">Legal issues in detail</div>\n                        <!-- /header -->\n                        <div>\n                            <div class=\"section-secondary-title fc-ref-mat-4\">1. Introduction</div>\n                            <p>\n                                This Toolkit is intended to provide governments and civil society organizations with the resources to ensure that tobacco product plain packaging legislation is robust and can stand against any legal challenge from the tobacco industry. Following the recommended steps outlined in this Toolkit should lead to a strong, defendable law. Nevertheless, government officials need to be aware of the legal arguments that the industry use to challenge the laws and be prepared for the risks of a legal challenge.\n                            </p>\n                            <p>\n                                The tobacco companies continue to aggressively assert that plain packaging is unlawful in every country that considers the policy, even though the industry legal challenges have all so far been defeated. In challenging these policies, tobacco companies continue to advance the same or similar arguments in each case, despite the fact that these have not been successful in the past.\n                            </p>\n\n                            <ul class=\"no-list-style\">\n                                <li>\n                                    <p>\n                                        <b>\n                                            National:\n                                        </b>\n                                        Legal challenges have been commenced, and dismissed, in the domestic courts of most of the countries that have adopted plain packaging laws -Australia, the UK, Ireland and France. Hungary, which has has fully adopted plain packaging laws, has not faced a legal challenge, although full implementation of the law is not until 2019. \n                                    </p>\n                                </li>\n\n                                <li>\n                                    <p>\n                                        <b>\n                                            Regional: \n                                        </b>\n                                        A legal challenge to the European Union’s Tobacco Products Directive (TPD), dismissed in May 2016,included a claim against the provision in the TPD that permitted Member States to adopt plain packaging if they choose to. \n                                    </p>\n                                </li>\n\n                                <li>\n                                    <p>\n                                        <b>\n                                            International:\n                                        </b>\n                                        An international investment arbitration claim brought by Philip Morris against Australia was dismissed by the Tribunal in December 2015. A World Trade Organisation complaint brought by 4 countries against Australia is awaiting the panel’s ruling, due in May 2017. \n                                    </p>\n                                </li>\n                            </ul>\n                            <p>\n                                Despite these very clear court rulings upholding plain packaging legislation around the world, the tobacco companies continue to argue that the legislation is unlawful: \n                            </p>\n        \n                            <ul class=\"no-list-style\">\n                                <li>\n                                    <p>\n                                        <b>\n                                            British American Tobacco's\n                                        </b>\n                                        website states that plain packaging is “Legislation that we believe is ineffective and unlawful”. <sup>1</sup>\n                                    </p>\n                                </li>\n                                <li>\n                                    <p>\n                                        <b>\n                                            Japan Tobacco International’s \n                                        </b>\n                                        website states that “plain packaging would infringe JTI's fundamental legal rights to property, expression and trade – without justification. These rights are protected by Constitutions, international trade treaties, intellectual property laws, bilateral investment treaties, and national laws.” <sup>2</sup>\n                                    </p>\n                                </li>\n                                <li>\n                                    <p>\n                                        <b>\n                                            Philip Morris International\n                                        </b>\n                                        in response to the tribunal’s ruling dismissing the investment arbitration claim, stated: “There is nothing in today’s outcome that addresses, let alone validates, plain packaging in Australia or anywhere else. <sup>3</sup>\n                                    </p>\n                                </li>\n                            </ul>\n                            \n                            <h3 class=\"fc-ref-mat-4 sub-title\">\n                                1.1 Will the tobacco industry sue every country that introduces plain packaging laws?\n                            </h3>\n\n                            <p>\n                                Litigation, and the threat of litigation, is one of the tactics that the tobacco industry uses to delay, deter or prevent governments from introducing effective tobacco control regulation. Whether the companies actually bring a claim in a particular country depends very much on the local political and legal situation.\n                            </p>\n\n                            <p>\n                                However, theirprevious legal defeats limit the litigation options available to the tobacco companies. \n                            </p>\n\n                            <p>\n                                For EU Member States, the EU law issues have largely been litigated in the UK courts, which makes using EU law arguments far more difficult when challenging the laws in other Member States. \n                            </p>\n\n                            <p>\n                                Defeats for Philip Morris in the two international investment arbitration claims against Australia and Uruguay mean that, although a further investment treaty claim cannot be ruled out, there are significant legal hurdles for the tobacco companies to overcome in future claims. \n                            </p>\n\n                            <p>\n                                It is therefore reasonable to expect that the greatest risk of legal challenges to new plain packaging laws will be in national constitutional or administrative courts.\n                            </p>\n                        </div>\n                    </div>\n                    <!-- sidebar -->\n                    <div class=\"content-desc-cont col-lg-3\">\n                        <!-- 1 -->\n                        <div class=\"sidebar-wrapper col-xs-12 sidebar-1\">\n                            <ul class=\"sidebar-nav\">\n                                <div class=\"sidebar-nav-header\">LINKED<br>TOOLS AND RESOURCES</div>\n                                <li>\n                                    <a href=\"#item1\">Case Summaries</a>\n                                </li>\n                                <li>\n                                    <a href=\"#item2\">Policy Brief: Is it Lawful?</a>\n                                </li>\n                            </ul>\n                        </div>\n                        <!-- 2 -->\n                        <div class=\"sidebar-wrapper col-xs-12 sidebar-2\">\n                            <ul class=\"sidebar-nav\">\n                                <div class=\"sidebar-nav-header\">KEY LEGAL ISSUES RAISED</div>\n                                <li>\n                                    <a href=\"#item1\">The “right to use” a trademark</a>\n                                </li>\n                                <li>\n                                    <a href=\"#item2\">Compatibility with national trademark laws</a>\n                                </li>\n                                <li>\n                                    <a href=\"#item3\">Unlawful acquisition or deprivation of property </a>\n                                </li>\n                                <li>\n                                    <a href=\"#\">Freedom of expression or right to conduct business</a>\n                                </li>\n                                <li>\n                                    <a href=\"#\">Unjustified by the evidence</a>\n                                </li>\n                                <li>\n                                    <a href=\"#\">Not reasonable, proportionate or necessary</a>\n                                </li>\n                                <li>\n                                    <a href=\"#\">Introduced without proper due process</a>\n                                </li>\n                                <li>\n                                    <a href=\"#\">Violates World Trade Organization rules</a>\n                                </li>\n                                <li>\n                                    <a href=\"#\">Breaches international investment treaties </a>\n                                </li>\n                            </ul>\n                        </div>\n                        <!-- 3 -->\n                        <div class=\"sidebar-wrapper col-xs-12 sidebar-3\">\n                            <ul class=\"sidebar-nav\">\n                                <div class=\"sidebar-nav-header\">FURTHER INFORMATION AND WEB LINKS</div>\n                                <li>\n                                    <a href=\"#item1\">On the legal issues</a>\n                                </li>\n                            </ul>\n                        </div>\n                    </div>\n                </div>\n            </section>",
+			"file": "functions.php",
 			"settings":
 			{
-				"buffer_size": 10730,
-				"line_ending": "Windows"
+				"buffer_size": 4057,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
 			}
 		},
 		{
 			"file": "README-guide.php",
 			"settings":
 			{
-				"buffer_size": 24076,
+				"buffer_size": 47758,
 				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/C/xampp/htdocs/tfk/Sidebar update.txt",
-			"settings":
-			{
-				"buffer_size": 4713,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
+				"line_ending": "Unix"
 			}
 		}
 	],
@@ -263,11 +214,58 @@
 	},
 	"expanded_folders":
 	[
-		"/C/xampp/htdocs/tfk/plainpackaging",
-		"/C/xampp/htdocs/tfk/plainpackaging/library"
+		"/C/xampp/htdocs/tfk/plainpackaging/plainpackaging",
+		"/C/xampp/htdocs/tfk/plainpackaging/plainpackaging/nav_contents"
 	],
 	"file_history":
 	[
+		"/C/xampp/htdocs/tfk/plainpackaging/plainpackaging/nav_contents/policy-briefs.php",
+		"/C/xampp/htdocs/tfk/plainpackaging/plainpackaging/nav_contents/regulatory-impact-analysis-ref.php",
+		"/C/xampp/htdocs/tfk/plainpackaging/plainpackaging/nav_contents/consultation-document-template.php",
+		"/C/xampp/htdocs/tfk/plainpackaging/plainpackaging/nav_contents/international-developments.php",
+		"/C/xampp/htdocs/tfk/plainpackaging/plainpackaging/nav_contents/legal-issues.php",
+		"/C/xampp/htdocs/tfk/plainpackaging/plainpackaging/nav_contents/tobacco-company-submissions-to-governments.php",
+		"/C/xampp/htdocs/tfk/plainpackaging/plainpackaging/nav_contents/tobacco-product-branding.php",
+		"/C/xampp/htdocs/tfk/plainpackaging/plainpackaging/nav_contents/template-draft-model-law.php",
+		"/C/Users/dc/Desktop/Marvin/Desktop/Tobacco Free Kids/Microsite 2/2-6-2017/content/C - [Sandro] - contents p4/C - Research Evidence/Read Me.txt",
+		"/C/Users/dc/Desktop/Marvin/Desktop/Tobacco Free Kids/Microsite 2/2-6-2017/content/C - [Sandro] - contents p4/C - Australia's post implementation evidence/Read Me.txt",
+		"/C/Users/dc/Desktop/Marvin/Desktop/Tobacco Free Kids/Microsite 2/2-6-2017/content/C - comparison of existing laws - tools and resources dropdown menu/Read Me.txt",
+		"/C/Users/dc/Desktop/Marvin/Desktop/Tobacco Free Kids/Microsite 2/2-6-2017/content/C - template model law - tools and resources dropdown menu/Read Me.txt",
+		"/C/xampp/htdocs/tfk/plainpackaging/plainpackaging/nav_contents/drafting-the-legislation-in-detail.php",
+		"/C/xampp/htdocs/tfk/plainpackaging/plainpackaging/nav_contents/branding-on-packs-does-not-make-people-start-smoking.php",
+		"/C/xampp/htdocs/tfk/plainpackaging/plainpackaging/nav_contents/less-restrictive-alternative-measures.php",
+		"/C/xampp/htdocs/tfk/plainpackaging/plainpackaging/nav_contents/violates-intellectual-property.php",
+		"/C/xampp/htdocs/tfk/plainpackaging/plainpackaging/nav_contents/job-losses-in-local-tobacco-industry.php",
+		"/C/xampp/htdocs/tfk/plainpackaging/plainpackaging/nav_contents/will-lead-to-plain-packaging-of-other-products.php",
+		"/C/xampp/htdocs/tfk/plainpackaging/plainpackaging/nav_contents/negative-impacts-on-small-retailers.php",
+		"/C/xampp/htdocs/tfk/plainpackaging/plainpackaging/nav_contents/unlawful-and-breaches-international-treatie.php",
+		"/C/xampp/htdocs/tfk/plainpackaging/plainpackaging/nav_contents/leads-to-lower-tobacco-prices.php",
+		"/C/xampp/htdocs/tfk/plainpackaging/plainpackaging/nav_contents/increases-illicit-tobacco.php",
+		"/C/xampp/htdocs/tfk/plainpackaging/plainpackaging/nav_contents/no-reliable-evidence.php",
+		"/C/xampp/htdocs/tfk/plainpackaging/plainpackaging/nav_contents/tobacco-industry-arguments.php",
+		"/C/xampp/htdocs/tfk/plainpackaging/plainpackaging/nav_contents/is-it-lawful.php",
+		"/C/xampp/htdocs/tfk/plainpackaging/plainpackaging/nav_contents/case-summaries.php",
+		"/C/xampp/htdocs/tfk/plainpackaging/plainpackaging/nav_contents/what-is-it-and-why-is-it-needed.php",
+		"/C/Users/dc/Desktop/Marvin/Desktop/Tobacco Free Kids/Microsite 2/2-6-2017/content/[Sandro] - contents p5/Template Model Law/Read Me.txt",
+		"/C/Users/dc/Desktop/Marvin/Desktop/Tobacco Free Kids/Microsite 2/2-6-2017/content/[Sandro] - contents p5/Policy Briefs/Read Me.txt",
+		"/C/xampp/htdocs/tfk/plainpackaging/plainpackaging/nav_contents/comparison-table-of-existing-plain-packaging-laws.php",
+		"/C/xampp/htdocs/tfk/plainpackaging/plainpackaging/nav_contents/compare-images.php",
+		"/C/Users/dc/Desktop/Marvin/Desktop/Tobacco Free Kids/Microsite 2/2-6-2017/content/[Sandro] - contents p5/Comparison of existing laws/Read Me.txt",
+		"/C/xampp/htdocs/tfk/plainpackaging/plainpackaging/nav_contents/opposing-arguments-and-how-to-counter-them.php",
+		"/C/xampp/htdocs/tfk/plainpackaging/plainpackaging/nav_contents/research-evidence.php",
+		"/C/xampp/htdocs/tfk/plainpackaging/plainpackaging/nav_contents/australia-post-implementation-evidence.php",
+		"/C/xampp/htdocs/tfk/plainpackaging/plainpackaging/nav_contents/more-help-from-ctfk.php",
+		"/C/xampp/htdocs/tfk/plainpackaging/plainpackaging/nav_contents/plain-packaging-and-the-who-fctc.php",
+		"/C/Users/dc/Desktop/Marvin/Desktop/Tobacco Free Kids/Microsite 2/2-6-2017/content/[Sandro] - contents p4/Australia's post implementation evidence/Read Me.txt",
+		"/C/Users/dc/Desktop/Marvin/Desktop/Tobacco Free Kids/Microsite 2/2-6-2017/content/CD - template model law - tools and resources dropdown menu/Read Me.txt",
+		"/C/xampp/htdocs/tfk/plainpackaging/plainpackaging/nav_contents/faqs - Copy - Copy (6).php",
+		"/C/xampp/htdocs/tfk/plainpackaging/plainpackaging/nav_contents/faqs.php",
+		"/C/xampp/htdocs/tfk/plainpackaging/plainpackaging/nav_contents/where-in-the-world.php",
+		"/C/Users/dc/Desktop/Marvin/Desktop/Tobacco Free Kids/Microsite 2/2-6-2017/content/CD [Sandro] - contents p3/image links - landing page/Read Me.txt",
+		"/C/xampp/htdocs/tfk/Sidebar update.txt",
+		"/C/Users/dc/Desktop/Marvin/Desktop/Scrap/index.html",
+		"/C/xampp/htdocs/tfk/plainpackaging/plainpackaging/nav_contents/about-and-contact.php",
+		"/C/Users/dc/Desktop/Marvin/Desktop/Tobacco Free Kids/Microsite 2/2-6-2017/content/[Sandro] - contents p5/Compare images/Read Me.txt",
 		"/C/Users/dc/Desktop/Marvin/Desktop/Tobacco Free Kids/Microsite 2/2-6-2017/content/[Sandro] - contents p1/[Sandro]each clause explained - tools and resources dropdown menu/Read Me.txt",
 		"/C/xampp/htdocs/tfk/plainpackaging/js/grayscale-menu.js",
 		"/C/xampp/htdocs/tfk/plainpackaging/js/grayscale.js",
@@ -323,7 +321,7 @@
 	],
 	"find":
 	{
-		"height": 34.0
+		"height": 146.0
 	},
 	"find_in_files":
 	{
@@ -337,6 +335,116 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"Policy",
+			"about and contact",
+			"fc-ref-mat-1",
+			"fc-dark-brown",
+			"valign=\"middle\"",
+			"table",
+			"fc-ref-mat-2",
+			"fc-ref",
+			"fc-ref-mat-3",
+			"country specific",
+			"sound and smell",
+			"fc-blue",
+			"fc-ref-mat-2",
+			"fc-ref-mat-3",
+			"fc-dark-brown",
+			"legal claim",
+			"in the legal",
+			"fc-dark-brown",
+			"fc-ref-mat-2",
+			"fc-ref-mat-3",
+			"fc-dark-brown",
+			"fc-ref-mat-3",
+			"fc-ref-mat-2",
+			"fc-ref-mat-3",
+			"fc-dark-brown",
+			"fc-ref-mat-2",
+			"fc-ref-mat-3",
+			"fc-dark-brown",
+			"fc-ref-mat-2",
+			"fc-dark-brown",
+			"fc-ref-mat-3",
+			"fc-dark",
+			"fc-ref-",
+			"fc-ref-mat-3",
+			"fc-dark-brown",
+			"fc-bro",
+			"fc-ref-mat-2",
+			"fc",
+			"fc-ref-mat-3",
+			"fc-dark-brown",
+			"fc-brown",
+			"fc-dark-brown",
+			"fc-ref-mat-2",
+			"fc-ref-mat-3",
+			"fc-ref-mat-2",
+			"fc-ref-mat-3",
+			"does tobacco",
+			"fc-ref-mat-4",
+			"1.6",
+			"unjustified by",
+			"unjustified",
+			"sidebar",
+			"fc-ref-mat-4",
+			"fc-ref-mat",
+			"fc-ref-mat-",
+			"fc-ref-mat-4",
+			"fc-ref-mat-2",
+			"class=\"col-lg-6 img-responsive text-center\"",
+			"class=\"col-lg-6\"",
+			"col-lg-3",
+			"The relationship between branded packaging and tobacco consumption in young people",
+			"<p class=\"indented\">",
+			"marketing theory and the role ",
+			"The relationship between branded packaging and tobacco consumption in young people",
+			"<li class=\"text-center\">",
+			"force",
+			"fc-ref-mat",
+			"fc-ref-mat-4",
+			"fc-ref-mat-3",
+			"fc-ref-mat-4",
+			"Overview of the outcomes from the research",
+			"branded packaging",
+			"fc-ref-mat-3",
+			"fc-dark-brown",
+			"h4",
+			"font-size",
+			"1 ",
+			"1. ",
+			"1.",
+			"no-reliable-evidence",
+			"tobacco-company-submissions-to-governments",
+			"Another feature to appear in Marlboro packs in the UK after plain packaging was introduced is a plastic flap attached to the lid that seals the lining:",
+			"existing legislation",
+			"tabs for resealing pouches",
+			"12. ",
+			"class=\"content-desc-cont col-lg-10 col-lg-offset-1\"",
+			"tobacco industry",
+			"claims ",
+			"undermining the research evidence",
+			"industry argument",
+			"it will lead to price",
+			"fc-ref-mat-2",
+			"what do the tobacco",
+			"What do the tobacco companies claim; and what have the courts ruled?",
+			"fc-ref-mat-3",
+			"class=\"section-secondary-title\"",
+			",img",
+			"img",
+			"<img",
+			"img",
+			"<img",
+			"img",
+			".spacer-mobile",
+			"<img",
+			"Industry Argument It will commoditise tobacco leading to price reductions thereby increasing demand.",
+			"img",
+			"notes",
+			"what is plain packaging of tobacco",
+			"<img",
+			",img",
 			"sidebar",
 			"positive right to use ",
 			"bootstrap",
@@ -354,117 +462,7 @@
 			"LEGAL ISSUES AND CASE SUMMARIES in the Reference Materials",
 			" Reference Section L: List of International Developments",
 			"Reference Section L: List of International Developments",
-			" Reference Section L: List of International Developments",
-			"a href",
-			"url_title_back",
-			"webkit",
-			"<h4 class=\"",
-			"sub-section-title",
-			"h3",
-			"<h3 class=\"",
-			"<h3>",
-			"h3 class=\"",
-			"h2 class=\"",
-			"case summary",
-			"h3",
-			"h3 class=\"",
-			"h-list-roman",
-			".custom",
-			"h-list",
-			".custom",
-			"g-list",
-			".sub-section-secondary-title",
-			".sub-title",
-			"section-title",
-			"font-size:18px;",
-			"font-size: 18px",
-			"navbar",
-			"page-scroll",
-			"ender-",
-			"ender-darkgray",
-			"body",
-			"intellectual property",
-			"and in JT",
-			"custom",
-			"dr chipty",
-			"ul.custom",
-			".table-custom",
-			".content-section",
-			"page-scroll",
-			"breadcrumbs",
-			"legal-issues-and-case-summaries",
-			"fc-ref-mat-3",
-			"case",
-			"// i",
-			"fc-ref-mat-2",
-			"break;",
-			"fc",
-			"reference",
-			"template-draft-model-law",
-			"case e",
-			"menu2",
-			"navigate-the-toolkit",
-			"reference-materials/",
-			"step-by-step-guides/",
-			"reference-materials/",
-			"step-by-step-guides/",
-			"$og_desc = 'Test';",
-			".dropdown",
-			"breadcrumbs",
-			"crumbs",
-			"breadcrumbs",
-			"note",
-			"<ul",
-			"bullet",
-			"<ul class",
-			"legifrance",
-			"regulatory-impact-analysis",
-			"ol",
-			"?>nav/",
-			"webkit",
-			"dropdown-sbs",
-			"web",
-			"<td class=\"col-lg-3>",
-			"<th>",
-			"<td>",
-			"<div>Guide",
-			"span",
-			"dropdown",
-			".nav-dropdown-cont",
-			"nav-cont",
-			".navbar-brand",
-			".menu-title",
-			".navbar-toggle",
-			".navbar-custom",
-			".custom",
-			"plain packaging",
-			"table",
-			"ul class=\"custom",
-			"custom",
-			"table-custom",
-			"a {",
-			"a",
-			"href",
-			"box-style",
-			"table-custom",
-			"font-g1",
-			"webkit",
-			"plain packaging",
-			"section-secondary-title",
-			"background-color:#fff",
-			"font-size",
-			"14px",
-			"href=\"sample.php\"",
-			"intro-body",
-			"666",
-			".content-mid-section, .content-st-section",
-			".content-desc-cont",
-			".section-desc",
-			"font-black",
-			"li a",
-			".navbar-collapse",
-			".navbar-collapse.in",
-			"navigate-the-toolkit"
+			" Reference Section L: List of International Developments"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -472,6 +470,25 @@
 		"regex": false,
 		"replace_history":
 		[
+			"fc-brown-home",
+			"valign=\"middle\" class=\"fs-20\" style=\"vertical-align:middle;\"",
+			"fc-blue-home",
+			"fc-brown-home",
+			"fc-blue-home",
+			"fc-brown-home",
+			"fc-dark-brown",
+			"fc-blue-home",
+			"class=\"img-responsive text-center\"",
+			"class=\"col-lg-6 img-responsive text-center\" style=\"height:300px;margin-bottom:20px;\"",
+			"col-lg-6",
+			"<p class=\"p-states\">",
+			"<li>",
+			"fc-brown-home",
+			"",
+			"fc-ref-mat-4",
+			"fc-dark-brown",
+			"class=\"section-secondary-title fc-dark-brown\"",
+			"<img class=\"img-responsive\" ",
 			"",
 			"<h4 class=\"fc-ref-mat-3 ",
 			"<h3 class=\"fc-ref-mat-3 ",
@@ -523,7 +540,7 @@
 	"groups":
 	[
 		{
-			"selected": 3,
+			"selected": 5,
 			"sheets":
 			[
 				{
@@ -532,15 +549,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 13585,
+						"buffer_size": 13567,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								90,
-								0
+								2588,
+								2588
 							]
 						],
 						"settings":
@@ -550,10 +567,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 606.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 11,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
@@ -583,7 +600,7 @@
 						"translation.y": 104.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 10,
+					"stack_index": 12,
 					"type": "text"
 				},
 				{
@@ -592,15 +609,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 986,
+						"buffer_size": 989,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								895,
-								895
+								0,
+								0
 							]
 						],
 						"settings":
@@ -629,8 +646,8 @@
 						"selection":
 						[
 							[
-								356,
-								356
+								425,
+								425
 							]
 						],
 						"settings":
@@ -641,40 +658,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 8,
+					"stack_index": 9,
 					"type": "text"
 				},
 				{
 					"buffer": 4,
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1915,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1915,
-								1915
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 86.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 19,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
 					"file": "footer.php",
 					"semi_transient": false,
 					"settings":
@@ -697,58 +685,27 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1235.0,
+						"translation.y": 104.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 14,
+					"stack_index": 8,
 					"type": "text"
 				},
 				{
-					"buffer": 6,
-					"file": "/C/Users/dc/Desktop/Marvin/Desktop/Scrap/index.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 13549,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1198,
-								1198
-							]
-						],
-						"settings":
-						{
-							"auto_name": "<div class=\"col-lg-12 navbar-mobile\">",
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 169.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 12,
-					"type": "text"
-				},
-				{
-					"buffer": 7,
+					"buffer": 5,
 					"file": "navigation.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 24746,
+						"buffer_size": 24705,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								23152,
-								23152
+								22576,
+								22557
 							]
 						],
 						"settings":
@@ -758,10 +715,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 385.0,
+						"translation.y": 132064.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 9,
+					"stack_index": 1,
 					"type": "text"
 				}
 			]
@@ -771,20 +728,20 @@
 			"sheets":
 			[
 				{
-					"buffer": 8,
+					"buffer": 6,
 					"file": "css/grayscale.css",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 31981,
+						"buffer_size": 32985,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3991,
-								3991
+								32700,
+								32700
 							]
 						],
 						"settings":
@@ -794,167 +751,19 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 3137.0,
+						"translation.y": 24494.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
 					"type": "text"
 				},
 				{
-					"buffer": 9,
+					"buffer": 7,
 					"file": "js/script.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2022,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2018,
-								2018
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 658.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				}
-			]
-		},
-		{
-			"selected": 5,
-			"sheets":
-			[
-				{
-					"buffer": 10,
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3786,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								3786
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 78.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 17,
-					"type": "text"
-				},
-				{
-					"buffer": 11,
-					"file": "parseUrl.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2997,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								232,
-								232
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 7.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 7,
-					"type": "text"
-				},
-				{
-					"buffer": 12,
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2447,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								216,
-								139
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 16,
-					"type": "text"
-				},
-				{
-					"buffer": 13,
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1863,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								258,
-								258
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 18,
-					"type": "text"
-				},
-				{
-					"buffer": 14,
-					"file": ".htaccess",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2698,
+						"buffer_size": 2311,
 						"regions":
 						{
 						},
@@ -967,30 +776,94 @@
 						],
 						"settings":
 						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 117.0,
+						"translation.y": 658.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 15,
+					"stack_index": 11,
 					"type": "text"
-				},
+				}
+			]
+		},
+		{
+			"selected": 1,
+			"sheets":
+			[
 				{
-					"buffer": 15,
-					"file": "library/base_url.php",
+					"buffer": 8,
+					"file": "parseUrl.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 125,
+						"buffer_size": 3586,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								125,
-								125
+								2395,
+								2395
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1479.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": ".htaccess",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2851,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1037,
+								1037
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 455.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "library/base_url.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 140,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								139,
+								139
 							]
 						],
 						"settings":
@@ -1001,7 +874,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 10,
 					"type": "text"
 				}
 			]
@@ -1011,20 +884,20 @@
 			"sheets":
 			[
 				{
-					"buffer": 16,
+					"buffer": 11,
 					"file": "library/api.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 789446,
+						"buffer_size": 8437,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								552286,
-								540278
+								6715,
+								6715
 							]
 						],
 						"settings":
@@ -1034,26 +907,27 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 176418.0,
+						"translation.y": 4038.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
-					"buffer": 17,
+					"buffer": 12,
+					"file": "functions.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 10730,
+						"buffer_size": 4057,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								10730,
-								10730
+								3946,
+								3946
 							]
 						],
 						"settings":
@@ -1063,27 +937,27 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 2452.0,
+						"translation.y": 797.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 6,
 					"type": "text"
 				},
 				{
-					"buffer": 18,
+					"buffer": 13,
 					"file": "README-guide.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 24076,
+						"buffer_size": 47758,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								24076,
-								13676
+								32772,
+								32772
 							]
 						],
 						"settings":
@@ -1093,37 +967,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 4849.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 19,
-					"file": "/C/xampp/htdocs/tfk/Sidebar update.txt",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 4713,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3688,
-								3688
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Text/Plain text.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 1126.0,
+						"translation.y": 143278.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 4,
@@ -1172,9 +1016,9 @@
 		"cols":
 		[
 			0.0,
-			0.17652173913,
-			0.446956521739,
-			0.490434782609,
+			0.0451671183379,
+			0.70325203252,
+			0.954832881662,
 			1.0
 		],
 		"rows":
@@ -1192,7 +1036,7 @@
 	"project": "land1.sublime-project",
 	"replace":
 	{
-		"height": 62.0
+		"height": 286.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -1230,7 +1074,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 216.0,
+	"side_bar_width": 259.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
