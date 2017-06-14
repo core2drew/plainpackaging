@@ -12,8 +12,10 @@ $(document).ready(function(){
 	var isTARClicked = false;
 	var isMoreClicked = false;
 
-	$('body').click(function(){
-        resetAllDropDownMenu();
+	$('body').click(function(e){
+	   if(! $(e.target).hasClass('body-menu')){
+	   	resetAllDropDownMenu();
+	   }
 	});
 
 	function resetAllDropDownMenu(){
@@ -116,13 +118,13 @@ $(document).ready(function(){
 	$('a#explore-the-guides').click(function(){
 		$('.dc-step-by-step-cont').css('display','block');
 		$('.dc-step-by-step-li').css('background-color','rgb(204,204,204)');
-		$('.dc-step-by-step').css('color','#000');
+		// $('.dc-step-by-step').css('color','#000');
 	});
 
 	$('a#tools-and-resources').click(function(){
 		$('.dc-reference-cont').css('display','block');
 		$('.dc-reference-li').css('background-color','rgb(204,204,204)');
-		$('.dc-reference').css('color','#000');
+		// $('.dc-reference').css('color','#000');
 	});
 
 });

@@ -118,10 +118,10 @@ is-it-lawful">
                         <div class="col-lg-4 text-center">
                             <div class="col-lg-12 image-links-cont">
                                 <a id="explore-the-guides" href="#explore-the-guides">
-                                    <img class="img-responsive text-center" src="<?php echo $base_url; ?>img/home/UKproposedplainpacks.jpg">
+                                    <img class="img-responsive text-center body-menu" src="<?php echo $base_url; ?>img/home/UKproposedplainpacks.jpg">
                                     <div class="image-links-desc-cont">
-                                        <span class="image-links-title">Explore the</span><br>
-                                        <span class="image-links-title">GUIDES</span>
+                                        <span class="image-links-title body-menu">Explore the</span><br>
+                                        <span class="image-links-title body-menu">GUIDES</span>
                                     </div>
                                 </a>
                             </div>
@@ -142,13 +142,13 @@ is-it-lawful">
                         <div class="col-lg-4 text-center">
                             <div class="col-lg-12 image-links-cont explore">
                                 <a id="tools-and-resources" href="#tools-and-resources">
-                                    <img class="img-responsive img-links-logo text-center" src="<?php echo $base_url; ?>img/home/plain-packaging-data.png">
+                                    <img class="img-responsive img-links-logo text-center body-menu" src="<?php echo $base_url; ?>img/home/plain-packaging-data.png">
                                     <div class="image-links-desc-cont explore">
-                                        <span class="image-links-title">Explore the</span><br>
-                                        <span class="image-links-title">TOOLS</span><br>
-                                        <span class="image-links-desc">AND</span>
+                                        <span class="image-links-title body-menu">Explore the</span><br>
+                                        <span class="image-links-title body-menu">TOOLS</span><br>
+                                        <span class="image-links-desc body-menu">AND</span>
                                         <br>
-                                        <span class="image-links-title">RESOURCES</span>
+                                        <span class="image-links-title body-menu">RESOURCES</span>
                                     </div>
                                 </a>
                             </div>
