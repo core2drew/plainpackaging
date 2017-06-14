@@ -10,7 +10,7 @@ if ($var == 'og_desc') {
         <div class="col-lg-10 col-lg-offset-1"><?php echo breadcrumbs(' / ', 'Home'); ?></div>
         <div class="col-lg-10 col-lg-offset-1">
             <div class="section-title-num fc-violet">Guide 1.2</div>
-            <div class="section-title fc-violet">Establish document record</div>
+            <div class="section-title fc-violet">Establish a document record</div>
         </div>
         <div class="content-desc-cont">
             <div class="col-lg-10 col-lg-offset-1">
