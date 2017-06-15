@@ -1210,7 +1210,7 @@ table.dropdown-sbs th{
 }
 
 table.dropdown-sbs td{
-  font-size:12px;
+  font-size: 15px;
   text-align:center;
   color:#fff;
   font-weight:normal;
@@ -1291,7 +1291,7 @@ table.dropdown-reference td,table.dropdown-reference td, table.dropdown-more td{
 }
 
 table.dropdown-reference td, table.dropdown-more td{
-  font-size:12px;
+  font-size:15px;
   text-align:center;
   color:#fff;
   font-weight:normal;
@@ -1317,7 +1317,7 @@ table.dropdown-reference tr, table.dropdown-more tr{
 }
 
 .dropdown-note{
-  font-size:10px;
+  font-size:12px;
   font-style: italic;
 }
 
