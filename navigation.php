@@ -222,7 +222,7 @@
                                             <td class="bg-nav-r-4"><a href="<?php echo $base_url; ?>nav/more-help-from-ctfk">About and Contact</a></td>
                                         </tr>
                                         <tr>
-                                            <td class="bg-nav-r-4"><a href="<?php echo $base_url; ?>#">Extenal link to ILC landing page</a></td>
+                                            <td class="bg-nav-r-4"><a href="http://global.tobaccofreekids.org/en/solutions/laws_litigation/">International Legal Centre</a></td>
                                         </tr>
                                         </tbody>
                                     </table>
