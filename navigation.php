@@ -119,7 +119,7 @@
                                             <td class="nav-title">EVIDENCE</td>
                                         </tr>
                                         <tr>
-                                            <th class="nav-th nav-title" rowspan="2">Policy</th>
+                                            <th class="nav-th nav-title arrowed" rowspan="2">Policy</th>
                                             <td class="col-lg-3 bg-nav-r-1">
                                                 <a href="<?php echo $base_url; ?>resources/policy-briefs">
                                                     Policy Briefs
@@ -179,7 +179,7 @@
                                             </th>
                                         </tr>
                                         <tr>
-                                            <th class="nav-th nav-title" rowspan="2">Legal</th>
+                                            <th class="nav-th nav-title arrowed" rowspan="2">Legal</th>
                                             <td class="col-lg-3 bg-nav-r-1">
                                                 <a href="<?php echo $base_url; ?>resources/comparison-table-of-existing-plain-packaging-laws">
                                                     Comparison of Existing Laws
