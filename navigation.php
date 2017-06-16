@@ -124,11 +124,13 @@
                                                 <a href="<?php echo $base_url; ?>resources/policy-briefs">
                                                     Policy Briefs
                                                 </a>
+                                                <p class="text small">Short briefing documents explaining key issues</p>
                                             </td>
                                             <td class="col-lg-3 bg-nav-r-1">
                                                 <a href="<?php echo $base_url; ?>resources/opposing-arguments-and-how-to-counter-them">
                                                     Opposing Arguments
                                                 </a>
+                                                <p class="text small">All the industry arguments analysed with detailed explanations on how to respond</p>
                                             </td>
                                             <td class="col-lg-3 bg-nav-r-2">
                                                 <a href="<?php echo $base_url; ?>templates/regulatory-impact-analysis-ref">
@@ -146,6 +148,7 @@
                                                 <a href="<?php echo $base_url; ?>resources/international-developments">
                                                     International Developments
                                                 </a>
+                                                <p class="text small">List of countries implementing or considering plain packaging</p>
                                             </td>
                                             <td class="col-lg-3">&nbsp;</td>
                                             <td class="col-lg-3 bg-nav-r-2">
