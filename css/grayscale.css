@@ -1223,12 +1223,14 @@ table.dropdown-sbs td{
 }
 
 table.dropdown-reference tbody td{
-  padding: 15px;
+  padding: 10px;
 }
 
 table.dropdown-reference tbody td .text{
   margin:0;
-  font-size: 11px;
+  font-size: 10px;
+  line-height: 1;
+  margin-top:5px;
 }
 
 table.dropdown-sbs tbody td > a,
@@ -1254,16 +1256,10 @@ table.dropdown-more tbody td > a{
 
 }
 
-table.dropdown-sbs tbody td:hover,
-table.dropdown-reference tbody td:hover,
-table.dropdown-more tbody td:hover {
-  border:4px solid #fff;
-}
-
-table.dropdown-sbs tbody td:not('.nav-title'),
-table.dropdown-reference tbody td:not('.nav-title'),
-table.dropdown-more tbody td:not('.nav-title'){
-  border:none;
+table.dropdown-sbs tbody td:not(.nav-title):not(.empty):hover,
+table.dropdown-reference tbody td:not(.nav-title):not(.empty):hover,
+table.dropdown-more tbody td:not(.nav-title):not(.empty):hover {
+  background-color:#4c4129;
 }
 
 table.dropdown-sbs tr,

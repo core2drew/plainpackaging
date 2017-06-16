@@ -141,6 +141,7 @@
                                                 <a href="<?php echo $base_url; ?>evidence/research-evidence">
                                                     Research Evidence
                                                 </a>
+                                                <p class="text small">Outline and analysis of the global supporting research</p>
                                             </td>
                                         </tr>
                                         <tr>
@@ -150,7 +151,7 @@
                                                 </a>
                                                 <p class="text small">List of countries implementing or considering plain packaging</p>
                                             </td>
-                                            <td class="col-lg-3">&nbsp;</td>
+                                            <td class="col-lg-3 empty">&nbsp;</td>
                                             <td class="col-lg-3 bg-nav-r-2">
                                                 <a href="<?php echo $base_url; ?>templates/consultation-document-template">
                                                     Template Consultation Document
@@ -161,17 +162,19 @@
                                                 ?>evidence/australia-post-implementation-evidence">
                                                     Australia's Post Implementation Evidence
                                                 </a>
+                                                <p class="text small">Statistics and research</p>
                                             </td>
                                         </tr>
                                         <tr>
                                             <th>
-                                            <td class="col-lg-3">&nbsp;</td>
-                                            <td class="col-lg-3">&nbsp;</td>
-                                            <td class="col-lg-3">&nbsp;</td>
+                                            <td class="col-lg-3 empty">&nbsp;</td>
+                                            <td class="col-lg-3 empty">&nbsp;</td>
+                                            <td class="col-lg-3 empty">&nbsp;</td>
                                             <td class="col-lg-3 bg-nav-r-3">
                                                 <a href="<?php echo $base_url; ?>evidence/tobacco-product-branding">
                                                     Tobacco Branding
                                                 </a>
+                                                <p class="text small">The theory and practice of branding on tobacco packaging</p>
                                             </td>
                                             </th>
                                         </tr>
@@ -181,16 +184,21 @@
                                                 <a href="<?php echo $base_url; ?>resources/comparison-table-of-existing-plain-packaging-laws">
                                                     Comparison of Existing Laws
                                                 </a>
+                                                <p class="text small">Table of key clauses from laws in 5 countries</p>
                                             </td>
                                             <td class="col-lg-3 bg-nav-r-1">
                                                 <a href="<?php echo $base_url; ?>resources/drafting-the-legislation-in-detail">
                                                     Each Clause Explained
                                                 </a>
+                                                <p class="text small">The reasons for each clause of the template law
+                                                    in detail</p>
                                             </td>
                                             <td class="col-lg-3 bg-nav-r-2">
                                                 <a href="<?php echo $base_url; ?>templates/template-draft-model-law">
                                                     Template Model Law
                                                 </a>
+                                                <p class="text small">Draft set of regulations covering every
+                                                    recommended provision</p>
                                             </td>
                                         </tr>
                                         <tr>
@@ -198,11 +206,14 @@
                                                 <a href="<?php echo $base_url; ?>resources/legal-issues">
                                                     Legal Issues
                                                 </a>
+                                                <p class="text small">Details of main legal issues raised by the
+                                                    industry</p>
                                             </td>
                                             <td class="col-lg-3 bg-nav-r-1">
                                                 <a href="<?php echo $base_url; ?>resources/case-summaries">
                                                     Case Summaries
                                                 </a>
+                                                <p class="text small">Industry challenges to plain packaging laws and the court judgments</p>
                                             </td>
                                         </tr>
                                         </tbody>
@@ -397,9 +408,11 @@
                     <ul class="dropdown-menu multi-level">
                         <li>
                             <a href="<?php echo $base_url; ?>evidence/research-evidence">Research Evidence</a>
+                            <p class="text small">Outline and analysis of the global supporting research</p>
                         </li>
                         <li>
                             <a href="<?php echo $base_url; ?>evidence/austalia-post-implementation-evidence">Australia's Post Implementation Evidence</a>
+
                         </li>
                         <li>
                             <a href="<?php echo $base_url; ?>evidence/tobacco-product-branding">Tobacco Branding</a>
